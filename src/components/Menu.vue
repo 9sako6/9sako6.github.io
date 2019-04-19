@@ -1,22 +1,25 @@
 <template>
-    <Slide>
-      <a href="/">
-        <span class="navi-item">Home</span>
-      </a>
-      <a href="/about">
-        <span class="navi-item">About</span>
-      </a>
-    </Slide>
+  <Slide>
+    <router-link to="/">
+      <span class="navi-item">Home</span>
+    </router-link>
+    <router-link to="/about">
+      <span class="navi-item">About</span>
+    </router-link>
+    <router-link to="/products">
+      <span class="navi-item">Products</span>
+    </router-link>
+  </Slide>
 </template>
 
 <script>
-import { Slide } from 'vue-burger-menu' // import the CSS transitions you wish to use, in this case we are using `Slide`
+import { Slide } from "vue-burger-menu"; // import the CSS transitions you wish to use, in this case we are using `Slide`
 export default {
-  name: 'app',
+  name: "app",
   components: {
     Slide
   }
-}
+};
 </script>
 
 <style scoped>
