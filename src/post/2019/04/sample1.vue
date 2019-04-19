@@ -84,9 +84,20 @@ print(ans%MOD) # 剰余で答えるのを忘れずに
 </script>
 <style scoped>
 #preview {
-  width: 60%;
-  margin-left: 20%;
   margin-bottom: 10%;
   text-align: left;
+}
+@media screen and (max-width: 767px) {
+  #preview {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 0.8em;
+  }
+}
+@media screen and (min-width: 768px) {
+  #preview {
+    width: 60%;
+    margin-left: 20%;
+  }
 }
 </style>
