@@ -1,5 +1,6 @@
 <template>
   <div id="preview">
+    <h1>ABC058 C - 怪文書 / Dubious Document</h1>
     <div v-html="compiledMarkdown"></div>
   </div>
 </template>
@@ -7,13 +8,11 @@
 import marked from "marked";
 import hljs from "highlight.js";
 
-// import md from '../assets/post/hoge.md'
-
 export default {
-  name: "postForm",
+  name: 'postForm',
   created: function() {
     marked.setOptions({
-      langPrefix: "",
+      langPrefix:'',
       highlight: function(code, lang) {
         return hljs.highlightAuto(code, [lang]).value;
       }
@@ -26,13 +25,20 @@ export default {
   },
   data: function() {
     return {
-      markdownText: `## 問題
+      markdownText: `
+\`\`\`python
+n = int(input())
+S=[input() for _ in range(n)]
+ans = ''
+for i in range(97, 97+26):
+    memo = [0]*n # 各文字列S_iに文字chr(i)がいくつずつ含まれるかを記録する配列
+    for j in range(n):
+        memo[j] = S[j].count(chr(i))
+    ans += min(memo)*chr(i)
 
-[https://atcoder.jp/contests/abc058/tasks/arc071_a:embed:cite]
+print(ans)
+\`\`\`
 
-## 解法
-a~zの文字について、ある文字●が全文字列中で共通して何回使われているかを数えます。その共通して使われている数だけ文字●を連結していく、ということを行えば答えるべき文字列が求まります。
- ざっくりと\`O(26*n^2)\`ですが、[tex: 1 \leq n \leq 50]なので間に合います。
 `
     };
   }

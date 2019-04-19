@@ -27,9 +27,9 @@ export default new Router({
       component: () => import('./views/Products.vue'),
     },
     {
-      path: '/markdown',
-      name: 'markdown',
-      component: () => import('./components/Markdown.vue'),
+      path: '/post/2019/04/sample1',
+      name: 'sample1',
+      component: () => import('./post/2019/04/sample1.vue'),
     },
   ],
 });
