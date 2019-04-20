@@ -1,0 +1,228 @@
+@import "./media-query.scss";
+
+div.tex-equations {
+  overflow-x: auto;
+}
+
+#page-title {
+  margin: 1em 0 1em 0;
+  line-height: 1.5em;
+  word-wrap: break-word;
+  margin-left: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+
+  @include pc {
+    font-size: 2em;
+  }
+
+  @include mobile {
+    font-size: 1.7em;
+  }
+}
+
+.post-meta {
+  color: #696565;
+  margin: 2em 0 2em 1em;
+}
+
+.post-time-title {
+  display: inline-block;
+  width: 75px;
+}
+
+.page {
+  color: $my-black;
+  @apply text-lg;
+
+  /deep/ ::before,
+  ::after {
+    // this is necessary bacause of a border added by '@tailwind base'
+    border: none;
+  }
+
+  /deep/ a {
+    color: $my-red;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /deep/ img {
+    @include pc {
+      margin-left: 5%;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  /deep/ h1 {
+    margin: 2.5em 0 1.5em 0;
+    font-size: 1.8em;
+    padding: 0.4em 0;
+    color: #494949;
+    // background: #f4f4f4;
+    // border-left: solid 5px #494949;
+    border-bottom: solid 3px #494949;
+  }
+
+  /deep/ h2 {
+    margin: 2.5em 0 1.3em 0;
+    font-size: 1.5em;
+    padding: 0.25em 0.5em;
+    color: #494949;
+    background: transparent;
+    border-left: solid 5px #494949;
+  }
+
+  /deep/ h3 {
+    margin: 2.5em 0 1.3em 0;
+    font-size: 1.5em;
+    padding: 0.25em 0.5em;
+    color: #494949;
+    background: transparent;
+  }
+
+  /deep/ p {
+    padding: 0.5em;
+    margin: 1em 0 1em 0;
+    @apply leading-relaxed;
+  }
+
+  /deep/ section {
+    padding: 0.5em;
+    margin: 1em 0 1em 0;
+    line-height: 1.5em;
+  }
+
+  /deep/ hr {
+    margin: 2em 0 2em 0;
+  }
+
+  /deep/ table {
+    width: 100%;
+  }
+
+  /deep/ th {
+    height: 2em;
+    border-bottom: solid 1px #eee;
+  }
+
+  /deep/ td {
+    height: 2em;
+    border-bottom: solid 1px #eee;
+  }
+
+  /deep/ ul {
+    @apply list-disc;
+    margin-left: 40px;
+  }
+
+  /deep/ ol {
+    @apply list-decimal;
+    list-style-type: decimal !important;
+    margin-left: 40px;
+  }
+
+  /deep/ li {
+    display: list-item;
+    margin: 0.5em 0 0.5em 0;
+    @apply leading-normal;
+  }
+
+  /deep/ blockquote {
+    position: relative;
+    padding: 30px 15px 8px 15px;
+    box-sizing: border-box;
+    font-style: italic;
+    background: #efefef;
+    color: #555;
+  }
+
+  /deep/ blockquote:before {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    content: "“";
+    font-family: sans-serif;
+    color: #cfcfcf;
+    font-size: 90px;
+    line-height: 1;
+  }
+
+  /deep/ blockquote p {
+    padding: 0;
+    margin: 10px 0;
+    line-height: 1.7;
+  }
+
+  /deep/ blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+  }
+
+  /deep/ code {
+    @apply font-mono;
+    @apply rounded;
+    background: #e2e6e9;
+    padding: 2px;
+  }
+
+  /deep/ pre {
+    @apply rounded;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /deep/ pre code {
+    @apply font-mono;
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    padding: 0;
+    line-height: 1.2em;
+    background-color: transparent;
+    border: none;
+    color: rgb(212, 214, 214);
+  }
+
+  /deep/ code::before {
+    content: none;
+  }
+
+  /deep/ code::after {
+    content: none;
+  }
+
+  /deep/ .table-of-contents {
+    padding: 0 0 1em 0;
+    background-color: #fafafa;
+  }
+
+  /deep/ .table-of-contents::before {
+    display: block;
+    font-weight: 600;
+    color: #494949;
+    padding: 1em;
+    content: "目次";
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  /deep/ .table-of-contents a {
+    color: #494949;
+  }
+
+  /deep/ .table-of-contents li {
+    line-height: 1.3em;
+  }
+}

@@ -1,0 +1,33 @@
+@import "./media-query.scss";
+
+.post-tags {
+  display: inline-block;
+  margin-top: 0.5em;
+
+  /deep/ a:hover {
+    border-bottom: none;
+  }
+}
+
+.post-tag {
+  color: $my-black;
+  display: inline-block;
+  border: solid 1px #e6e6e6;
+  border-radius: 1em;
+
+  &:hover {
+    color: rgb(187, 25, 87);
+  }
+
+  @include pc {
+    margin: 0 1em 0 0;
+    font-size: 0.9em;
+    padding: 0.5em 0.5em;
+
+  }
+
+  @include mobile {
+    margin: 0 0.5em 0 0;
+    padding: 0.5em 0.5em;
+  }
+}

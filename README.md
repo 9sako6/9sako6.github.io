@@ -1,29 +1,7 @@
-# blog
+# 9sako6-garden
 
-## Project setup
-```
-npm install
-```
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1a3c7a02-ce96-434c-9a52-8a0eefaa3762/deploy-status)](https://app.netlify.com/sites/9sako6-garden/deploys)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+> My blog
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://blog.9sako6.site/
