@@ -1,31 +1,41 @@
 {
-  "name": "blog",
-  "version": "0.1.0",
+  "name": "garden-of-9sako6",
+  "version": "0.0.1",
+  "description": "9sako6 Garden",
+  "author": "9sako6",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "rm -rf dist && vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "md2json": "processmd contents/posts/*.md --stdout --outputDir contents/posts > contents/posts/summary.json",
+    "about": "processmd contents/about.md --stdout --outputDir contents/"
   },
   "dependencies": {
-    "core-js": "^2.6.5",
-    "highlight.js": "^9.15.6",
-    "marked": "^0.6.2",
-    "register-service-worker": "^1.6.2",
-    "vue": "^2.6.10",
-    "vue-burger-menu": "^2.0.1",
-    "vue-class-component": "^7.0.2",
-    "vue-property-decorator": "^8.1.0",
-    "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "@nuxtjs/pwa": "^2.6.0",
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.4.0",
+    "vue-burger-menu": "^2.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.6.0",
-    "@vue/cli-plugin-pwa": "^3.6.0",
-    "@vue/cli-plugin-typescript": "^3.6.0",
-    "@vue/cli-service": "^3.6.0",
-    "typescript": "^3.4.3",
-    "vue-template-compiler": "^2.5.21",
-    "webpack": "^4.30.0"
+    "nodemon": "^1.18.9",
+    "@nuxtjs/eslint-config": "^0.0.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.1",
+    "eslint-config-standard": ">=12.0.0",
+    "eslint-plugin-import": ">=2.16.0",
+    "eslint-plugin-jest": ">=22.3.0",
+    "eslint-plugin-node": ">=8.0.1",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-promise": ">=4.0.1",
+    "eslint-plugin-standard": ">=4.0.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-vue": "^5.2.2",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "fileMap": {
+    "contents/posts/2019-04-08-abc052_c.json": {
+      "title": "ABC052 C - Factors of Factorial",
+      "created_at": "2019-04-08T00:00:00.000Z",
+      "dir": "contents/posts",
+      "base": "2019-04-08-abc052_c.json",
+      "ext": ".json",
+      "sourceBase": "2019-04-08-abc052_c.md",
+      "sourceExt": ".md"
+    }
+  },
+  "sourceFileArray": [
+    "contents/posts/2019-04-08-abc052_c.md"
+  ]
+}
