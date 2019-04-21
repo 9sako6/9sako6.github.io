@@ -1,21 +1,40 @@
 <template>
   <section>
     <Post
-      link="/posts/2019/04/08/abc052_c"
-      title="ABC052 C - Factors of Factorial"
-      date="2019-04-08"
-      content="N!の約数の個数を10^9+7で割った余りを答える問題。
-
-## 解法
-約数の個数は(各素因数の指数+1)を掛け合わせたものです。"
+      v-for="article in articles"
+      :key="article.id"
+      v-bind:link="article.link"
+      v-bind:title="article.title"
+      v-bind:description="article.description"
+      v-bind:date="article.date"
     />
   </section>
 </template>
 
 <script>
 import Post from '~/components/Post.vue'
+import Summary from '~/contents/posts/summary.json'
+
+const articles = []
+
+Summary.sourceFileArray.reverse().forEach(markdownName => {
+  const baseName = markdownName.match(/([^.]+)/)[0]
+  const jsonName = baseName + '.json'
+  const link = '/' + baseName.match(/contents\/(.+)/)[1].replace(/-/g, '/')
+  const content = Summary.fileMap[jsonName]
+  const date = content.created_at.split('T')[0]
+  articles.push({
+    link: link,
+    title: content.title,
+    description: content.description,
+    date: date
+  })
+})
 
 export default {
+  data: function() {
+    return { articles }
+  },
   components: {
     Post
   }

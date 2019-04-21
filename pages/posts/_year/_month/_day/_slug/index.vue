@@ -11,7 +11,7 @@
 
 <script>
 // source: https://jmblog.jp/posts/2018-01-18/build-a-blog-with-nuxtjs-and-markdown-2/
-import { sourceFileArray } from '../../../../../../contents/posts/summary.json'
+import { sourceFileArray } from '~/contents/posts/summary.json'
 import SnsButtons from '~/components/SnsButtons.vue'
 
 export default {
@@ -37,10 +37,20 @@ export default {
 }
 </script>
 <style scoped>
-.page {
-  color: #35495e;
-  width: 50%;
-  margin: 10% 25% 10% 25%;
+@media screen and (max-width: 767px) {
+  .page {
+    color: #35495e;
+    width: 80%;
+    margin: 25% 10% 25% 10%;
+    font-size: 0.8em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page {
+    color: #35495e;
+    width: 50%;
+    margin: 10% 25% 10% 25%;
+  }
 }
 #page-title {
   margin: 1em 0 1em 0;
@@ -60,6 +70,10 @@ export default {
   color: rgba(60, 150, 120, 1);
 }
 .page >>> code {
+  background-color: rgb(255, 236, 235);
+}
+.page >>> pre code {
+  background-color: black;
   box-shadow: 1px 1px 20px #aaa;
 }
 .page >>> .hljs-comment {

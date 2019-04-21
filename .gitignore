@@ -88,3 +88,6 @@ sw.*
 
 # mac
 .DS_Store
+
+# original
+.memo

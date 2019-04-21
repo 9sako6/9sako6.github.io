@@ -1,5 +1,20 @@
 import pkg from './package'
 
+/*
+ ** make routes to generate static pages of dynamic routing
+ */
+
+import Summary from './contents/posts/summary.json'
+
+const routes = []
+
+Summary.sourceFileArray.reverse().forEach(markdownName => {
+  const baseName = markdownName.match(/([^.]+)/)[0]
+  const link = '/' + baseName.match(/contents\/(.+)/)[1].replace(/-/g, '/')
+  routes.push(link)
+})
+console.log(routes)
+
 export default {
   mode: 'spa',
 
@@ -57,5 +72,9 @@ export default {
         })
       }
     }
+  },
+
+  generate: {
+    routes: routes
   }
 }

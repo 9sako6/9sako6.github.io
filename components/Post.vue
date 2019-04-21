@@ -3,14 +3,14 @@
     <div class="post">
       <div class="post-title">{{ title }}</div>
       <div class="post-date">{{ date }}</div>
-      <div class="post-content">{{ content }}</div>
+      <div class="post-content">{{ description }}</div>
     </div>
   </router-link>
 </template>
 
 <script>
 export default {
-  props: ['link', 'title', 'date', 'content']
+  props: ['link', 'title', 'date', 'description']
 }
 </script>
 
