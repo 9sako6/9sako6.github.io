@@ -55,8 +55,17 @@ export default {
 #page-title {
   margin: 1em 0 1em 0;
   font-size: 2em;
+  border: none;
+}
+.page >>> h1 {
+  font-size: 1.8em;
+  margin: 2em 0 1em 0;
+  border-bottom: solid 1px #d8d8d8;
 }
 .page >>> h2 {
+  margin: 1em 0 1em 0;
+}
+.page >>> h3 {
   margin: 1em 0 1em 0;
 }
 .page >>> p {
