@@ -87,10 +87,10 @@ export default {
 }
 .page >>> a {
   text-decoration: none;
-  color: rgba(60, 150, 120, 0.6);
+  color: rgba(60, 150, 120, 1);
 }
 .page >>> a:hover {
-  color: rgba(60, 150, 120, 1);
+  color: rgb(17, 103, 74);
 }
 .page >>> blockquote {
   quotes: '“' '”' '‘' '’';
