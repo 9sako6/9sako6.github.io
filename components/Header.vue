@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Slide id="menu" right noOverlay width="200">
+    <Slide class="my-burger-menu" right noOverlay width="200">
       <router-link to="/">
         <span class="navi-item">Home</span>
       </router-link>
@@ -10,7 +10,7 @@
     </Slide>
     <div id="top">
       <router-link to="/">
-        <img class="logo" src="~/static/icon.png" />
+        <img alt="logo" class="logo" src="~/static/icon.png" />
       </router-link>
       <h1 class="title">9sako6 Garden</h1>
     </div>
@@ -32,23 +32,23 @@ export default {
   opacity: 0.5;
 }
 @media screen and (max-width: 767px) {
-  #menu >>> .bm-burger-button {
+  .my-burger-menu >>> .bm-burger-button {
     width: 24px;
     height: 20px;
   }
-  #menu >>> .navi-item {
+  .my-burger-menu >>> .navi-item {
     font-size: 1em;
   }
 }
 @media screen and (min-width: 768px) {
-  #menu >>> .navi-item {
+  .my-burger-menu >>> .navi-item {
     font-size: 1.2em;
   }
 }
-#menu >>> .bm-cross-button {
+.my-burger-menu >>> .bm-cross-button {
   right: 0 !important;
 }
-#menu >>> .bm-cross {
+.my-burger-menu >>> .bm-cross {
   height: 24px !important;
 }
 .title {
