@@ -54,7 +54,7 @@ export default {
 }
 #page-title {
   margin: 1em 0 1em 0;
-  font-size: 2em;
+  font-size: 2.5em;
   border: none;
 }
 .page >>> h1 {
@@ -77,6 +77,19 @@ export default {
 }
 .page >>> a:hover {
   color: rgba(60, 150, 120, 1);
+}
+.page >>> blockquote {
+  quotes: '“' '”' '‘' '’';
+  padding: 1em;
+  background-color: #f7f7f7;
+  color: gray;
+}
+.page >>> blockquote::before {
+  content: open-quote;
+}
+.page >>> blockquote::after {
+  right: 0;
+  content: close-quote;
 }
 .page >>> code {
   background-color: rgb(255, 236, 235);
