@@ -6,6 +6,14 @@
     </div>
     <div v-html="bodyHtml"></div>
     <SnsButtons />
+    <script
+      src="https://utteranc.es/client.js"
+      repo="9sako6/9sako6-garden"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async
+    ></script>
   </section>
 </template>
 
@@ -70,6 +78,12 @@ export default {
 }
 .page >>> p {
   margin: 1em 0 1em 0;
+}
+.page >>> hr {
+  margin: 2em 0 2em 0;
+}
+.page >>> img {
+  width: 100%;
 }
 .page >>> a {
   text-decoration: none;
