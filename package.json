@@ -13,13 +13,16 @@
     "precommit": "npm run lint",
     "md2json": "processmd contents/posts/*.md --stdout --outputDir contents/posts > contents/posts/summary.json",
     "about": "processmd contents/about.md --stdout --outputDir contents/",
-    "deploy": "npm run md2json && npm run build && firebase deploy"
+    "deploy": "npm run md2json && npm run build && firebase deploy",
+    "delcache": "rm -rf node_modules/.cache/hard-source/"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^2.6.0",
     "cross-env": "^5.2.0",
+    "hard-source-webpack-plugin": "^0.13.1",
     "nuxt": "^2.4.0",
-    "vue-burger-menu": "^2.0.1"
+    "vue-burger-menu": "^2.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.9",

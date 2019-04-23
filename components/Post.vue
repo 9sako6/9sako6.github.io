@@ -10,7 +10,12 @@
 
 <script>
 export default {
-  props: ['link', 'title', 'date', 'description']
+  props: {
+    link: String,
+    title: String,
+    date: String,
+    description: String
+  }
 }
 </script>
 

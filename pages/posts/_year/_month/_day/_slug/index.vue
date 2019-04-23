@@ -87,16 +87,19 @@ export default {
 }
 .page >>> a {
   text-decoration: none;
-  color: rgba(60, 150, 120, 1);
+  color: rgb(1, 88, 59);
 }
 .page >>> a:hover {
-  color: rgb(17, 103, 74);
+  color: rgb(72, 142, 118);
+}
+.page >>> li {
+  margin: 1em 0 1em 0;
 }
 .page >>> blockquote {
   quotes: '“' '”' '‘' '’';
   padding: 1em;
   background-color: #f7f7f7;
-  color: gray;
+  color: rgb(72, 70, 70);
 }
 .page >>> blockquote::before {
   content: open-quote;
