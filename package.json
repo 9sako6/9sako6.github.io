@@ -13,7 +13,7 @@
     "precommit": "npm run lint",
     "md": "processmd contents/posts/*.md --stdout --outputDir contents/posts > contents/posts/summary.json",
     "about": "processmd contents/about.md --stdout --outputDir contents/",
-    "deploy": "npm run md2json && npm run build && firebase deploy",
+    "deploy": "npm run md && npm run build && firebase deploy",
     "delcache": "rm -rf node_modules/.cache/hard-source/"
   },
   "dependencies": {
