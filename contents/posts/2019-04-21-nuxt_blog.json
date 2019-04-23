@@ -1,6 +1,6 @@
 {
-  "title": "【Nuxt.js】Makdownで記事を書けるSPAブログを自作する",
-  "description": "Nuxt.jsで自作ブログを作っています。-Markdownで記事を書き、processmdでHTMLに変換 -Nuxt.jsで静的ファイル生成 -firebaseでホスティング...",
+  "title": "[Nuxt.js]Makdownで記事を書けるSPAブログを自作する",
+  "description": "Nuxt.jsでSPAブログを作る。Markdownで記事を書き、processmdでHTMLに変換し、Nuxt.jsで静的ファイルを生成し、firebaseでホスティング...",
   "tags": [
     "Nuxt.js"
   ],

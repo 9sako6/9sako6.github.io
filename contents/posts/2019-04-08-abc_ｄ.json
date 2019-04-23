@@ -1,0 +1,15 @@
+{
+  "title": "AtCoder Beginner Contest D をPython3で解く",
+  "description": "ABC D問題をひたすら解いて、生やした考察やミスりポイント、綺麗なコードの書き方を記録していく...",
+  "tags": [
+    "競技プログラミング"
+  ],
+  "created_at": "2019-04-08T00:00:00.000Z",
+  "bodyContent": "ABC D問題をひたすら解いて、生やした考察やミスりポイント、綺麗なコードの書き方を記録していく。",
+  "bodyHtml": "<p>ABC D問題をひたすら解いて、生やした考察やミスりポイント、綺麗なコードの書き方を記録していく。</p>\n",
+  "dir": "contents/posts",
+  "base": "2019-04-08-abc_ｄ.json",
+  "ext": ".json",
+  "sourceBase": "2019-04-08-abc_ｄ.md",
+  "sourceExt": ".md"
+}
