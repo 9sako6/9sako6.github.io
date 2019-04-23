@@ -2,7 +2,7 @@
   <section class="page">
     <script
       type="text/javascript"
-      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"
     ></script>
     <h1 id="page-title">{{ title }}</h1>
     <div class="post-meta">
