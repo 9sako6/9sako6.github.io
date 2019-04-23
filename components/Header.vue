@@ -13,6 +13,7 @@
         <img alt="logo" class="logo" src="~/static/icon.png" />
       </router-link>
       <h1 class="title">9sako6 Garden</h1>
+      <div class="subtitle">Web Application / Competitive Programming</div>
     </div>
   </header>
 </template>
@@ -57,7 +58,13 @@ export default {
   color: #35495e;
   letter-spacing: 1px;
 }
-
+.subtitle {
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  color: #35495e;
+  letter-spacing: 1px;
+}
 @media screen and (max-width: 767px) {
   #top {
     margin-top: 10%;
@@ -65,6 +72,9 @@ export default {
   .title {
     font-weight: 600;
     font-size: 30px;
+  }
+  .subtitle {
+    font-size: 0.8em;
   }
 }
 @media screen and (min-width: 768px) {
@@ -74,6 +84,9 @@ export default {
   .title {
     font-weight: 600;
     font-size: 60px;
+  }
+  .subtitle {
+    font-size: 1em;
   }
 }
 .logo {

@@ -11,7 +11,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "md2json": "processmd contents/posts/*.md --stdout --outputDir contents/posts > contents/posts/summary.json",
+    "md": "processmd contents/posts/*.md --stdout --outputDir contents/posts > contents/posts/summary.json",
     "about": "processmd contents/about.md --stdout --outputDir contents/",
     "deploy": "npm run md2json && npm run build && firebase deploy",
     "delcache": "rm -rf node_modules/.cache/hard-source/"

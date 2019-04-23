@@ -1,8 +1,8 @@
 <template>
   <router-link v-bind:to="link">
     <div class="post">
-      <div class="post-title">{{ title }}</div>
       <div class="post-date">{{ date }}</div>
+      <div class="post-title">{{ title }}</div>
       <div class="post-content">{{ description }}</div>
     </div>
   </router-link>

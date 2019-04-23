@@ -1,5 +1,9 @@
 <template>
   <section class="page">
+    <script
+      type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    ></script>
     <h1 id="page-title">{{ title }}</h1>
     <div class="post-meta">
       <time>{{ `${params.year}-${params.month}-${params.day}` }}</time>
