@@ -1,11 +1,11 @@
 <template>
-  <router-link v-bind:to="link">
+  <a v-bind:href="link">
     <div class="post">
       <div class="post-date">{{ date }}</div>
       <div class="post-title">{{ title }}</div>
       <div class="post-content">{{ description }}</div>
     </div>
-  </router-link>
+  </a>
 </template>
 
 <script>

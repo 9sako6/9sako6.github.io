@@ -1,0 +1,15 @@
+{
+  "title": "Educational DP Contest / DP まとめコンテストをPython3で解く",
+  "description": "Educational DP Contest / DP まとめコンテストを解いて、生やした考察やミスりポイント、綺麗なコードの書き方を記録していく...",
+  "tags": [
+    "競技プログラミング"
+  ],
+  "created_at": "2019-04-23T00:00:00.000Z",
+  "bodyContent": "[Educational DP Contest / DP まとめコンテスト](https://atcoder.jp/contests/dp/)\n\nA問題からZ問題まで26問あります。\n（解ききるのはいつになるか...）\n\n# A - Frog 1\n[A - Frog 1](https://atcoder.jp/contests/dp/tasks/dp_a)\n\n## 解法\n\n## 学び\n\n\n類題：[C - 柱柱柱柱柱](https://atcoder.jp/contests/abc040/tasks/abc040_c)\n\n# B - Frog 2\n[B - Frog 2](https://atcoder.jp/contests/dp/tasks/dp_b)\n\n# C - Vacation\n[C - Vacation](https://atcoder.jp/contests/dp/tasks/dp_c)",
+  "bodyHtml": "<p><a href=\"https://atcoder.jp/contests/dp/\">Educational DP Contest / DP まとめコンテスト</a></p>\n<p>A問題からZ問題まで26問あります。\n（解ききるのはいつになるか...）</p>\n<h1>A - Frog 1</h1>\n<p><a href=\"https://atcoder.jp/contests/dp/tasks/dp_a\">A - Frog 1</a></p>\n<h2>解法</h2>\n<h2>学び</h2>\n<p>類題：<a href=\"https://atcoder.jp/contests/abc040/tasks/abc040_c\">C - 柱柱柱柱柱</a></p>\n<h1>B - Frog 2</h1>\n<p><a href=\"https://atcoder.jp/contests/dp/tasks/dp_b\">B - Frog 2</a></p>\n<h1>C - Vacation</h1>\n<p><a href=\"https://atcoder.jp/contests/dp/tasks/dp_c\">C - Vacation</a></p>\n",
+  "dir": "contents/posts",
+  "base": "2019-04-23-educational_dp.json",
+  "ext": ".json",
+  "sourceBase": "2019-04-23-educational_dp.md",
+  "sourceExt": ".md"
+}
