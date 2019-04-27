@@ -2,13 +2,13 @@
   <section class="page">
     <h1 id="page-title">{{ title }}</h1>
     <div class="post-meta">
-      <time> created: {{ created_at.split('T')[0] }}</time>
+      <time v-if="created_at">created: {{ created_at.split('T')[0] }}</time>
       <time v-if="updated_at">, updated: {{ updated_at.split('T')[0] }}</time>
     </div>
     <div class="post-tags">
-      <span class="post-tag" v-for="tag in tags" v-bind:key="tag.id">
-        {{ tag }}
-      </span>
+      <span class="post-tag" v-for="tag in tags" v-bind:key="tag.id">{{
+        tag
+      }}</span>
     </div>
     <div v-html="bodyHtml"></div>
     <SnsButtons />
@@ -48,6 +48,20 @@ export default {
       }.json`),
       { params }
     )
+  },
+  mounted: function() {
+    // タグ埋め込みを作成
+    const elems = this.bodyContent.match(/@@[\s\S]+@@/g)
+    if (elems) {
+      elems.forEach(elem => {
+        elem.split('@@').forEach(tag => {
+          if (tag.match(/[<>]/)) {
+            this.bodyHtml = this.bodyHtml.replace('@@', `${tag} @@`)
+          }
+        })
+      })
+      this.bodyHtml = this.bodyHtml.replace(/@@[\s\S]+@@/, '')
+    }
   }
 }
 </script>

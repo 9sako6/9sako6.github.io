@@ -26,9 +26,10 @@
     margin: 2em 0 4em 0;
   }
   .post-tag {
-    margin-left: 1em;
+    margin: 0 1em 1em 0;
+    display:inline-block;
     border-radius: 0.2em;
-    padding: 0.1em 0.4em;
+    padding: 0.4em 0.4em;
     background-color: rgb(229, 250, 242);
   }
   .page >>> h1 {
@@ -49,7 +50,7 @@
     margin: 2em 0 2em 0;
   }
   .page >>> img {
-    width: 100%;
+    width: 75%;
   }
   .page >>> table {
     width: 100%;
@@ -88,7 +89,7 @@
   .page >>> code {
     border-radius: 0.2em;
     padding: 0.1em 0.4em;
-    background-color: #eee;
+    background-color: #f5f5f5;
   }
   .page >>> pre code {
     background-color: black;
