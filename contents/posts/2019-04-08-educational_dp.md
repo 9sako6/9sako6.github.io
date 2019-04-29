@@ -1,15 +1,17 @@
 ---
 title: Educational DP Contest / DP まとめコンテストをPython3で解く
-description: Educational DP Contest / DP まとめコンテストを解いて、生やした考察やミスりポイント、綺麗なコードの書き方を記録していく...
+description: Educational DP Contest / DP まとめコンテストを解いて、生やした考察やミスりポイント、Tipsを記録していく記事...
 tags:
   - 競技プログラミング
-created_at: 2019-04-23
+  - Python3
+created_at: 2019-04-08
 updated_at: 2019-04-28
 ---
 
 [Educational DP Contest / DP まとめコンテスト](https://atcoder.jp/contests/dp/)
-
-A問題からZ問題まで26問あります。
+をひたすら解いて、生やした考察やミスりポイント、Tipsを記録していく記事。
+くさころが文章を書く練習をする記事でもある。
+A問題からZ問題まで26問ある。
 （解ききるのはいつになるか...）
 
 # A - Frog 1
