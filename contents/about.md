@@ -29,7 +29,7 @@ created_at: 2019-04-21
 - Ruby
 - JavaScript, TypeScript
 - HTML, CSS
-- C
+- C/C++ （競技プログラミング専用）
 
 ## Frameworks
 - Vue.js, Nuxt.js
