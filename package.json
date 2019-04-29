@@ -17,11 +17,12 @@
     "delcache": "rm -rf node_modules/.cache/hard-source/"
   },
   "dependencies": {
+    "@nuxtjs/google-adsense": "^1.1.3",
     "@nuxtjs/pwa": "^2.6.0",
     "cross-env": "^5.2.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "nuxt": "^2.4.0",
-    "vue-burger-menu": "^2.0.1",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0"
+    "vue-burger-menu": "^2.0.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",

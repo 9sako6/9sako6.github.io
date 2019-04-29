@@ -2,6 +2,7 @@
   <div>
     <Header />
     <nuxt />
+    <adsbygoogle />
   </div>
 </template>
 
