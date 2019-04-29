@@ -23,12 +23,15 @@ Summary.sourceFileArray.reverse().forEach(markdownName => {
   const link = '/' + baseName.match(/contents\/(.+)/)[1].replace(/-/g, '/')
   const content = Summary.fileMap[jsonName]
   const date = content.created_at.split('T')[0]
-  articles.push({
-    link: link,
-    title: content.title,
-    description: content.description,
-    date: date
-  })
+  const draft = content.draft
+  if (!draft) {
+    articles.push({
+      link: link,
+      title: content.title,
+      description: content.description,
+      date: date
+    })
+  }
 })
 
 export default {

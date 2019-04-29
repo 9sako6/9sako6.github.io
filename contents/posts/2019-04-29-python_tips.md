@@ -6,6 +6,7 @@ tags:
   - Python3
 created_at: 2019-04-29
 updated_at:
+draft: true
 ---
 
 # `sys.stdin.readline()`
@@ -31,7 +32,7 @@ updated_at:
 
 # `itertools.accumulate(iterable[, func])`
 
-`accumulate([1,2,3,4,5]) --> 1 3 6 10 15`
+`accumulate([1,2,3,4,5]) --> 1 3 6 10 15`のように、累積和をつくる。
 
 
 `accumulate([1,2,3,4,5], operator.mul) --> 1 2 6 24 120`
