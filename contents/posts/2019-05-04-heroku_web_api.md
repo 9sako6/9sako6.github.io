@@ -5,7 +5,7 @@ tags:
   - Heroku
   - WebAPI
 created_at: 2019-05-04
-updated_at: 
+updated_at: 2019-05-06
 ---
 
 
@@ -236,6 +236,40 @@ $ curl "http://localhost:3000/jp?name=9sako6"
 こんにちは 9sako6
 ```
 
+# CORS
+オリジン間リソース共有 (CORS, Cross-Origin Resource Sharing)を可能にします。
+ブラウザは「[同一オリジンポリシー](https://developer.mozilla.org/ja/docs/Web/Security/Same-origin_policy)」という仕組みを設け、異なるオリジンのリソースへのアクセスに制約をかけています。CORSは、この制約を一部解除し、異なるオリジン間でリソースを共有するための仕組みです。
+CROSにより、任意のフロントエンドのJavaScriptコードから自作APIにリクエストできるようになります。
+
+
+```js
+const express = require('express');
+const app = express();
+
+app.set('port', (process.env.PORT || 3000));
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", '*');
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+  res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
+  next();
+});
+
+app.get('/', function(request, response) {
+  response.send('Hello World!\n');
+});
+
+app.get('/jp', function(request, response) {
+  response.send('こんにちは\n');
+});
+
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'));
+});
+```
 
 # 参考
 [Node.js(Express) 事始め ＆ Heroku へデプロイまでのメモ - Qiita](https://qiita.com/hkusu/items/e46de8c446840c50aefe)
+
+[CORS(Cross-Origin Resource Sharing) - とほほのWWW入門](http://www.tohoho-web.com/ex/cors.html)
