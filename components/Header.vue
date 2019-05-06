@@ -7,9 +7,6 @@
       <router-link to="/about">
         <span class="navi-item">About</span>
       </router-link>
-      <router-link to="/policy">
-        <span class="navi-item">Privacy Policy</span>
-      </router-link>
     </Slide>
     <div id="top">
       <router-link to="/">

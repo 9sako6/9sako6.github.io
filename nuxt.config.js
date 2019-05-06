@@ -53,11 +53,7 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/pwa',
-    ['@nuxtjs/google-adsense', {
-      id: 'ca-pub-9751925136899831',
-      pageLevelAds: true
-    }]
+    '@nuxtjs/pwa'
   ],
 
   /*

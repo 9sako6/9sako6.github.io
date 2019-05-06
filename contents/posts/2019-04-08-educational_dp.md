@@ -6,6 +6,7 @@ tags:
   - Python3
 created_at: 2019-04-08
 updated_at: 2019-04-28
+draft: true
 ---
 
 [Educational DP Contest / DP まとめコンテスト](https://atcoder.jp/contests/dp/)

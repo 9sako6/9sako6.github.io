@@ -2,16 +2,18 @@
   <div>
     <Header />
     <nuxt />
-    <adsbygoogle />
+    <A8netFoot />
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header.vue'
+import A8netFoot from '~/components/A8netFoot.vue'
 
 export default {
   components: {
-    Header
+    Header,
+    A8netFoot
   }
 }
 </script>
