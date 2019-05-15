@@ -26,7 +26,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: pkg.description },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:site', content: '@9sako6' },
+      { name: 'twitter:image', content: './static/icon.png' },
+      { property: 'og:url', content: 'https://9sako6.me' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
