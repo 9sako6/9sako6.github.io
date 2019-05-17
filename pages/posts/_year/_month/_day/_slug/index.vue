@@ -1,0 +1,93 @@
+<template>
+  <section class="page">
+    <h1 id="page-title">{{ title }}</h1>
+    <div class="post-meta">
+      <time v-if="created_at">created: {{ created_at.split('T')[0] }}</time>
+      <time v-if="updated_at">, updated: {{ updated_at.split('T')[0] }}</time>
+    </div>
+    <div class="post-tags">
+      <span v-for="tag in tags" :key="tag.id" class="post-tag">{{ tag }}</span>
+    </div>
+    <div v-html="bodyHtml"></div>
+    <SnsButtons />
+    <div id="disqus_thread"></div>
+    <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      ;(function() {
+        // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement('script')
+        s.src = 'https://9sako6-garden.disqus.com/embed.js'
+        s.setAttribute('data-timestamp', +new Date())
+        ;(d.head || d.body).appendChild(s)
+      })()
+    </script>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
+    <!-- <script
+      src="https://utteranc.es/client.js"
+      repo="9sako6/9sako6-garden"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async
+    ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+  </section>
+</template>
+
+<script>
+// source: https://jmblog.jp/posts/2018-01-18/build-a-blog-with-nuxtjs-and-markdown-2/
+import { sourceFileArray } from '~/contents/posts/summary.json'
+import SnsButtons from '~/components/SnsButtons.vue'
+
+export default {
+  components: {
+    SnsButtons
+  },
+  validate({ params }) {
+    return sourceFileArray.includes(
+      `contents/posts/${params.year}-${params.month}-${params.day}-${
+        params.slug
+      }.md`
+    )
+  },
+  asyncData({ params }) {
+    return Object.assign(
+      {},
+      require(`~/contents/posts/${params.year}-${params.month}-${params.day}-${
+        params.slug
+      }.json`),
+      { params }
+    )
+  },
+  mounted: function() {
+    // tweet埋め込みを作成
+    const elems = this.bodyContent.match(/@@[\s\S]+?@@/g)
+    if (elems) {
+      elems.forEach(elem => {
+        elem.split('@@').forEach(tag => {
+          if (tag.match(/[<>]/)) {
+            this.bodyHtml = this.bodyHtml.replace(/@@[\s\S]+?@@/, `${tag}`)
+          }
+        })
+      })
+    }
+  }
+}
+</script>
+<style scoped>
+@import '@/assets/css/post.css';
+</style>

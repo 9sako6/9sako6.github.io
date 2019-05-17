@@ -1,0 +1,10 @@
+{
+  "bodyContent": "# Privacy Policy\n\n当サイトでは[Googleアドセンス](https://www.google.co.jp/adsense/start/#/?modal_active=none)を利用しており、\n第三者配信事業者や広告ネットワークの配信する広告がサイトに掲載されます。\n\nGoogleなどの第三者配信事業者は、Cookieを使用して、ユーザーがそのウェブサイトや他のウェブサイトに過去にアクセスした際の情報に基づいて広告を配信します。\nGoogleは広告Cookieを使用することにより、ユーザーがそのサイトや他のサイトにアクセスした際の情報に基づいて、Googleやそのパートナーが適切な広告をユーザーに表示できます。\n\nユーザーは、[広告設定](https://adssettings.google.com/authenticated)でパーソナライズ広告を無効にできます。または、[www.aboutads.info](http://optout.aboutads.info/?c=2&lang=EN) にアクセスすれば、パーソナライズ広告に使われる第三者配信事業者のCookieを無効にできます。",
+  "bodyHtml": "<h1>Privacy Policy</h1>\n<p>当サイトでは<a href=\"https://www.google.co.jp/adsense/start/#/?modal_active=none\">Googleアドセンス</a>を利用しており、\n第三者配信事業者や広告ネットワークの配信する広告がサイトに掲載されます。</p>\n<p>Googleなどの第三者配信事業者は、Cookieを使用して、ユーザーがそのウェブサイトや他のウェブサイトに過去にアクセスした際の情報に基づいて広告を配信します。\nGoogleは広告Cookieを使用することにより、ユーザーがそのサイトや他のサイトにアクセスした際の情報に基づいて、Googleやそのパートナーが適切な広告をユーザーに表示できます。</p>\n<p>ユーザーは、<a href=\"https://adssettings.google.com/authenticated\">広告設定</a>でパーソナライズ広告を無効にできます。または、<a href=\"http://optout.aboutads.info/?c=2&amp;lang=EN\">www.aboutads.info</a> にアクセスすれば、パーソナライズ広告に使われる第三者配信事業者のCookieを無効にできます。</p>\n",
+  "title": "Privacy Policy",
+  "dir": "contents",
+  "base": "policy.json",
+  "ext": ".json",
+  "sourceBase": "policy.md",
+  "sourceExt": ".md"
+}

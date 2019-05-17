@@ -1,29 +1,6 @@
-# blog
+# 9sako6 Garden
+My Blog.
 
-## Project setup
-```
-npm install
-```
+You can communicate with me as following:
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+twitter: @9sako6
