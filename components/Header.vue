@@ -94,11 +94,20 @@ export default {
   height: 100px;
   width: 100px;
   box-shadow: 1px 1px 15px #aaa;
-  border: solid 1px #35495e;
+  border: solid 0px #35495e;
   transition: box-shadow 0.3s ease;
+  animation: rotate-anime 1s ease 1;
 }
 .logo:hover {
   box-shadow: 1px 1px 20px #eee;
+}
+@keyframes rotate-anime {
+  0% {
+    transform: rotateY(-120deg);
+  }
+  100% {
+    transform: rotateY(0);
+  }
 }
 #top {
   text-align: center;
