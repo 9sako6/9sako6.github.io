@@ -10,6 +10,19 @@
 export default {
   asyncData() {
     return Object.assign({}, require(`~/contents/about.json`), {})
+  },
+  mounted: function() {
+    // tweet埋め込みを作成
+    const elems = this.bodyContent.match(/@@[\s\S]+?@@/g)
+    if (elems) {
+      elems.forEach(elem => {
+        elem.split('@@').forEach(tag => {
+          if (tag.match(/[<>]/)) {
+            this.bodyHtml = this.bodyHtml.replace(/@@[\s\S]+?@@/, `${tag}`)
+          }
+        })
+      })
+    }
   }
 }
 </script>

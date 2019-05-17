@@ -96,17 +96,26 @@ export default {
   box-shadow: 1px 1px 15px #aaa;
   border: solid 0px #35495e;
   transition: box-shadow 0.3s ease;
-  animation: rotate-anime 1s ease 1;
+  /* animation: rotate-anime 1s ease 1; */
 }
 .logo:hover {
   box-shadow: 1px 1px 20px #eee;
 }
 @keyframes rotate-anime {
   0% {
-    transform: rotateY(-120deg);
+    transform: rotate(-30deg);
   }
+  50% {
+    transform: rotate(30deg);
+  }
+  /* 70% {
+    transform: rotate(-30deg);
+  }
+  80% {
+    transform: rotate(30deg);
+  } */
   100% {
-    transform: rotateY(0);
+    transform: rotate(0);
   }
 }
 #top {
