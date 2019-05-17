@@ -3,10 +3,10 @@
     <Post
       v-for="article in articles"
       :key="article.id"
-      v-bind:link="article.link"
-      v-bind:title="article.title"
-      v-bind:description="article.description"
-      v-bind:date="article.date"
+      :link="article.link"
+      :title="article.title"
+      :description="article.description"
+      :date="article.date"
     />
   </section>
 </template>
@@ -35,11 +35,11 @@ Summary.sourceFileArray.reverse().forEach(markdownName => {
 })
 
 export default {
-  data: function() {
-    return { articles }
-  },
   components: {
     Post
+  },
+  data: function() {
+    return { articles }
   }
 }
 </script>

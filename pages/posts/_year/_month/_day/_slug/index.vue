@@ -6,9 +6,7 @@
       <time v-if="updated_at">, updated: {{ updated_at.split('T')[0] }}</time>
     </div>
     <div class="post-tags">
-      <span class="post-tag" v-for="tag in tags" v-bind:key="tag.id">{{
-        tag
-      }}</span>
+      <span v-for="tag in tags" :key="tag.id" class="post-tag">{{ tag }}</span>
     </div>
     <div v-html="bodyHtml"></div>
     <SnsButtons />

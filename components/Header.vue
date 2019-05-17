@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Slide class="my-burger-menu" right noOverlay width="200">
+    <Slide class="my-burger-menu" right no-overlay width="200">
       <router-link to="/">
         <span class="navi-item">Home</span>
       </router-link>

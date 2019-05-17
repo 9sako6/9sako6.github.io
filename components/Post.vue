@@ -1,5 +1,5 @@
 <template>
-  <a v-bind:href="link">
+  <a :href="link">
     <div class="post">
       <div class="post-date">{{ date }}</div>
       <div class="post-title">{{ title }}</div>
