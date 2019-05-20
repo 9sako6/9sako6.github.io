@@ -21,11 +21,6 @@ created_at: 2019-04-21
   - 言語処理学会第25回年次大会 (2019/03)
 - 2016年度 大実験成績優秀者表彰 @@<a href="https://www.nuee.nagoya-u.ac.jp/kyoiku/gakubu/experiment/h2016.php" target="_blank">[link]</a>@@
 
-## Conference Papers, Presentations (Non-Refereed)
-- ダイレクト広告コピー文の分析と自動生成 [[paper]](https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/P1-26.pdf) [poster]
-  - **平良裕汰朗**, 佐藤理史, 宮田玲, 今頭伸嘉
-  - 言語処理学会第25回年次大会, 名古屋, pp.406–409, 2019年3月 (優秀ポスター賞受賞)
-
 ## Skills, Licenses, Certifications
 - Paiza S
 
