@@ -2,26 +2,25 @@
   <div>
     <Header />
     <nuxt />
-    <A8netFoot />
+    <!-- <A8netFoot /> -->
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header.vue'
-import A8netFoot from '~/components/A8netFoot.vue'
+// import A8netFoot from '~/components/A8netFoot.vue'
 
 export default {
   components: {
-    Header,
-    A8netFoot
+    Header
+    // A8netFoot
   }
 }
 </script>
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

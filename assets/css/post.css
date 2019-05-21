@@ -22,17 +22,6 @@
   color: #999;
   margin: 2em 0 2em 0;
 }
-.post-tags {
-  display: inline;
-  /* margin: 2em 0 4em 0; */
-}
-.post-tag {
-  margin: 0 1em 1em 0;
-  display:inline-block;
-  border-radius: 0.2em;
-  padding: 0.4em 0.4em;
-  background-color: rgb(229, 250, 242);
-}
 .page >>> h1 {
   font-size: 1.8em;
   margin: 2em 0 1em 0;
@@ -97,10 +86,4 @@
 }
 .page >>> .hljs-comment {
   color: rgb(124, 175, 102);
-}
-.post-tag {
-  color: #35495e;
-}
-.post-tags >>> a:hover {
-  border-bottom: none;
 }

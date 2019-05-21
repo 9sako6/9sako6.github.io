@@ -28,6 +28,7 @@ export default {
 </script>
 
 <style scoped>
+@import '@/assets/css/tag.css';
 .post {
   text-align: left;
   padding: 20px;
@@ -42,17 +43,5 @@ export default {
 a {
   color: #35495e;
   text-decoration: none;
-}
-
-.post-tags {
-  display: inline;
-  /* margin: 2em 0 4em 0; */
-}
-.post-tag {
-  margin: 0 0.1em 0.1em 0;
-  display: inline-block;
-  border-radius: 0.2em;
-  padding: 0.4em 0.4em;
-  background-color: rgb(229, 250, 242);
 }
 </style>

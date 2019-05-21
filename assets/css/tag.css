@@ -1,0 +1,20 @@
+.post-tag {
+  color: #35495e;
+}
+.post-tags >>> a:hover {
+  border-bottom: none;
+}
+.post-tags {
+  display: inline-block;
+  margin: 1em 0 1em 0;
+}
+.post-tag {
+  margin: 0 1em 1em 0;
+  display:inline-block;
+  border-radius: 1em;
+  padding: 0.1em 0.5em;
+  border: solid 1px #e6e6e6;
+}
+.post-tag:hover {
+  color: rgb(72, 142, 118);
+}

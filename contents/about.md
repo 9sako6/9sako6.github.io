@@ -19,7 +19,6 @@ created_at: 2019-04-21
 ## Awards
 - 優秀ポスター賞 @@<a href="/posts_images/about/nlp2019.jpg" target="_blank">[link]</a>@@
   - 言語処理学会第25回年次大会 (2019/03)
-- 2016年度 大実験成績優秀者表彰 @@<a href="https://www.nuee.nagoya-u.ac.jp/kyoiku/gakubu/experiment/h2016.php" target="_blank">[link]</a>@@
 
 ## Skills, Licenses, Certifications
 - Paiza S
