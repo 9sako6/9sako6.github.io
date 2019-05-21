@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <h1>{{ title }}</h1>
+  <section class="container">
+    <h1>{{ this.$route.params.tag }}</h1>
     <Post
       v-for="article in articles"
       :key="article.id"
@@ -17,37 +17,53 @@
 import Post from '~/components/Post.vue'
 import { TagsMap } from '~/contents/posts/tags.json'
 
-// console.log(this.$route.params)
-
 export default {
   components: {
     Post
   },
-  computed: {
-    title: function() {
-      return this.$route.params.tag
-    },
-    articles: function() {
-      const tagName = this.$route.params.tag
-      const articles = []
-      TagsMap[tagName].forEach(article => {
-        Object.keys(article).forEach(markdownName => {
-          const baseName = markdownName.match(/([^.]+)/)[0]
-          const link =
-            '/' + baseName.match(/contents\/(.+)/)[1].replace(/-/g, '/')
-          // const draft = article[markdownName].draft
-          console.log(link)
-          articles.push({
-            link: link,
-            title: article[markdownName].title,
-            description: article[markdownName].description,
-            date: article[markdownName].created_at.split('T')[0],
-            tags: article[markdownName].tags
-          })
+  asyncData({ params }) {
+    const articles = []
+    TagsMap[params.tag].forEach(article => {
+      Object.keys(article).forEach(markdownName => {
+        const baseName = markdownName.match(/([^.]+)/)[0]
+        const link =
+          '/' + baseName.match(/contents\/(.+)/)[1].replace(/-/g, '/')
+        articles.push({
+          link: link,
+          title: article[markdownName].title,
+          description: article[markdownName].description,
+          date: article[markdownName].created_at.split('T')[0],
+          tags: article[markdownName].tags
         })
       })
-      return 'hoge'
-    }
+    })
+    return { articles }
   }
 }
 </script>
+<style scoped>
+@media screen and (max-width: 767px) {
+  .container {
+    width: 80%;
+    margin: 10% 10% 25% 10%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 50%;
+    margin: 5% 25% 10% 25%;
+  }
+}
+.container {
+  color: #35495e;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+h1 {
+  text-align: left;
+  font-size: 1.8em;
+  margin: 2em 0 1em 0;
+  border-bottom: solid 1px #d8d8d8;
+}
+</style>
