@@ -15,7 +15,8 @@
 
 <script>
 import Post from '~/components/Post.vue'
-import { TagsMap, TagsList } from '~/contents/posts/tags.json'
+import { TagsMap } from '~/contents/posts/tags_map.json'
+import { TagsList } from '~/contents/posts/tags_list.json'
 
 export default {
   components: {

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { TagsList } from '~/contents/posts/tags.json'
+import { TagsList } from '~/contents/posts/tags_list.json'
 
 export default {
   data() {

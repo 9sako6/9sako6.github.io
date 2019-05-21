@@ -3,6 +3,7 @@ title: Educational DP Contest / DP まとめコンテストをPython3で解く
 description: Educational DP Contest / DP まとめコンテストを解いて、生やした考察やミスりポイント、Tipsを記録していく記事...
 tags:
   - 競技プログラミング
+  - 雑記
   - Python3
 created_at: 2019-04-08
 updated_at: 2019-04-28

@@ -1,0 +1,44 @@
+{
+  "TagsList": [
+    {
+      "name": "競技プログラミング",
+      "count": 4
+    },
+    {
+      "name": "雑記",
+      "count": 5
+    },
+    {
+      "name": "Python3",
+      "count": 4
+    },
+    {
+      "name": "Ruby",
+      "count": 4
+    },
+    {
+      "name": "Go",
+      "count": 1
+    },
+    {
+      "name": "TypeScript",
+      "count": 1
+    },
+    {
+      "name": "デザイン",
+      "count": 1
+    },
+    {
+      "name": "Heroku",
+      "count": 1
+    },
+    {
+      "name": "WebAPI",
+      "count": 1
+    },
+    {
+      "name": "BERT",
+      "count": 1
+    }
+  ]
+}
