@@ -1,17 +1,20 @@
 <template>
   <header>
     <Slide class="my-burger-menu" right no-overlay width="200">
-      <router-link to="/">
+      <nuxt-link to="/">
         <span class="navi-item">Home</span>
-      </router-link>
-      <router-link to="/about">
+      </nuxt-link>
+      <nuxt-link to="/about">
         <span class="navi-item">About</span>
-      </router-link>
+      </nuxt-link>
+      <nuxt-link to="/tags">
+        <span class="navi-item">Tags</span>
+      </nuxt-link>
     </Slide>
     <div id="top">
-      <router-link to="/">
+      <nuxt-link to="/">
         <img alt="logo" class="logo" src="~/static/icon.png" />
-      </router-link>
+      </nuxt-link>
       <h1 class="title">9sako6 Garden</h1>
       <div class="subtitle">Web Application / Competitive Programming</div>
     </div>

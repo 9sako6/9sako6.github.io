@@ -7,6 +7,7 @@
       :title="article.title"
       :description="article.description"
       :date="article.date"
+      :tags="article.tags"
     />
   </section>
 </template>
@@ -24,12 +25,14 @@ Summary.sourceFileArray.reverse().forEach(markdownName => {
   const content = Summary.fileMap[jsonName]
   const date = content.created_at.split('T')[0]
   const draft = content.draft
+  const tags = content.tags
   if (!draft) {
     articles.push({
       link: link,
       title: content.title,
       description: content.description,
-      date: date
+      date: date,
+      tags: tags
     })
   }
 })
