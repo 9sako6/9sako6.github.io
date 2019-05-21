@@ -9,12 +9,24 @@
   margin-top: 0.5em;
 }
 .post-tag {
-  margin: 0 1em 0 0;
   display:inline-block;
-  border-radius: 1em;
-  padding: 0.1em 0.5em;
   border: solid 1px #e6e6e6;
 }
 .post-tag:hover {
   color: rgb(72, 142, 118);
+}
+@media screen and (max-width: 767px) {
+  .post-tag {
+    font-size: 0.9em;
+    margin: 0 0.5em 0 0;
+    border-radius: 1em;
+    padding: 0.1em 0.5em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-tag {
+    margin: 0 1em 0 0;
+    border-radius: 1em;
+    padding: 0.1em 0.5em;
+  }
 }

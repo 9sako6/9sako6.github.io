@@ -1,5 +1,27 @@
 <template>
-  <header>
+  <header class="navbar">
+    <nuxt-link to="/" class="nav-link">
+      <span class="site-title">9sako6 Garden</span>
+    </nuxt-link>
+    <div class="links can-hide">
+      <nav class="nav-links">
+        <nuxt-link to="/" class="nav-link">
+          <div class="nav-item">
+            <span class="nav-title">Home</span>
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/about" class="nav-link">
+          <div class="nav-item">
+            <span class="nav-title">About</span>
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/tags" class="nav-link">
+          <div class="nav-item">
+            <span class="nav-title">Tags</span>
+          </div>
+        </nuxt-link>
+      </nav>
+    </div>
     <Slide class="my-burger-menu" right no-overlay width="200">
       <nuxt-link to="/">
         <span class="navi-item">Home</span>
@@ -11,13 +33,14 @@
         <span class="navi-item">Tags</span>
       </nuxt-link>
     </Slide>
+    <!-- <
     <div id="top">
       <nuxt-link to="/">
         <img alt="logo" class="logo" src="~/static/icon.png" />
       </nuxt-link>
       <h1 class="title">9sako6 Garden</h1>
       <div class="subtitle">Web Application / Competitive Programming</div>
-    </div>
+    </div> -->
   </header>
 </template>
 
@@ -31,29 +54,97 @@ export default {
 </script>
 
 <style scoped>
-.navi-item:hover {
-  opacity: 0.5;
+.navbar {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.6rem;
+  padding: 0.7rem 1.5rem;
+  line-height: 2.2rem;
+  border-bottom: 1px solid #eaecef;
+  display: inline-block;
+  background-color: #ffffff;
+}
+.nav-link {
+  border-bottom: none;
+  text-decoration: none;
+}
+.site-title {
+  font-weight: 700;
+  position: relative;
+  font-size: 1.3em;
+  color: #35495e;
+}
+.logo {
+  height: 2em;
+}
+.links {
+  position: absolute;
+  white-space: nowrap;
+  display: flex;
+  right: 1.5rem;
+  top: 0.7rem;
+}
+.nav-links {
+  display: inline-block;
+}
+.nav-links a {
+  line-height: 1.4rem;
+}
+.nav-item {
+  margin-right: 1em;
+  position: relative;
+  display: inline-block;
+}
+.nav-title {
+  color: #35495e;
+  font-size: 1.1em;
+  /* color: rgb(72, 142, 118); */
+}
+.nav-item:hover {
+  border-bottom: solid 2px rgb(72, 142, 118);
 }
 @media screen and (max-width: 767px) {
-  .my-burger-menu >>> .bm-burger-button {
-    width: 24px;
-    height: 20px;
-  }
-  .my-burger-menu >>> .navi-item {
-    font-size: 1em;
+  .can-hide {
+    display: none;
   }
 }
 @media screen and (min-width: 768px) {
-  .my-burger-menu >>> .navi-item {
-    font-size: 1.2em;
+  .my-burger-menu {
+    display: none;
   }
 }
+.navi-item:hover {
+  opacity: 0.5;
+}
+.my-burger-menu >>> .bm-burger-button {
+  top: 20px;
+  width: 24px;
+  height: 20px;
+}
+.my-burger-menu >>> .navi-item {
+  font-size: 1em;
+}
 .my-burger-menu >>> .bm-cross-button {
-  right: 0 !important;
+  top: 20px;
+  right: 24px !important;
 }
 .my-burger-menu >>> .bm-cross {
   height: 24px !important;
+  background-color: #35495e;
 }
+.my-burger-menu >>> .bm-menu {
+  color: #35495e;
+  transition: 0.2s ease;
+  background-color: #ffffff;
+  border-left: 1px solid #eaecef;
+}
+.navi-item {
+  color: #35495e;
+}
+/*
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -99,7 +190,6 @@ export default {
   box-shadow: 1px 1px 15px #aaa;
   border: solid 0px #35495e;
   transition: box-shadow 0.3s ease;
-  /* animation: rotate-anime 1s ease 1; */
 }
 .logo:hover {
   box-shadow: 1px 1px 20px #eee;
@@ -111,12 +201,6 @@ export default {
   50% {
     transform: rotate(30deg);
   }
-  /* 70% {
-    transform: rotate(-30deg);
-  }
-  80% {
-    transform: rotate(30deg);
-  } */
   100% {
     transform: rotate(0);
   }
@@ -124,4 +208,5 @@ export default {
 #top {
   text-align: center;
 }
+*/
 </style>
