@@ -15,11 +15,20 @@
 
 <script>
 import Post from '~/components/Post.vue'
-import { TagsMap } from '~/contents/posts/tags.json'
+import { TagsMap, TagsList } from '~/contents/posts/tags.json'
 
 export default {
   components: {
     Post
+  },
+  validate({ params }) {
+    let flag = false
+    TagsList.forEach(tag => {
+      if (params.tag === tag.name) {
+        flag = true
+      }
+    })
+    return flag
   },
   asyncData({ params }) {
     const articles = []
