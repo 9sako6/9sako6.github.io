@@ -3,6 +3,9 @@ title: Google ColabでBERTの学習済みモデルを動かす
 description: 'BERTを動かし、GLUEタスクを解いてみる'
 tags:
   - BERT
+  - NLP
+  - DeepLearning
+  - Google Colab
 created_at: 2019-05-15
 updated_at: 
 ---

@@ -31,6 +31,10 @@ tags_count.each do |tag_name, tag_count|
   tags_list << { "name" => tag_name, "count" => tag_count }
 end
 
+tags_list.sort_by! do |tag_info|
+  tag_info["count"]
+end.reverse!
+
 File.open("./contents/posts/tags_list.json", "w") do |file|
   file.puts(JSON.pretty_generate({ "TagsList" => tags_list }))
 end

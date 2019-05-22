@@ -9,7 +9,7 @@
   ],
   "created_at": "1970-01-01T00:00:00.000Z",
   "updated_at": "2019-05-21T00:00:00.000Z",
-  "draft": false,
+  "draft": true,
   "bodyContent": "ABC F問題をひたすら解いて、生やした考察やミスりポイント、Tipsを記録していく記事。\nくさころが文章を書く練習をする記事でもある。\n\n\n# 問題ステータス\n各問題で使用した手法や考え方のメモと、くさころの個人的な解答状況。\nStatusは「o: 完全に理解した」、「r: 解いたけど要復習」、「x: まったくわからない」を意味する。\n\n|Contest Name|Comment|Status|\n|:----:|----|:----:|\n|ABC126|`XOR`|r|",
   "bodyHtml": "<p>ABC F問題をひたすら解いて、生やした考察やミスりポイント、Tipsを記録していく記事。\nくさころが文章を書く練習をする記事でもある。</p>\n<h1>問題ステータス</h1>\n<p>各問題で使用した手法や考え方のメモと、くさころの個人的な解答状況。\nStatusは「o: 完全に理解した」、「r: 解いたけど要復習」、「x: まったくわからない」を意味する。</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align:center\">Contest Name</th>\n<th>Comment</th>\n<th style=\"text-align:center\">Status</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align:center\">ABC126</td>\n<td><code>XOR</code></td>\n<td style=\"text-align:center\">r</td>\n</tr>\n</tbody>\n</table>\n",
   "dir": "contents/posts",

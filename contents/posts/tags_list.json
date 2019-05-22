@@ -1,35 +1,55 @@
 {
   "TagsList": [
     {
+      "name": "AtCoder",
+      "count": 3
+    },
+    {
       "name": "競技プログラミング",
-      "count": 4
+      "count": 3
+    },
+    {
+      "name": "ABC-D",
+      "count": 2
     },
     {
       "name": "雑記",
-      "count": 5
+      "count": 2
+    },
+    {
+      "name": "Union-Find木",
+      "count": 2
     },
     {
       "name": "Python3",
-      "count": 4
+      "count": 2
+    },
+    {
+      "name": "DP",
+      "count": 1
+    },
+    {
+      "name": "DeepLearning",
+      "count": 1
+    },
+    {
+      "name": "NLP",
+      "count": 1
+    },
+    {
+      "name": "BERT",
+      "count": 1
     },
     {
       "name": "Ruby",
-      "count": 4
-    },
-    {
-      "name": "Go",
       "count": 1
     },
     {
-      "name": "TypeScript",
+      "name": "重み付きUnion-Find木",
       "count": 1
     },
     {
-      "name": "デザイン",
-      "count": 1
-    },
-    {
-      "name": "Heroku",
+      "name": "ABC-C",
       "count": 1
     },
     {
@@ -37,7 +57,27 @@
       "count": 1
     },
     {
-      "name": "BERT",
+      "name": "Heroku",
+      "count": 1
+    },
+    {
+      "name": "デザイン",
+      "count": 1
+    },
+    {
+      "name": "TypeScript",
+      "count": 1
+    },
+    {
+      "name": "Go",
+      "count": 1
+    },
+    {
+      "name": "はじめまして",
+      "count": 1
+    },
+    {
+      "name": "Google Colab",
       "count": 1
     }
   ]

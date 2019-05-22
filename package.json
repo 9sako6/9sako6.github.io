@@ -16,11 +16,14 @@
     "about": "processmd contents/about.md --stdout --outputDir contents/",
     "policy": "processmd contents/policy.md --stdout --outputDir contents/",
     "deploy": "npm run about && npm run md && ruby lib/make_tags_json.rb && npm run build && firebase deploy",
-    "delcache": "rm -rf node_modules/.cache/hard-source/"
+    "delcache": "rm -rf node_modules/.cache/hard-source/",
+    "new": "ruby lib/make_new_markdown.rb",
+    "tag": "ruby lib/make_tags_json.rb"
   },
   "dependencies": {
     "@nuxtjs/google-adsense": "^1.1.3",
     "@nuxtjs/pwa": "^2.6.0",
+    "@nuxtjs/sitemap": "^1.2.0",
     "cross-env": "^5.2.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "nuxt": "^2.6.3",
