@@ -94,8 +94,7 @@ export default {
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://9sako6.me',
-    generate: true,
-    exclude: [],
+    exclude: ['/policy'],
     routes: routes
   },
 
