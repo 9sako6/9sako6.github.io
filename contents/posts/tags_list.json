@@ -9,11 +9,7 @@
       "count": 3
     },
     {
-      "name": "ABC-D",
-      "count": 2
-    },
-    {
-      "name": "雑記",
+      "name": "Python3",
       "count": 2
     },
     {
@@ -21,11 +17,27 @@
       "count": 2
     },
     {
-      "name": "Python3",
+      "name": "雑記",
       "count": 2
     },
     {
+      "name": "ABC-D",
+      "count": 2
+    },
+    {
+      "name": "重み付きUnion-Find木",
+      "count": 1
+    },
+    {
+      "name": "ABC-C",
+      "count": 1
+    },
+    {
       "name": "DP",
+      "count": 1
+    },
+    {
+      "name": "Google Colab",
       "count": 1
     },
     {
@@ -38,18 +50,6 @@
     },
     {
       "name": "BERT",
-      "count": 1
-    },
-    {
-      "name": "Ruby",
-      "count": 1
-    },
-    {
-      "name": "重み付きUnion-Find木",
-      "count": 1
-    },
-    {
-      "name": "ABC-C",
       "count": 1
     },
     {
@@ -77,7 +77,7 @@
       "count": 1
     },
     {
-      "name": "Google Colab",
+      "name": "Ruby",
       "count": 1
     }
   ]

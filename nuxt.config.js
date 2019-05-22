@@ -4,14 +4,17 @@ import pkg from './package'
  ** make routes to generate static pages of dynamic routing
  */
 
-import Summary from './contents/posts/summary.json'
+import { sourceFileArray, fileMap } from './contents/posts/summary.json'
 
 const routes = []
 
-Summary.sourceFileArray.reverse().forEach(markdownName => {
+sourceFileArray.reverse().forEach(markdownName => {
   const baseName = markdownName.match(/([^.]+)/)[0]
+  const jsonName = baseName + '.json'
   const link = '/' + baseName.match(/contents\/(.+)/)[1].replace(/-/g, '/')
-  routes.push(link)
+  if (!fileMap[jsonName].draft){
+    routes.push(link)
+  }
 })
 console.log(routes)
 
@@ -60,7 +63,10 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa'],
+  modules: [
+    ['@nuxtjs/pwa'],
+    ['@nuxtjs/sitemap']
+  ],
 
   /*
    ** Build configuration
@@ -80,6 +86,17 @@ export default {
         })
       }
     }
+  },
+
+  /*
+   ** sitemap configuration
+   */
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://9sako6.me',
+    generate: true,
+    exclude: [],
+    routes: routes
   },
 
   generate: {
