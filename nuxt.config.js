@@ -12,7 +12,7 @@ sourceFileArray.reverse().forEach(markdownName => {
   const baseName = markdownName.match(/([^.]+)/)[0]
   const jsonName = baseName + '.json'
   const link = '/' + baseName.match(/contents\/(.+)/)[1].replace(/-/g, '/')
-  if (!fileMap[jsonName].draft){
+  if (!fileMap[jsonName].draft) {
     routes.push(link)
   }
 })
@@ -32,8 +32,7 @@ export default {
       { hid: 'description', name: 'description', content: pkg.description },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@9sako6' },
-      { name: 'twitter:image', content: './static/icon.png' },
-      { property: 'og:url', content: 'https://9sako6.me' }
+      { name: 'twitter:image', content: './static/icon.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -63,10 +62,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    ['@nuxtjs/pwa'],
-    ['@nuxtjs/sitemap']
-  ],
+  modules: [['@nuxtjs/pwa'], ['@nuxtjs/sitemap']],
 
   /*
    ** Build configuration

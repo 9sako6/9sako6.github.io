@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div>
     <div id="disqus_thread"></div>
     <script>
       /**
@@ -26,13 +26,13 @@
         >comments powered by Disqus.</a
       ></noscript
     >
-  </div>
-  <!-- <script
-      src="https://utteranc.es/client.js"
-      repo="9sako6/9sako6-garden"
-      issue-term="pathname"
-      theme="github-light"
-      crossorigin="anonymous"
-      async
-    ></script> -->
+  </div> -->
+  <script
+    src="https://utteranc.es/client.js"
+    repo="9sako6/9sako6-garden"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async
+  ></script>
 </template>

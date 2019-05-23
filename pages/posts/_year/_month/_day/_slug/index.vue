@@ -45,7 +45,9 @@ export default {
     )
   },
   mounted: function() {
-    // tweet埋め込みを作成
+    /**
+     * draw tag embedding (e.g. tweet embedding)
+     */
     const elems = this.bodyContent.match(/@@[\s\S]+?@@/g)
     if (elems) {
       elems.forEach(elem => {
@@ -56,6 +58,20 @@ export default {
         })
       })
     }
+    /**
+     * add meta tag
+     */
+    this.url = `https://9sako6.me/posts/${this.params.year}/${
+      this.params.month
+    }/${this.params.day}/${this.params.slug}`
+    const headElem = document.getElementsByTagName('head')[0]
+    const attrList = ['title', 'url', 'description']
+    attrList.forEach(attr => {
+      const metaElem = document.createElement('meta')
+      metaElem.setAttribute('property', 'og:' + attr)
+      metaElem.setAttribute('content', this[attr])
+      headElem.appendChild(metaElem)
+    })
   }
 }
 </script>
