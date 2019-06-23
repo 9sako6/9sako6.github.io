@@ -13,6 +13,10 @@
       "count": 2
     },
     {
+      "name": "ABC-D",
+      "count": 2
+    },
+    {
       "name": "Union-Find木",
       "count": 2
     },
@@ -21,8 +25,28 @@
       "count": 2
     },
     {
-      "name": "ABC-D",
-      "count": 2
+      "name": "NLP",
+      "count": 1
+    },
+    {
+      "name": "BERT",
+      "count": 1
+    },
+    {
+      "name": "WebAPI",
+      "count": 1
+    },
+    {
+      "name": "Heroku",
+      "count": 1
+    },
+    {
+      "name": "はじめまして",
+      "count": 1
+    },
+    {
+      "name": "Go",
+      "count": 1
     },
     {
       "name": "重み付きUnion-Find木",
@@ -37,14 +61,6 @@
       "count": 1
     },
     {
-      "name": "WebAPI",
-      "count": 1
-    },
-    {
-      "name": "Heroku",
-      "count": 1
-    },
-    {
       "name": "Google Colab",
       "count": 1
     },
@@ -53,27 +69,11 @@
       "count": 1
     },
     {
-      "name": "NLP",
-      "count": 1
-    },
-    {
-      "name": "BERT",
-      "count": 1
-    },
-    {
       "name": "デザイン",
       "count": 1
     },
     {
       "name": "TypeScript",
-      "count": 1
-    },
-    {
-      "name": "Go",
-      "count": 1
-    },
-    {
-      "name": "はじめまして",
       "count": 1
     },
     {
