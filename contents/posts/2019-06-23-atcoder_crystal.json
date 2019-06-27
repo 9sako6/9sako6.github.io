@@ -1,0 +1,19 @@
+{
+  "title": "Crystalで競プロ(AtCoder)をするときのTips",
+  "description": null,
+  "tags": [
+    "AtCoder",
+    "競技プログラミング",
+    "Crystal"
+  ],
+  "created_at": "2019-06-23T00:00:00.000Z",
+  "updated_at": null,
+  "draft": true,
+  "bodyContent": "Rubyとの違いを重点的に\n\n# 環境\n|サイト|バージョン|日付|\n|:---:|:---:|:---:|\nAtcoder | Crystal (0.20.5)|2019/06/23現在|\n\n# 入力の受け取り\n```ruby\nn = gets.not_nil!.to_i                  # 整数\ns = gets.not_nil!                       # 文字列他\ns = read_line\na = gets.not_nil!.split.map(&.to_i)     # スペース区切りの整数\nd = Array.new(n) { gets.not_nil!.to_i } # 縦並びのn個の整数AtCoderでうごかん\n```\nN = gets.not_nil!.to_i\nみたいに大文字にするとバグる\n\n\n&.to_i, &:to_i\n\n文字列はダブルクオーテーションでくくる\n'' で囲った値は Char 型のリテラルです\n```ruby\n# ABC081A - Placing Marbles\nputs gets.not_nil!.count('1') # Correct\nputs gets.not_nil!.count(\"1\") # Wrong\n```\n\nHash\ncnt = Hash(String, Int32).new(0)\n\nstring << できない？\n\ninjectはないっぽい\n\narrayの和をもとめるとき、reduceよりsumがはやいっぽい？\n\nputs arrayやるとp表示みたいになる\n\n[0...k]よりlast(k), first(k)とかがはやそう\n\nsort.reverseよりは.sort_by{|x| -x}がちょっとはやい?いや、そうでもないかも",
+  "bodyHtml": "<p>Rubyとの違いを重点的に</p>\n<h1>環境</h1>\n<table>\n<thead>\n<tr>\n<th style=\"text-align:center\">サイト</th>\n<th style=\"text-align:center\">バージョン</th>\n<th style=\"text-align:center\">日付</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align:center\">Atcoder</td>\n<td style=\"text-align:center\">Crystal (0.20.5)</td>\n<td style=\"text-align:center\">2019/06/23現在</td>\n</tr>\n</tbody>\n</table>\n<h1>入力の受け取り</h1>\n<pre><code class=\"hljs\">n = gets.not_nil!.to_i                  <span class=\"hljs-comment\"># 整数</span>\ns = gets.not_nil!                       <span class=\"hljs-comment\"># 文字列他</span>\ns = read_line\na = gets.not_nil!.split.map(&amp;.to_i)     <span class=\"hljs-comment\"># スペース区切りの整数</span>\nd = Array.new(n) { gets.not_nil!.to_i } <span class=\"hljs-comment\"># 縦並びのn個の整数AtCoderでうごかん</span></code></pre><p>N = gets.not_nil!.to_i\nみたいに大文字にするとバグる</p>\n<p>&amp;.to_i, &amp;:to_i</p>\n<p>文字列はダブルクオーテーションでくくる\n'' で囲った値は Char 型のリテラルです</p>\n<pre><code class=\"hljs\"><span class=\"hljs-comment\"># ABC081A - Placing Marbles</span>\nputs gets.not_nil!.count(<span class=\"hljs-string\">'1'</span>) <span class=\"hljs-comment\"># Correct</span>\nputs gets.not_nil!.count(<span class=\"hljs-string\">\"1\"</span>) <span class=\"hljs-comment\"># Wrong</span></code></pre><p>Hash\ncnt = Hash(String, Int32).new(0)</p>\n<p>string &lt;&lt; できない？</p>\n<p>injectはないっぽい</p>\n<p>arrayの和をもとめるとき、reduceよりsumがはやいっぽい？</p>\n<p>puts arrayやるとp表示みたいになる</p>\n<p>[0...k]よりlast(k), first(k)とかがはやそう</p>\n<p>sort.reverseよりは.sort_by{|x| -x}がちょっとはやい?いや、そうでもないかも</p>\n",
+  "dir": "contents/posts",
+  "base": "2019-06-23-atcoder_crystal.json",
+  "ext": ".json",
+  "sourceBase": "2019-06-23-atcoder_crystal.md",
+  "sourceExt": ".md"
+}
