@@ -24,11 +24,11 @@ created_at: 2019-04-21
 - Paiza S
 
 ## Languages
-- Python3
 - Ruby
+- Python3
+- C/C++
 - JavaScript, TypeScript
 - HTML, CSS
-- C/C++ （競技プログラミング専用）
 
 ## Frameworks
 - Vue.js, Nuxt.js（ほんのすこしわかる）

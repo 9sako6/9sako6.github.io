@@ -1,0 +1,17 @@
+{
+  "title": "発表の留意点",
+  "description": null,
+  "tags": [
+    "雑記"
+  ],
+  "created_at": "2019-07-02T00:00:00.000Z",
+  "updated_at": null,
+  "draft": true,
+  "bodyContent": "発表に関してはかなりしごかれていると思うんですが、\n研究室生活で学んだ\n誰かの参考にはなるかもしれないので書きます。\n\n## 発表スライド\n\n[](https://engineer.blog.lancers.jp/2018/07/how_to_write_engineering_blog/)\n\n## ネタの集め方\n\n本文は\n自分がなんども調べていることについて\nかいて覚える",
+  "bodyHtml": "<p>発表に関してはかなりしごかれていると思うんですが、\n研究室生活で学んだ\n誰かの参考にはなるかもしれないので書きます。</p>\n<h2>発表スライド</h2>\n<p><a href=\"https://engineer.blog.lancers.jp/2018/07/how_to_write_engineering_blog/\"></a></p>\n<h2>ネタの集め方</h2>\n<p>本文は\n自分がなんども調べていることについて\nかいて覚える</p>\n",
+  "dir": "contents/posts",
+  "base": "2019-07-02-attention.json",
+  "ext": ".json",
+  "sourceBase": "2019-07-02-attention.md",
+  "sourceExt": ".md"
+}

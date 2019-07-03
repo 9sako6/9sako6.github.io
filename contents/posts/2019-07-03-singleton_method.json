@@ -1,0 +1,17 @@
+{
+  "title": "そもそも、特異メソッドを定義する方法には",
+  "description": null,
+  "tags": [
+    null
+  ],
+  "created_at": "2019-07-03T00:00:00.000Z",
+  "updated_at": null,
+  "draft": true,
+  "bodyContent": "そもそも、特異メソッドを定義する方法には\n- 特異メソッド形式\n  - `def instance_name.method_name`のようにして定義する方法\n- 特異クラス形式\n  - `class << instance_name`で特異クラスのインスタンスメソッドとして定義する方法\nがある。\n\n特異メソッド形式による定義の例：\n\n`def instance_name.method_name`というのはこういう意味。\n\n```ruby\nclass Bar\n  def Bar.hoge\n    \"hoge\"\n  end\nend\n```\n\n```ruby\n# 普通はselfを使う\nclass Bar\n  def self.hoge\n    \"hoge\"\n  end\nend\n```\n\n```ruby\n# class ClassNameという記法は\n# ClassNameというグローバル定数に\n# Classクラスのインスタンスを作成して代入するという意味\n# なのでこんな書き方もある\nBar = Class.new\n\ndef Bar.hoge\n  \"hoge\"\nend\n```\n\n特異クラス形式による定義の例：\n\n```ruby\n```",
+  "bodyHtml": "<p>そもそも、特異メソッドを定義する方法には</p>\n<ul>\n<li>特異メソッド形式\n<ul>\n<li><code>def instance_name.method_name</code>のようにして定義する方法</li>\n</ul>\n</li>\n<li>特異クラス形式\n<ul>\n<li><code>class &lt;&lt; instance_name</code>で特異クラスのインスタンスメソッドとして定義する方法\nがある。</li>\n</ul>\n</li>\n</ul>\n<p>特異メソッド形式による定義の例：</p>\n<p><code>def instance_name.method_name</code>というのはこういう意味。</p>\n<pre><code class=\"hljs\"><span class=\"hljs-class\"><span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">Bar</span></span>\n  <span class=\"hljs-function\"><span class=\"hljs-keyword\">def</span> <span class=\"hljs-title\">Bar</span>.<span class=\"hljs-title\">hoge</span></span>\n    <span class=\"hljs-string\">\"hoge\"</span>\n  <span class=\"hljs-keyword\">end</span>\n<span class=\"hljs-keyword\">end</span></code></pre><pre><code class=\"hljs\"><span class=\"hljs-comment\"># 普通はselfを使う</span>\n<span class=\"hljs-class\"><span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">Bar</span></span>\n  <span class=\"hljs-function\"><span class=\"hljs-keyword\">def</span> <span class=\"hljs-title\">self</span>.<span class=\"hljs-title\">hoge</span></span>\n    <span class=\"hljs-string\">\"hoge\"</span>\n  <span class=\"hljs-keyword\">end</span>\n<span class=\"hljs-keyword\">end</span></code></pre><pre><code class=\"hljs\"><span class=\"hljs-comment\"># class ClassNameという記法は</span>\n<span class=\"hljs-comment\"># ClassNameというグローバル定数に</span>\n<span class=\"hljs-comment\"># Classクラスのインスタンスを作成して代入するという意味</span>\n<span class=\"hljs-comment\"># なのでこんな書き方もある</span>\nBar = Class.new\n\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">def</span> <span class=\"hljs-title\">Bar</span>.<span class=\"hljs-title\">hoge</span></span>\n  <span class=\"hljs-string\">\"hoge\"</span>\n<span class=\"hljs-keyword\">end</span></code></pre><p>特異クラス形式による定義の例：</p>\n<pre><code class=\"hljs\"></code></pre>",
+  "dir": "contents/posts",
+  "base": "2019-07-03-singleton_method.json",
+  "ext": ".json",
+  "sourceBase": "2019-07-03-singleton_method.md",
+  "sourceExt": ".md"
+}

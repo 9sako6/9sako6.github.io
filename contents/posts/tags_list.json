@@ -9,15 +9,7 @@
       "count": 3
     },
     {
-      "name": "ABC-D",
-      "count": 2
-    },
-    {
       "name": "Union-Find木",
-      "count": 2
-    },
-    {
-      "name": "Python3",
       "count": 2
     },
     {
@@ -25,12 +17,16 @@
       "count": 2
     },
     {
-      "name": "Heroku",
-      "count": 1
+      "name": "ABC-D",
+      "count": 2
     },
     {
-      "name": "DP",
-      "count": 1
+      "name": "Python3",
+      "count": 2
+    },
+    {
+      "name": "Ruby",
+      "count": 2
     },
     {
       "name": "はじめまして",
@@ -38,10 +34,6 @@
     },
     {
       "name": "重み付きUnion-Find木",
-      "count": 1
-    },
-    {
-      "name": "Ruby",
       "count": 1
     },
     {
@@ -61,6 +53,14 @@
       "count": 1
     },
     {
+      "name": "WebAPI",
+      "count": 1
+    },
+    {
+      "name": "Heroku",
+      "count": 1
+    },
+    {
       "name": "デザイン",
       "count": 1
     },
@@ -73,7 +73,7 @@
       "count": 1
     },
     {
-      "name": "WebAPI",
+      "name": "DP",
       "count": 1
     },
     {
