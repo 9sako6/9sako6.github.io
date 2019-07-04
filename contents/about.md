@@ -17,7 +17,7 @@ created_at: 2019-04-21
 
 
 ## Awards
-- 優秀ポスター賞 @@<a href="/posts_images/about/nlp2019.jpg" target="_blank">[link]</a>@@
+- 優秀ポスター賞
   - 言語処理学会第25回年次大会 (2019/03)
 
 ## Skills, Licenses, Certifications
