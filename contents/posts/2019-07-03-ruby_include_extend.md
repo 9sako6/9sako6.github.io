@@ -1,6 +1,6 @@
 ---
-title: Rubyのinclude, extendを理解する
-description: 
+title: Rubyのinclude, extendの違いをここで理解しよう
+description: いつもこんがらがるinclude, extendの違いについて、ここでマスターする。さらに、これらを用いる利点について述べる。
 tags:
   - Ruby
 created_at: 2019-07-03
