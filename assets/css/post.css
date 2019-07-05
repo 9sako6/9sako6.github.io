@@ -40,7 +40,8 @@
   margin: 2em 0 2em 0;
 }
 .page >>> img {
-  width: 75%;
+  margin-left: 10%;
+  width: 80%;
 }
 .page >>> table {
   width: 100%;
@@ -64,24 +65,27 @@
   margin: 1em 0 1em 0;
 }
 .page >>> blockquote {
-  quotes: '“' '”' '‘' '’';
+  /* quotes: '“' '”' '‘' '’'; */
   padding: 1em;
   background-color: #f7f7f7;
   color: rgb(72, 70, 70);
 }
-.page >>> blockquote::before {
+/* .page >>> blockquote::before {
   content: open-quote;
 }
 .page >>> blockquote::after {
   right: 0;
   content: close-quote;
-}
+} */
 .page >>> code {
   border-radius: 0.2em;
   padding: 0.1em 0.4em;
   background-color: #f5f5f5;
 }
 .page >>> pre code {
+  margin-left: 5%;
+  width: 90%;
+  padding: 1em;
   background-color: black;
 }
 .page >>> .hljs-comment {

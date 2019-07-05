@@ -30,17 +30,13 @@ export default {
   },
   validate({ params }) {
     return sourceFileArray.includes(
-      `contents/posts/${params.year}-${params.month}-${params.day}-${
-        params.slug
-      }.md`
+      `contents/posts/${params.year}-${params.month}-${params.day}-${params.slug}.md`
     )
   },
   asyncData({ params }) {
     return Object.assign(
       {},
-      require(`~/contents/posts/${params.year}-${params.month}-${params.day}-${
-        params.slug
-      }.json`),
+      require(`~/contents/posts/${params.year}-${params.month}-${params.day}-${params.slug}.json`),
       { params }
     )
   },
@@ -61,9 +57,7 @@ export default {
     /**
      * add meta tag
      */
-    this.url = `https://9sako6.me/posts/${this.params.year}/${
-      this.params.month
-    }/${this.params.day}/${this.params.slug}`
+    this.url = `https://9sako6.me/posts/${this.params.year}/${this.params.month}/${this.params.day}/${this.params.slug}`
     const headElem = document.getElementsByTagName('head')[0]
     const attrList = ['title', 'url', 'description']
     attrList.forEach(attr => {
