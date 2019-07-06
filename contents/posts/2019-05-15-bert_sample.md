@@ -13,7 +13,7 @@ updated_at:
 Google Colab上でとりあえず[BERT](https://github.com/google-research/bert)を動かし、GLUEタスクを解いてみる。
 その忘備録。
 
-## 準備
+# 準備
 まずは公式リポジトリをクローンする。
 
 ```shell
@@ -62,7 +62,7 @@ Downloading and extracting diagnostic...
 	Completed!
 ```
 
-## MRPC
+# MRPC
 MRPCタスクを解いてみる。
 
 ```shell
@@ -95,14 +95,14 @@ INFO:tensorflow:  global_step = 343
 INFO:tensorflow:  loss = 0.48449218
 ```
 
-## 所感
+# 所感
 最近のNLPはBERTに代表されるつよつよな言語モデルを作って殴るのが主流なのかなあと感じている。せめてBERTは押さえておきたくて軽く動かしてみた。
 動かすだけなら簡単だった。
 
 次は自分で設定したタスクのfinetuningをしたり、[BERT日本語Pretrainedモデル](http://nlp.ist.i.kyoto-u.ac.jp/index.php?BERT%E6%97%A5%E6%9C%AC%E8%AA%9EPretrained%E3%83%A2%E3%83%87%E3%83%AB)を使うまでやりたい。
 
 
-## 参考
+# 参考
 - [google-research/bert
 ](https://github.com/google-research/bert)
 - [BERTの学習済みモデルを使ってみる](https://techblog.nhn-techorus.com/archives/12978)

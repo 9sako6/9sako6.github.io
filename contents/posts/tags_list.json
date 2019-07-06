@@ -1,12 +1,16 @@
 {
   "TagsList": [
     {
+      "name": "競技プログラミング",
+      "count": 3
+    },
+    {
       "name": "AtCoder",
       "count": 3
     },
     {
-      "name": "競技プログラミング",
-      "count": 3
+      "name": "Union-Find木",
+      "count": 2
     },
     {
       "name": "雑記",
@@ -18,10 +22,6 @@
     },
     {
       "name": "Python3",
-      "count": 2
-    },
-    {
-      "name": "Union-Find木",
       "count": 2
     },
     {
@@ -65,15 +65,15 @@
       "count": 1
     },
     {
-      "name": "DP",
-      "count": 1
-    },
-    {
       "name": "TypeScript",
       "count": 1
     },
     {
       "name": "Go",
+      "count": 1
+    },
+    {
+      "name": "DP",
       "count": 1
     },
     {

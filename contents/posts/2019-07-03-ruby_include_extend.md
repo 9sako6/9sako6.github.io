@@ -1,10 +1,10 @@
 ---
-title: Rubyのinclude, extendの違いをここで理解しよう
-description: いつもこんがらがるinclude, extendの違いについて、ここでマスターする。さらに、これらを用いる利点について述べる。
+title: Rubyのinclude, extendの違いを理解する
+description: include, extendの違いについて説明する。
 tags:
   - Ruby
 created_at: 2019-07-03
-updated_at: 
+updated_at: 2019-07-06
 draft: false
 ---
 
@@ -159,7 +159,7 @@ end
 
 
 
-## 参考
+# 参考
 - [Ruby 2.6.0 リファレンスマニュアル > ライブラリ一覧 > 組み込みライブラリ > Moduleクラス > include](https://docs.ruby-lang.org/ja/latest/method/Module/i/include.html)
 - [Ruby 2.6.0 リファレンスマニュアル > ライブラリ一覧 > 組み込みライブラリ > Objectクラス > extend](https://docs.ruby-lang.org/ja/latest/method/Object/i/extend.html)
 - [Ruby 初級者のための class << self の話 (または特異クラスとメタクラス)](https://magazine.rubyist.net/articles/0046/0046-SingletonClassForBeginners.html)
