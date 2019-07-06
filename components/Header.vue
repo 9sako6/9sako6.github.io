@@ -101,10 +101,10 @@ export default {
 .nav-title {
   color: #35495e;
   font-size: 1.1em;
-  /* color: rgb(72, 142, 118); */
+  /* color: #4183c4; */
 }
 .nav-item:hover {
-  border-bottom: solid 2px rgb(72, 142, 118);
+  border-bottom: solid 2px #4183c4;
 }
 @media screen and (max-width: 767px) {
   .can-hide {

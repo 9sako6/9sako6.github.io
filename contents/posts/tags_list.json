@@ -37,14 +37,6 @@
       "count": 1
     },
     {
-      "name": "WebAPI",
-      "count": 1
-    },
-    {
-      "name": "Heroku",
-      "count": 1
-    },
-    {
       "name": "Google Colab",
       "count": 1
     },
@@ -58,6 +50,14 @@
     },
     {
       "name": "BERT",
+      "count": 1
+    },
+    {
+      "name": "WebAPI",
+      "count": 1
+    },
+    {
+      "name": "Heroku",
       "count": 1
     },
     {
