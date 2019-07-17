@@ -1,0 +1,18 @@
+{
+  "title": "VSCode C++整形時の行頭カッコやめたい",
+  "description": "デフォルトでは{の前に改行が入って嫌なので設定を変える。そのやり方。",
+  "tags": [
+    "C++",
+    "VSCode"
+  ],
+  "created_at": "2019-07-17T00:00:00.000Z",
+  "updated_at": null,
+  "draft": false,
+  "bodyContent": "VSCodeに[C++拡張](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)を入れていると、\n`Ctrl+Alt+F`でコードを整形できる。（環境によってキーバインドは違うかもしれない）\n\nデフォルトでは開始鉤括弧の前に改行が入り、このように整形される。\n```c++\nvoid f()\n{\n    // your code\n}\n```\n\n`{`の前に改行が入るのが嫌なので下のようにしたい。\n\n```c++\nvoid f() {\n    // your code\n}\n```\n\n下記の通りに辿って`settings.json`を開く。\n\n![設定](/posts_images/2019-07-17-vscode_cpp_format/1.png)\n\n![settings.json](/posts_images/2019-07-17-vscode_cpp_format/2.png)\n\n\n下記の`BreakBeforeBraces: Attach`を加えると目的の整形ができるようになる。\n\n```json\n\"C_Cpp.clang_format_style\": \"{ BreakBeforeBraces: Attach, IndentWidth: 4 }\"\n```\n\nGoogleスタイルを使う手もある。\n\n```json\n\"C_Cpp.clang_format_style\": \"{ BasedOnStyle: Google, IndentWidth: 4 }\"\n```\n\n\n\n# 参考\n[vscodeのC++用コード整形設定(clang-formatの設定)](https://fastapple.hatenablog.com/entry/vscode/clang-format)",
+  "bodyHtml": "<p>VSCodeに<a href=\"https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools\">C++拡張</a>を入れていると、\n<code>Ctrl+Alt+F</code>でコードを整形できる。（環境によってキーバインドは違うかもしれない）</p>\n<p>デフォルトでは開始鉤括弧の前に改行が入り、このように整形される。</p>\n<pre><code class=\"hljs\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">void</span> <span class=\"hljs-title\">f</span><span class=\"hljs-params\">()</span>\n</span>{\n    <span class=\"hljs-comment\">// your code</span>\n}</code></pre><p><code>{</code>の前に改行が入るのが嫌なので下のようにしたい。</p>\n<pre><code class=\"hljs\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">void</span> <span class=\"hljs-title\">f</span><span class=\"hljs-params\">()</span> </span>{\n    <span class=\"hljs-comment\">// your code</span>\n}</code></pre><p>下記の通りに辿って<code>settings.json</code>を開く。</p>\n<p><img src=\"/posts_images/2019-07-17-vscode_cpp_format/1.png\" alt=\"設定\"></p>\n<p><img src=\"/posts_images/2019-07-17-vscode_cpp_format/2.png\" alt=\"settings.json\"></p>\n<p>下記の<code>BreakBeforeBraces: Attach</code>を加えると目的の整形ができるようになる。</p>\n<pre><code class=\"hljs\">\"C_Cpp.clang_format_style\": \"{ BreakBeforeBraces: Attach, IndentWidth: 4 }\"</code></pre><p>Googleスタイルを使う手もある。</p>\n<pre><code class=\"hljs\">\"C_Cpp.clang_format_style\": \"{ BasedOnStyle: Google, IndentWidth: 4 }\"</code></pre><h1>参考</h1>\n<p><a href=\"https://fastapple.hatenablog.com/entry/vscode/clang-format\">vscodeのC++用コード整形設定(clang-formatの設定)</a></p>\n",
+  "dir": "contents/posts",
+  "base": "2019-07-17-vscode_cpp_format.json",
+  "ext": ".json",
+  "sourceBase": "2019-07-17-vscode_cpp_format.md",
+  "sourceExt": ".md"
+}
