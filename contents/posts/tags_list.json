@@ -1,11 +1,11 @@
 {
   "TagsList": [
     {
-      "name": "AtCoder",
+      "name": "競技プログラミング",
       "count": 3
     },
     {
-      "name": "競技プログラミング",
+      "name": "AtCoder",
       "count": 3
     },
     {
@@ -13,11 +13,11 @@
       "count": 2
     },
     {
-      "name": "ABC-D",
+      "name": "Union-Find木",
       "count": 2
     },
     {
-      "name": "Union-Find木",
+      "name": "ABC-D",
       "count": 2
     },
     {
@@ -33,27 +33,7 @@
       "count": 1
     },
     {
-      "name": "DP",
-      "count": 1
-    },
-    {
-      "name": "デザイン",
-      "count": 1
-    },
-    {
-      "name": "TypeScript",
-      "count": 1
-    },
-    {
-      "name": "Go",
-      "count": 1
-    },
-    {
       "name": "はじめまして",
-      "count": 1
-    },
-    {
-      "name": "Heroku",
       "count": 1
     },
     {
@@ -61,7 +41,7 @@
       "count": 1
     },
     {
-      "name": "重み付きUnion-Find木",
+      "name": "VSCode",
       "count": 1
     },
     {
@@ -85,7 +65,27 @@
       "count": 1
     },
     {
-      "name": "VSCode",
+      "name": "Heroku",
+      "count": 1
+    },
+    {
+      "name": "デザイン",
+      "count": 1
+    },
+    {
+      "name": "重み付きUnion-Find木",
+      "count": 1
+    },
+    {
+      "name": "TypeScript",
+      "count": 1
+    },
+    {
+      "name": "Go",
+      "count": 1
+    },
+    {
+      "name": "DP",
       "count": 1
     }
   ]

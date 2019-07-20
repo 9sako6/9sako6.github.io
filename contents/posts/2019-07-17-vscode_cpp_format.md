@@ -5,14 +5,14 @@ tags:
   - C++
   - VSCode
 created_at: 2019-07-17
-updated_at: 
+updated_at: 2019-07-20
 draft: false
 ---
 
 VSCodeに[C++拡張](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)を入れていると、
 `Ctrl+Alt+F`でコードを整形できる。（環境によってキーバインドは違うかもしれない）
 
-デフォルトでは開始鉤括弧の前に改行が入り、このように整形される。
+デフォルトでは`{`の前に改行が入り、このように整形される。
 ```c++
 void f()
 {
@@ -35,7 +35,7 @@ void f() {
 ![settings.json](/posts_images/2019-07-17-vscode_cpp_format/2.png)
 
 
-下記の`BreakBeforeBraces: Attach`を加えると目的の整形ができるようになる。
+`BreakBeforeBraces: Attach`を加えると目的の整形ができるようになる。
 
 ```json
 "C_Cpp.clang_format_style": "{ BreakBeforeBraces: Attach, IndentWidth: 4 }"
