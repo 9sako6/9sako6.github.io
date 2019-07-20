@@ -2,6 +2,10 @@
   "TagsList": [
     {
       "name": "競技プログラミング",
+      "count": 4
+    },
+    {
+      "name": "雑記",
       "count": 3
     },
     {
@@ -25,15 +29,15 @@
       "count": 2
     },
     {
-      "name": "雑記",
-      "count": 2
+      "name": "BERT",
+      "count": 1
     },
     {
       "name": "ABC-C",
       "count": 1
     },
     {
-      "name": "はじめまして",
+      "name": "DP",
       "count": 1
     },
     {
@@ -41,7 +45,15 @@
       "count": 1
     },
     {
-      "name": "VSCode",
+      "name": "重み付きUnion-Find木",
+      "count": 1
+    },
+    {
+      "name": "WebAPI",
+      "count": 1
+    },
+    {
+      "name": "Heroku",
       "count": 1
     },
     {
@@ -57,23 +69,7 @@
       "count": 1
     },
     {
-      "name": "BERT",
-      "count": 1
-    },
-    {
-      "name": "WebAPI",
-      "count": 1
-    },
-    {
-      "name": "Heroku",
-      "count": 1
-    },
-    {
       "name": "デザイン",
-      "count": 1
-    },
-    {
-      "name": "重み付きUnion-Find木",
       "count": 1
     },
     {
@@ -85,7 +81,11 @@
       "count": 1
     },
     {
-      "name": "DP",
+      "name": "はじめまして",
+      "count": 1
+    },
+    {
+      "name": "VSCode",
       "count": 1
     }
   ]
