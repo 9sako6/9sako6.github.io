@@ -5,12 +5,20 @@
       "count": 4
     },
     {
+      "name": "雑記",
+      "count": 3
+    },
+    {
       "name": "AtCoder",
       "count": 3
     },
     {
-      "name": "雑記",
-      "count": 3
+      "name": "Ruby",
+      "count": 2
+    },
+    {
+      "name": "ABC-D",
+      "count": 2
     },
     {
       "name": "Union-Find木",
@@ -21,12 +29,8 @@
       "count": 2
     },
     {
-      "name": "ABC-D",
-      "count": 2
-    },
-    {
-      "name": "Ruby",
-      "count": 2
+      "name": "Go",
+      "count": 1
     },
     {
       "name": "ABC-C",
@@ -37,7 +41,11 @@
       "count": 1
     },
     {
-      "name": "はじめまして",
+      "name": "重み付きUnion-Find木",
+      "count": 1
+    },
+    {
+      "name": "C++",
       "count": 1
     },
     {
@@ -61,14 +69,6 @@
       "count": 1
     },
     {
-      "name": "WebAPI",
-      "count": 1
-    },
-    {
-      "name": "Heroku",
-      "count": 1
-    },
-    {
       "name": "デザイン",
       "count": 1
     },
@@ -77,15 +77,15 @@
       "count": 1
     },
     {
-      "name": "Go",
+      "name": "WebAPI",
       "count": 1
     },
     {
-      "name": "C++",
+      "name": "Heroku",
       "count": 1
     },
     {
-      "name": "重み付きUnion-Find木",
+      "name": "はじめまして",
       "count": 1
     }
   ]
