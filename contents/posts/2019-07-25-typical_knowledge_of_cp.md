@@ -8,7 +8,7 @@ tags:
   - 典型
 created_at: 2019-07-25
 updated_at: 
-draft: false
+draft: true
 ---
 
 くさころです。ころころ。「典型力」をご存知ですか。

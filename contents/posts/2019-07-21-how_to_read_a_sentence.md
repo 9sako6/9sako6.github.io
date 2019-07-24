@@ -6,7 +6,7 @@ tags:
   - 雑記
 created_at: 2019-07-21
 updated_at: 2019-07-25
-draft: false
+draft: true
 ---
 
 当たり前のことが書かれた記事です。

@@ -2,28 +2,8 @@
   "TagsMap": {
     "競技プログラミング": [
       {
-        "contents/posts/2019-07-25-typical_knowledge_of_cp.json": {
-          "title": "競技プログラミングにおけるオレオレ典型知識",
-          "description": null,
-          "tags": [
-            "競技プログラミング",
-            "C++",
-            "Ruby",
-            "典型"
-          ],
-          "created_at": "2019-07-25T00:00:00.000Z",
-          "updated_at": null,
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-07-25-typical_knowledge_of_cp.json",
-          "ext": ".json",
-          "sourceBase": "2019-07-25-typical_knowledge_of_cp.md",
-          "sourceExt": ".md"
-        }
-      },
-      {
         "contents/posts/2019-07-25-abc113_d.json": {
-          "title": "ABC0113 D - Number of Amidakuji (400点)",
+          "title": "ABC113 D - Number of Amidakuji (400点)",
           "description": null,
           "tags": [
             "競技プログラミング",
@@ -41,24 +21,6 @@
           "base": "2019-07-25-abc113_d.json",
           "ext": ".json",
           "sourceBase": "2019-07-25-abc113_d.md",
-          "sourceExt": ".md"
-        }
-      },
-      {
-        "contents/posts/2019-07-21-how_to_read_a_sentence.json": {
-          "title": "競技プログラミングにおける問題文の読み方",
-          "description": "当たり前のことが書かれた記事です。",
-          "tags": [
-            "競技プログラミング",
-            "雑記"
-          ],
-          "created_at": "2019-07-21T00:00:00.000Z",
-          "updated_at": "2019-07-25T00:00:00.000Z",
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-07-21-how_to_read_a_sentence.json",
-          "ext": ".json",
-          "sourceBase": "2019-07-21-how_to_read_a_sentence.md",
           "sourceExt": ".md"
         }
       },
@@ -128,58 +90,7 @@
       }
     ],
     "雑記": [
-      {
-        "contents/posts/2019-07-21-how_to_read_a_sentence.json": {
-          "title": "競技プログラミングにおける問題文の読み方",
-          "description": "当たり前のことが書かれた記事です。",
-          "tags": [
-            "競技プログラミング",
-            "雑記"
-          ],
-          "created_at": "2019-07-21T00:00:00.000Z",
-          "updated_at": "2019-07-25T00:00:00.000Z",
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-07-21-how_to_read_a_sentence.json",
-          "ext": ".json",
-          "sourceBase": "2019-07-21-how_to_read_a_sentence.md",
-          "sourceExt": ".md"
-        }
-      },
-      {
-        "contents/posts/2019-04-23-goal.json": {
-          "title": "2019年 くさころの目標",
-          "description": "これまでの振り返りと今年の目標...",
-          "tags": [
-            "雑記"
-          ],
-          "created_at": "2019-04-23T00:00:00.000Z",
-          "updated_at": null,
-          "dir": "contents/posts",
-          "base": "2019-04-23-goal.json",
-          "ext": ".json",
-          "sourceBase": "2019-04-23-goal.md",
-          "sourceExt": ".md"
-        }
-      },
-      {
-        "contents/posts/1970-01-01-hello_world.json": {
-          "title": "はじめまして",
-          "description": "はじめまして、9sako6（くさころ）と申します。ブログを開設しました。本ブログでは、...",
-          "tags": [
-            "雑記",
-            "はじめまして"
-          ],
-          "created_at": "1970-01-01T00:00:00.000Z",
-          "updated_at": "2019-05-23T00:00:00.000Z",
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "1970-01-01-hello_world.json",
-          "ext": ".json",
-          "sourceBase": "1970-01-01-hello_world.md",
-          "sourceExt": ".md"
-        }
-      }
+
     ],
     "Python3": [
       {
@@ -225,30 +136,19 @@
         }
       }
     ],
+    "Go": [
+
+    ],
+    "TypeScript": [
+
+    ],
+    "デザイン": [
+
+    ],
     "Ruby": [
       {
-        "contents/posts/2019-07-25-typical_knowledge_of_cp.json": {
-          "title": "競技プログラミングにおけるオレオレ典型知識",
-          "description": null,
-          "tags": [
-            "競技プログラミング",
-            "C++",
-            "Ruby",
-            "典型"
-          ],
-          "created_at": "2019-07-25T00:00:00.000Z",
-          "updated_at": null,
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-07-25-typical_knowledge_of_cp.json",
-          "ext": ".json",
-          "sourceBase": "2019-07-25-typical_knowledge_of_cp.md",
-          "sourceExt": ".md"
-        }
-      },
-      {
         "contents/posts/2019-07-25-abc113_d.json": {
-          "title": "ABC0113 D - Number of Amidakuji (400点)",
+          "title": "ABC113 D - Number of Amidakuji (400点)",
           "description": null,
           "tags": [
             "競技プログラミング",
@@ -266,23 +166,6 @@
           "base": "2019-07-25-abc113_d.json",
           "ext": ".json",
           "sourceBase": "2019-07-25-abc113_d.md",
-          "sourceExt": ".md"
-        }
-      },
-      {
-        "contents/posts/2019-07-03-ruby_include_extend.json": {
-          "title": "Rubyのinclude, extendの違いを理解する",
-          "description": "include, extendの違いについて説明する。",
-          "tags": [
-            "Ruby"
-          ],
-          "created_at": "2019-07-03T00:00:00.000Z",
-          "updated_at": "2019-07-06T00:00:00.000Z",
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-07-03-ruby_include_extend.json",
-          "ext": ".json",
-          "sourceBase": "2019-07-03-ruby_include_extend.md",
           "sourceExt": ".md"
         }
       },
@@ -309,26 +192,6 @@
         }
       }
     ],
-    "はじめまして": [
-      {
-        "contents/posts/1970-01-01-hello_world.json": {
-          "title": "はじめまして",
-          "description": "はじめまして、9sako6（くさころ）と申します。ブログを開設しました。本ブログでは、...",
-          "tags": [
-            "雑記",
-            "はじめまして"
-          ],
-          "created_at": "1970-01-01T00:00:00.000Z",
-          "updated_at": "2019-05-23T00:00:00.000Z",
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "1970-01-01-hello_world.json",
-          "ext": ".json",
-          "sourceBase": "1970-01-01-hello_world.md",
-          "sourceExt": ".md"
-        }
-      }
-    ],
     "Python": [
 
     ],
@@ -341,192 +204,28 @@
     "Rust": [
 
     ],
-    "Go": [
-      {
-        "contents/posts/2019-04-22-yomimono.json": {
-          "title": "役立つWeb系の読み物リンク集",
-          "description": "主にWeb系のネット上で見つけたためになる読み物をまとめています...",
-          "tags": [
-            "Go",
-            "TypeScript",
-            "デザイン"
-          ],
-          "created_at": "2019-04-22T00:00:00.000Z",
-          "updated_at": "2019-07-03T00:00:00.000Z",
-          "dir": "contents/posts",
-          "base": "2019-04-22-yomimono.json",
-          "ext": ".json",
-          "sourceBase": "2019-04-22-yomimono.md",
-          "sourceExt": ".md"
-        }
-      }
-    ],
-    "TypeScript": [
-      {
-        "contents/posts/2019-04-22-yomimono.json": {
-          "title": "役立つWeb系の読み物リンク集",
-          "description": "主にWeb系のネット上で見つけたためになる読み物をまとめています...",
-          "tags": [
-            "Go",
-            "TypeScript",
-            "デザイン"
-          ],
-          "created_at": "2019-04-22T00:00:00.000Z",
-          "updated_at": "2019-07-03T00:00:00.000Z",
-          "dir": "contents/posts",
-          "base": "2019-04-22-yomimono.json",
-          "ext": ".json",
-          "sourceBase": "2019-04-22-yomimono.md",
-          "sourceExt": ".md"
-        }
-      }
-    ],
-    "デザイン": [
-      {
-        "contents/posts/2019-04-22-yomimono.json": {
-          "title": "役立つWeb系の読み物リンク集",
-          "description": "主にWeb系のネット上で見つけたためになる読み物をまとめています...",
-          "tags": [
-            "Go",
-            "TypeScript",
-            "デザイン"
-          ],
-          "created_at": "2019-04-22T00:00:00.000Z",
-          "updated_at": "2019-07-03T00:00:00.000Z",
-          "dir": "contents/posts",
-          "base": "2019-04-22-yomimono.json",
-          "ext": ".json",
-          "sourceBase": "2019-04-22-yomimono.md",
-          "sourceExt": ".md"
-        }
-      }
-    ],
     "Heroku": [
-      {
-        "contents/posts/2019-05-04-heroku_web_api.json": {
-          "title": "Herokuで簡単なWeb APIを作る",
-          "description": "GETリクエストを送るとHello, Worldを返すだけの簡単なWeb APIを作ります...",
-          "tags": [
-            "Heroku",
-            "WebAPI"
-          ],
-          "created_at": "2019-05-04T00:00:00.000Z",
-          "updated_at": "2019-07-25T00:00:00.000Z",
-          "dir": "contents/posts",
-          "base": "2019-05-04-heroku_web_api.json",
-          "ext": ".json",
-          "sourceBase": "2019-05-04-heroku_web_api.md",
-          "sourceExt": ".md"
-        }
-      }
+
     ],
     "WebAPI": [
-      {
-        "contents/posts/2019-05-04-heroku_web_api.json": {
-          "title": "Herokuで簡単なWeb APIを作る",
-          "description": "GETリクエストを送るとHello, Worldを返すだけの簡単なWeb APIを作ります...",
-          "tags": [
-            "Heroku",
-            "WebAPI"
-          ],
-          "created_at": "2019-05-04T00:00:00.000Z",
-          "updated_at": "2019-07-25T00:00:00.000Z",
-          "dir": "contents/posts",
-          "base": "2019-05-04-heroku_web_api.json",
-          "ext": ".json",
-          "sourceBase": "2019-05-04-heroku_web_api.md",
-          "sourceExt": ".md"
-        }
-      }
+
     ],
     "BERT": [
-      {
-        "contents/posts/2019-05-15-bert_sample.json": {
-          "title": "Google ColabでBERTの学習済みモデルを動かす",
-          "description": "BERTを動かし、GLUEタスクを解いてみる",
-          "tags": [
-            "BERT",
-            "NLP",
-            "DeepLearning",
-            "Google Colab"
-          ],
-          "created_at": "2019-05-15T00:00:00.000Z",
-          "updated_at": null,
-          "dir": "contents/posts",
-          "base": "2019-05-15-bert_sample.json",
-          "ext": ".json",
-          "sourceBase": "2019-05-15-bert_sample.md",
-          "sourceExt": ".md"
-        }
-      }
+
     ],
     "NLP": [
-      {
-        "contents/posts/2019-05-15-bert_sample.json": {
-          "title": "Google ColabでBERTの学習済みモデルを動かす",
-          "description": "BERTを動かし、GLUEタスクを解いてみる",
-          "tags": [
-            "BERT",
-            "NLP",
-            "DeepLearning",
-            "Google Colab"
-          ],
-          "created_at": "2019-05-15T00:00:00.000Z",
-          "updated_at": null,
-          "dir": "contents/posts",
-          "base": "2019-05-15-bert_sample.json",
-          "ext": ".json",
-          "sourceBase": "2019-05-15-bert_sample.md",
-          "sourceExt": ".md"
-        }
-      }
+
     ],
     "DeepLearning": [
-      {
-        "contents/posts/2019-05-15-bert_sample.json": {
-          "title": "Google ColabでBERTの学習済みモデルを動かす",
-          "description": "BERTを動かし、GLUEタスクを解いてみる",
-          "tags": [
-            "BERT",
-            "NLP",
-            "DeepLearning",
-            "Google Colab"
-          ],
-          "created_at": "2019-05-15T00:00:00.000Z",
-          "updated_at": null,
-          "dir": "contents/posts",
-          "base": "2019-05-15-bert_sample.json",
-          "ext": ".json",
-          "sourceBase": "2019-05-15-bert_sample.md",
-          "sourceExt": ".md"
-        }
-      }
+
     ],
     "Google Colab": [
-      {
-        "contents/posts/2019-05-15-bert_sample.json": {
-          "title": "Google ColabでBERTの学習済みモデルを動かす",
-          "description": "BERTを動かし、GLUEタスクを解いてみる",
-          "tags": [
-            "BERT",
-            "NLP",
-            "DeepLearning",
-            "Google Colab"
-          ],
-          "created_at": "2019-05-15T00:00:00.000Z",
-          "updated_at": null,
-          "dir": "contents/posts",
-          "base": "2019-05-15-bert_sample.json",
-          "ext": ".json",
-          "sourceBase": "2019-05-15-bert_sample.md",
-          "sourceExt": ".md"
-        }
-      }
+
     ],
     "AtCoder": [
       {
         "contents/posts/2019-07-25-abc113_d.json": {
-          "title": "ABC0113 D - Number of Amidakuji (400点)",
+          "title": "ABC113 D - Number of Amidakuji (400点)",
           "description": null,
           "tags": [
             "競技プログラミング",
@@ -615,7 +314,7 @@
     "DP": [
       {
         "contents/posts/2019-07-25-abc113_d.json": {
-          "title": "ABC0113 D - Number of Amidakuji (400点)",
+          "title": "ABC113 D - Number of Amidakuji (400点)",
           "description": null,
           "tags": [
             "競技プログラミング",
@@ -681,33 +380,6 @@
         }
       }
     ],
-    "二部マッチング問題": [
-
-    ],
-    "最大マッチング": [
-
-    ],
-    "マッチング": [
-
-    ],
-    "二部グラフ": [
-
-    ],
-    "グラフ": [
-
-    ],
-    "有向グラフ": [
-
-    ],
-    "ネットワーク": [
-
-    ],
-    "最大流": [
-
-    ],
-    "最大流問題": [
-
-    ],
     "Union-Find木": [
       {
         "contents/posts/2019-05-22-abc087_d.json": {
@@ -756,7 +428,7 @@
     "ABC-D": [
       {
         "contents/posts/2019-07-25-abc113_d.json": {
-          "title": "ABC0113 D - Number of Amidakuji (400点)",
+          "title": "ABC113 D - Number of Amidakuji (400点)",
           "description": null,
           "tags": [
             "競技プログラミング",
@@ -848,6 +520,33 @@
         }
       }
     ],
+    "二部マッチング問題": [
+
+    ],
+    "最大マッチング": [
+
+    ],
+    "マッチング": [
+
+    ],
+    "二部グラフ": [
+
+    ],
+    "グラフ": [
+
+    ],
+    "有向グラフ": [
+
+    ],
+    "ネットワーク": [
+
+    ],
+    "最大流": [
+
+    ],
+    "最大流問題": [
+
+    ],
     "Crystal": [
 
     ],
@@ -861,89 +560,15 @@
 
     ],
     "C++": [
-      {
-        "contents/posts/2019-07-25-typical_knowledge_of_cp.json": {
-          "title": "競技プログラミングにおけるオレオレ典型知識",
-          "description": null,
-          "tags": [
-            "競技プログラミング",
-            "C++",
-            "Ruby",
-            "典型"
-          ],
-          "created_at": "2019-07-25T00:00:00.000Z",
-          "updated_at": null,
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-07-25-typical_knowledge_of_cp.json",
-          "ext": ".json",
-          "sourceBase": "2019-07-25-typical_knowledge_of_cp.md",
-          "sourceExt": ".md"
-        }
-      },
-      {
-        "contents/posts/2019-07-17-vscode_cpp_format.json": {
-          "title": "VSCode C++整形時の行頭カッコやめたい",
-          "description": "デフォルトでは{の前に改行が入って嫌なので設定を変える。そのやり方。",
-          "tags": [
-            "C++",
-            "VSCode"
-          ],
-          "created_at": "2019-07-17T00:00:00.000Z",
-          "updated_at": "2019-07-20T00:00:00.000Z",
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-07-17-vscode_cpp_format.json",
-          "ext": ".json",
-          "sourceBase": "2019-07-17-vscode_cpp_format.md",
-          "sourceExt": ".md"
-        }
-      }
+
     ],
     "VSCode": [
-      {
-        "contents/posts/2019-07-17-vscode_cpp_format.json": {
-          "title": "VSCode C++整形時の行頭カッコやめたい",
-          "description": "デフォルトでは{の前に改行が入って嫌なので設定を変える。そのやり方。",
-          "tags": [
-            "C++",
-            "VSCode"
-          ],
-          "created_at": "2019-07-17T00:00:00.000Z",
-          "updated_at": "2019-07-20T00:00:00.000Z",
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-07-17-vscode_cpp_format.json",
-          "ext": ".json",
-          "sourceBase": "2019-07-17-vscode_cpp_format.md",
-          "sourceExt": ".md"
-        }
-      }
+
     ],
     "典型": [
       {
-        "contents/posts/2019-07-25-typical_knowledge_of_cp.json": {
-          "title": "競技プログラミングにおけるオレオレ典型知識",
-          "description": null,
-          "tags": [
-            "競技プログラミング",
-            "C++",
-            "Ruby",
-            "典型"
-          ],
-          "created_at": "2019-07-25T00:00:00.000Z",
-          "updated_at": null,
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-07-25-typical_knowledge_of_cp.json",
-          "ext": ".json",
-          "sourceBase": "2019-07-25-typical_knowledge_of_cp.md",
-          "sourceExt": ".md"
-        }
-      },
-      {
         "contents/posts/2019-07-25-abc113_d.json": {
-          "title": "ABC0113 D - Number of Amidakuji (400点)",
+          "title": "ABC113 D - Number of Amidakuji (400点)",
           "description": null,
           "tags": [
             "競技プログラミング",
@@ -968,7 +593,7 @@
     "割った余り": [
       {
         "contents/posts/2019-07-25-abc113_d.json": {
-          "title": "ABC0113 D - Number of Amidakuji (400点)",
+          "title": "ABC113 D - Number of Amidakuji (400点)",
           "description": null,
           "tags": [
             "競技プログラミング",

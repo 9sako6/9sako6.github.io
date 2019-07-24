@@ -1,7 +1,7 @@
 <template>
   <header class="navbar">
     <nuxt-link to="/" class="nav-link">
-      <span class="site-title">9sako6 Garden</span>
+      <span class="site-title">9sako6の競プロ日記</span>
     </nuxt-link>
     <div class="links can-hide">
       <nav class="nav-links">

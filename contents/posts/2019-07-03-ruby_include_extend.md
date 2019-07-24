@@ -5,7 +5,7 @@ tags:
   - Ruby
 created_at: 2019-07-03
 updated_at: 2019-07-06
-draft: false
+draft: true
 ---
 
 ざっくり言うとそれぞれ次のことをする。

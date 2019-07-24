@@ -8,6 +8,7 @@ tags:
   - Google Colab
 created_at: 2019-05-15
 updated_at: 
+draft: true
 ---
 
 Google Colab上でとりあえず[BERT](https://github.com/google-research/bert)を動かし、GLUEタスクを解いてみる。

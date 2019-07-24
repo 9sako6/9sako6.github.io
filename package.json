@@ -18,7 +18,7 @@
     "deploy": "npm run about && npm run md && ruby lib/make_tags_json.rb && npm run build && firebase deploy",
     "delcache": "rm -rf node_modules/.cache/hard-source/",
     "new": "ruby lib/make_new_markdown.rb",
-    "tag": "ruby lib/make_tags_json.rb"
+    "maketag": "ruby lib/make_tags_json.rb"
   },
   "dependencies": {
     "@nuxtjs/google-adsense": "^1.1.3",

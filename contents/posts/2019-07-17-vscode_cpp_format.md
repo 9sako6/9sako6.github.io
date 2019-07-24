@@ -6,7 +6,7 @@ tags:
   - VSCode
 created_at: 2019-07-17
 updated_at: 2019-07-20
-draft: false
+draft: true
 ---
 
 VSCodeに[C++拡張](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)を入れていると、
