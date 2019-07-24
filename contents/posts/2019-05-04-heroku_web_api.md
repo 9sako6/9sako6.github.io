@@ -5,7 +5,7 @@ tags:
   - Heroku
   - WebAPI
 created_at: 2019-05-04
-updated_at: 2019-05-06
+updated_at: 2019-07-25
 ---
 
 
@@ -116,9 +116,12 @@ node_modules
 ```
 
 続いて、`Procfile`を作ります。
+`Procfile`はアプリケーションを起動するために実行するコマンドを記述するファイルです。
+
 ```txt
 web: node index.js
 ```
+
 これでもろもろの設定は終わりで、
 最終的なディレクトリ構成は以下のようになります。
 
@@ -147,29 +150,7 @@ $ git push heroku master
 $ heroku open
 ```
 
-`heroku create`の時点でデプロイ先のURLが表示されるのでメモっておきます。
-忘れた場合は以下のようにしてURLを確認します。
-
-```shell
-$ heroku apps
-=== username Apps
-enigmatic-garden-50659 # なんかそれっぽいやつ
-limitless-river-16445
-
-$ heroku info --app enigmatic-garden-50659
-=== enigmatic-garden-50659
-Auto Cert Mgmt: false
-Dynos:          web: 1
-Git URL:        https://git.heroku.com/enigmatic-garden-50659.git
-Owner:          username
-Region:         us
-Repo Size:      8 KB
-Slug Size:      18 MB
-Stack:          heroku-18
-Web URL:        https://enigmatic-garden-50659.herokuapp.com/
-```
-
-デプロイ先のURLに`curl`してみて、Web APIの完成を喜びます。
+`curl`してみて、Web APIの完成を喜びます。
 
 ```shell
 $ curl https://enigmatic-garden-50659.herokuapp.com/
@@ -270,6 +251,8 @@ app.listen(app.get('port'), function() {
 ```
 
 # 参考
+[All Articles - Heroku Dev Center](https://devcenter.heroku.com/articles)
+
 [Node.js(Express) 事始め ＆ Heroku へデプロイまでのメモ - Qiita](https://qiita.com/hkusu/items/e46de8c446840c50aefe)
 
 [CORS(Cross-Origin Resource Sharing) - とほほのWWW入門](http://www.tohoho-web.com/ex/cors.html)
