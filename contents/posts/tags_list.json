@@ -2,7 +2,7 @@
   "TagsList": [
     {
       "name": "競技プログラミング",
-      "count": 5
+      "count": 6
     },
     {
       "name": "AtCoder",
@@ -10,7 +10,7 @@
     },
     {
       "name": "Ruby",
-      "count": 3
+      "count": 4
     },
     {
       "name": "ABC-D",
@@ -21,6 +21,14 @@
       "count": 3
     },
     {
+      "name": "Python3",
+      "count": 2
+    },
+    {
+      "name": "典型",
+      "count": 2
+    },
+    {
       "name": "Union-Find木",
       "count": 2
     },
@@ -29,32 +37,8 @@
       "count": 2
     },
     {
-      "name": "Python3",
+      "name": "C++",
       "count": 2
-    },
-    {
-      "name": "Go",
-      "count": 1
-    },
-    {
-      "name": "はじめまして",
-      "count": 1
-    },
-    {
-      "name": "ABC-C",
-      "count": 1
-    },
-    {
-      "name": "典型",
-      "count": 1
-    },
-    {
-      "name": "割った余り",
-      "count": 1
-    },
-    {
-      "name": "Google Colab",
-      "count": 1
     },
     {
       "name": "DeepLearning",
@@ -85,11 +69,27 @@
       "count": 1
     },
     {
+      "name": "Go",
+      "count": 1
+    },
+    {
       "name": "VSCode",
       "count": 1
     },
     {
-      "name": "C++",
+      "name": "はじめまして",
+      "count": 1
+    },
+    {
+      "name": "ABC-C",
+      "count": 1
+    },
+    {
+      "name": "割った余り",
+      "count": 1
+    },
+    {
+      "name": "Google Colab",
       "count": 1
     },
     {
