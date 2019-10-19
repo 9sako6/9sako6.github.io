@@ -11,11 +11,10 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint",
-    "md": "processmd contents/posts/*.md --stdout --outputDir contents/posts > contents/posts/summary.json",
+    "md": "processmd contents/posts/*.md --stdout --outputDir contents/posts > contents/posts/summary.json && yarn maketag",
     "about": "processmd contents/about.md --stdout --outputDir contents/",
     "policy": "processmd contents/policy.md --stdout --outputDir contents/",
-    "deploy": "npm run about && npm run md && ruby lib/make_tags_json.rb && npm run build && firebase deploy",
+    "deploy": "yarn about && yarn md && ruby lib/make_tags_json.rb && yarn build && firebase deploy",
     "delcache": "rm -rf node_modules/.cache/hard-source/",
     "new": "ruby lib/make_new_markdown.rb",
     "maketag": "ruby lib/make_tags_json.rb"
@@ -52,6 +51,8 @@
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",
     "processmd": "^4.4.2",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
   }
 }

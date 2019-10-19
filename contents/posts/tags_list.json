@@ -2,7 +2,7 @@
   "TagsList": [
     {
       "name": "競技プログラミング",
-      "count": 4
+      "count": 5
     },
     {
       "name": "AtCoder",
@@ -13,7 +13,7 @@
       "count": 3
     },
     {
-      "name": "Ruby",
+      "name": "Union-Find木",
       "count": 2
     },
     {
@@ -25,11 +25,11 @@
       "count": 2
     },
     {
-      "name": "Union-Find木",
+      "name": "Ruby",
       "count": 2
     },
     {
-      "name": "割った余り",
+      "name": "典型",
       "count": 1
     },
     {
@@ -37,11 +37,31 @@
       "count": 1
     },
     {
-      "name": "典型",
+      "name": "部分列の削除",
+      "count": 1
+    },
+    {
+      "name": "部分列",
       "count": 1
     },
     {
       "name": "ABC-C",
+      "count": 1
+    },
+    {
+      "name": "素数",
+      "count": 1
+    },
+    {
+      "name": "yukicoder",
+      "count": 1
+    },
+    {
+      "name": "割った余り",
+      "count": 1
+    },
+    {
+      "name": "貪欲",
       "count": 1
     }
   ]

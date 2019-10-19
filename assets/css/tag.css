@@ -13,7 +13,7 @@
   border: solid 1px #e6e6e6;
 }
 .post-tag:hover {
-  color: #4183C4;
+  color: rgb(187, 25, 87);
 }
 @media screen and (max-width: 767px) {
   .post-tag {

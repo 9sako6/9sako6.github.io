@@ -1,24 +1,33 @@
 <template>
-  <div>
-    <Header />
+  <div id="root">
+    <Header style="flex: 1;" />
     <nuxt />
     <!-- <A8netFoot /> -->
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header.vue'
+import Footer from '~/components/Footer.vue'
 // import A8netFoot from '~/components/A8netFoot.vue'
 
 export default {
   components: {
-    Header
+    Header,
+    Footer
     // A8netFoot
   }
 }
 </script>
 
 <style>
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 html {
   font-family: -apple-system;
   font-size: 16px;

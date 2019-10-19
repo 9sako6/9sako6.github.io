@@ -1,7 +1,7 @@
 <template>
   <header class="navbar">
     <nuxt-link to="/" class="nav-link">
-      <span class="site-title">9sako6の競プロ日記</span>
+      <span class="site-title">くさころ競プロ日記</span>
     </nuxt-link>
     <div class="links can-hide">
       <nav class="nav-links">
@@ -22,7 +22,7 @@
         </nuxt-link>
       </nav>
     </div>
-    <Slide class="my-burger-menu" right no-overlay width="200">
+    <Slide id="my-burger-menu" class="my-burger-menu" left width="160">
       <nuxt-link to="/">
         <span class="navi-item">Home</span>
       </nuxt-link>
@@ -33,14 +33,6 @@
         <span class="navi-item">Tags</span>
       </nuxt-link>
     </Slide>
-    <!-- <
-    <div id="top">
-      <nuxt-link to="/">
-        <img alt="logo" class="logo" src="~/static/icon.png" />
-      </nuxt-link>
-      <h1 class="title">9sako6 Garden</h1>
-      <div class="subtitle">Web Application / Competitive Programming</div>
-    </div> -->
   </header>
 </template>
 
@@ -63,9 +55,8 @@ export default {
   height: 3.6rem;
   padding: 0.7rem 1.5rem;
   line-height: 2.2rem;
-  border-bottom: 1px solid #eaecef;
   display: inline-block;
-  background-color: #ffffff;
+  background-color: #d82e8c;
 }
 .nav-link {
   border-bottom: none;
@@ -75,7 +66,7 @@ export default {
   font-weight: 700;
   position: relative;
   font-size: 1.3em;
-  color: #35495e;
+  color: #ffffff;
 }
 .logo {
   height: 2em;
@@ -84,7 +75,7 @@ export default {
   position: absolute;
   white-space: nowrap;
   display: flex;
-  right: 1.5rem;
+  left: 80%;
   top: 0.7rem;
 }
 .nav-links {
@@ -99,16 +90,19 @@ export default {
   display: inline-block;
 }
 .nav-title {
-  color: #35495e;
+  color: #ffffff;
+  font-weight: 600;
   font-size: 1.1em;
-  /* color: #4183c4; */
 }
 .nav-item:hover {
-  border-bottom: solid 2px #4183c4;
+  border-bottom: solid 2px #ffffff;
 }
 @media screen and (max-width: 767px) {
   .can-hide {
     display: none;
+  }
+  .site-title {
+    margin-left: 3em;
   }
 }
 @media screen and (min-width: 768px) {
@@ -118,6 +112,11 @@ export default {
 }
 .navi-item:hover {
   opacity: 0.5;
+}
+.my-burger-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .my-burger-menu >>> .bm-burger-button {
   top: 20px;
@@ -129,84 +128,18 @@ export default {
 }
 .my-burger-menu >>> .bm-cross-button {
   top: 20px;
-  right: 24px !important;
 }
 .my-burger-menu >>> .bm-cross {
   height: 24px !important;
-  background-color: #35495e;
+  background-color: #ffffff;
+}
+.my-burger-menu >>> .line-style {
+  background-color: #ffffff;
 }
 .my-burger-menu >>> .bm-menu {
-  color: #35495e;
+  color: #ffffff;
   transition: 0.2s ease;
-  background-color: #ffffff;
+  background-color: #d82e8c;
   border-left: 1px solid #eaecef;
 }
-.navi-item {
-  color: #35495e;
-}
-/*
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-.subtitle {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-@media screen and (max-width: 767px) {
-  #top {
-    margin-top: 10%;
-  }
-  .title {
-    font-weight: 600;
-    font-size: 30px;
-  }
-  .subtitle {
-    font-size: 0.8em;
-  }
-}
-@media screen and (min-width: 768px) {
-  #top {
-    margin-top: 5%;
-  }
-  .title {
-    font-weight: 600;
-    font-size: 60px;
-  }
-  .subtitle {
-    font-size: 1em;
-  }
-}
-.logo {
-  border-radius: 50px;
-  height: 100px;
-  width: 100px;
-  box-shadow: 1px 1px 15px #aaa;
-  border: solid 0px #35495e;
-  transition: box-shadow 0.3s ease;
-}
-.logo:hover {
-  box-shadow: 1px 1px 20px #eee;
-}
-@keyframes rotate-anime {
-  0% {
-    transform: rotate(-30deg);
-  }
-  50% {
-    transform: rotate(30deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-#top {
-  text-align: center;
-}
-*/
 </style>
