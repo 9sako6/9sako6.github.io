@@ -13,11 +13,11 @@
       "count": 3
     },
     {
-      "name": "Ruby",
+      "name": "Union-Find木",
       "count": 2
     },
     {
-      "name": "Union-Find木",
+      "name": "Ruby",
       "count": 2
     },
     {
@@ -30,18 +30,6 @@
     },
     {
       "name": "ABC-C",
-      "count": 1
-    },
-    {
-      "name": "典型",
-      "count": 1
-    },
-    {
-      "name": "重み付きUnion-Find木",
-      "count": 1
-    },
-    {
-      "name": "部分列の削除",
       "count": 1
     },
     {
@@ -61,7 +49,19 @@
       "count": 1
     },
     {
+      "name": "重み付きUnion-Find木",
+      "count": 1
+    },
+    {
       "name": "割った余り",
+      "count": 1
+    },
+    {
+      "name": "典型",
+      "count": 1
+    },
+    {
+      "name": "部分列の削除",
       "count": 1
     }
   ]

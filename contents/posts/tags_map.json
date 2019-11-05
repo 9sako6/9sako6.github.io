@@ -313,7 +313,30 @@
         }
       }
     ],
-    "Union-Find木": [
+    "Ruby": [
+      {
+        "contents/posts/2019-07-25-abc113_d.json": {
+          "title": "ABC113 D - Number of Amidakuji (400点)",
+          "description": null,
+          "tags": [
+            "競技プログラミング",
+            "Ruby",
+            "ABC-D",
+            "DP",
+            "AtCoder",
+            "典型",
+            "割った余り"
+          ],
+          "created_at": "2019-07-25T00:00:00.000Z",
+          "updated_at": null,
+          "draft": false,
+          "dir": "contents/posts",
+          "base": "2019-07-25-abc113_d.json",
+          "ext": ".json",
+          "sourceBase": "2019-07-25-abc113_d.md",
+          "sourceExt": ".md"
+        }
+      },
       {
         "contents/posts/2019-05-22-abc087_d.json": {
           "title": "ABC087 D - People on a Line (400点)",
@@ -333,27 +356,6 @@
           "base": "2019-05-22-abc087_d.json",
           "ext": ".json",
           "sourceBase": "2019-05-22-abc087_d.md",
-          "sourceExt": ".md"
-        }
-      },
-      {
-        "contents/posts/2019-05-22-abc040_d.json": {
-          "title": "ABC040 D - 道路の老朽化対策について (100点)",
-          "description": "Union-Find（素集合データ構造, Disjoint-set Data Structure）を使って解く。 ただし、各質問ごとにUnion-Findを構築すると間に合わない。 そこで、...",
-          "tags": [
-            "競技プログラミング",
-            "AtCoder",
-            "Union-Find木",
-            "Python3",
-            "ABC-D"
-          ],
-          "created_at": "2019-05-22T00:00:00.000Z",
-          "updated_at": "2019-05-23T00:00:00.000Z",
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-05-22-abc040_d.json",
-          "ext": ".json",
-          "sourceBase": "2019-05-22-abc040_d.md",
           "sourceExt": ".md"
         }
       }
@@ -422,6 +424,125 @@
           "base": "2019-05-22-abc040_d.json",
           "ext": ".json",
           "sourceBase": "2019-05-22-abc040_d.md",
+          "sourceExt": ".md"
+        }
+      }
+    ],
+    "典型": [
+      {
+        "contents/posts/2019-07-25-abc113_d.json": {
+          "title": "ABC113 D - Number of Amidakuji (400点)",
+          "description": null,
+          "tags": [
+            "競技プログラミング",
+            "Ruby",
+            "ABC-D",
+            "DP",
+            "AtCoder",
+            "典型",
+            "割った余り"
+          ],
+          "created_at": "2019-07-25T00:00:00.000Z",
+          "updated_at": null,
+          "draft": false,
+          "dir": "contents/posts",
+          "base": "2019-07-25-abc113_d.json",
+          "ext": ".json",
+          "sourceBase": "2019-07-25-abc113_d.md",
+          "sourceExt": ".md"
+        }
+      }
+    ],
+    "割った余り": [
+      {
+        "contents/posts/2019-07-25-abc113_d.json": {
+          "title": "ABC113 D - Number of Amidakuji (400点)",
+          "description": null,
+          "tags": [
+            "競技プログラミング",
+            "Ruby",
+            "ABC-D",
+            "DP",
+            "AtCoder",
+            "典型",
+            "割った余り"
+          ],
+          "created_at": "2019-07-25T00:00:00.000Z",
+          "updated_at": null,
+          "draft": false,
+          "dir": "contents/posts",
+          "base": "2019-07-25-abc113_d.json",
+          "ext": ".json",
+          "sourceBase": "2019-07-25-abc113_d.md",
+          "sourceExt": ".md"
+        }
+      }
+    ],
+    "Union-Find木": [
+      {
+        "contents/posts/2019-05-22-abc087_d.json": {
+          "title": "ABC087 D - People on a Line (400点)",
+          "description": "与えられる情報が成り立ってるのかを調べていく。条件が成立しているかどうかは重み付きUnion-Find木を使えば簡単に調べられる...",
+          "tags": [
+            "競技プログラミング",
+            "AtCoder",
+            "ABC-D",
+            "Union-Find木",
+            "重み付きUnion-Find木",
+            "Ruby"
+          ],
+          "created_at": "2019-05-22T00:00:00.000Z",
+          "updated_at": null,
+          "draft": false,
+          "dir": "contents/posts",
+          "base": "2019-05-22-abc087_d.json",
+          "ext": ".json",
+          "sourceBase": "2019-05-22-abc087_d.md",
+          "sourceExt": ".md"
+        }
+      },
+      {
+        "contents/posts/2019-05-22-abc040_d.json": {
+          "title": "ABC040 D - 道路の老朽化対策について (100点)",
+          "description": "Union-Find（素集合データ構造, Disjoint-set Data Structure）を使って解く。 ただし、各質問ごとにUnion-Findを構築すると間に合わない。 そこで、...",
+          "tags": [
+            "競技プログラミング",
+            "AtCoder",
+            "Union-Find木",
+            "Python3",
+            "ABC-D"
+          ],
+          "created_at": "2019-05-22T00:00:00.000Z",
+          "updated_at": "2019-05-23T00:00:00.000Z",
+          "draft": false,
+          "dir": "contents/posts",
+          "base": "2019-05-22-abc040_d.json",
+          "ext": ".json",
+          "sourceBase": "2019-05-22-abc040_d.md",
+          "sourceExt": ".md"
+        }
+      }
+    ],
+    "重み付きUnion-Find木": [
+      {
+        "contents/posts/2019-05-22-abc087_d.json": {
+          "title": "ABC087 D - People on a Line (400点)",
+          "description": "与えられる情報が成り立ってるのかを調べていく。条件が成立しているかどうかは重み付きUnion-Find木を使えば簡単に調べられる...",
+          "tags": [
+            "競技プログラミング",
+            "AtCoder",
+            "ABC-D",
+            "Union-Find木",
+            "重み付きUnion-Find木",
+            "Ruby"
+          ],
+          "created_at": "2019-05-22T00:00:00.000Z",
+          "updated_at": null,
+          "draft": false,
+          "dir": "contents/posts",
+          "base": "2019-05-22-abc087_d.json",
+          "ext": ".json",
+          "sourceBase": "2019-05-22-abc087_d.md",
           "sourceExt": ".md"
         }
       }
@@ -542,127 +663,6 @@
           "base": "2019-10-20-yukicoder910.json",
           "ext": ".json",
           "sourceBase": "2019-10-20-yukicoder910.md",
-          "sourceExt": ".md"
-        }
-      }
-    ],
-    "重み付きUnion-Find木": [
-      {
-        "contents/posts/2019-05-22-abc087_d.json": {
-          "title": "ABC087 D - People on a Line (400点)",
-          "description": "与えられる情報が成り立ってるのかを調べていく。条件が成立しているかどうかは重み付きUnion-Find木を使えば簡単に調べられる...",
-          "tags": [
-            "競技プログラミング",
-            "AtCoder",
-            "ABC-D",
-            "Union-Find木",
-            "重み付きUnion-Find木",
-            "Ruby"
-          ],
-          "created_at": "2019-05-22T00:00:00.000Z",
-          "updated_at": null,
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-05-22-abc087_d.json",
-          "ext": ".json",
-          "sourceBase": "2019-05-22-abc087_d.md",
-          "sourceExt": ".md"
-        }
-      }
-    ],
-    "Ruby": [
-      {
-        "contents/posts/2019-07-25-abc113_d.json": {
-          "title": "ABC113 D - Number of Amidakuji (400点)",
-          "description": null,
-          "tags": [
-            "競技プログラミング",
-            "Ruby",
-            "ABC-D",
-            "DP",
-            "AtCoder",
-            "典型",
-            "割った余り"
-          ],
-          "created_at": "2019-07-25T00:00:00.000Z",
-          "updated_at": null,
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-07-25-abc113_d.json",
-          "ext": ".json",
-          "sourceBase": "2019-07-25-abc113_d.md",
-          "sourceExt": ".md"
-        }
-      },
-      {
-        "contents/posts/2019-05-22-abc087_d.json": {
-          "title": "ABC087 D - People on a Line (400点)",
-          "description": "与えられる情報が成り立ってるのかを調べていく。条件が成立しているかどうかは重み付きUnion-Find木を使えば簡単に調べられる...",
-          "tags": [
-            "競技プログラミング",
-            "AtCoder",
-            "ABC-D",
-            "Union-Find木",
-            "重み付きUnion-Find木",
-            "Ruby"
-          ],
-          "created_at": "2019-05-22T00:00:00.000Z",
-          "updated_at": null,
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-05-22-abc087_d.json",
-          "ext": ".json",
-          "sourceBase": "2019-05-22-abc087_d.md",
-          "sourceExt": ".md"
-        }
-      }
-    ],
-    "典型": [
-      {
-        "contents/posts/2019-07-25-abc113_d.json": {
-          "title": "ABC113 D - Number of Amidakuji (400点)",
-          "description": null,
-          "tags": [
-            "競技プログラミング",
-            "Ruby",
-            "ABC-D",
-            "DP",
-            "AtCoder",
-            "典型",
-            "割った余り"
-          ],
-          "created_at": "2019-07-25T00:00:00.000Z",
-          "updated_at": null,
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-07-25-abc113_d.json",
-          "ext": ".json",
-          "sourceBase": "2019-07-25-abc113_d.md",
-          "sourceExt": ".md"
-        }
-      }
-    ],
-    "割った余り": [
-      {
-        "contents/posts/2019-07-25-abc113_d.json": {
-          "title": "ABC113 D - Number of Amidakuji (400点)",
-          "description": null,
-          "tags": [
-            "競技プログラミング",
-            "Ruby",
-            "ABC-D",
-            "DP",
-            "AtCoder",
-            "典型",
-            "割った余り"
-          ],
-          "created_at": "2019-07-25T00:00:00.000Z",
-          "updated_at": null,
-          "draft": false,
-          "dir": "contents/posts",
-          "base": "2019-07-25-abc113_d.json",
-          "ext": ".json",
-          "sourceBase": "2019-07-25-abc113_d.md",
           "sourceExt": ".md"
         }
       }

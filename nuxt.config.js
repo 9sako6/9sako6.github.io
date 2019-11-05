@@ -9,10 +9,9 @@ import { sourceFileArray, fileMap } from './contents/posts/summary.json'
 const routes = []
 
 sourceFileArray.reverse().forEach(markdownName => {
-  const baseName = markdownName.match(/([^.]+)/)[0]
-  const jsonName = baseName + '.json'
-  const link = '/' + baseName.match(/contents\/(.+)/)[1].replace(/-/g, '/')
-  if (!fileMap[jsonName].draft) {
+  const baseName = markdownName.replace(/^.*[/]/, '').replace(/\.md$/, '')
+  const link = `contents/posts/${baseName}.json`
+  if (!fileMap[link].draft) {
     routes.push(link)
   }
 })
@@ -30,15 +29,37 @@ export default {
       lang: 'ja'
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description },
-      { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:site', content: '@9sako6' },
-      { name: 'twitter:image', content: './static/icon.png' }
+      {
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: pkg.description
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary'
+      },
+      {
+        name: 'twitter:site',
+        content: '@9sako6'
+      },
+      {
+        name: 'twitter:image',
+        content: './static/icon.png'
+      }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
       {
         rel: 'stylesheet',
         href:
@@ -50,7 +71,9 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: {
+    color: '#fff'
+  },
 
   /*
    ** Global CSS

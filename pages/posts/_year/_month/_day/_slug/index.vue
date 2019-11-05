@@ -30,7 +30,7 @@ export default {
   },
   validate({ params }) {
     return sourceFileArray.includes(
-      `contents/posts/${params.year}-${params.month}-${params.day}-${params.slug}.md`
+      `./md/${params.year}-${params.month}-${params.day}-${params.slug}.md`
     )
   },
   asyncData({ params }) {

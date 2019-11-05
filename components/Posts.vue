@@ -19,10 +19,13 @@ import Summary from '~/contents/posts/summary.json'
 const articles = []
 
 Summary.sourceFileArray.reverse().forEach(markdownName => {
-  const baseName = markdownName.match(/([^.]+)/)[0]
-  const jsonName = baseName + '.json'
-  const link = '/' + baseName.match(/contents\/(.+)/)[1].replace(/-/g, '/')
+  const baseName = markdownName.replace(/^.*[/]/, '').replace(/\.md$/, '')
+  const jsonName = `contents/posts/${baseName}.json`
   const content = Summary.fileMap[jsonName]
+  const link = `/${jsonName
+    .match(/contents\/(.+)/)[1]
+    .replace(/-/g, '/')
+    .replace(/\.json$/g, '')}`
   const date = content.created_at.split('T')[0]
   const draft = content.draft
   const tags = content.tags
