@@ -91,7 +91,8 @@ html {
     box-sizing: border-box;
   }
   #container-outer {
-    width: 100%;
+    width: 90%;
+    margin: auto;
   }
   #page-main {
     width: 100%;

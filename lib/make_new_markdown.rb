@@ -2,7 +2,7 @@ require "date"
 
 title = ""
 date = Date.today.strftime("%Y-%m-%d")
-path = "./contents/posts"
+path = "./md"
 
 if ARGV.empty?
   puts "Please input the title:"
@@ -18,7 +18,7 @@ description:
 tags:
   - 
 created_at: #{date}
-updated_at: 
+updated_at: #{date}
 draft: true
 ---
 EOS
