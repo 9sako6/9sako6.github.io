@@ -13,6 +13,10 @@
       "count": 3
     },
     {
+      "name": "Ruby",
+      "count": 2
+    },
+    {
       "name": "Union-Find木",
       "count": 2
     },
@@ -25,8 +29,8 @@
       "count": 2
     },
     {
-      "name": "Ruby",
-      "count": 2
+      "name": "ABC-C",
+      "count": 1
     },
     {
       "name": "典型",
@@ -45,7 +49,7 @@
       "count": 1
     },
     {
-      "name": "ABC-C",
+      "name": "貪欲",
       "count": 1
     },
     {
@@ -58,10 +62,6 @@
     },
     {
       "name": "割った余り",
-      "count": 1
-    },
-    {
-      "name": "貪欲",
       "count": 1
     }
   ]

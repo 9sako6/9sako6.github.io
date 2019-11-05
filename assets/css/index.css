@@ -1,19 +1,22 @@
 @media screen and (max-width: 767px) {
   .container {
-    color: #35495e;
+    color: #3f3f3f;
     width: 80%;
-    margin: 25% 10% 25% 10%;
+    margin: auto;
     font-size: 0.9em;
   }
 }
+
 @media screen and (min-width: 768px) {
   .container {
-    color: #35495e;
-    width: 50%;
-    margin: 10% 25% 10% 25%;
+    color: #3f3f3f;
+    /* width: 1140px;
+    margin: auto; */
+    /* margin: 10% 25% 10% 25%; */
     font-size: 1.1em;
   }
 }
+
 .container {
   justify-content: center;
   align-items: center;

@@ -1,18 +1,18 @@
 @media screen and (max-width: 767px) {
   .page {
-    color: #35495e;
-    width: 80%;
-    margin: 25% 10% 25% 10%;
+    color: #3f3f3f;
+    /* width: 80%; */
+    /* margin: 25% 10% 25% 10%; */
     font-size: 0.9em;
   }
 }
 
 @media screen and (min-width: 768px) {
   .page {
-    color: #35495e;
-    width: 50%;
-    margin: 10% 25% 10% 25%;
-    font-size: 1.1em;
+    color: #3f3f3f;
+    /* width: 50%;
+    margin: 10% 25% 10% 25%; */
+    font-size: 1em;
   }
 }
 div.tex-equations {
@@ -83,14 +83,14 @@ div.tex-equations {
   border-bottom: solid 1px #eee;
 }
 
-.page>>>a {
+/* .page>>>a {
   text-decoration: none;
   color: rgb(187, 25, 87);
 }
 
 .page>>>a:hover {
   border-bottom: solid 1px rgb(187, 25, 87);
-}
+} */
 
 .page>>>li {
   margin: 0.5em 0 0.5em 0;

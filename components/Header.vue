@@ -46,17 +46,20 @@ export default {
 </script>
 
 <style scoped>
+/* header {
+  margin-top: auto;
+} */
 .navbar {
   z-index: 20;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 3.6rem;
-  padding: 0.7rem 1.5rem;
+  height: 2rem;
+  padding: 0rem 1.5rem;
   line-height: 2.2rem;
   display: inline-block;
-  background-color: #d82e8c;
+  background-color: #342d44;
 }
 .nav-link {
   border-bottom: none;
@@ -65,7 +68,7 @@ export default {
 .site-title {
   font-weight: 700;
   position: relative;
-  font-size: 1.3em;
+  font-size: 1em;
   color: #ffffff;
 }
 .logo {
@@ -82,7 +85,7 @@ export default {
   display: inline-block;
 }
 .nav-links a {
-  line-height: 1.4rem;
+  line-height: 1rem;
 }
 .nav-item {
   margin-right: 1em;
@@ -92,7 +95,7 @@ export default {
 .nav-title {
   color: #ffffff;
   font-weight: 600;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 .nav-item:hover {
   border-bottom: solid 2px #ffffff;

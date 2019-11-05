@@ -11,9 +11,8 @@ export default {}
 <style scoped>
 footer {
   margin-top: auto;
-  background-color: #d82e8c;
   text-align: center;
   padding: 1em;
-  color: aliceblue;
+  color: #999999;
 }
 </style>

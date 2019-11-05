@@ -35,13 +35,13 @@ export default {
 }
 .post-title {
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 .post-date {
   color: #717579;
 }
 a {
-  color: #35495e;
+  color: #3f3f3f;
   text-decoration: none;
 }
 </style>

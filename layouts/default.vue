@@ -1,22 +1,34 @@
 <template>
   <div id="root">
-    <Header style="flex: 1;" />
-    <nuxt />
-    <!-- <A8netFoot /> -->
+    <!-- <Header style="flex: 1;" /> -->
+    <div id="container-outer">
+      <PageTitle />
+      <div id="content">
+        <nuxt id="page-main" />
+        <aside id="side-menu">
+          <Profile />
+          <Tags />
+        </aside>
+      </div>
+    </div>
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from '~/components/Header.vue'
+// import Header from '~/components/Header.vue'
+import PageTitle from '~/components/PageTitle.vue'
+import Profile from '~/components/Profile.vue'
+import Tags from '~/components/Tags.vue'
 import Footer from '~/components/Footer.vue'
-// import A8netFoot from '~/components/A8netFoot.vue'
 
 export default {
   components: {
-    Header,
+    // Header,
+    PageTitle,
+    Profile,
+    Tags,
     Footer
-    // A8netFoot
   }
 }
 </script>
@@ -63,8 +75,8 @@ html {
 .button--grey {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
+  border: 1px solid #3f3f3f;
+  color: #3f3f3f;
   text-decoration: none;
   padding: 10px 30px;
   margin-left: 15px;
@@ -72,6 +84,53 @@ html {
 
 .button--grey:hover {
   color: #fff;
-  background-color: #35495e;
+  background-color: #3f3f3f;
+}
+@media screen and (max-width: 767px) {
+  * {
+    box-sizing: border-box;
+  }
+  #container-outer {
+    width: 100%;
+  }
+  #page-main {
+    width: 100%;
+  }
+  #side-menu {
+    width: 100%;
+  }
+  #content {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #container-outer {
+    width: 1140px;
+    border-right: 1px solid #eceef1;
+    border-left: 1px solid #eceef1;
+  }
+  #page-main {
+    width: 700px;
+  }
+  #side-menu {
+    width: 290px;
+  }
+  #content {
+    margin: 35px 55px;
+  }
+}
+#container-outer {
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+#page-main {
+  float: left;
+  margin-bottom: 100px;
+}
+#side-menu {
+  float: right;
+  height: 100%;
 }
 </style>
