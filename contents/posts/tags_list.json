@@ -17,11 +17,11 @@
       "count": 3
     },
     {
-      "name": "DP",
+      "name": "文字列",
       "count": 2
     },
     {
-      "name": "文字列",
+      "name": "DP",
       "count": 2
     },
     {
@@ -31,10 +31,6 @@
     {
       "name": "Union-Find木",
       "count": 2
-    },
-    {
-      "name": "ABC-C",
-      "count": 1
     },
     {
       "name": "割った余り",
@@ -78,6 +74,10 @@
     },
     {
       "name": "ランレングス圧縮",
+      "count": 1
+    },
+    {
+      "name": "ABC-C",
       "count": 1
     },
     {

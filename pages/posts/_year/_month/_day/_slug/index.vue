@@ -10,7 +10,7 @@
         <span class="post-tag">{{ tag }}</span>
       </nuxt-link>
     </div>
-    <div v-html="bodyHtml"></div>
+    <div v-html="bodyHtml" style="margin-bottom: 120px;"></div>
     <!-- <SnsButtons /> -->
     <CommentForm />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
