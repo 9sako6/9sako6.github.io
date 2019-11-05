@@ -9,19 +9,19 @@
       "count": 6
     },
     {
-      "name": "ABC-D",
-      "count": 3
-    },
-    {
       "name": "Ruby",
       "count": 3
     },
     {
-      "name": "文字列",
-      "count": 2
+      "name": "ABC-D",
+      "count": 3
     },
     {
       "name": "DP",
+      "count": 2
+    },
+    {
+      "name": "文字列",
       "count": 2
     },
     {
@@ -33,6 +33,10 @@
       "count": 2
     },
     {
+      "name": "ABC-C",
+      "count": 1
+    },
+    {
       "name": "割った余り",
       "count": 1
     },
@@ -41,23 +45,11 @@
       "count": 1
     },
     {
-      "name": "重み付きUnion-Find木",
-      "count": 1
-    },
-    {
-      "name": "ABC-C",
+      "name": "ARC",
       "count": 1
     },
     {
       "name": "パターンに一致する文字列を数える",
-      "count": 1
-    },
-    {
-      "name": "ABC",
-      "count": 1
-    },
-    {
-      "name": "ランレングス圧縮",
       "count": 1
     },
     {
@@ -81,7 +73,15 @@
       "count": 1
     },
     {
-      "name": "ARC",
+      "name": "ABC",
+      "count": 1
+    },
+    {
+      "name": "ランレングス圧縮",
+      "count": 1
+    },
+    {
+      "name": "重み付きUnion-Find木",
       "count": 1
     }
   ]

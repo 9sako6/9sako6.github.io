@@ -11,7 +11,7 @@
       </nuxt-link>
     </div>
     <div v-html="bodyHtml"></div>
-    <SnsButtons />
+    <!-- <SnsButtons /> -->
     <CommentForm />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
   </section>
@@ -20,12 +20,12 @@
 <script>
 // source: https://jmblog.jp/posts/2018-01-18/build-a-blog-with-nuxtjs-and-markdown-2/
 import { sourceFileArray } from '~/contents/posts/summary.json'
-import SnsButtons from '~/components/SnsButtons.vue'
+// import SnsButtons from '~/components/SnsButtons.vue'
 import CommentForm from '~/components/CommentForm.vue'
 
 export default {
   components: {
-    SnsButtons,
+    // SnsButtons,
     CommentForm
   },
   validate({ params }) {
