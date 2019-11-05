@@ -17,7 +17,7 @@
       "count": 3
     },
     {
-      "name": "Union-Find木",
+      "name": "文字列",
       "count": 2
     },
     {
@@ -29,7 +29,7 @@
       "count": 2
     },
     {
-      "name": "文字列",
+      "name": "Union-Find木",
       "count": 2
     },
     {
@@ -37,23 +37,27 @@
       "count": 1
     },
     {
-      "name": "ABC",
-      "count": 1
-    },
-    {
-      "name": "素数",
-      "count": 1
-    },
-    {
-      "name": "ランレングス圧縮",
-      "count": 1
-    },
-    {
-      "name": "貪欲",
+      "name": "典型",
       "count": 1
     },
     {
       "name": "重み付きUnion-Find木",
+      "count": 1
+    },
+    {
+      "name": "ABC-C",
+      "count": 1
+    },
+    {
+      "name": "パターンに一致する文字列を数える",
+      "count": 1
+    },
+    {
+      "name": "ABC",
+      "count": 1
+    },
+    {
+      "name": "ランレングス圧縮",
       "count": 1
     },
     {
@@ -65,7 +69,11 @@
       "count": 1
     },
     {
-      "name": "ABC-C",
+      "name": "貪欲",
+      "count": 1
+    },
+    {
+      "name": "素数",
       "count": 1
     },
     {
@@ -74,14 +82,6 @@
     },
     {
       "name": "ARC",
-      "count": 1
-    },
-    {
-      "name": "パターンに一致する文字列を数える",
-      "count": 1
-    },
-    {
-      "name": "典型",
       "count": 1
     }
   ]
