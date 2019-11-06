@@ -2,7 +2,7 @@
   "TagsList": [
     {
       "name": "AtCoder",
-      "count": 7
+      "count": 8
     },
     {
       "name": "競技プログラミング",
@@ -13,8 +13,20 @@
       "count": 3
     },
     {
+      "name": "文字列",
+      "count": 3
+    },
+    {
       "name": "Ruby",
       "count": 3
+    },
+    {
+      "name": "Union-Find木",
+      "count": 2
+    },
+    {
+      "name": "連続する部分列",
+      "count": 2
     },
     {
       "name": "DP",
@@ -25,15 +37,19 @@
       "count": 2
     },
     {
-      "name": "Union-Find木",
-      "count": 2
-    },
-    {
-      "name": "文字列",
-      "count": 2
-    },
-    {
       "name": "部分列",
+      "count": 2
+    },
+    {
+      "name": "ABC",
+      "count": 1
+    },
+    {
+      "name": "ランレングス圧縮",
+      "count": 1
+    },
+    {
+      "name": "部分列の削除",
       "count": 1
     },
     {
@@ -49,18 +65,6 @@
       "count": 1
     },
     {
-      "name": "ABC",
-      "count": 1
-    },
-    {
-      "name": "ランレングス圧縮",
-      "count": 1
-    },
-    {
-      "name": "重み付きUnion-Find木",
-      "count": 1
-    },
-    {
       "name": "割った余り",
       "count": 1
     },
@@ -69,15 +73,11 @@
       "count": 1
     },
     {
+      "name": "重み付きUnion-Find木",
+      "count": 1
+    },
+    {
       "name": "ABC-C",
-      "count": 1
-    },
-    {
-      "name": "パターンに一致する文字列を数える",
-      "count": 1
-    },
-    {
-      "name": "第5回 ドワンゴからの挑戦状 予選",
       "count": 1
     },
     {
@@ -97,15 +97,31 @@
       "count": 1
     },
     {
-      "name": "連続する部分列",
+      "name": "スタック",
       "count": 1
     },
     {
-      "name": "部分列の削除",
+      "name": "シミュレーション",
+      "count": 1
+    },
+    {
+      "name": "操作",
+      "count": 1
+    },
+    {
+      "name": "AGC",
       "count": 1
     },
     {
       "name": "ARC",
+      "count": 1
+    },
+    {
+      "name": "パターンに一致する文字列を数える",
+      "count": 1
+    },
+    {
+      "name": "第5回 ドワンゴからの挑戦状 予選",
       "count": 1
     }
   ]
