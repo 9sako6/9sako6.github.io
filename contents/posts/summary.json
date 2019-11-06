@@ -19,6 +19,25 @@
       "sourceBase": "2019-05-22-abc040_c.md",
       "sourceExt": ".md"
     },
+    "contents/posts/2019-05-22-abc040_d.json": {
+      "title": "ABC040 D - 道路の老朽化対策について (100点)",
+      "description": "Union-Find（素集合データ構造, Disjoint-set Data Structure）を使って解く。 ただし、各質問ごとにUnion-Findを構築すると間に合わない。 そこで、...",
+      "tags": [
+        "競技プログラミング",
+        "AtCoder",
+        "Union-Find木",
+        "Python3",
+        "ABC-D"
+      ],
+      "created_at": "2019-05-22T00:00:00.000Z",
+      "updated_at": "2019-11-06T00:00:00.000Z",
+      "draft": false,
+      "dir": "contents/posts",
+      "base": "2019-05-22-abc040_d.json",
+      "ext": ".json",
+      "sourceBase": "2019-05-22-abc040_d.md",
+      "sourceExt": ".md"
+    },
     "contents/posts/2019-05-22-abc087_d.json": {
       "title": "ABC087 D - People on a Line (400点)",
       "description": "与えられる情報が成り立ってるのかを調べていく。条件が成立しているかどうかは重み付きUnion-Find木を使えば簡単に調べられる...",
@@ -80,6 +99,27 @@
       "sourceBase": "2019-10-20-yukicoder910.md",
       "sourceExt": ".md"
     },
+    "contents/posts/2019-11-06-abc044_d.json": {
+      "title": "D - 桁和 / Digit Sum (500点)",
+      "description": null,
+      "tags": [
+        "桁",
+        "条件を満たす最小値",
+        "AtCoder",
+        "割り算",
+        "式変形",
+        "数学",
+        "再帰"
+      ],
+      "created_at": "2019-11-06T00:00:00.000Z",
+      "updated_at": "2019-11-06T00:00:00.000Z",
+      "draft": false,
+      "dir": "contents/posts",
+      "base": "2019-11-06-abc044_d.json",
+      "ext": ".json",
+      "sourceBase": "2019-11-06-abc044_d.md",
+      "sourceExt": ".md"
+    },
     "contents/posts/2019-11-06-abc019_b.json": {
       "title": "ABC019 B - 高橋くんと文字列圧縮",
       "description": null,
@@ -99,42 +139,25 @@
       "sourceBase": "2019-11-06-abc019_b.md",
       "sourceExt": ".md"
     },
-    "contents/posts/2019-05-22-abc040_d.json": {
-      "title": "ABC040 D - 道路の老朽化対策について (100点)",
-      "description": "Union-Find（素集合データ構造, Disjoint-set Data Structure）を使って解く。 ただし、各質問ごとにUnion-Findを構築すると間に合わない。 そこで、...",
-      "tags": [
-        "競技プログラミング",
-        "AtCoder",
-        "Union-Find木",
-        "Python3",
-        "ABC-D"
-      ],
-      "created_at": "2019-05-22T00:00:00.000Z",
-      "updated_at": "2019-11-06T00:00:00.000Z",
-      "draft": false,
-      "dir": "contents/posts",
-      "base": "2019-05-22-abc040_d.json",
-      "ext": ".json",
-      "sourceBase": "2019-05-22-abc040_d.md",
-      "sourceExt": ".md"
-    },
-    "contents/posts/2019-11-06-arc002_c.json": {
-      "title": "ARC02 C - コマンド入力",
+    "contents/posts/2019-11-06-dwacon5th_prelims_b.json": {
+      "title": "B - Sum AND Subarrays",
       "description": null,
       "tags": [
-        "パターンに一致する文字列を数える",
+        "連続する部分列",
+        "最大化",
         "AtCoder",
-        "ARC",
-        "文字列",
-        "Ruby"
+        "企業コン",
+        "ビット",
+        "論理積",
+        "第5回 ドワンゴからの挑戦状 予選"
       ],
       "created_at": "2019-11-06T00:00:00.000Z",
       "updated_at": "2019-11-06T00:00:00.000Z",
       "draft": false,
       "dir": "contents/posts",
-      "base": "2019-11-06-arc002_c.json",
+      "base": "2019-11-06-dwacon5th_prelims_b.json",
       "ext": ".json",
-      "sourceBase": "2019-11-06-arc002_c.md",
+      "sourceBase": "2019-11-06-dwacon5th_prelims_b.md",
       "sourceExt": ".md"
     },
     "contents/posts/2019-11-06-agc005_a.json": {
@@ -159,25 +182,23 @@
       "sourceBase": "2019-11-06-agc005_a.md",
       "sourceExt": ".md"
     },
-    "contents/posts/2019-11-06-dwacon5th_prelims_b.json": {
-      "title": "B - Sum AND Subarrays",
+    "contents/posts/2019-11-06-arc002_c.json": {
+      "title": "ARC02 C - コマンド入力",
       "description": null,
       "tags": [
-        "連続する部分列",
-        "最大化",
+        "パターンに一致する文字列を数える",
         "AtCoder",
-        "企業コン",
-        "ビット",
-        "論理積",
-        "第5回 ドワンゴからの挑戦状 予選"
+        "ARC",
+        "文字列",
+        "Ruby"
       ],
       "created_at": "2019-11-06T00:00:00.000Z",
       "updated_at": "2019-11-06T00:00:00.000Z",
       "draft": false,
       "dir": "contents/posts",
-      "base": "2019-11-06-dwacon5th_prelims_b.json",
+      "base": "2019-11-06-arc002_c.json",
       "ext": ".json",
-      "sourceBase": "2019-11-06-dwacon5th_prelims_b.md",
+      "sourceBase": "2019-11-06-arc002_c.md",
       "sourceExt": ".md"
     }
   },
@@ -188,6 +209,7 @@
     "./md/2019-07-25-abc113_d.md",
     "./md/2019-10-20-yukicoder910.md",
     "./md/2019-11-06-abc019_b.md",
+    "./md/2019-11-06-abc044_d.md",
     "./md/2019-11-06-agc005_a.md",
     "./md/2019-11-06-arc002_c.md",
     "./md/2019-11-06-dwacon5th_prelims_b.md"

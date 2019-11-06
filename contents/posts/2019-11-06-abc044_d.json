@@ -1,0 +1,23 @@
+{
+  "title": "D - 桁和 / Digit Sum (500点)",
+  "description": null,
+  "tags": [
+    "桁",
+    "条件を満たす最小値",
+    "AtCoder",
+    "割り算",
+    "式変形",
+    "数学",
+    "再帰"
+  ],
+  "created_at": "2019-11-06T00:00:00.000Z",
+  "updated_at": "2019-11-06T00:00:00.000Z",
+  "draft": false,
+  "bodyContent": "# 問題\n[D - 桁和 / Digit Sum](https://atcoder.jp/contests/abc044/tasks/arc060_b)\n\n# 考察\n\\\\(n\\\\), \\\\(s\\\\)に対して以下の変形ができます。\n\n\\\\( n = a_0b^0 + a_1b^1 + ... + a_mb^m \\\\)\n\n\\\\( s = a_0 + a_1 + ... + a_m \\\\)\n\n\\\\(b\\\\)が大きくなるほど\\\\(m\\\\)は小さくなります。\nなぜなら\\\\(m\\\\)は\\\\(n\\\\)を\\\\(b\\\\)で何回割れるかみたいなことを表す値だからです。\n\n\\\\(m = floor(\\log_b n) \\\\)\n\n\\\\(b\\\\)をどんどん大きくしてみます。\n\n- \\\\(b = \\sqrt{n} \\\\)のとき、\\\\(m = 2\\\\)\n- \\\\(b > \\sqrt{n} \\\\)のとき、\\\\(m < 2\\\\)\n\n\\\\(2 \\leq b \\leq \\sqrt{n} \\\\)のとき、\\\\(O(\\sqrt{n})\\\\)で\\\\(b\\\\)を全探索すれば良いです。\n\n以降、\\\\(b > \\sqrt{n} \\\\)の場合を考えます。このとき、\n\n\\\\[\nn = a_0 + a_1b \\tag{1}\n\\\\] \n\\\\[\ns = a_0 + a_1 \\tag{2}\n\\\\] \n\nとかけます。\\\\((1)\\\\)式から、\\\\(n = a_0 + a_1b \\geq a_1b > a_1 \\sqrt{n} \\\\)より、\\\\(\\sqrt{n} > a_1 \\\\)を得ます。\n\nまた、\\\\((1, 2)\\\\)式から、\\\\(b = (n - s) / a_1 + 1\\\\)です。\n\nよって、\\\\(\\sqrt{n} > a_1 \\geq 1 \\\\)となる\\\\(a_1\\\\)を全探索すれば\\\\(b\\\\)が求まります。\n\nちなみに、\\\\(s > n\\\\)を満たす\\\\(b\\\\)は無く、\\\\(s = n\\\\)を満たす\\\\(b\\\\)は\\\\(n+1\\\\)です。\n\n\n[submission(Ruby)](https://atcoder.jp/contests/abc044/submissions/8314781)\n\n# 学び\n割り算が出たら\\\\(\\sqrt{n} \\\\)を考えるというのは典型っぽい？\n今回の場合だと\\\\(b\\\\)を\\\\(\\sqrt{n} \\\\)で場合分けすることによって探索が\\\\(O(\\sqrt{n})\\\\)でできるようになりました。頭いい。\n\n# 参考\n1. [http://arc060.contest.atcoder.jp/data/arc/060/editorial.pdf](http://arc060.contest.atcoder.jp/data/arc/060/editorial.pdf)\n1. [http://seica-at.hatenablog.com/entry/2017/12/29/132244](http://seica-at.hatenablog.com/entry/2017/12/29/132244)",
+  "bodyHtml": "<h1>問題</h1>\n<p><a href=\"https://atcoder.jp/contests/abc044/tasks/arc060_b\">D - 桁和 / Digit Sum</a></p>\n<h1>考察</h1>\n<p>\\(n\\), \\(s\\)に対して以下の変形ができます。</p>\n<p>\\( n = a_0b^0 + a_1b^1 + ... + a_mb^m \\)</p>\n<p>\\( s = a_0 + a_1 + ... + a_m \\)</p>\n<p>\\(b\\)が大きくなるほど\\(m\\)は小さくなります。\nなぜなら\\(m\\)は\\(n\\)を\\(b\\)で何回割れるかみたいなことを表す値だからです。</p>\n<p>\\(m = floor(\\log_b n) \\)</p>\n<p>\\(b\\)をどんどん大きくしてみます。</p>\n<ul>\n<li>\\(b = \\sqrt{n} \\)のとき、\\(m = 2\\)</li>\n<li>\\(b &gt; \\sqrt{n} \\)のとき、\\(m &lt; 2\\)</li>\n</ul>\n<p>\\(2 \\leq b \\leq \\sqrt{n} \\)のとき、\\(O(\\sqrt{n})\\)で\\(b\\)を全探索すれば良いです。</p>\n<p>以降、\\(b &gt; \\sqrt{n} \\)の場合を考えます。このとき、</p>\n<p>\\[\nn = a_0 + a_1b \\tag{1}\n\\]\n\\[\ns = a_0 + a_1 \\tag{2}\n\\]</p>\n<p>とかけます。\\((1)\\)式から、\\(n = a_0 + a_1b \\geq a_1b &gt; a_1 \\sqrt{n} \\)より、\\(\\sqrt{n} &gt; a_1 \\)を得ます。</p>\n<p>また、\\((1, 2)\\)式から、\\(b = (n - s) / a_1 + 1\\)です。</p>\n<p>よって、\\(\\sqrt{n} &gt; a_1 \\geq 1 \\)となる\\(a_1\\)を全探索すれば\\(b\\)が求まります。</p>\n<p>ちなみに、\\(s &gt; n\\)を満たす\\(b\\)は無く、\\(s = n\\)を満たす\\(b\\)は\\(n+1\\)です。</p>\n<p><a href=\"https://atcoder.jp/contests/abc044/submissions/8314781\">submission(Ruby)</a></p>\n<h1>学び</h1>\n<p>割り算が出たら\\(\\sqrt{n} \\)を考えるというのは典型っぽい？\n今回の場合だと\\(b\\)を\\(\\sqrt{n} \\)で場合分けすることによって探索が\\(O(\\sqrt{n})\\)でできるようになりました。頭いい。</p>\n<h1>参考</h1>\n<ol>\n<li><a href=\"http://arc060.contest.atcoder.jp/data/arc/060/editorial.pdf\">http://arc060.contest.atcoder.jp/data/arc/060/editorial.pdf</a></li>\n<li><a href=\"http://seica-at.hatenablog.com/entry/2017/12/29/132244\">http://seica-at.hatenablog.com/entry/2017/12/29/132244</a></li>\n</ol>\n",
+  "dir": "contents/posts",
+  "base": "2019-11-06-abc044_d.json",
+  "ext": ".json",
+  "sourceBase": "2019-11-06-abc044_d.md",
+  "sourceExt": ".md"
+}

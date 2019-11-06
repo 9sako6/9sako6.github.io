@@ -36,7 +36,7 @@ draft: false
 
 最下位の桁まで上記の処理を行ったのち、\\(S_{cands}\\)の全要素のビット毎の論理積をとると答えが求まります。
 
-計算量は\\(O(N^2 \log 10^9 N \leq 4 \times 10^7 )\\)です。
+計算量は\\(O(N^2 \log_2 10^9 N \leq 4 \times 10^7 )\\)です。
 
 [submission(Ruby)](https://atcoder.jp/contests/dwacon5th-prelims/submissions/8301350)
 
