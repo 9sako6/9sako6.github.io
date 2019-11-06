@@ -2,23 +2,19 @@
   "TagsList": [
     {
       "name": "AtCoder",
-      "count": 6
+      "count": 7
     },
     {
       "name": "競技プログラミング",
       "count": 6
     },
     {
-      "name": "Ruby",
-      "count": 3
-    },
-    {
       "name": "ABC-D",
       "count": 3
     },
     {
-      "name": "文字列",
-      "count": 2
+      "name": "Ruby",
+      "count": 3
     },
     {
       "name": "DP",
@@ -33,24 +29,8 @@
       "count": 2
     },
     {
-      "name": "割った余り",
-      "count": 1
-    },
-    {
-      "name": "典型",
-      "count": 1
-    },
-    {
-      "name": "ARC",
-      "count": 1
-    },
-    {
-      "name": "パターンに一致する文字列を数える",
-      "count": 1
-    },
-    {
-      "name": "部分列の削除",
-      "count": 1
+      "name": "文字列",
+      "count": 2
     },
     {
       "name": "部分列",
@@ -77,11 +57,55 @@
       "count": 1
     },
     {
+      "name": "重み付きUnion-Find木",
+      "count": 1
+    },
+    {
+      "name": "割った余り",
+      "count": 1
+    },
+    {
+      "name": "典型",
+      "count": 1
+    },
+    {
       "name": "ABC-C",
       "count": 1
     },
     {
-      "name": "重み付きUnion-Find木",
+      "name": "パターンに一致する文字列を数える",
+      "count": 1
+    },
+    {
+      "name": "第5回 ドワンゴからの挑戦状 予選",
+      "count": 1
+    },
+    {
+      "name": "論理積",
+      "count": 1
+    },
+    {
+      "name": "ビット",
+      "count": 1
+    },
+    {
+      "name": "企業コン",
+      "count": 1
+    },
+    {
+      "name": "最大化",
+      "count": 1
+    },
+    {
+      "name": "連続する部分列",
+      "count": 1
+    },
+    {
+      "name": "部分列の削除",
+      "count": 1
+    },
+    {
+      "name": "ARC",
       "count": 1
     }
   ]
