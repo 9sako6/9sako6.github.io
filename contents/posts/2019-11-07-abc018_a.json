@@ -1,0 +1,23 @@
+{
+  "title": "A - Getting Difference (300点)",
+  "description": null,
+  "tags": [
+    "競技プログラミング",
+    "AtCoder",
+    "AGC",
+    "数列",
+    "操作",
+    "最大公約数",
+    "数学"
+  ],
+  "created_at": "2019-11-07T00:00:00.000Z",
+  "updated_at": "2019-11-07T00:00:00.000Z",
+  "draft": false,
+  "bodyContent": "# 問題\n[A - Getting Difference](https://atcoder.jp/contests/agc018/tasks/agc018_a)\n\n# 考察\n\nある整数\\\\(g\\\\)の倍数である整数\\\\(A, B\\\\)どうしの差の絶対値は\\\\(g\\\\)の倍数である。\n\n\\\\(|A - B| = |gp - gq| = g|p - q| \\\\)\n\n好きなだけ操作を繰り返すと、最大公約数\\\\(G\\\\)を作れる。\n\\\\(max(A_i) \\geq K \\\\)なら0回以上\\\\(max(A_i)\\\\)から\\\\(G\\\\)を引くことで\\\\(K\\\\)を作れる。\n\n[submission(Ruby)](https://atcoder.jp/contests/agc018/submissions/8322393)",
+  "bodyHtml": "<h1>問題</h1>\n<p><a href=\"https://atcoder.jp/contests/agc018/tasks/agc018_a\">A - Getting Difference</a></p>\n<h1>考察</h1>\n<p>ある整数\\(g\\)の倍数である整数\\(A, B\\)どうしの差の絶対値は\\(g\\)の倍数である。</p>\n<p>\\(|A - B| = |gp - gq| = g|p - q| \\)</p>\n<p>好きなだけ操作を繰り返すと、最大公約数\\(G\\)を作れる。\n\\(max(A_i) \\geq K \\)なら0回以上\\(max(A_i)\\)から\\(G\\)を引くことで\\(K\\)を作れる。</p>\n<p><a href=\"https://atcoder.jp/contests/agc018/submissions/8322393\">submission(Ruby)</a></p>\n",
+  "dir": "contents/posts",
+  "base": "2019-11-07-abc018_a.json",
+  "ext": ".json",
+  "sourceBase": "2019-11-07-abc018_a.md",
+  "sourceExt": ".md"
+}

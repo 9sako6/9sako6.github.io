@@ -3,7 +3,7 @@
     <div class="side-title">Tags</div>
     <div class="side-description">
       <ul v-for="tag in tags" :key="tag.id">
-        <li class="post-tag">
+        <li class="list-item">
           <nuxt-link :to="'/tags/' + tag.name">
             {{ tag.name + ` (${tag.count})` }}
           </nuxt-link>
@@ -26,4 +26,5 @@ export default {
 </script>
 <style scoped>
 @import '@/assets/css/side.css';
+@import '@/assets/css/tag.css';
 </style>

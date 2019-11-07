@@ -6,6 +6,10 @@
   border-bottom: 1px solid #ECEEF1;
 }
 .side-description {
-  font-size: 85%;
+  /* font-size: 85%; */
   margin: 1em;
+}
+
+.list-item {
+  margin-bottom: 0.5em;
 }

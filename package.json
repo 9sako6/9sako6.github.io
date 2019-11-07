@@ -22,13 +22,11 @@
     "@nuxtjs/pwa": "^2.6.0",
     "@nuxtjs/sitemap": "^1.2.0",
     "cross-env": "^5.2.0",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "fstream": "^1.0.12",
     "lodash": "^4.17.13",
     "npm-check-updates": "^3.1.12",
     "nuxt": "^2.8.1",
-    "tar": "^4.4.10",
-    "vue-burger-menu": "^2.0.2"
+    "tar": "^4.4.10"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
@@ -45,6 +43,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.2.3",
+    "extract-text-webpack-plugin": "^3.0.2",
     "node-sass": "^4.12.0",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",

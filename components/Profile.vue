@@ -7,9 +7,13 @@
     <div class="side-description">
       くさころです。RubyとC++で競プロをしています。
       <ul>
-        <li><a href="https://atcoder.jp/users/qsako6">AtCoder</a></li>
-        <li><a href="https://twitter.com/9sako6">Twitter</a></li>
-        <li>
+        <li class="list-item">
+          <a href="https://atcoder.jp/users/qsako6">AtCoder</a>
+        </li>
+        <li class="list-item">
+          <a href="https://twitter.com/9sako6">Twitter</a>
+        </li>
+        <li class="list-item">
           <a href="https://github.com/9sako6/ruby-datastructures-algorithms"
             >ruby-datastructures-algorithms</a
           >

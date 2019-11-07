@@ -2,6 +2,7 @@
 title: "B - Sum AND Subarrays"
 description:
 tags:
+  - 競技プログラミング
   - 連続する部分列
   - 最大化
   - AtCoder
@@ -10,7 +11,7 @@ tags:
   - 論理積
   - "第5回 ドワンゴからの挑戦状 予選"
 created_at: 2019-11-06
-updated_at: 2019-11-06
+updated_at: 2019-11-07
 draft: false
 ---
 

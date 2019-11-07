@@ -1,19 +1,19 @@
 {
   "TagsList": [
     {
-      "name": "AtCoder",
-      "count": 9
-    },
-    {
       "name": "競技プログラミング",
-      "count": 6
+      "count": 11
     },
     {
-      "name": "文字列",
-      "count": 3
+      "name": "AtCoder",
+      "count": 10
     },
     {
       "name": "Ruby",
+      "count": 3
+    },
+    {
+      "name": "文字列",
       "count": 3
     },
     {
@@ -21,11 +21,23 @@
       "count": 3
     },
     {
+      "name": "数学",
+      "count": 2
+    },
+    {
       "name": "Union-Find木",
       "count": 2
     },
     {
+      "name": "部分列",
+      "count": 2
+    },
+    {
       "name": "連続する部分列",
+      "count": 2
+    },
+    {
+      "name": "AGC",
       "count": 2
     },
     {
@@ -37,16 +49,8 @@
       "count": 2
     },
     {
-      "name": "部分列",
+      "name": "操作",
       "count": 2
-    },
-    {
-      "name": "再帰",
-      "count": 1
-    },
-    {
-      "name": "数学",
-      "count": 1
     },
     {
       "name": "式変形",
@@ -65,11 +69,11 @@
       "count": 1
     },
     {
-      "name": "ABC",
+      "name": "割った余り",
       "count": 1
     },
     {
-      "name": "ランレングス圧縮",
+      "name": "典型",
       "count": 1
     },
     {
@@ -89,11 +93,7 @@
       "count": 1
     },
     {
-      "name": "割った余り",
-      "count": 1
-    },
-    {
-      "name": "典型",
+      "name": "ABC-C",
       "count": 1
     },
     {
@@ -101,7 +101,11 @@
       "count": 1
     },
     {
-      "name": "ABC-C",
+      "name": "数列",
+      "count": 1
+    },
+    {
+      "name": "第5回 ドワンゴからの挑戦状 予選",
       "count": 1
     },
     {
@@ -121,14 +125,6 @@
       "count": 1
     },
     {
-      "name": "ARC",
-      "count": 1
-    },
-    {
-      "name": "パターンに一致する文字列を数える",
-      "count": 1
-    },
-    {
       "name": "スタック",
       "count": 1
     },
@@ -137,15 +133,27 @@
       "count": 1
     },
     {
-      "name": "操作",
+      "name": "ARC",
       "count": 1
     },
     {
-      "name": "AGC",
+      "name": "パターンに一致する文字列を数える",
       "count": 1
     },
     {
-      "name": "第5回 ドワンゴからの挑戦状 予選",
+      "name": "ABC",
+      "count": 1
+    },
+    {
+      "name": "ランレングス圧縮",
+      "count": 1
+    },
+    {
+      "name": "再帰",
+      "count": 1
+    },
+    {
+      "name": "最大公約数",
       "count": 1
     }
   ]

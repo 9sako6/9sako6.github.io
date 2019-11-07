@@ -49,6 +49,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  color: #3f3f3f;
 }
 
 *,
@@ -133,5 +134,9 @@ html {
 #side-menu {
   float: right;
   height: 100%;
+}
+
+a {
+  word-break: break-all;
 }
 </style>

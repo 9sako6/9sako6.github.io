@@ -18,7 +18,7 @@ description:
 tags:
   - 
 created_at: #{date}
-updated_at: #{date}
+updated_at: 
 draft: true
 ---
 EOS

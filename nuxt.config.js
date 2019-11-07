@@ -1,5 +1,4 @@
 import pkg from './package'
-
 /*
  ** make routes to generate static pages of dynamic routing
  */
@@ -15,7 +14,6 @@ sourceFileArray.reverse().forEach(markdownName => {
     routes.push(link)
   }
 })
-console.log(routes)
 
 export default {
   mode: 'spa',
