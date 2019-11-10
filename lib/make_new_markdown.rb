@@ -26,3 +26,7 @@ EOS
 File.open("#{path}/#{date}-#{title}.md", "w") do |file|
   file.puts template
 end
+
+img_path = "./static/posts_images"
+
+Dir.mkdir("#{img_path}/#{date}-#{title}")

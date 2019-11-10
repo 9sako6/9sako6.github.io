@@ -28,12 +28,21 @@ div.tex-equations {
     font-weight: 600;
     font-size: 1.7em;
   }
+  .page>>>img {
+    margin-left: 10%;
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 768px) {
   #page-title {
     font-weight: 600;
     font-size: 2em;
+  }
+  .page>>>img {
+    margin-left: 10%;
+    width: 80%;
+    max-width: 300px;
   }
 }
 
@@ -62,11 +71,6 @@ div.tex-equations {
 
 .page>>>hr {
   margin: 2em 0 2em 0;
-}
-
-.page>>>img {
-  margin-left: 10%;
-  width: 80%;
 }
 
 .page>>>table {
