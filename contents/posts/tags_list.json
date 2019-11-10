@@ -13,10 +13,6 @@
       "count": 4
     },
     {
-      "name": "部分列",
-      "count": 3
-    },
-    {
       "name": "Ruby",
       "count": 3
     },
@@ -25,19 +21,15 @@
       "count": 3
     },
     {
+      "name": "部分列",
+      "count": 3
+    },
+    {
+      "name": "ABC",
+      "count": 2
+    },
+    {
       "name": "数学",
-      "count": 2
-    },
-    {
-      "name": "Union-Find木",
-      "count": 2
-    },
-    {
-      "name": "AGC",
-      "count": 2
-    },
-    {
-      "name": "yukicoder",
       "count": 2
     },
     {
@@ -45,7 +37,15 @@
       "count": 2
     },
     {
-      "name": "ABC",
+      "name": "yukicoder",
+      "count": 2
+    },
+    {
+      "name": "連続する部分列",
+      "count": 2
+    },
+    {
+      "name": "AGC",
       "count": 2
     },
     {
@@ -53,7 +53,7 @@
       "count": 2
     },
     {
-      "name": "連続する部分列",
+      "name": "Union-Find木",
       "count": 2
     },
     {
@@ -65,11 +65,11 @@
       "count": 1
     },
     {
-      "name": "スタック",
+      "name": "ARC",
       "count": 1
     },
     {
-      "name": "シミュレーション",
+      "name": "パターンに一致する文字列を数える",
       "count": 1
     },
     {
@@ -101,22 +101,6 @@
       "count": 1
     },
     {
-      "name": "構築",
-      "count": 1
-    },
-    {
-      "name": "数直線",
-      "count": 1
-    },
-    {
-      "name": "最大公約数",
-      "count": 1
-    },
-    {
-      "name": "数列",
-      "count": 1
-    },
-    {
       "name": "第5回 ドワンゴからの挑戦状 予選",
       "count": 1
     },
@@ -137,11 +121,27 @@
       "count": 1
     },
     {
-      "name": "ARC",
+      "name": "構築",
       "count": 1
     },
     {
-      "name": "パターンに一致する文字列を数える",
+      "name": "数直線",
+      "count": 1
+    },
+    {
+      "name": "最大公約数",
+      "count": 1
+    },
+    {
+      "name": "数列",
+      "count": 1
+    },
+    {
+      "name": "スタック",
+      "count": 1
+    },
+    {
+      "name": "シミュレーション",
       "count": 1
     },
     {
