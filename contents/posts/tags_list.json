@@ -13,7 +13,7 @@
       "count": 4
     },
     {
-      "name": "DP",
+      "name": "部分列",
       "count": 3
     },
     {
@@ -21,39 +21,11 @@
       "count": 3
     },
     {
-      "name": "部分列",
+      "name": "DP",
       "count": 3
     },
     {
-      "name": "Bellman-Ford法",
-      "count": 2
-    },
-    {
-      "name": "単一始点最短路問題",
-      "count": 2
-    },
-    {
       "name": "グラフ",
-      "count": 2
-    },
-    {
-      "name": "操作",
-      "count": 2
-    },
-    {
-      "name": "AGC",
-      "count": 2
-    },
-    {
-      "name": "yukicoder",
-      "count": 2
-    },
-    {
-      "name": "数学",
-      "count": 2
-    },
-    {
-      "name": "ABC",
       "count": 2
     },
     {
@@ -61,7 +33,11 @@
       "count": 2
     },
     {
-      "name": "Python",
+      "name": "Bellman-Ford法",
+      "count": 2
+    },
+    {
+      "name": "ABC",
       "count": 2
     },
     {
@@ -69,71 +45,35 @@
       "count": 2
     },
     {
-      "name": "企業コン",
-      "count": 1
+      "name": "AGC",
+      "count": 2
     },
     {
-      "name": "ARC",
-      "count": 1
+      "name": "単一始点最短路問題",
+      "count": 2
     },
     {
-      "name": "パターンに一致する文字列を数える",
-      "count": 1
+      "name": "数学",
+      "count": 2
     },
     {
-      "name": "スタック",
-      "count": 1
+      "name": "yukicoder",
+      "count": 2
+    },
+    {
+      "name": "Python",
+      "count": 2
+    },
+    {
+      "name": "操作",
+      "count": 2
     },
     {
       "name": "シミュレーション",
       "count": 1
     },
     {
-      "name": "全点対最短路問題",
-      "count": 1
-    },
-    {
-      "name": "部分文字列",
-      "count": 1
-    },
-    {
-      "name": "Warshall–Floyd法",
-      "count": 1
-    },
-    {
-      "name": "部分列の削除",
-      "count": 1
-    },
-    {
-      "name": "BFS",
-      "count": 1
-    },
-    {
-      "name": "貪欲",
-      "count": 1
-    },
-    {
-      "name": "素数",
-      "count": 1
-    },
-    {
-      "name": "ランレングス圧縮",
-      "count": 1
-    },
-    {
-      "name": "割った余り",
-      "count": 1
-    },
-    {
-      "name": "典型",
-      "count": 1
-    },
-    {
       "name": "再帰",
-      "count": 1
-    },
-    {
-      "name": "メモ",
       "count": 1
     },
     {
@@ -153,11 +93,55 @@
       "count": 1
     },
     {
-      "name": "Dijkstra法",
+      "name": "ランレングス圧縮",
+      "count": 1
+    },
+    {
+      "name": "部分列の削除",
+      "count": 1
+    },
+    {
+      "name": "貪欲",
+      "count": 1
+    },
+    {
+      "name": "素数",
       "count": 1
     },
     {
       "name": "重み付きUnion-Find木",
+      "count": 1
+    },
+    {
+      "name": "割った余り",
+      "count": 1
+    },
+    {
+      "name": "典型",
+      "count": 1
+    },
+    {
+      "name": "部分文字列",
+      "count": 1
+    },
+    {
+      "name": "メモ",
+      "count": 1
+    },
+    {
+      "name": "全点対最短路問題",
+      "count": 1
+    },
+    {
+      "name": "Warshall–Floyd法",
+      "count": 1
+    },
+    {
+      "name": "Dijkstra法",
+      "count": 1
+    },
+    {
+      "name": "BFS",
       "count": 1
     },
     {
@@ -169,11 +153,7 @@
       "count": 1
     },
     {
-      "name": "最大公約数",
-      "count": 1
-    },
-    {
-      "name": "数列",
+      "name": "ARC",
       "count": 1
     },
     {
@@ -189,7 +169,27 @@
       "count": 1
     },
     {
+      "name": "企業コン",
+      "count": 1
+    },
+    {
       "name": "最大化",
+      "count": 1
+    },
+    {
+      "name": "最大公約数",
+      "count": 1
+    },
+    {
+      "name": "数列",
+      "count": 1
+    },
+    {
+      "name": "スタック",
+      "count": 1
+    },
+    {
+      "name": "パターンに一致する文字列を数える",
       "count": 1
     }
   ]
