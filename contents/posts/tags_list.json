@@ -2,15 +2,19 @@
   "TagsList": [
     {
       "name": "競技プログラミング",
-      "count": 12
+      "count": 13
     },
     {
       "name": "AtCoder",
-      "count": 11
+      "count": 12
     },
     {
       "name": "文字列",
       "count": 4
+    },
+    {
+      "name": "部分列",
+      "count": 3
     },
     {
       "name": "Ruby",
@@ -21,43 +25,19 @@
       "count": 3
     },
     {
+      "name": "ABC",
+      "count": 3
+    },
+    {
       "name": "DP",
       "count": 3
     },
     {
-      "name": "部分列",
-      "count": 3
-    },
-    {
-      "name": "Bellman-Ford法",
-      "count": 2
-    },
-    {
-      "name": "単一始点最短路問題",
-      "count": 2
-    },
-    {
-      "name": "企業コン",
+      "name": "再帰",
       "count": 2
     },
     {
       "name": "Union-Find木",
-      "count": 2
-    },
-    {
-      "name": "yukicoder",
-      "count": 2
-    },
-    {
-      "name": "ABC",
-      "count": 2
-    },
-    {
-      "name": "連続する部分列",
-      "count": 2
-    },
-    {
-      "name": "グラフ",
       "count": 2
     },
     {
@@ -69,16 +49,36 @@
       "count": 2
     },
     {
+      "name": "BFS",
+      "count": 2
+    },
+    {
+      "name": "グラフ",
+      "count": 2
+    },
+    {
+      "name": "企業コン",
+      "count": 2
+    },
+    {
+      "name": "単一始点最短路問題",
+      "count": 2
+    },
+    {
+      "name": "yukicoder",
+      "count": 2
+    },
+    {
+      "name": "連続する部分列",
+      "count": 2
+    },
+    {
       "name": "Python",
       "count": 2
     },
     {
-      "name": "数直線",
-      "count": 1
-    },
-    {
-      "name": "第5回 ドワンゴからの挑戦状 予選",
-      "count": 1
+      "name": "Bellman-Ford法",
+      "count": 2
     },
     {
       "name": "論理積",
@@ -90,26 +90,6 @@
     },
     {
       "name": "最大化",
-      "count": 1
-    },
-    {
-      "name": "スタック",
-      "count": 1
-    },
-    {
-      "name": "シミュレーション",
-      "count": 1
-    },
-    {
-      "name": "最大公約数",
-      "count": 1
-    },
-    {
-      "name": "数列",
-      "count": 1
-    },
-    {
-      "name": "再帰",
       "count": 1
     },
     {
@@ -133,6 +113,46 @@
       "count": 1
     },
     {
+      "name": "部分列の削除",
+      "count": 1
+    },
+    {
+      "name": "貪欲",
+      "count": 1
+    },
+    {
+      "name": "素数",
+      "count": 1
+    },
+    {
+      "name": "割った余り",
+      "count": 1
+    },
+    {
+      "name": "典型",
+      "count": 1
+    },
+    {
+      "name": "重み付きUnion-Find木",
+      "count": 1
+    },
+    {
+      "name": "各桁",
+      "count": 1
+    },
+    {
+      "name": "DFS",
+      "count": 1
+    },
+    {
+      "name": "部分文字列",
+      "count": 1
+    },
+    {
+      "name": "独立性",
+      "count": 1
+    },
+    {
       "name": "操作回数",
       "count": 1
     },
@@ -142,14 +162,6 @@
     },
     {
       "name": "天啓",
-      "count": 1
-    },
-    {
-      "name": "割った余り",
-      "count": 1
-    },
-    {
-      "name": "典型",
       "count": 1
     },
     {
@@ -169,7 +181,19 @@
       "count": 1
     },
     {
-      "name": "BFS",
+      "name": "最大公約数",
+      "count": 1
+    },
+    {
+      "name": "数列",
+      "count": 1
+    },
+    {
+      "name": "構築",
+      "count": 1
+    },
+    {
+      "name": "数直線",
       "count": 1
     },
     {
@@ -181,31 +205,19 @@
       "count": 1
     },
     {
-      "name": "重み付きUnion-Find木",
+      "name": "スタック",
       "count": 1
     },
     {
-      "name": "部分列の削除",
+      "name": "シミュレーション",
       "count": 1
     },
     {
-      "name": "貪欲",
+      "name": "第5回 ドワンゴからの挑戦状 予選",
       "count": 1
     },
     {
-      "name": "素数",
-      "count": 1
-    },
-    {
-      "name": "部分文字列",
-      "count": 1
-    },
-    {
-      "name": "構築",
-      "count": 1
-    },
-    {
-      "name": "独立性",
+      "name": "全探索",
       "count": 1
     }
   ]
