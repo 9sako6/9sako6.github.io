@@ -128,3 +128,7 @@ div.tex-equations {
 .page>>>.hljs-comment {
   color: rgb(124, 175, 102);
 }
+
+.page>>>strong {
+  font-weight: 900;
+}

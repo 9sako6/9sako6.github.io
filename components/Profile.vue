@@ -5,7 +5,7 @@
       <img id="profile-avatar" src="~/static/icon.png" />
     </div>
     <div class="side-description">
-      くさころです。RubyとC++で競プロをしています。
+      くさころです。RubyとC++で競プロをしています。正直競プロあまり得意じゃないです。自分でもわかるようになるべく行間のない解説を心がけます。
       <ul>
         <li class="list-item">
           <a href="https://atcoder.jp/users/qsako6">AtCoder</a>
