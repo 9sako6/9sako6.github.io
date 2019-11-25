@@ -17,6 +17,10 @@
       "count": 4
     },
     {
+      "name": "ABC",
+      "count": 3
+    },
+    {
       "name": "部分列",
       "count": 3
     },
@@ -25,27 +29,11 @@
       "count": 3
     },
     {
-      "name": "ABC",
-      "count": 3
-    },
-    {
       "name": "DP",
       "count": 3
     },
     {
-      "name": "組み合わせ",
-      "count": 2
-    },
-    {
-      "name": "企業コン",
-      "count": 2
-    },
-    {
-      "name": "BFS",
-      "count": 2
-    },
-    {
-      "name": "Bellman-Ford法",
+      "name": "yukicoder",
       "count": 2
     },
     {
@@ -53,23 +41,7 @@
       "count": 2
     },
     {
-      "name": "グラフ",
-      "count": 2
-    },
-    {
-      "name": "数列",
-      "count": 2
-    },
-    {
-      "name": "操作",
-      "count": 2
-    },
-    {
-      "name": "連続する部分列",
-      "count": 2
-    },
-    {
-      "name": "AGC",
+      "name": "組み合わせ",
       "count": 2
     },
     {
@@ -77,11 +49,39 @@
       "count": 2
     },
     {
+      "name": "企業コン",
+      "count": 2
+    },
+    {
+      "name": "連続する部分列",
+      "count": 2
+    },
+    {
       "name": "再帰",
       "count": 2
     },
     {
-      "name": "yukicoder",
+      "name": "数列",
+      "count": 2
+    },
+    {
+      "name": "Bellman-Ford法",
+      "count": 2
+    },
+    {
+      "name": "BFS",
+      "count": 2
+    },
+    {
+      "name": "操作",
+      "count": 2
+    },
+    {
+      "name": "AGC",
+      "count": 2
+    },
+    {
+      "name": "グラフ",
       "count": 2
     },
     {
@@ -97,34 +97,6 @@
       "count": 2
     },
     {
-      "name": "天啓",
-      "count": 1
-    },
-    {
-      "name": "パターンに一致する文字列を数える",
-      "count": 1
-    },
-    {
-      "name": "メモ",
-      "count": 1
-    },
-    {
-      "name": "全点対最短路問題",
-      "count": 1
-    },
-    {
-      "name": "Warshall–Floyd法",
-      "count": 1
-    },
-    {
-      "name": "Dijkstra法",
-      "count": 1
-    },
-    {
-      "name": "条件を満たす最小値",
-      "count": 1
-    },
-    {
       "name": "構築",
       "count": 1
     },
@@ -133,27 +105,7 @@
       "count": 1
     },
     {
-      "name": "桁",
-      "count": 1
-    },
-    {
-      "name": "最大化",
-      "count": 1
-    },
-    {
-      "name": "重み付きUnion-Find木",
-      "count": 1
-    },
-    {
       "name": "最大公約数",
-      "count": 1
-    },
-    {
-      "name": "部分列の削除",
-      "count": 1
-    },
-    {
-      "name": "部分文字列",
       "count": 1
     },
     {
@@ -165,7 +117,35 @@
       "count": 1
     },
     {
+      "name": "第5回 ドワンゴからの挑戦状 予選",
+      "count": 1
+    },
+    {
+      "name": "論理積",
+      "count": 1
+    },
+    {
       "name": "ビット",
+      "count": 1
+    },
+    {
+      "name": "最大化",
+      "count": 1
+    },
+    {
+      "name": "式変形",
+      "count": 1
+    },
+    {
+      "name": "割り算",
+      "count": 1
+    },
+    {
+      "name": "条件を満たす最小値",
+      "count": 1
+    },
+    {
+      "name": "桁",
       "count": 1
     },
     {
@@ -177,43 +157,15 @@
       "count": 1
     },
     {
-      "name": "グリッド",
-      "count": 1
-    },
-    {
       "name": "ランレングス圧縮",
       "count": 1
     },
     {
-      "name": "第5回 ドワンゴからの挑戦状 予選",
+      "name": "重み付きUnion-Find木",
       "count": 1
     },
     {
       "name": "典型",
-      "count": 1
-    },
-    {
-      "name": "論理積",
-      "count": 1
-    },
-    {
-      "name": "白黒",
-      "count": 1
-    },
-    {
-      "name": "式変形",
-      "count": 1
-    },
-    {
-      "name": "2変数",
-      "count": 1
-    },
-    {
-      "name": "各桁",
-      "count": 1
-    },
-    {
-      "name": "DFS",
       "count": 1
     },
     {
@@ -237,10 +189,6 @@
       "count": 1
     },
     {
-      "name": "割り算",
-      "count": 1
-    },
-    {
       "name": "重複組み合わせ",
       "count": 1
     },
@@ -261,11 +209,63 @@
       "count": 1
     },
     {
+      "name": "天啓",
+      "count": 1
+    },
+    {
       "name": "反転",
       "count": 1
     },
     {
+      "name": "白黒",
+      "count": 1
+    },
+    {
+      "name": "グリッド",
+      "count": 1
+    },
+    {
+      "name": "2変数",
+      "count": 1
+    },
+    {
+      "name": "部分文字列",
+      "count": 1
+    },
+    {
+      "name": "各桁",
+      "count": 1
+    },
+    {
+      "name": "DFS",
+      "count": 1
+    },
+    {
       "name": "ARC",
+      "count": 1
+    },
+    {
+      "name": "パターンに一致する文字列を数える",
+      "count": 1
+    },
+    {
+      "name": "メモ",
+      "count": 1
+    },
+    {
+      "name": "全点対最短路問題",
+      "count": 1
+    },
+    {
+      "name": "Warshall–Floyd法",
+      "count": 1
+    },
+    {
+      "name": "Dijkstra法",
+      "count": 1
+    },
+    {
+      "name": "部分列の削除",
       "count": 1
     }
   ]
