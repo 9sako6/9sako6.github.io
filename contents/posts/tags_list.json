@@ -2,14 +2,14 @@
   "TagsList": [
     {
       "name": "競技プログラミング",
-      "count": 15
+      "count": 16
     },
     {
       "name": "AtCoder",
-      "count": 14
+      "count": 15
     },
     {
-      "name": "数学",
+      "name": "ABC",
       "count": 4
     },
     {
@@ -17,8 +17,12 @@
       "count": 4
     },
     {
-      "name": "ABC",
-      "count": 3
+      "name": "DP",
+      "count": 4
+    },
+    {
+      "name": "数学",
+      "count": 4
     },
     {
       "name": "部分列",
@@ -29,31 +33,7 @@
       "count": 3
     },
     {
-      "name": "DP",
-      "count": 3
-    },
-    {
-      "name": "yukicoder",
-      "count": 2
-    },
-    {
-      "name": "単一始点最短路問題",
-      "count": 2
-    },
-    {
-      "name": "組み合わせ",
-      "count": 2
-    },
-    {
-      "name": "割った余り",
-      "count": 2
-    },
-    {
-      "name": "企業コン",
-      "count": 2
-    },
-    {
-      "name": "連続する部分列",
+      "name": "数列",
       "count": 2
     },
     {
@@ -61,7 +41,15 @@
       "count": 2
     },
     {
-      "name": "数列",
+      "name": "yukicoder",
+      "count": 2
+    },
+    {
+      "name": "グラフ",
+      "count": 2
+    },
+    {
+      "name": "組み合わせ",
       "count": 2
     },
     {
@@ -77,19 +65,15 @@
       "count": 2
     },
     {
+      "name": "連続する部分列",
+      "count": 2
+    },
+    {
       "name": "AGC",
       "count": 2
     },
     {
-      "name": "グラフ",
-      "count": 2
-    },
-    {
-      "name": "Python",
-      "count": 2
-    },
-    {
-      "name": "Union-Find木",
+      "name": "割った余り",
       "count": 2
     },
     {
@@ -97,23 +81,23 @@
       "count": 2
     },
     {
-      "name": "構築",
-      "count": 1
+      "name": "単一始点最短路問題",
+      "count": 2
     },
     {
-      "name": "数直線",
-      "count": 1
+      "name": "Union-Find木",
+      "count": 2
     },
     {
-      "name": "最大公約数",
-      "count": 1
+      "name": "Python",
+      "count": 2
     },
     {
-      "name": "スタック",
-      "count": 1
+      "name": "企業コン",
+      "count": 2
     },
     {
-      "name": "シミュレーション",
+      "name": "部分文字列",
       "count": 1
     },
     {
@@ -133,6 +117,10 @@
       "count": 1
     },
     {
+      "name": "最大公約数",
+      "count": 1
+    },
+    {
       "name": "式変形",
       "count": 1
     },
@@ -149,6 +137,26 @@
       "count": 1
     },
     {
+      "name": "ARC",
+      "count": 1
+    },
+    {
+      "name": "パターンに一致する文字列を数える",
+      "count": 1
+    },
+    {
+      "name": "スタック",
+      "count": 1
+    },
+    {
+      "name": "シミュレーション",
+      "count": 1
+    },
+    {
+      "name": "部分列の削除",
+      "count": 1
+    },
+    {
       "name": "貪欲",
       "count": 1
     },
@@ -161,39 +169,15 @@
       "count": 1
     },
     {
-      "name": "重み付きUnion-Find木",
-      "count": 1
-    },
-    {
       "name": "典型",
       "count": 1
     },
     {
-      "name": "フェルマーの小定理",
+      "name": "重み付きUnion-Find木",
       "count": 1
     },
     {
-      "name": "逆元テーブル",
-      "count": 1
-    },
-    {
-      "name": "逆元",
-      "count": 1
-    },
-    {
-      "name": "並べ替えれば条件を満たせる",
-      "count": 1
-    },
-    {
-      "name": "条件を満たす整数の組の個数",
-      "count": 1
-    },
-    {
-      "name": "重複組み合わせ",
-      "count": 1
-    },
-    {
-      "name": "二項係数",
+      "name": "ゲーム",
       "count": 1
     },
     {
@@ -229,7 +213,31 @@
       "count": 1
     },
     {
-      "name": "部分文字列",
+      "name": "フェルマーの小定理",
+      "count": 1
+    },
+    {
+      "name": "逆元テーブル",
+      "count": 1
+    },
+    {
+      "name": "逆元",
+      "count": 1
+    },
+    {
+      "name": "並べ替えれば条件を満たせる",
+      "count": 1
+    },
+    {
+      "name": "条件を満たす整数の組の個数",
+      "count": 1
+    },
+    {
+      "name": "重複組み合わせ",
+      "count": 1
+    },
+    {
+      "name": "二項係数",
       "count": 1
     },
     {
@@ -241,11 +249,11 @@
       "count": 1
     },
     {
-      "name": "ARC",
+      "name": "構築",
       "count": 1
     },
     {
-      "name": "パターンに一致する文字列を数える",
+      "name": "数直線",
       "count": 1
     },
     {
@@ -265,7 +273,7 @@
       "count": 1
     },
     {
-      "name": "部分列の削除",
+      "name": "選べる手が決まっている",
       "count": 1
     }
   ]

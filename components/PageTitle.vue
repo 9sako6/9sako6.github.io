@@ -1,7 +1,7 @@
 <template>
   <div id="blog-title-wrapper">
     <h1 id="blog-title">
-      <nuxt-link to="/" class="nav-link">くさころ競プロ日記</nuxt-link>
+      <nuxt-link to="/" class="nav-link">9sako6 Garden</nuxt-link>
     </h1>
     <h2 id="blog-description">hogehoge</h2>
   </div>
