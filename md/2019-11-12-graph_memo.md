@@ -11,7 +11,7 @@ tags:
   - 全点対最短路問題
   - メモ
 created_at: 2019-11-12
-updated_at: 2019-11-13
+updated_at: 2019-12-05
 draft: false
 ---
 
@@ -25,7 +25,7 @@ draft: false
 
 - **Dijkstra法**
   - 負の辺がない場合の単一始点最短路問題
-  - \\(O(ElogV)\\)
+  - \\(O(ElogV)\\) or \\(O(V^2)\\)
   - 改造すると最短路の個数も一緒に求まる（[参考](http://drken1215.hatenablog.com/entry/2018/02/09/003200)）
   - 辺の重みが全て同一ならBFSで\\(O(E)\\)
 
