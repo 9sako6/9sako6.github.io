@@ -50,6 +50,6 @@
     "processmd": "^4.4.2",
     "sass-loader": "^7.1.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.10"
   }
 }
