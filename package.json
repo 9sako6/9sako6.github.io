@@ -26,7 +26,7 @@
     "lodash": "^4.17.13",
     "npm-check-updates": "^3.1.12",
     "nuxt": "^2.8.1",
-    "tar": "^4.4.10"
+    "tar": "^5.0.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
