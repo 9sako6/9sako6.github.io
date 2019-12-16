@@ -49,7 +49,7 @@
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",
     "processmd": "^4.4.2",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^8.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   }
