@@ -50,7 +50,7 @@
     "prettier": "^1.18.2",
     "processmd": "^4.4.2",
     "sass-loader": "^7.1.0",
-    "webpack": "^4.41.2",
+    "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10"
   }
 }
