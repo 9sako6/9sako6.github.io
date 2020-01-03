@@ -46,7 +46,7 @@
     "eslint-plugin-vue": "^6.1.2",
     "extract-text-webpack-plugin": "^3.0.2",
     "node-sass": "^4.12.0",
-    "nodemon": "^1.19.1",
+    "nodemon": "^2.0.2",
     "prettier": "^1.18.2",
     "processmd": "^4.4.2",
     "sass-loader": "^7.1.0",
