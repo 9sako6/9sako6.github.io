@@ -1,136 +1,79 @@
-import pkg from './package'
+import { fetchAllRoutes } from './plugins/router'
 
-// TODO fix
-import { categories } from './site.config.json'
-import SummaryBlog from './contents/posts/blog/summary.json'
-import SummaryCompetitiveProgramming from './contents/posts/competitive_programming/summary.json'
-import SummaryTechBlog from './contents/posts/tech_blog/summary.json'
-/*
- ** make routes to generate static pages of dynamic routing
- */
-const routes = []
-
-const Summary = {
-  blog: SummaryBlog,
-  competitive_programming: SummaryCompetitiveProgramming,
-  tech_blog: SummaryTechBlog
-}
-
-categories.forEach(category => {
-  console.log(category)
-  Summary[category].sourceFileArray.reverse().forEach(markdownName => {
-    const baseName = markdownName.replace(/^.*[/]/, '').replace(/\.md$/, '')
-    const link = `contents/posts/${category}/${baseName}.json`
-    if (!Summary[category].fileMap[link].draft) {
-      routes.push(link)
-    }
-  })
-})
+require('dotenv').config();
+const { MICROCMS_X_API_KEY, MICROCMS_BASE_URL } = process.env;
 
 export default {
   mode: 'spa',
-
   /*
-   ** Headers of the page
-   */
+  ** Headers of the page
+  */
   head: {
-    title: '9sako6 Garden',
-    htmlAttrs: {
-      lang: 'ja'
-    },
+    title: process.env.npm_package_name || '',
     meta: [
-      {
-        charset: 'utf-8'
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: pkg.description
-      },
-      {
-        name: 'twitter:card',
-        content: 'summary'
-      },
-      {
-        name: 'twitter:site',
-        content: '@9sako6'
-      },
-      {
-        name: 'twitter:image',
-        content: './static/icon.png'
-      }
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/tomorrow-night-bright.min.css'
-      }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-
   /*
-   ** Customize the progress-bar color
-   */
-  loading: {
-    color: '#fff'
+  ** Customize the progress-bar color
+  */
+  loading: { color: '#fff' },
+  /*
+  ** Global CSS
+  */
+  css: [
+  ],
+  /*
+  ** Plugins to load before mounting the App
+  */
+  plugins: [
+  ],
+  /*
+  ** Nuxt.js dev-modules
+  */
+  buildModules: [
+    // Doc: https://github.com/nuxt-community/eslint-module
+    // '@nuxtjs/eslint-module'
+  ],
+  /*
+  ** Nuxt.js modules
+  */
+  modules: [
+    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/axios'
+  ],
+  /*
+  ** Axios module configuration
+  ** See https://axios.nuxtjs.org/options
+  */
+  axios: {
   },
-
   /*
-   ** Global CSS
-   */
-  css: [],
-
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: [],
-
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [['@nuxtjs/pwa'], ['@nuxtjs/sitemap']],
-
-  /*
-   ** Build configuration
-   */
+  ** Build configuration
+  */
   build: {
     /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
+    ** You can extend webpack config here
+    */
+    extend (config, ctx) {
     }
   },
-
-  /*
-   ** sitemap configuration
-   */
-  sitemap: {
-    path: '/sitemap.xml',
-    hostname: 'https://9sako6.me',
-    exclude: ['/policy'],
-    routes: routes
-  },
-
   generate: {
-    routes: routes
+    fallback: true,
+    subFolders: false,
+    routes() {
+      return fetchAllRoutes().then((routes) => {
+        return routes
+      })
+    }
+  },
+  env: {
+    MICROCMS_BASE_URL,
+    MICROCMS_X_API_KEY
   }
 }

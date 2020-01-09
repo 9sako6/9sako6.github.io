@@ -23,7 +23,7 @@
       </nuxt-link>
     </div>
     <div class="title-container">
-      <nuxt-link class="top-title" to="/competitive_programming">
+      <nuxt-link class="top-title" to="/competitive_prog">
         <div class="button">
           <h1>競技プログラミング</h1>
           <p class="desc">
@@ -40,7 +40,6 @@
 
 <script>
 // import Posts from '~/components/Posts.vue'
-
 export default {
   layout: 'top',
   components: {
@@ -59,15 +58,14 @@ export default {
     font-size: 0.9em;
   }
 }
-
 @media screen and (min-width: 768px) {
   .title-container {
     width: 60%;
+    padding: 1em;
     max-width: 600px;
   }
 }
 .title-container {
-  padding: 1em;
   margin: auto;
   text-align: left;
 }
