@@ -6,14 +6,16 @@
     </p>
     <h2 v-else>error</h2>
     <div class="post-tags">
-      <nuxt-link to="/"> <span class="post-tag"> Home</span></nuxt-link>
+      <nuxt-link to="/">
+        <span class="post-tag">Home</span>
+      </nuxt-link>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  props: ['error']
+  props: { error: { type: Object, required: true } }
 }
 </script>
 

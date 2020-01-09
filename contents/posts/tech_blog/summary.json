@@ -1,0 +1,22 @@
+{
+  "fileMap": {
+    "contents/posts/tech_blog/2020-01-09-tec.json": {
+      "title": "tech_blog",
+      "description": "テスト投稿だよ",
+      "tags": [
+        "技術ブログ"
+      ],
+      "created_at": "2019-12-07T00:00:00.000Z",
+      "updated_at": null,
+      "draft": false,
+      "dir": "contents/posts/tech_blog",
+      "base": "2020-01-09-tec.json",
+      "ext": ".json",
+      "sourceBase": "2020-01-09-tec.md",
+      "sourceExt": ".md"
+    }
+  },
+  "sourceFileArray": [
+    "./md/tech_blog/2020-01-09-tec.md"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "ABC040 D - 道路の老朽化対策について (100点)",
+  "description": "Union-Find（素集合データ構造, Disjoint-set Data Structure）を使って解く。 ただし、各質問ごとにUnion-Findを構築すると間に合わない。 そこで、...",
+  "tags": [
+    "競技プログラミング",
+    "AtCoder",
+    "Union-Find木",
+    "Python"
+  ],
+  "created_at": "2019-05-22T00:00:00.000Z",
+  "updated_at": "2019-11-09T00:00:00.000Z",
+  "draft": false,
+  "bodyContent": "# 問題\n[D - 道路の老朽化対策について](https://atcoder.jp/contests/abc040/tasks/abc040_d)\n\n# 解法\nUnion-Find木（素集合データ構造, Disjoint-set Data Structure）を使って解く。\nただし、各質問ごとにUnion-Find木を構築すると間に合わない。\nそこで、各質問における道が新しい順にUnion-Find木を構築していく。この工夫が本問題の肝である。\n道が新しい順にUnion-Find木を構築していくと、次の質問に答える時に道が増えることがあっても減ることはない。\n\n[submission](https://atcoder.jp/contests/abc040/submissions/5136982)\n\n# 学び\nPythonで挑戦してTLEに苦しみましたが、\n`input()`ではなく`sys.stdin.readline()`を使うようにしただけで通りました。とはいえコードに改善の余地がありそう。",
+  "bodyHtml": "<h1>問題</h1>\n<p><a href=\"https://atcoder.jp/contests/abc040/tasks/abc040_d\">D - 道路の老朽化対策について</a></p>\n<h1>解法</h1>\n<p>Union-Find木（素集合データ構造, Disjoint-set Data Structure）を使って解く。\nただし、各質問ごとにUnion-Find木を構築すると間に合わない。\nそこで、各質問における道が新しい順にUnion-Find木を構築していく。この工夫が本問題の肝である。\n道が新しい順にUnion-Find木を構築していくと、次の質問に答える時に道が増えることがあっても減ることはない。</p>\n<p><a href=\"https://atcoder.jp/contests/abc040/submissions/5136982\">submission</a></p>\n<h1>学び</h1>\n<p>Pythonで挑戦してTLEに苦しみましたが、\n<code>input()</code>ではなく<code>sys.stdin.readline()</code>を使うようにしただけで通りました。とはいえコードに改善の余地がありそう。</p>\n",
+  "dir": "contents/posts/competitive_programming",
+  "base": "2019-05-22-abc040_d.json",
+  "ext": ".json",
+  "sourceBase": "2019-05-22-abc040_d.md",
+  "sourceExt": ".md"
+}

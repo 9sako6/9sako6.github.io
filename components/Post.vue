@@ -7,9 +7,7 @@
     </a>
     <div v-for="tag in tags" :key="tag.id" class="post-tags">
       <nuxt-link :to="'/tags/' + tag">
-        <span class="post-tag">
-          {{ tag }}
-        </span>
+        <span class="post-tag">{{ tag }}</span>
       </nuxt-link>
     </div>
   </div>
@@ -18,11 +16,11 @@
 <script>
 export default {
   props: {
-    link: String,
-    title: String,
-    date: String,
-    description: String,
-    tags: Array
+    link: { type: String, required: true },
+    title: { type: String, required: true },
+    date: { type: String, required: true },
+    description: { type: String, required: true, default: '' },
+    tags: { type: Array, required: true }
   }
 }
 </script>

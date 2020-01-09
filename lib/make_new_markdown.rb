@@ -13,12 +13,12 @@ end
 
 template = <<"EOS"
 ---
-title:
-description:
+title: ""
+description: ""
 tags:
-  - 
+  - ""
 created_at: #{date}
-updated_at: 
+updated_at: ""
 draft: true
 ---
 EOS

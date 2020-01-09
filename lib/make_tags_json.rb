@@ -1,16 +1,23 @@
 require 'json'
 require 'pp'
+require 'optparse'
+
+category = nil
+
+option = OptionParser.new
+option.on('-c VAL') {|v| category = v}
+option.parse!(ARGV)
 
 tags_count = Hash.new(0)
 
 tags_list = []
 tags_map = {}
 
-File.open("./contents/posts/summary.json", "r") do |file|
+File.open("./contents/posts/#{category}/summary.json", "r") do |file|
   summary_json = JSON.load(file)
   summary_json["fileMap"].each do |url, hash|
     # count each tag and make TagsMap
-    hash["tags"].each do |tag| 
+    hash["tags"].each do |tag|
       tags_count[tag] += 1 if !hash["draft"] # count each tag
       tags_map[tag] ||= []
       tags_map[tag] << { url => hash } if !hash["draft"]
@@ -35,9 +42,9 @@ tags_list.sort_by! do |tag_info|
   tag_info["count"]
 end.reverse!
 
-File.open("./contents/posts/tags_list.json", "w") do |file|
+File.open("./contents/posts/#{category}/tags_list.json", "w") do |file|
   file.puts(JSON.pretty_generate({ "TagsList" => tags_list }))
 end
-File.open("./contents/posts/tags_map.json", "w") do |file|
+File.open("./contents/posts/#{category}/tags_map.json", "w") do |file|
   file.puts(JSON.pretty_generate({ "TagsMap" => tags_map }))
 end

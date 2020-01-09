@@ -1,0 +1,24 @@
+{
+  "title": "ABC114 C - 755 (300点)",
+  "description": null,
+  "tags": [
+    "競技プログラミング",
+    "AtCoder",
+    "ABC",
+    "BFS",
+    "DFS",
+    "再帰",
+    "各桁",
+    "全探索"
+  ],
+  "created_at": "2019-11-24T00:00:00.000Z",
+  "updated_at": "2019-11-26T00:00:00.000Z",
+  "draft": false,
+  "bodyContent": "# 問題\n\n[C - 755](https://atcoder.jp/contests/abc114/tasks/abc114_c)\n\n# 考察\n\n制約は\\\\(1 \\leq N \\leq 10^9 \\\\)です。この範囲の整数を全て判定していくのは無理です。\n\nとりあえず、桁を扱う問題なので、桁に注目してみます。\n各桁に`3`, `5`, `7`を当てはめて候補を全探索しても\\\\(3^9 = 19683\\\\)なので間に合うことに気づきます。あとはそれらが七五三数であるかを判定すればよいです。\n\n候補の列挙は再帰でできます。\n私は再帰を軸に考えるのが苦手なので非再帰の`bfs`で解きました。\n\n[submission(Ruby)](https://atcoder.jp/contests/abc114/submissions/8602880)\n\nその後、再帰でも解きました。\n\n[submission(Ruby)](https://atcoder.jp/contests/abc114/submissions/8603176)",
+  "bodyHtml": "<h1>問題</h1>\n<p><a href=\"https://atcoder.jp/contests/abc114/tasks/abc114_c\">C - 755</a></p>\n<h1>考察</h1>\n<p>制約は\\(1 \\leq N \\leq 10^9 \\)です。この範囲の整数を全て判定していくのは無理です。</p>\n<p>とりあえず、桁を扱う問題なので、桁に注目してみます。\n各桁に<code>3</code>, <code>5</code>, <code>7</code>を当てはめて候補を全探索しても\\(3^9 = 19683\\)なので間に合うことに気づきます。あとはそれらが七五三数であるかを判定すればよいです。</p>\n<p>候補の列挙は再帰でできます。\n私は再帰を軸に考えるのが苦手なので非再帰の<code>bfs</code>で解きました。</p>\n<p><a href=\"https://atcoder.jp/contests/abc114/submissions/8602880\">submission(Ruby)</a></p>\n<p>その後、再帰でも解きました。</p>\n<p><a href=\"https://atcoder.jp/contests/abc114/submissions/8603176\">submission(Ruby)</a></p>\n",
+  "dir": "contents/posts/competitive_programming",
+  "base": "2019-11-24-abc114_c.json",
+  "ext": ".json",
+  "sourceBase": "2019-11-24-abc114_c.md",
+  "sourceExt": ".md"
+}

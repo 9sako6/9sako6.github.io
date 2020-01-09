@@ -1,18 +1,30 @@
 import pkg from './package'
+
+// TODO fix
+import { categories } from './site.config.json'
+import SummaryBlog from './contents/posts/blog/summary.json'
+import SummaryCompetitiveProgramming from './contents/posts/competitive_programming/summary.json'
+import SummaryTechBlog from './contents/posts/tech_blog/summary.json'
 /*
  ** make routes to generate static pages of dynamic routing
  */
-
-import { sourceFileArray, fileMap } from './contents/posts/summary.json'
-
 const routes = []
 
-sourceFileArray.reverse().forEach(markdownName => {
-  const baseName = markdownName.replace(/^.*[/]/, '').replace(/\.md$/, '')
-  const link = `contents/posts/${baseName}.json`
-  if (!fileMap[link].draft) {
-    routes.push(link)
-  }
+const Summary = {
+  blog: SummaryBlog,
+  competitive_programming: SummaryCompetitiveProgramming,
+  tech_blog: SummaryTechBlog
+}
+
+categories.forEach(category => {
+  console.log(category)
+  Summary[category].sourceFileArray.reverse().forEach(markdownName => {
+    const baseName = markdownName.replace(/^.*[/]/, '').replace(/\.md$/, '')
+    const link = `contents/posts/${category}/${baseName}.json`
+    if (!Summary[category].fileMap[link].draft) {
+      routes.push(link)
+    }
+  })
 })
 
 export default {

@@ -1,0 +1,24 @@
+{
+  "title": "B - Sum AND Subarrays",
+  "description": null,
+  "tags": [
+    "競技プログラミング",
+    "連続する部分列",
+    "最大化",
+    "AtCoder",
+    "企業コン",
+    "ビット",
+    "論理積",
+    "第5回 ドワンゴからの挑戦状 予選"
+  ],
+  "created_at": "2019-11-06T00:00:00.000Z",
+  "updated_at": "2019-11-07T00:00:00.000Z",
+  "draft": false,
+  "bodyContent": "# 問題\n[B - Sum AND Subarrays](https://atcoder.jp/contests/dwacon5th-prelims/tasks/dwacon5th_prelims_b)\n\n# 考察\n全美しさの候補は列挙できます。\n\nそこから大きいものをK個単純にとるのはうまく行かないです。\n論理積をとった結果が答えなので、なるべく大きい桁に1を残すのがよさそうです。\n上の桁からみていって、1を残せるように候補を絞っていきます。\n\n全美しさの集合を\\\\(S_{cands}\\\\)とします。\n\n上の桁から見ていきます。\n今\\\\(i\\\\)桁目にいるとして、\\\\(i\\\\)桁目に1が立っている美しさを新しい集合\\\\(S_{i}\\\\)\nに入れます。\n\n\\\\(|S_{i}| \\geq K \\\\)のとき\\\\(i\\\\)桁目に1を残せます。\\\\(S_{i}\\\\)を新たな\\\\(S_{cands}\\\\)にします。\n\n\\\\(|S_{i}| < K \\\\)のとき\\\\(i\\\\)桁目は0になります。\\\\(S_{cands}\\\\)はそのままにします。\n\n最下位の桁まで上記の処理を行ったのち、\\\\(S_{cands}\\\\)の全要素のビット毎の論理積をとると答えが求まります。\n\n計算量は\\\\(O(N^2 \\log_2 10^9 N \\leq 4 \\times 10^7 )\\\\)です。\n\n[submission(Ruby)](https://atcoder.jp/contests/dwacon5th-prelims/submissions/8301350)\n\n[submission(C++)](https://atcoder.jp/contests/dwacon5th-prelims/submissions/8301277)",
+  "bodyHtml": "<h1>問題</h1>\n<p><a href=\"https://atcoder.jp/contests/dwacon5th-prelims/tasks/dwacon5th_prelims_b\">B - Sum AND Subarrays</a></p>\n<h1>考察</h1>\n<p>全美しさの候補は列挙できます。</p>\n<p>そこから大きいものをK個単純にとるのはうまく行かないです。\n論理積をとった結果が答えなので、なるべく大きい桁に1を残すのがよさそうです。\n上の桁からみていって、1を残せるように候補を絞っていきます。</p>\n<p>全美しさの集合を\\(S_{cands}\\)とします。</p>\n<p>上の桁から見ていきます。\n今\\(i\\)桁目にいるとして、\\(i\\)桁目に1が立っている美しさを新しい集合\\(S_{i}\\)\nに入れます。</p>\n<p>\\(|S_{i}| \\geq K \\)のとき\\(i\\)桁目に1を残せます。\\(S_{i}\\)を新たな\\(S_{cands}\\)にします。</p>\n<p>\\(|S_{i}| &lt; K \\)のとき\\(i\\)桁目は0になります。\\(S_{cands}\\)はそのままにします。</p>\n<p>最下位の桁まで上記の処理を行ったのち、\\(S_{cands}\\)の全要素のビット毎の論理積をとると答えが求まります。</p>\n<p>計算量は\\(O(N^2 \\log_2 10^9 N \\leq 4 \\times 10^7 )\\)です。</p>\n<p><a href=\"https://atcoder.jp/contests/dwacon5th-prelims/submissions/8301350\">submission(Ruby)</a></p>\n<p><a href=\"https://atcoder.jp/contests/dwacon5th-prelims/submissions/8301277\">submission(C++)</a></p>\n",
+  "dir": "contents/posts/competitive_programming",
+  "base": "2019-11-06-dwacon5th_prelims_b.json",
+  "ext": ".json",
+  "sourceBase": "2019-11-06-dwacon5th_prelims_b.md",
+  "sourceExt": ".md"
+}
