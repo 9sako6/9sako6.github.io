@@ -3,7 +3,7 @@
     <h1 id="blog-title">
       <nuxt-link to="/" class="nav-link">9sako6 Garden</nuxt-link>
     </h1>
-    <h2 id="blog-description">hogehoge</h2>
+    <!-- <h2 id="blog-description">くさころのサイト</h2> -->
   </div>
 </template>
 

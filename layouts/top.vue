@@ -1,6 +1,7 @@
 <template>
   <div id="root">
     <PageTitle />
+    <!-- <h2 id="blog-description">くさころのサイト</h2> -->
     <nuxt />
     <Footer />
   </div>

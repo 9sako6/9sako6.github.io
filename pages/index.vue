@@ -53,10 +53,22 @@ export default {
 .top-container {
   color: #3f3f3f;
 }
+@media screen and (max-width: 767px) {
+  .title-container {
+    width: 90%;
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title-container {
+    width: 60%;
+    max-width: 600px;
+  }
+}
 .title-container {
   padding: 1em;
   margin: auto;
-  width: 60%;
   text-align: left;
 }
 /* https://www.nxworld.net/tips/css-button-hover-border-effects.html */
@@ -84,17 +96,17 @@ export default {
   transition: all 0.3s;
 }
 .button::before {
-  border-top: 2px solid #3be5ae;
-  border-bottom: 2px solid #3be5ae;
+  border-top: 2px solid #e65a5a;
+  border-bottom: 2px solid #e65a5a;
   transform: scale(0, 1);
 }
 .button::after {
-  border-right: 2px solid #3be5ae;
-  border-left: 2px solid #3be5ae;
+  border-right: 2px solid #e65a5a;
+  border-left: 2px solid #e65a5a;
   transform: scale(1, 0);
 }
 .button:hover {
-  color: #1f6851;
+  color: #e65a5a;
 }
 .button:hover::after,
 .button:hover::before {
