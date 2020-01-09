@@ -13,7 +13,6 @@ import PageTitle from '~/components/PageTitle.vue'
 // import Profile from '~/components/Profile.vue'
 // import Tags from '~/components/Tags.vue'
 import Footer from '~/components/Footer.vue'
-
 export default {
   components: {
     // Header,
@@ -31,7 +30,6 @@ export default {
   flex-direction: column;
   min-height: 100vh;
 }
-
 html {
   font-family: 'YuGothic', sans-serif;
   font-size: 16px;
@@ -43,14 +41,12 @@ html {
   box-sizing: border-box;
   color: #3f3f3f;
 }
-
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
 }
-
 .button--green {
   display: inline-block;
   border-radius: 4px;
@@ -59,12 +55,10 @@ html {
   text-decoration: none;
   padding: 10px 30px;
 }
-
 .button--green:hover {
   color: #fff;
   background-color: #3b8070;
 }
-
 .button--grey {
   display: inline-block;
   border-radius: 4px;
@@ -74,7 +68,6 @@ html {
   padding: 10px 30px;
   margin-left: 15px;
 }
-
 .button--grey:hover {
   color: #fff;
   background-color: #3f3f3f;
@@ -97,7 +90,6 @@ html {
     margin: 0 10px;
   }
 }
-
 @media screen and (min-width: 768px) {
   #container-outer {
     width: 1140px;
@@ -118,7 +110,6 @@ html {
   margin: auto;
   margin-bottom: 100px;
 }
-
 #page-main {
   float: left;
   margin-bottom: 100px;
@@ -127,7 +118,6 @@ html {
   float: right;
   height: 100%;
 }
-
 a {
   word-break: break-all;
 }

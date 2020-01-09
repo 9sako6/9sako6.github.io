@@ -5,7 +5,7 @@
       ><h4 class="title">技術ブログ</h4></nuxt-link
     >
     /
-    <nuxt-link class="link" to="/competitive_programming"
+    <nuxt-link class="link" to="/competitive_prog"
       ><h4 class="title">競技プログラミング</h4></nuxt-link
     >
   </div>
