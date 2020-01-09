@@ -40,7 +40,8 @@ export default {
     articles: function() {
       const articles = []
       const summary = Summary[this.category]
-      summary.sourceFileArray.reverse().forEach(markdownName => {
+      const markdowns = summary.sourceFileArray.slice().reverse()
+      markdowns.forEach(markdownName => {
         const baseName = markdownName.replace(/^.*[/]/, '').replace(/\.md$/, '')
         const jsonName = `contents/posts/${this.category}/${baseName}.json`
         const content = summary.fileMap[jsonName]

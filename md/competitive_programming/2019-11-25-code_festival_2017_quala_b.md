@@ -1,6 +1,6 @@
 ---
 title: "B - fLIP (200点)"
-description:
+description: ""
 tags:
   - 競技プログラミング
   - AtCoder

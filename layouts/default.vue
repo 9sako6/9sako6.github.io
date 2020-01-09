@@ -3,7 +3,6 @@
     <!-- <Header style="flex: 1;" /> -->
     <div id="container-outer">
       <PageTitle />
-      <Navi />
       <div id="content">
         <nuxt id="page-main" />
         <aside id="side-menu">
@@ -19,7 +18,6 @@
 <script>
 // import Header from '~/components/Header.vue'
 import PageTitle from '~/components/PageTitle.vue'
-import Navi from '~/components/Navi.vue'
 import Profile from '~/components/Profile.vue'
 import Tags from '~/components/Tags.vue'
 import Footer from '~/components/Footer.vue'
@@ -28,7 +26,6 @@ export default {
   components: {
     // Header,
     PageTitle,
-    Navi,
     Profile,
     Tags,
     Footer

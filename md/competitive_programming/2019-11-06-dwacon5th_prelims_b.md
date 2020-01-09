@@ -1,6 +1,6 @@
 ---
 title: "B - Sum AND Subarrays"
-description:
+description: ""
 tags:
   - 競技プログラミング
   - 連続する部分列

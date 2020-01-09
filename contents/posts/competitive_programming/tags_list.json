@@ -9,10 +9,6 @@
       "count": 15
     },
     {
-      "name": "DP",
-      "count": 4
-    },
-    {
       "name": "数学",
       "count": 4
     },
@@ -25,6 +21,10 @@
       "count": 4
     },
     {
+      "name": "DP",
+      "count": 4
+    },
+    {
       "name": "Ruby",
       "count": 3
     },
@@ -33,35 +33,7 @@
       "count": 3
     },
     {
-      "name": "企業コン",
-      "count": 2
-    },
-    {
-      "name": "数列",
-      "count": 2
-    },
-    {
       "name": "全探索",
-      "count": 2
-    },
-    {
-      "name": "BFS",
-      "count": 2
-    },
-    {
-      "name": "再帰",
-      "count": 2
-    },
-    {
-      "name": "Bellman-Ford法",
-      "count": 2
-    },
-    {
-      "name": "yukicoder",
-      "count": 2
-    },
-    {
-      "name": "割った余り",
       "count": 2
     },
     {
@@ -69,7 +41,7 @@
       "count": 2
     },
     {
-      "name": "Python",
+      "name": "yukicoder",
       "count": 2
     },
     {
@@ -81,11 +53,27 @@
       "count": 2
     },
     {
-      "name": "AGC",
+      "name": "再帰",
       "count": 2
     },
     {
-      "name": "単一始点最短路問題",
+      "name": "企業コン",
+      "count": 2
+    },
+    {
+      "name": "Bellman-Ford法",
+      "count": 2
+    },
+    {
+      "name": "BFS",
+      "count": 2
+    },
+    {
+      "name": "数列",
+      "count": 2
+    },
+    {
+      "name": "割った余り",
       "count": 2
     },
     {
@@ -93,19 +81,27 @@
       "count": 2
     },
     {
+      "name": "単一始点最短路問題",
+      "count": 2
+    },
+    {
+      "name": "Python",
+      "count": 2
+    },
+    {
+      "name": "AGC",
+      "count": 2
+    },
+    {
+      "name": "全点対最短路問題",
+      "count": 1
+    },
+    {
+      "name": "Warshall–Floyd法",
+      "count": 1
+    },
+    {
       "name": "Dijkstra法",
-      "count": 1
-    },
-    {
-      "name": "最大公約数",
-      "count": 1
-    },
-    {
-      "name": "構築",
-      "count": 1
-    },
-    {
-      "name": "数直線",
       "count": 1
     },
     {
@@ -122,6 +118,10 @@
     },
     {
       "name": "最大化",
+      "count": 1
+    },
+    {
+      "name": "最大公約数",
       "count": 1
     },
     {
@@ -157,6 +157,10 @@
       "count": 1
     },
     {
+      "name": "典型",
+      "count": 1
+    },
+    {
       "name": "ランレングス圧縮",
       "count": 1
     },
@@ -173,31 +177,11 @@
       "count": 1
     },
     {
-      "name": "典型",
-      "count": 1
-    },
-    {
       "name": "重み付きUnion-Find木",
       "count": 1
     },
     {
       "name": "ゲーム",
-      "count": 1
-    },
-    {
-      "name": "反転",
-      "count": 1
-    },
-    {
-      "name": "白黒",
-      "count": 1
-    },
-    {
-      "name": "グリッド",
-      "count": 1
-    },
-    {
-      "name": "2変数",
       "count": 1
     },
     {
@@ -233,11 +217,19 @@
       "count": 1
     },
     {
-      "name": "各桁",
+      "name": "反転",
       "count": 1
     },
     {
-      "name": "DFS",
+      "name": "白黒",
+      "count": 1
+    },
+    {
+      "name": "グリッド",
+      "count": 1
+    },
+    {
+      "name": "2変数",
       "count": 1
     },
     {
@@ -257,19 +249,27 @@
       "count": 1
     },
     {
+      "name": "各桁",
+      "count": 1
+    },
+    {
+      "name": "DFS",
+      "count": 1
+    },
+    {
+      "name": "構築",
+      "count": 1
+    },
+    {
+      "name": "数直線",
+      "count": 1
+    },
+    {
       "name": "部分文字列",
       "count": 1
     },
     {
       "name": "メモ",
-      "count": 1
-    },
-    {
-      "name": "全点対最短路問題",
-      "count": 1
-    },
-    {
-      "name": "Warshall–Floyd法",
       "count": 1
     },
     {

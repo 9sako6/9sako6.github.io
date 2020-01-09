@@ -10,8 +10,8 @@
   "bodyContent": "# blog",
   "bodyHtml": "<h1>blog</h1>\n",
   "dir": "contents/posts/blog",
-  "base": "2020-01-09-blog.json",
+  "base": "2020-01-07-blog.json",
   "ext": ".json",
-  "sourceBase": "2020-01-09-blog.md",
+  "sourceBase": "2020-01-07-blog.md",
   "sourceExt": ".md"
 }
