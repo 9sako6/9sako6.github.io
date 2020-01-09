@@ -14,38 +14,55 @@
 
 <script>
 import Post from '~/components/Post.vue'
-import Summary from '~/contents/posts/summary.json'
 
-const articles = []
+// TODO fix
+import SummaryBlog from '~/contents/posts/blog/summary.json'
+import SummaryCompetitiveProgramming from '~/contents/posts/competitive_programming/summary.json'
+import SummaryTechBlog from '~/contents/posts/tech_blog/summary.json'
 
-Summary.sourceFileArray.reverse().forEach(markdownName => {
-  const baseName = markdownName.replace(/^.*[/]/, '').replace(/\.md$/, '')
-  const jsonName = `contents/posts/${baseName}.json`
-  const content = Summary.fileMap[jsonName]
-  const link = `/${jsonName
-    .match(/contents\/(.+)/)[1]
-    .replace(/-/g, '/')
-    .replace(/\.json$/g, '')}`
-  const date = content.created_at.split('T')[0]
-  const draft = content.draft
-  const tags = content.tags
-  if (!draft) {
-    articles.push({
-      link: link,
-      title: content.title,
-      description: content.description,
-      date: date,
-      tags: tags
-    })
-  }
-})
+const Summary = {
+  blog: SummaryBlog,
+  competitive_programming: SummaryCompetitiveProgramming,
+  tech_blog: SummaryTechBlog
+}
 
 export default {
   components: {
     Post
   },
-  data: function() {
-    return { articles }
+  props: {
+    category: {
+      type: String,
+      required: true
+    }
+  },
+  computed: {
+    articles: function() {
+      const articles = []
+      const summary = Summary[this.category]
+      summary.sourceFileArray.reverse().forEach(markdownName => {
+        const baseName = markdownName.replace(/^.*[/]/, '').replace(/\.md$/, '')
+        const jsonName = `contents/posts/${this.category}/${baseName}.json`
+        const content = summary.fileMap[jsonName]
+        const link = `/${jsonName
+          .match(/contents\/(.+)/)[1]
+          .replace(/-/g, '/')
+          .replace(/\.json$/g, '')}`
+        const date = content.created_at.split('T')[0]
+        const draft = content.draft
+        const tags = content.tags
+        if (!draft) {
+          articles.push({
+            link: link,
+            title: content.title,
+            description: content.description,
+            date: date,
+            tags: tags
+          })
+        }
+      })
+      return articles
+    }
   }
 }
 </script>

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { TagsList } from '~/contents/posts/tags_list.json'
+import { TagsList } from '~/contents/posts/competitive_programming/tags_list.json'
 
 export default {
   data() {

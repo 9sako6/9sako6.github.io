@@ -1,0 +1,17 @@
+{
+  "title": "blog",
+  "description": null,
+  "tags": [
+    "ブログ"
+  ],
+  "created_at": "2019-12-07T00:00:00.000Z",
+  "updated_at": null,
+  "draft": false,
+  "bodyContent": "# blog",
+  "bodyHtml": "<h1>blog</h1>\n",
+  "dir": "contents/posts/blog",
+  "base": "2019-01-09-blog.json",
+  "ext": ".json",
+  "sourceBase": "2019-01-09-blog.md",
+  "sourceExt": ".md"
+}

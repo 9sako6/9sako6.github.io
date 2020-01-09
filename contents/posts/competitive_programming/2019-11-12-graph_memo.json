@@ -1,0 +1,24 @@
+{
+  "title": "Dijkstra法, Bellman-Ford法, Warshall–Floyd法のメモ",
+  "description": "計算量や特徴など...",
+  "tags": [
+    "グラフ",
+    "BFS",
+    "Bellman-Ford法",
+    "Dijkstra法",
+    "Warshall–Floyd法",
+    "単一始点最短路問題",
+    "全点対最短路問題",
+    "メモ"
+  ],
+  "created_at": "2019-11-12T00:00:00.000Z",
+  "updated_at": "2019-12-05T00:00:00.000Z",
+  "draft": false,
+  "bodyContent": "頂点数を\\\\(V\\\\), 辺数を\\\\(E\\\\)とする。\n\n- **Bellman-Ford法**\n  - 単一始点最短路問題\n  - \\\\(O(VE)\\\\)\n  - 負の辺があっても使える\n  - 負閉路（辺の重みの総和が負になる閉路）検出ができる\n\n- **Dijkstra法**\n  - 負の辺がない場合の単一始点最短路問題\n  - \\\\(O(ElogV)\\\\) or \\\\(O(V^2)\\\\)\n  - 改造すると最短路の個数も一緒に求まる（[参考](http://drken1215.hatenablog.com/entry/2018/02/09/003200)）\n  - 辺の重みが全て同一ならBFSで\\\\(O(E)\\\\)\n\n- **Warshall–Floyd法**\n  - 全点対最短路問題\n  - \\\\(O(V^3)\\\\)\n  - 負閉路がない限り、負の辺があっても使える",
+  "bodyHtml": "<p>頂点数を\\(V\\), 辺数を\\(E\\)とする。</p>\n<ul>\n<li>\n<p><strong>Bellman-Ford法</strong></p>\n<ul>\n<li>単一始点最短路問題</li>\n<li>\\(O(VE)\\)</li>\n<li>負の辺があっても使える</li>\n<li>負閉路（辺の重みの総和が負になる閉路）検出ができる</li>\n</ul>\n</li>\n<li>\n<p><strong>Dijkstra法</strong></p>\n<ul>\n<li>負の辺がない場合の単一始点最短路問題</li>\n<li>\\(O(ElogV)\\) or \\(O(V^2)\\)</li>\n<li>改造すると最短路の個数も一緒に求まる（<a href=\"http://drken1215.hatenablog.com/entry/2018/02/09/003200\">参考</a>）</li>\n<li>辺の重みが全て同一ならBFSで\\(O(E)\\)</li>\n</ul>\n</li>\n<li>\n<p><strong>Warshall–Floyd法</strong></p>\n<ul>\n<li>全点対最短路問題</li>\n<li>\\(O(V^3)\\)</li>\n<li>負閉路がない限り、負の辺があっても使える</li>\n</ul>\n</li>\n</ul>\n",
+  "dir": "contents/posts/competitive_programming",
+  "base": "2019-11-12-graph_memo.json",
+  "ext": ".json",
+  "sourceBase": "2019-11-12-graph_memo.md",
+  "sourceExt": ".md"
+}

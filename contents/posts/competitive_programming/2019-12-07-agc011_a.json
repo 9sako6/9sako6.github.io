@@ -1,0 +1,17 @@
+{
+  "title": null,
+  "description": null,
+  "tags": [
+    null
+  ],
+  "created_at": "2019-12-07T00:00:00.000Z",
+  "updated_at": null,
+  "draft": true,
+  "bodyContent": "",
+  "bodyHtml": "",
+  "dir": "contents/posts/competitive_programming",
+  "base": "2019-12-07-agc011_a.json",
+  "ext": ".json",
+  "sourceBase": "2019-12-07-agc011_a.md",
+  "sourceExt": ".md"
+}

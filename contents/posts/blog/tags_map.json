@@ -1,0 +1,23 @@
+{
+  "TagsMap": {
+    "ブログ": [
+      {
+        "contents/posts/blog/2020-01-09-blog.json": {
+          "title": "ブログテスト",
+          "description": "",
+          "tags": [
+            "ブログ"
+          ],
+          "created_at": "2020-12-07T00:00:00.000Z",
+          "updated_at": null,
+          "draft": false,
+          "dir": "contents/posts/blog",
+          "base": "2020-01-09-blog.json",
+          "ext": ".json",
+          "sourceBase": "2020-01-09-blog.md",
+          "sourceExt": ".md"
+        }
+      }
+    ]
+  }
+}
