@@ -9,7 +9,7 @@
       "count": 15
     },
     {
-      "name": "文字列",
+      "name": "数学",
       "count": 4
     },
     {
@@ -17,7 +17,7 @@
       "count": 4
     },
     {
-      "name": "数学",
+      "name": "文字列",
       "count": 4
     },
     {
@@ -25,19 +25,55 @@
       "count": 4
     },
     {
+      "name": "Ruby",
+      "count": 3
+    },
+    {
       "name": "部分列",
       "count": 3
     },
     {
-      "name": "Ruby",
-      "count": 3
+      "name": "AGC",
+      "count": 2
+    },
+    {
+      "name": "数列",
+      "count": 2
     },
     {
       "name": "全探索",
       "count": 2
     },
     {
-      "name": "単一始点最短路問題",
+      "name": "操作",
+      "count": 2
+    },
+    {
+      "name": "yukicoder",
+      "count": 2
+    },
+    {
+      "name": "連続する部分列",
+      "count": 2
+    },
+    {
+      "name": "Union-Find木",
+      "count": 2
+    },
+    {
+      "name": "割った余り",
+      "count": 2
+    },
+    {
+      "name": "Bellman-Ford法",
+      "count": 2
+    },
+    {
+      "name": "再帰",
+      "count": 2
+    },
+    {
+      "name": "企業コン",
       "count": 2
     },
     {
@@ -49,71 +85,19 @@
       "count": 2
     },
     {
-      "name": "企業コン",
-      "count": 2
-    },
-    {
-      "name": "数列",
-      "count": 2
-    },
-    {
-      "name": "再帰",
-      "count": 2
-    },
-    {
-      "name": "操作",
-      "count": 2
-    },
-    {
-      "name": "連続する部分列",
-      "count": 2
-    },
-    {
-      "name": "AGC",
-      "count": 2
-    },
-    {
-      "name": "割った余り",
-      "count": 2
-    },
-    {
-      "name": "yukicoder",
-      "count": 2
-    },
-    {
       "name": "Python",
       "count": 2
     },
     {
-      "name": "Union-Find木",
+      "name": "単一始点最短路問題",
       "count": 2
     },
     {
-      "name": "Bellman-Ford法",
-      "count": 2
-    },
-    {
-      "name": "全点対最短路問題",
+      "name": "DFS",
       "count": 1
     },
     {
-      "name": "Warshall–Floyd法",
-      "count": 1
-    },
-    {
-      "name": "Dijkstra法",
-      "count": 1
-    },
-    {
-      "name": "二項係数",
-      "count": 1
-    },
-    {
-      "name": "典型",
-      "count": 1
-    },
-    {
-      "name": "並べ替えれば条件を満たせる",
+      "name": "部分文字列",
       "count": 1
     },
     {
@@ -122,10 +106,6 @@
     },
     {
       "name": "数直線",
-      "count": 1
-    },
-    {
-      "name": "部分文字列",
       "count": 1
     },
     {
@@ -141,10 +121,6 @@
       "count": 1
     },
     {
-      "name": "重み付きUnion-Find木",
-      "count": 1
-    },
-    {
       "name": "最大化",
       "count": 1
     },
@@ -157,19 +133,19 @@
       "count": 1
     },
     {
-      "name": "最大公約数",
+      "name": "スタック",
       "count": 1
     },
     {
-      "name": "部分列の削除",
+      "name": "シミュレーション",
       "count": 1
     },
     {
-      "name": "逆元",
+      "name": "ランレングス圧縮",
       "count": 1
     },
     {
-      "name": "重複組み合わせ",
+      "name": "典型",
       "count": 1
     },
     {
@@ -189,11 +165,7 @@
       "count": 1
     },
     {
-      "name": "スタック",
-      "count": 1
-    },
-    {
-      "name": "シミュレーション",
+      "name": "部分列の削除",
       "count": 1
     },
     {
@@ -205,19 +177,7 @@
       "count": 1
     },
     {
-      "name": "フェルマーの小定理",
-      "count": 1
-    },
-    {
-      "name": "組み合わせ",
-      "count": 1
-    },
-    {
-      "name": "条件を満たす整数の組の個数",
-      "count": 1
-    },
-    {
-      "name": "選べる手が決まっている",
+      "name": "重み付きUnion-Find木",
       "count": 1
     },
     {
@@ -225,19 +185,35 @@
       "count": 1
     },
     {
-      "name": "反転",
+      "name": "フェルマーの小定理",
       "count": 1
     },
     {
-      "name": "白黒",
+      "name": "逆元テーブル",
       "count": 1
     },
     {
-      "name": "グリッド",
+      "name": "逆元",
       "count": 1
     },
     {
-      "name": "2変数",
+      "name": "並べ替えれば条件を満たせる",
+      "count": 1
+    },
+    {
+      "name": "条件を満たす整数の組の個数",
+      "count": 1
+    },
+    {
+      "name": "組み合わせ",
+      "count": 1
+    },
+    {
+      "name": "重複組み合わせ",
+      "count": 1
+    },
+    {
+      "name": "二項係数",
       "count": 1
     },
     {
@@ -257,15 +233,19 @@
       "count": 1
     },
     {
-      "name": "ランレングス圧縮",
+      "name": "反転",
       "count": 1
     },
     {
-      "name": "各桁",
+      "name": "白黒",
       "count": 1
     },
     {
-      "name": "DFS",
+      "name": "グリッド",
+      "count": 1
+    },
+    {
+      "name": "2変数",
       "count": 1
     },
     {
@@ -273,7 +253,27 @@
       "count": 1
     },
     {
-      "name": "逆元テーブル",
+      "name": "全点対最短路問題",
+      "count": 1
+    },
+    {
+      "name": "Warshall–Floyd法",
+      "count": 1
+    },
+    {
+      "name": "Dijkstra法",
+      "count": 1
+    },
+    {
+      "name": "最大公約数",
+      "count": 1
+    },
+    {
+      "name": "各桁",
+      "count": 1
+    },
+    {
+      "name": "選べる手が決まっている",
       "count": 1
     }
   ]

@@ -11,9 +11,8 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "md-cp": "processmd ./md/competitive_programming/*.md --stdout --outputDir contents/posts/competitive_programming > contents/posts/competitive_programming/summary.json && yarn maketag",
     "md": "ruby bin/md2json.rb",
-    "deploy": "yarn md && ruby lib/make_tags_json.rb && yarn build && firebase deploy",
+    "deploy": "yarn md && yarn build && firebase deploy",
     "delcache": "rm -rf node_modules/.cache/hard-source/",
     "new": "ruby lib/make_new_markdown.rb",
     "maketag": "ruby lib/make_tags_json.rb"
