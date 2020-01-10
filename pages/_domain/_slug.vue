@@ -10,19 +10,19 @@
       <span class="post-tag">{{ tag }}</span>
       <!-- </nuxt-link> -->
     </div>
-    <div style="margin-bottom: 120px;" v-html="article.body"></div>
+    <div v-html="article.body"></div>
     <!-- <SnsButtons /> -->
-    <CommentForm />
+    <!-- <CommentForm /> -->
   </section>
 </template>
 
 <script>
-import CommentForm from '~/components/CommentForm'
+// import CommentForm from '~/components/CommentForm'
 import microcms from "~/plugins/microcms";
 
 export default {
   components: {
-    CommentForm
+    // CommentForm
   },
   async asyncData({ params, $axios }) {
     const data = await Promise.all([

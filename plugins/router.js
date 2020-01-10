@@ -16,10 +16,12 @@ export async function fetchRoutes(entrypoint) {
 
 export async function fetchAllRoutes() {
   const entrypoints = process.env.MICROCMS_ENTRYPOINTS.split(':')
-  const routes = await Promise.all(entrypoints.map(async entrypoint => {
+  let routes = await Promise.all(entrypoints.map(async entrypoint => {
     const data = await fetchRoutes(entrypoint)
     return data
   }))
-  console.log(routes.flat())
-  return routes.flat()
+  // to flat single level array
+  routes = routes.reduce((acc, val) => acc.concat(val), []);
+  console.log(routes)
+  return routes
 }

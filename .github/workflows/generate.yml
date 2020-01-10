@@ -1,0 +1,9 @@
+name: yarn generate
+on: push
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: generate
+      run: yarn generate
