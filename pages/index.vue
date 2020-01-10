@@ -1,51 +1,79 @@
 <template>
-  <section class="top-container">
-    <div class="title-container">
-      <nuxt-link class="top-title" to="/blog">
-        <div class="button">
-          <h1>雑記</h1>
-          <p class="desc">
-            くさころの日常を書いています。雑多なことを書き連ねる記事群です。
-          </p>
-        </div>
-      </nuxt-link>
-    </div>
-    <div class="title-container">
-      <nuxt-link class="top-title" to="/tech_blog">
-        <div class="button">
-          <h1>技術ブログ</h1>
-          <p class="desc">
-            技術的なTipsや自作のアプリケーションについて書いています。
+  <div class="top-container">
+    <div v-if="$mq!=='sp'">
+      <Art title="Blog" description="くさころの日常を書いています。雑多なことを書き連ねる記事群です。" link="/blog" />
+      <Art
+        title="Tech Blog"
+        description="技術的なTipsや自作のアプリケーションについて書いています。
             職業柄Web系が多くなりそうです。 主な使用言語はRuby, TypeScript, C++,
-            Goです。
-          </p>
-        </div>
-      </nuxt-link>
-    </div>
-    <div class="title-container">
-      <nuxt-link class="top-title" to="/competitive_prog">
-        <div class="button">
-          <h1>競技プログラミング</h1>
-          <p class="desc">
-            解いた問題の解説等を載せています。
+            Goです。"
+        link="/tech_blog"
+      />
+      <Art
+        title="Competitive Programming"
+        description="解いた問題の解説等を載せています。
             とはいえ競プロあまり得意じゃないです。
             自分でもわかるようになるべく行間のない解説を心がけています。
-            好きなアルゴリズムはBFSです。普段はRubyとC++で競プロをしています。
-          </p>
-        </div>
-      </nuxt-link>
+            好きなアルゴリズムはBFSです。普段はRubyとC++で競プロをしています。"
+        link="/competitive_prog"
+      />
     </div>
-  </section>
+    <div v-else>
+      <div class="title-container">
+        <nuxt-link class="top-title" to="/blog">
+          <div class="button">
+            <h1>雑記</h1>
+            <p class="desc">くさころの日常を書いています。雑多なことを書き連ねる記事群です。</p>
+          </div>
+        </nuxt-link>
+      </div>
+      <div class="title-container">
+        <nuxt-link class="top-title" to="/tech_blog">
+          <div class="button">
+            <h1>技術ブログ</h1>
+            <p class="desc">
+              技術的なTipsや自作のアプリケーションについて書いています。
+              職業柄Web系が多くなりそうです。 主な使用言語はRuby, TypeScript, C++,
+              Goです。
+            </p>
+          </div>
+        </nuxt-link>
+      </div>
+      <div class="title-container">
+        <nuxt-link class="top-title" to="/competitive_prog">
+          <div class="button">
+            <h1>競技プログラミング</h1>
+            <p class="desc">
+              解いた問題の解説等を載せています。
+              とはいえ競プロあまり得意じゃないです。
+              自分でもわかるようになるべく行間のない解説を心がけています。
+              好きなアルゴリズムはBFSです。普段はRubyとC++で競プロをしています。
+            </p>
+          </div>
+        </nuxt-link>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 // import Posts from '~/components/Posts.vue'
+import Vue from "vue";
+import VueMq from "vue-mq";
+
+const breakpoints = {
+  sp: 767,
+  pc: 1024
+};
+Vue.use(VueMq, { breakpoints });
+import Art from "~/components/Art.vue";
 export default {
-  layout: 'top',
+  layout: "top",
   components: {
     // Posts
+    Art
   }
-}
+};
 </script>
 
 <style scoped>
@@ -90,7 +118,7 @@ export default {
   bottom: -2px;
   left: -2px;
   z-index: 2;
-  content: '';
+  content: "";
   transition: all 0.3s;
 }
 .button::before {
