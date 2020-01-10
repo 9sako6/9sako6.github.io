@@ -11,18 +11,49 @@
       <!-- </nuxt-link> -->
     </div>
     <div v-html="article.body"></div>
-    <!-- <SnsButtons /> -->
-    <!-- <CommentForm /> -->
   </section>
 </template>
 
 <script>
-// import CommentForm from '~/components/CommentForm'
 import microcms from "~/plugins/microcms";
 
 export default {
-  components: {
-    // CommentForm
+  head() {
+    return {
+      title: this.article.title,
+      meta: [
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.article.title || ""
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: this.article.description || ""
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.article.description || ""
+        },
+        // {
+        //   hid: 'og:image',
+        //   property: 'og:image',
+        //   content: this.article.img.url
+        // },
+        {
+          hid: "twitter:card",
+          property: "twitter:card",
+          content: "summary"
+        },
+        {
+          hid: "twitter:site",
+          property: "twitter:site",
+          content: `@${process.env.TWITTER_USER}`
+        }
+      ]
+    };
   },
   async asyncData({ params, $axios }) {
     const data = await Promise.all([

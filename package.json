@@ -1,7 +1,7 @@
 {
   "name": "9sako6-garden",
   "version": "1.0.0",
-  "description": "My blog",
+  "description": "CS全般、主にWebと競技プログラミングの知見を書いています。",
   "author": "9sako6",
   "private": true,
   "scripts": {
