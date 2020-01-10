@@ -4,7 +4,7 @@ require('dotenv').config();
 const { MICROCMS_X_API_KEY, MICROCMS_BASE_URL, MICROCMS_ENTRYPOINTS } = process.env;
 
 export default {
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Headers of the page
   */
