@@ -91,3 +91,5 @@ sw.*
 
 # original
 .memo
+# Local Netlify folder
+.netlify
