@@ -1,9 +1,9 @@
 <template>
   <div class="post">
     <div class="post-date">{{ createdAt.split('T')[0] }}</div>
-    <a :href="link">
+    <nuxt-link :to="link">
       <div class="post-title">{{ title }}</div>
-    </a>
+    </nuxt-link>
     <div v-for="tag in tags" :key="tag.id" class="post-tags">
       <!-- <nuxt-link :to="'/tags/' + tag"> -->
         <span class="post-tag">{{ tag }}</span>

@@ -1,7 +1,7 @@
 import { fetchAllRoutes } from './plugins/router'
 
 require('dotenv').config();
-const { MICROCMS_X_API_KEY, MICROCMS_BASE_URL } = process.env;
+const { MICROCMS_X_API_KEY, MICROCMS_BASE_URL, MICROCMS_ENTRYPOINTS } = process.env;
 
 export default {
   mode: 'spa',
@@ -14,6 +14,11 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+    ],
+    script: [
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -74,6 +79,7 @@ export default {
   },
   env: {
     MICROCMS_BASE_URL,
-    MICROCMS_X_API_KEY
+    MICROCMS_X_API_KEY,
+    MICROCMS_ENTRYPOINTS
   }
 }

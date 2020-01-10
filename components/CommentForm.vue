@@ -1,0 +1,10 @@
+<template>
+  <script
+    src="https://utteranc.es/client.js"
+    repo="9sako6/9sako6-garden"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async
+  ></script>
+</template>
