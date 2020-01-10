@@ -1,7 +1,7 @@
 import { fetchAllRoutes } from './plugins/router'
 
 require('dotenv').config();
-const { MICROCMS_X_API_KEY, MICROCMS_BASE_URL, MICROCMS_ENTRYPOINTS } = process.env;
+const { APP_URL, MICROCMS_BASE_URL, MICROCMS_X_API_KEY, MICROCMS_ENTRYPOINTS } = process.env
 
 export default {
   mode: 'universal',
@@ -9,11 +9,29 @@ export default {
   ** Headers of the page
   */
   head: {
+    titleTemplate: '%s - ' + process.env.npm_package_name,
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: process.env.npm_package_name || ''
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: process.env.APP_URL || '' },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: process.env.npm_package_name || ''
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: process.env.npm_package_description || ''
+      }
     ],
     script: [
       {
@@ -78,8 +96,9 @@ export default {
     }
   },
   env: {
-    MICROCMS_BASE_URL,
-    MICROCMS_X_API_KEY,
-    MICROCMS_ENTRYPOINTS
+    APP_URL: APP_URL,
+    MICROCMS_BASE_URL: MICROCMS_BASE_URL,
+    MICROCMS_X_API_KEY: MICROCMS_X_API_KEY,
+    MICROCMS_ENTRYPOINTS: MICROCMS_ENTRYPOINTS
   }
 }

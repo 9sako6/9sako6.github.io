@@ -3,6 +3,7 @@
     <div class="post-date">{{ createdAt.split('T')[0] }}</div>
     <nuxt-link :to="link">
       <div class="post-title">{{ title }}</div>
+      <div v-if="description" class="">{{ description }}</div>
     </nuxt-link>
     <div v-for="tag in tags" :key="tag.id" class="post-tags">
       <!-- <nuxt-link :to="'/tags/' + tag"> -->
@@ -19,7 +20,7 @@ export default {
     title: { type: String, default: '' },
     createdAt: { type: String, default: '' },
     // date: { type: String, required: true },
-    // description: { type: String, required: true, default: '' },
+    description: { type: String, default: '' },
     tags: { type: Array, default: [] }
   }
 }

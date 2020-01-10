@@ -3,6 +3,7 @@
     <div v-for="article in articles" :key="article.id">
       <Card
         :title="article.title"
+        :description="article.description"
         :createdAt="article.createdAt"
         :link="`/${domain}/${article.id}`"
         :tags="article.tags"
