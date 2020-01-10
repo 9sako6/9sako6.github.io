@@ -15,7 +15,8 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.1",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue-mq": "^1.0.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
