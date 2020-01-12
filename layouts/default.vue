@@ -2,7 +2,7 @@
   <div id="root">
     <!-- <Header style="flex: 1;" /> -->
     <div id="container-outer">
-      <PageTitle />
+      <TopTitle />
       <div id="content">
         <nuxt id="page-main" />
         <aside id="side-menu">
@@ -17,14 +17,14 @@
 
 <script>
 // import Header from '~/components/Header.vue'
-import PageTitle from '~/components/PageTitle.vue'
+import TopTitle from '~/components/TopTitle.vue'
 import Profile from '~/components/Profile.vue'
 // import Tags from '~/components/Tags.vue'
 import Footer from '~/components/Footer.vue'
 export default {
   components: {
     // Header,
-    PageTitle,
+    TopTitle,
     Profile,
     // Tags,
     Footer

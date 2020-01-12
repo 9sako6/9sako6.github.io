@@ -10,14 +10,19 @@
       <span class="post-tag">{{ tag }}</span>
       <!-- </nuxt-link> -->
     </div>
-    <div v-html="article.body"></div>
+    <div v-html="article.body" style="margin-bottom: 120px;"></div>
+    <BackArrow :link="`/${domain}`" />
   </section>
 </template>
 
 <script>
 import microcms from "~/plugins/microcms";
+import BackArrow from "~/components/BackArrow"
 
 export default {
+  components: {
+    BackArrow
+  },
   head() {
     return {
       title: this.article.title,
@@ -62,7 +67,7 @@ export default {
     const article = data[0]["data"];
     // split tags to list of tag
     article["tags"] = article["tags"].split(":");
-    return { article: article };
+    return { article: article, domain: params.domain };
   },
   mounted() {
     this.renderMathJax();

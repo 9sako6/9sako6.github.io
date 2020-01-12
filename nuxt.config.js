@@ -68,7 +68,8 @@ export default {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
   ],
   /*
   ** Axios module configuration
@@ -100,5 +101,10 @@ export default {
     MICROCMS_BASE_URL: MICROCMS_BASE_URL,
     MICROCMS_X_API_KEY: MICROCMS_X_API_KEY,
     MICROCMS_ENTRYPOINTS: MICROCMS_ENTRYPOINTS
-  }
+  },
+  styleResources: {
+    scss: [
+     '~/assets/scss/colors.scss',
+     ]
+   }
 }

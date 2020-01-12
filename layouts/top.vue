@@ -1,35 +1,31 @@
-<template>
-  <div id="root">
-    <PageTitle />
-    <!-- <h2 id="blog-description">くさころのサイト</h2> -->
-    <nuxt />
-    <Footer />
-  </div>
+<template lang='pug'>
+  div#root
+    TopTitle
+    //- PageTitle
+    nuxt
+    Footer
 </template>
 
 <script>
-// import Header from '~/components/Header.vue'
-import PageTitle from '~/components/PageTitle.vue'
-// import Profile from '~/components/Profile.vue'
-// import Tags from '~/components/Tags.vue'
+// import PageTitle from '~/components/PageTitle.vue'
+import TopTitle from '~/components/TopTitle.vue'
 import Footer from '~/components/Footer.vue'
 export default {
   components: {
-    // Header,
-    PageTitle,
-    // Profile,
-    // Tags,
+    TopTitle,
+    // PageTitle,
     Footer
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 html {
   font-family: 'YuGothic', sans-serif;
   font-size: 16px;
@@ -39,86 +35,13 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  color: #3f3f3f;
+  color: $my-black;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
-}
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3f3f3f;
-  color: #3f3f3f;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-.button--grey:hover {
-  color: #fff;
-  background-color: #3f3f3f;
-}
-@media screen and (max-width: 767px) {
-  * {
-    box-sizing: border-box;
-  }
-  #container-outer {
-    width: 90%;
-    margin: auto;
-  }
-  #page-main {
-    width: 100%;
-  }
-  #side-menu {
-    width: 100%;
-  }
-  #content {
-    margin: 0 10px;
-  }
-}
-@media screen and (min-width: 768px) {
-  #container-outer {
-    width: 1140px;
-    border-right: 1px solid #eceef1;
-    border-left: 1px solid #eceef1;
-  }
-  #page-main {
-    width: 700px;
-  }
-  #side-menu {
-    width: 290px;
-  }
-  #content {
-    margin: 35px 55px;
-  }
-}
-#container-outer {
-  margin: auto;
-  margin-bottom: 100px;
-}
-#page-main {
-  float: left;
-  margin-bottom: 100px;
-}
-#side-menu {
-  float: right;
-  height: 100%;
-}
-a {
-  word-break: break-all;
 }
 </style>

@@ -7,16 +7,31 @@
     </div>
     <div class="img">
       <img
-        src="~/static/bird.jpg"
+        :src="images[link.split('/').slice(-1)[0]]"
       />
     </div>
   </section>
 </template>
 <script>
+import eleph from '~/assets/img/eleph.jpg'
+import bird from '~/assets/img/bird.jpg'
+import ox from '~/assets/img/ox.jpg'
+
+const images = {
+  blog: ox,
+  competitive_prog: eleph,
+  tech_blog: bird
+}
+
 export default {
+  data(){
+    return {
+      images: images
+    }
+  },
   props: {
     link: { type: String, default: '' },
-    // imglink: { type: String, default: '../../static/bird.jpg' },
+    // imglink: { type: String, default: '~assets/img/eleph.jpg' },
     title: { type: String, default: '' },
     description: { type: String, default: '' },
   },

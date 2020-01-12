@@ -1,14 +1,6 @@
 <template>
   <div class="top-container">
     <div v-if="$mq!=='sp'">
-      <Art title="Blog" description="くさころの日常を書いています。雑多なことを書き連ねる記事群です。" link="/blog" />
-      <Art
-        title="Tech Blog"
-        description="技術的なTipsや自作のアプリケーションについて書いています。
-            職業柄Web系が多くなりそうです。 主な使用言語はRuby, TypeScript, C++,
-            Goです。"
-        link="/tech_blog"
-      />
       <Art
         title="Competitive Programming"
         description="解いた問題の解説等を載せています。
@@ -17,13 +9,26 @@
             好きなアルゴリズムはBFSです。普段はRubyとC++で競プロをしています。"
         link="/competitive_prog"
       />
+      <Art
+        title="Tech Blog"
+        description="技術的なTipsや自作のアプリケーションについて書いています。
+            職業柄Web系が多くなりそうです。 主な使用言語はRuby, TypeScript, C++,
+            Goです。"
+        link="/tech_blog"
+      />
+      <Art title="Blog" description="くさころの日常を書いています。雑多なことを書き連ねる記事群です。" link="/blog" />
     </div>
     <div v-else>
       <div class="title-container">
-        <nuxt-link class="top-title" to="/blog">
+        <nuxt-link class="top-title" to="/competitive_prog">
           <div class="button">
-            <h1>雑記</h1>
-            <p class="desc">くさころの日常を書いています。雑多なことを書き連ねる記事群です。</p>
+            <h1>競技プログラミング</h1>
+            <p class="desc">
+              解いた問題の解説等を載せています。
+              とはいえ競プロあまり得意じゃないです。
+              自分でもわかるようになるべく行間のない解説を心がけています。
+              好きなアルゴリズムはBFSです。普段はRubyとC++で競プロをしています。
+            </p>
           </div>
         </nuxt-link>
       </div>
@@ -40,15 +45,10 @@
         </nuxt-link>
       </div>
       <div class="title-container">
-        <nuxt-link class="top-title" to="/competitive_prog">
+        <nuxt-link class="top-title" to="/blog">
           <div class="button">
-            <h1>競技プログラミング</h1>
-            <p class="desc">
-              解いた問題の解説等を載せています。
-              とはいえ競プロあまり得意じゃないです。
-              自分でもわかるようになるべく行間のない解説を心がけています。
-              好きなアルゴリズムはBFSです。普段はRubyとC++で競プロをしています。
-            </p>
+            <h1>雑記</h1>
+            <p class="desc">くさころの日常を書いています。雑多なことを書き連ねる記事群です。</p>
           </div>
         </nuxt-link>
       </div>
@@ -81,7 +81,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .top-container {
   color: #3f3f3f;
 }
@@ -127,17 +127,17 @@ export default {
   transition: all 0.3s;
 }
 .button::before {
-  border-top: 2px solid #e65a5a;
-  border-bottom: 2px solid #e65a5a;
+  border-top: 2px solid $my-red;
+  border-bottom: 2px solid $my-red;
   transform: scale(0, 1);
 }
 .button::after {
-  border-right: 2px solid #e65a5a;
-  border-left: 2px solid #e65a5a;
+  border-right: 2px solid $my-red;
+  border-left: 2px solid $my-red;
   transform: scale(1, 0);
 }
 .button:hover {
-  color: #e65a5a;
+  color: $my-red;
 }
 .button:hover::after,
 .button:hover::before {
@@ -145,7 +145,7 @@ export default {
 }
 .top-title {
   text-decoration: none;
-  color: #3f3f3f;
+  color: $my-gray;
 }
 .desc {
   margin-top: 1em;
