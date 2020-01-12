@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #blog-title-wrapper {
   text-align: center;
   padding: 50px 0;
