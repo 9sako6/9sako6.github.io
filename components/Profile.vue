@@ -5,9 +5,10 @@
       <img id="profile-avatar" src="~/static/icon.png" />
     </div>
     <div class="side-description">
-      くさころです。RubyとC++で競プロをしています。
+      くさころといいます。
+      <!-- RubyとC++で競プロをしています。
       競プロあまり得意じゃないです。
-      自分でもわかるようになるべく行間のない解説を心がけます。
+      自分でもわかるようになるべく行間のない解説を心がけます。 -->
       好きなアルゴリズムはBFSです。
       <ul>
         <li class="list-item">
