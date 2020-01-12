@@ -69,6 +69,11 @@ Vue.use(VueMq, { breakpoints });
 import Art from "~/components/Art.vue";
 export default {
   layout: "top",
+  head() {
+    return {
+      titleTemplate: ''
+    }
+  },
   components: {
     // Posts
     Art

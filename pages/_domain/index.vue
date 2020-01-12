@@ -17,6 +17,11 @@ import microcms from "~/plugins/microcms";
 import Card from "~/components/Card";
 
 export default {
+  head() {
+    return {
+      titleTemplate: ''
+    }
+  },
   components: {
     Card
   },
