@@ -22,7 +22,7 @@
       <div class="title-container">
         <nuxt-link class="top-title" to="/competitive_prog">
           <div class="button">
-            <h1>競技プログラミング</h1>
+            <h1 class="mobile-title">競技プログラミング</h1>
             <p class="desc">
               解いた問題の解説等を載せています。
               とはいえ競プロあまり得意じゃないです。
@@ -35,7 +35,7 @@
       <div class="title-container">
         <nuxt-link class="top-title" to="/tech_blog">
           <div class="button">
-            <h1>技術ブログ</h1>
+            <h1 class="mobile-title">技術ブログ</h1>
             <p class="desc">
               技術的なTipsや自作のアプリケーションについて書いています。
               職業柄Web系が多くなりそうです。 主な使用言語はRuby, TypeScript, C++,
@@ -47,7 +47,7 @@
       <div class="title-container">
         <nuxt-link class="top-title" to="/blog">
           <div class="button">
-            <h1>雑記</h1>
+            <h1 class="mobile-title">雑記</h1>
             <p class="desc">くさころの日常を書いています。雑多なことを書き連ねる記事群です。</p>
           </div>
         </nuxt-link>
@@ -146,6 +146,9 @@ export default {
 .top-title {
   text-decoration: none;
   color: $my-gray;
+}
+.mobile-title {
+  font-size: 1.5em;
 }
 .desc {
   margin-top: 1em;

@@ -6,7 +6,7 @@
       .navi-wrap
         Navi
     - for (var x = 0; x < 50; x++)
-      div(class="circle")
+      div(class="square")
 </template>
 <script>
 import Navi from "~/components/Navi.vue";
@@ -27,28 +27,16 @@ export default {
 $height: 400px;
 
 .wrapper {
-  // position: fixed;
   position: relative;
-  // z-index: -999px;
-  // height: ;
-  // @media screen and (max-width: 767px) {
-  //   height: 200px;
-  // }
-  // @media screen and (min-width: 768px) {
-  //   height: 400px;
-  // }
   height: $height;
   width: 100%;
-  // top: 0;
-  // left: 0;
   overflow: hidden;
-  // background: radial-gradient(circle, #ffffff, #e9e9e9);
-  // background-image: url('~static/header.jpeg');
+  // background: radial-gradient(square, #ffffff, #e9e9e9);
   // background-size: 100%;
   background-repeat: no-repeat;
 }
 @for $i from 0 through 49 {
-  @keyframes circle-animation-#{$i} {
+  @keyframes square-animation-#{$i} {
     100% {
       transform: translate3d(
         random-num(-50, 150) * 1vw,
@@ -57,7 +45,7 @@ $height: 400px;
       );
     }
   }
-  .circle:nth-child(#{$i}) {
+  .square:nth-child(#{$i}) {
     position: absolute;
     $size: random(15) + 5 + px;
     $color: hsl(0, 0%, 63%);
@@ -67,7 +55,7 @@ $height: 400px;
       background-color: $color;
     }
     box-shadow: 0px 0px 10px $color;
-    animation: circle-animation-#{$i}
+    animation: square-animation-#{$i}
       linear
       (random(10) + 10) +
       s
