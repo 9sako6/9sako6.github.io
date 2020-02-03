@@ -5,14 +5,17 @@
       nuxt-link(to="/").link 9sako6 Garden
       .navi-wrap
         Navi
-    - for (var x = 0; x < 50; x++)
-      div(class="square")
+    Squares
+    //- - for (var x = 0; x < 50; x++)
+    //-   div(class="square")
 </template>
 <script>
 import Navi from "~/components/Navi.vue";
+import Squares from "~/components/Squares.vue";
 export default {
   components: {
-    Navi
+    Navi,
+    Squares
   }
 };
 </script>
@@ -24,51 +27,11 @@ export default {
 }
 @media screen and (min-width: 768px) {
 }
-$height: 400px;
+$height: 200px;
 
-.wrapper {
-  position: relative;
-  height: $height;
-  width: 100%;
-  overflow: hidden;
-  // background: radial-gradient(square, #ffffff, #e9e9e9);
-  // background-size: 100%;
-  background-repeat: no-repeat;
-}
-@for $i from 0 through 49 {
-  @keyframes square-animation-#{$i} {
-    100% {
-      transform: translate3d(
-        random-num(-50, 150) * 1vw,
-        random($height) + px,
-        random(100) + px
-      );
-    }
-  }
-  .square:nth-child(#{$i}) {
-    position: absolute;
-    $size: random(15) + 5 + px;
-    $color: hsl(0, 0%, 63%);
-    height: $size;
-    width: $size;
-    @if $i % random(3) == 0 {
-      background-color: $color;
-    }
-    box-shadow: 0px 0px 10px $color;
-    animation: square-animation-#{$i}
-      linear
-      (random(10) + 10) +
-      s
-      alternate
-      infinite;
-    animation-delay: -$i * 1s;
-    transform: translate3d(random(90) * 1vw, random($height) + px, 0)
-      rotate((random(360)) + deg);
-  }
-}
 .title {
   position: absolute;
-  top: $height / 2;
+  top: $height / 4;
   left: 0;
   right: 0;
   font-family: serif;

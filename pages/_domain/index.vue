@@ -17,6 +17,9 @@ import microcms from "~/plugins/microcms";
 import Card from "~/components/Card";
 
 export default {
+  layout (context) {
+    return context.params.domain
+  },
   head() {
     return {
       titleTemplate: ''

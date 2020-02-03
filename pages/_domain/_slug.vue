@@ -17,9 +17,12 @@
 
 <script>
 import microcms from "~/plugins/microcms";
-import BackArrow from "~/components/BackArrow"
+import BackArrow from "~/components/BackArrow";
 
 export default {
+  layout(context) {
+    return context.params.domain;
+  },
   components: {
     BackArrow
   },
@@ -78,7 +81,10 @@ export default {
         window.MathJax.Hub.Config({
           TeX: { equationNumbers: { autoNumber: "AMS" } },
           tex2jax: {
-            inlineMath: [["$", "$"], ["\\(", "\\)"]],
+            inlineMath: [
+              ["$", "$"],
+              ["\\(", "\\)"]
+            ],
             processEscapes: true
           },
           "HTML-CSS": { matchFontHeight: false },

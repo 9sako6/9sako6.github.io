@@ -1,13 +1,13 @@
 <template>
   <div class="post">
     <div class="post-date">{{ createdAt.split('T')[0] }}</div>
-    <nuxt-link :to="link">
-      <div class="post-title">{{ title }}</div>
-      <div v-if="description" class="">{{ description }}</div>
-    </nuxt-link>
+    <div>
+      <nuxt-link :to="link" class="post-title">{{ title }}</nuxt-link>
+    </div>
+    <div v-if="description" class="post-description">{{ description }}</div>
     <div v-for="tag in tags" :key="tag.id" class="post-tags">
       <!-- <nuxt-link :to="'/tags/' + tag"> -->
-        <span class="post-tag">{{ tag }}</span>
+      <span class="post-tag">{{ tag }}</span>
       <!-- </nuxt-link> -->
     </div>
   </div>
@@ -16,18 +16,18 @@
 <script>
 export default {
   props: {
-    link: { type: String, default: '' },
-    title: { type: String, default: '' },
-    createdAt: { type: String, default: '' },
+    link: { type: String, default: "" },
+    title: { type: String, default: "" },
+    createdAt: { type: String, default: "" },
     // date: { type: String, required: true },
-    description: { type: String, default: '' },
+    description: { type: String, default: "" },
     tags: { type: Array, default: [] }
   }
-}
+};
 </script>
 
-<style scoped>
-@import '@/assets/css/tag.css';
+<style scoped lang="scss">
+@import "@/assets/css/tag.css";
 .post {
   text-align: left;
   padding: 20px;
@@ -35,6 +35,9 @@ export default {
 .post-title {
   font-weight: 600;
   font-size: 1.2em;
+}
+.post-title:hover {
+  text-decoration: underline;
 }
 .post-date {
   color: #717579;
