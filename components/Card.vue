@@ -33,11 +33,14 @@ export default {
   padding: 20px;
 }
 .post-title {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.2em;
 }
 .post-title:hover {
   text-decoration: underline;
+}
+.post-description {
+  color: $my-gray;
 }
 .post-date {
   color: #717579;

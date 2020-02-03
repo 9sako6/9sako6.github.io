@@ -46,7 +46,7 @@ $title-height: 150px;
   width: 100%;
   height: $title-height;
   text-align: center;
-  border-bottom: 1px solid #eceef1;
+  // border-bottom: 1px solid #eceef1;
 }
 .title {
   text-align: center;
@@ -134,13 +134,13 @@ html {
     border-left: 1px solid #eceef1;
   }
   #page-main {
-    width: 700px;
+    width: 800px;
   }
   #side-menu {
-    width: 290px;
+    width: 200px;
   }
   #content {
-    margin: 35px 55px;
+    margin: $title-height / 2 55px;
   }
 }
 #container-outer {
