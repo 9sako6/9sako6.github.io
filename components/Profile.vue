@@ -2,25 +2,23 @@
   <div id="profile">
     <div class="side-title">Profile</div>
     <div style="text-align: center;">
-      <img id="profile-avatar" src="~/static/icon2.png" />
+      <img id="profile-avatar" src="~/static/icon2.png" alt="a picture drawn by 9sako6" />
     </div>
     <div class="side-description">
       くさころといいます。
       <!-- RubyとC++で競プロをしています。
       競プロあまり得意じゃないです。
-      自分でもわかるようになるべく行間のない解説を心がけます。 -->
+      自分でもわかるようになるべく行間のない解説を心がけます。-->
       好きなアルゴリズムはBFSです。
       <ul>
         <!-- <li class="list-item">
           <a href="https://atcoder.jp/users/qsako6">AtCoder</a>
-        </li> -->
+        </li>-->
         <li class="list-item">
-          <a href="https://twitter.com/9sako6" target="_blank">Twitter</a>
+          <a href="https://twitter.com/9sako6" target="_blank" rel="noopener noreferrer">Twitter</a>
         </li>
         <li class="list-item">
-          <a href="https://github.com/9sako6/" target="_blank"
-            >GitHub</a
-          >
+          <a href="https://github.com/9sako6/" target="_blank" rel="noopener noreferrer">GitHub</a>
         </li>
       </ul>
     </div>
@@ -28,11 +26,11 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style scoped>
-@import '@/assets/css/side.css';
+@import "@/assets/css/side.css";
 #profile-avatar {
   width: 200px;
   border-radius: 100%;

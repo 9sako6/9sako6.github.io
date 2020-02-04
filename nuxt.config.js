@@ -9,6 +9,9 @@ export default {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     titleTemplate: '%s | ' + process.env.npm_package_name,
     title: process.env.npm_package_name || '',
     meta: [

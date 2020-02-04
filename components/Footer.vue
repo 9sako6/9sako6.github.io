@@ -13,14 +13,14 @@
 export default {}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 footer {
   margin-top: auto;
   text-align: center;
   padding: 1em;
-  color: #999999;
+  color: $my-gray;
 }
 #repo-link {
-  color: #999999;
+  color: $my-gray;
 }
 </style>

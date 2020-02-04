@@ -7,6 +7,7 @@
     </div>
     <div class="img">
       <img
+        alt="a picture drawn by 9sako6"
         :src="images[link.split('/').slice(-1)[0]]"
       />
     </div>
