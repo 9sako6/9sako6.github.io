@@ -6,9 +6,9 @@
       <time v-if="article.updatedAt">, updated: {{ article.updatedAt.split('T')[0] }}</time>
     </div>
     <div v-for="tag in article.tags" :key="tag.id" class="post-tags">
-      <!-- <nuxt-link :to="'/tags/' + tag"> -->
-      <span class="post-tag">{{ tag }}</span>
-      <!-- </nuxt-link> -->
+      <nuxt-link :to="`/${domain}/tag/${encodeURIComponent(tag)}`">
+        <span class="post-tag">{{ tag }}</span>
+      </nuxt-link>
     </div>
     <div v-html="article.body" style="margin-bottom: 120px;"></div>
     <BackArrow :link="`/${domain}`" />
