@@ -28,7 +28,9 @@ export default {
 @media screen and (min-width: 768px) {
 }
 $height: 200px;
-
+.wrapper {
+  height: $height;
+}
 .title {
   position: absolute;
   top: $height / 4;

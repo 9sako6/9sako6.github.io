@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.wrapper
+  div.squares-wrapper
     - for (var x = 0; x < 30; x++)
       div(class="square")
 </template>
@@ -11,15 +11,13 @@
 }
 @media screen and (min-width: 768px) {
 }
-$height: 200px;
+$height: 100%;
 
-.wrapper {
+.squares-wrapper {
   position: relative;
   height: $height;
   width: 100%;
   overflow: hidden;
-  // background: radial-gradient(square, #ffffff, #e9e9e9);
-  // background-size: 100%;
   background-repeat: no-repeat;
   z-index: -1;
 }
