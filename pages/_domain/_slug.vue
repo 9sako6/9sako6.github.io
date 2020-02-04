@@ -64,12 +64,16 @@ export default {
     };
   },
   async asyncData({ params, $axios }) {
+    // const axiosObj = microcms(0, 10)
+    // console.log(axiosObj)
+    // console.log(microcms())
     const data = await Promise.all([
       microcms.get(`${params.domain}/${params.slug}`)
     ]);
     const article = data[0]["data"];
     // split tags to list of tag
-    article["tags"] = article["tags"].split(":");
+    article["tags"] =
+      article["tags"] === undefined ? [] : article["tags"].split(":");
     return { article: article, domain: params.domain };
   },
   mounted() {
