@@ -26,7 +26,7 @@
 import TopTitle from "~/components/TopTitle.vue";
 import Squares from "~/components/Squares.vue";
 import Profile from "~/components/Profile.vue";
-// import Tags from '~/components/Tags.vue'
+// import Tags from "~/components/Tags.vue";
 import Footer from "~/components/Footer.vue";
 export default {
   components: {

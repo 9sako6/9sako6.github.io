@@ -70,6 +70,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    '@/modules/hook'
   ],
   /*
   ** Axios module configuration

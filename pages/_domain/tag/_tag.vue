@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h1 class="tag-title">#{{tag}}</h1>
     <div v-for="article in articles" :key="article.id">
       <Card
         :entrypoint="domain"
@@ -10,14 +11,12 @@
         :tags="article.tags"
       />
     </div>
-    <Pagenation :domain="domain" :pages="pages" />
   </div>
 </template>
 
 <script>
 import microcms from "~/plugins/microcms";
 import Card from "~/components/Card";
-import Pagenation from "~/components/Pagenation";
 
 export default {
   layout(context) {
@@ -29,23 +28,16 @@ export default {
     };
   },
   components: {
-    Card,
-    Pagenation
+    Card
   },
   async asyncData({ params, $axios }) {
-    let pageNum = 1;
-    if (typeof params.id !== "undefined") {
-      pageNum = parseInt(params.id);
-    }
-    // get the number of total articles
-    const res = await Promise.all([microcms.get(`${params.domain}?fields=id`)]);
-    const totalCount = parseInt(res[0]["data"]["totalCount"]);
-    const oldestPageNum = Math.ceil(totalCount / 10);
-    const pages = Array.from(Array(oldestPageNum).keys(), x => x + 1);
-
     // get the latest 10 articles
     const data = await Promise.all([
-      microcms.get(`${params.domain}?offset=${10 * (pageNum - 1)}&limit=${10}`)
+      microcms.get(
+        `${params.domain}?filters=tags[contains]${encodeURIComponent(
+          params.tag
+        )}`
+      )
     ]);
     const articles = data[0]["data"]["contents"];
 
@@ -57,8 +49,14 @@ export default {
     return {
       articles: articles,
       domain: params.domain,
-      pages: pages
+      tag: params.tag
     };
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.tag-title {
+  padding-left: 20px;
+}
+</style>
