@@ -1,16 +1,16 @@
 <template>
   <section class="page">
-    <h1 id="page-title">{{ article.title }}</h1>
+    <h1 id="page-title">{{ article.fields.title }}</h1>
     <div class="post-meta">
-      <time v-if="article.createdAt">created: {{ article.createdAt.split('T')[0] }}</time>
-      <time v-if="article.updatedAt">, updated: {{ article.updatedAt.split('T')[0] }}</time>
+      <time v-if="article.sys.createdAt">created: {{ article.sys.createdAt.split('T')[0] }}</time>
+      <time v-if="article.sys.updatedAt">, updated: {{ article.sys.updatedAt.split('T')[0] }}</time>
     </div>
-    <div v-for="tag in article.tags" :key="tag.id" class="post-tags">
+    <div v-for="tag in article.fields.tags" :key="tag.id" class="post-tags">
       <nuxt-link :to="`/${domain}/tag/${encodeURIComponent(tag)}`">
         <span class="post-tag">{{ tag }}</span>
       </nuxt-link>
     </div>
-    <div v-html="article.body" style="margin-bottom: 120px;"></div>
+    <div v-html="article.fields.body" style="margin-bottom: 120px;"></div>
     <BackArrow :link="`/${domain}`" />
   </section>
 </template>
@@ -18,6 +18,7 @@
 <script>
 import microcms from "~/plugins/microcms";
 import BackArrow from "~/components/BackArrow";
+import client from "~/plugins/contentful";
 
 export default {
   layout(context) {
@@ -63,18 +64,16 @@ export default {
       ]
     };
   },
-  async asyncData({ params, $axios }) {
-    // const axiosObj = microcms(0, 10)
-    // console.log(axiosObj)
-    // console.log(microcms())
-    const data = await Promise.all([
-      microcms.get(`${params.domain}/${params.slug}`)
-    ]);
-    const article = data[0]["data"];
-    // split tags to list of tag
-    article["tags"] =
-      article["tags"] === undefined ? [] : article["tags"].split(":");
-    return { article: article, domain: params.domain };
+  async asyncData({ env, params }) {
+    let article = null;
+    await client
+      .getEntries({
+        content_type: env.CTF_BLOG_POST_TYPE_ID,
+        "fields.slug": params.slug
+      })
+      .then(res => (article = res.items[0]))
+      .catch(console.error);
+    return { article, domain: params.domain };
   },
   mounted() {
     this.renderMathJax();
