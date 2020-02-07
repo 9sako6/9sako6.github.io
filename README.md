@@ -1,22 +1,7 @@
 # 9sako6-garden
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1a3c7a02-ce96-434c-9a52-8a0eefaa3762/deploy-status)](https://app.netlify.com/sites/9sako6-garden/deploys)
+
 > My blog
 
-## Build Setup
 
-``` bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
