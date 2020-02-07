@@ -9,7 +9,14 @@
 export default {
   props: {
     domain: { type: String, default: "" },
-    pages: { type: Array, default: [1] }
+    totalPostsCount: { type: Number, default: 0 }
+  },
+  data: function() {
+    const oldestPageNum = Math.ceil(this.totalPostsCount / 10);
+    const pages = Array.from(Array(oldestPageNum).keys(), x => x + 1);
+    return {
+      pages: pages
+    };
   }
 };
 </script>
