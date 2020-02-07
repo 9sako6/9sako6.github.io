@@ -6,8 +6,8 @@
     </div>
     <div v-if="description" class="post-description">{{ description }}</div>
     <div v-for="tag in tags" :key="tag.id" class="post-tags">
-      <nuxt-link :to="`/${entrypoint}/tag/${encodeURIComponent(tag)}`">
-        <span class="post-tag">{{ tag }}</span>
+      <nuxt-link :to="`/${entrypoint}/tag/${encodeURIComponent(tag.fields.slug)}`">
+        <span class="post-tag">{{ tag.fields.name }}</span>
       </nuxt-link>
     </div>
   </div>

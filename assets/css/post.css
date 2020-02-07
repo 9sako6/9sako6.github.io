@@ -113,20 +113,20 @@ div.tex-equations {
   right: 0;
   content: close-quote;
 } */
-.page>>>code {
+/* .page>>>code {
   border-radius: 0.2em;
   padding: 0.1em 0.4em;
   background-color: #f5f5f5;
-}
+} */
 
-.page>>>pre code {
+/* .page>>>pre code {
   padding: 1em 0 1em 2em;
   background-color: #364549;
-}
+} */
 
-.page>>>.hljs-comment {
+/* .page>>>.hljs-comment {
   color: rgb(124, 175, 102);
-}
+} */
 
 .page>>>strong {
   font-weight: 900;

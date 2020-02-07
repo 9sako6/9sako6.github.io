@@ -3,20 +3,21 @@
     <div v-for="post in posts" :key="post.id">
       <Card
         :entrypoint="domain"
-        :title="post.fields.title"
+        :title="setPost(post).title"
         :description="post.fields.description"
         :createdAt="post.sys.createdAt"
         :link="`/${domain}/${post.fields.slug}`"
         :tags="post.fields.tags || []"
       />
     </div>
-    <!-- <Pagenation :domain="domain" :pages="pages" /> -->
-    {{posts}}
+    <Pagenation :domain="domain" :totalPostsCount="10"/>
+    <!-- {{posts}}
+    {{posts.length}} -->
   </div>
 </template>
 
 <script>
-import microcms from "~/plugins/microcms";
+import { mapState, mapGetters } from "vuex";
 import client from "~/plugins/contentful";
 import Card from "~/components/Card";
 import Pagenation from "~/components/Pagenation";
@@ -34,17 +35,24 @@ export default {
     Card,
     Pagenation
   },
-  async asyncData({ env, params }) {
-    let posts = [];
-    await client
-      .getEntries({
-        content_type: env.CTF_BLOG_POST_TYPE_ID,
-        order: "-sys.createdAt"
-      })
-      .then(res => (posts = res.items))
-      .catch(console.error);
-    return { posts, domain: params.domain };
+  computed: {
+    ...mapState(["posts"]), // 追記
+    ...mapGetters(["setPost", "draftChip", "linkTo"]) // 追記
+  },
+  async asyncData({ params }) {
+    return { domain: params.domain };
   }
+  // async asyncData({ env, params }) {
+  //   let posts = [];
+  //   await client
+  //     .getEntries({
+  //       content_type: env.CTF_BLOG_POST_TYPE_ID,
+  //       order: "-sys.createdAt"
+  //     })
+  //     .then(res => (posts = res.items))
+  //     .catch(console.error);
+  //   return { posts, domain: params.domain };
+  // }
   // async asyncData({ params, $axios }) {
   //   let pageNum = 1;
   //   if (typeof params.id !== "undefined") {

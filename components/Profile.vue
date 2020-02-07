@@ -6,19 +6,10 @@
     </div>
     <div class="side-description">
       くさころといいます。
-      <!-- RubyとC++で競プロをしています。
-      競プロあまり得意じゃないです。
-      自分でもわかるようになるべく行間のない解説を心がけます。-->
       好きなアルゴリズムはBFSです。
       <ul>
-        <!-- <li class="list-item">
-          <a href="https://atcoder.jp/users/qsako6">AtCoder</a>
-        </li>-->
-        <li class="list-item">
-          <a href="https://twitter.com/9sako6" target="_blank" rel="noopener noreferrer">Twitter</a>
-        </li>
-        <li class="list-item">
-          <a href="https://github.com/9sako6/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <li v-for="item in items" :key="item.id">
+          <a :href="item.link" target="_blank" rel="noopener noreferrer">{{item.title}}</a>
         </li>
       </ul>
     </div>
@@ -26,7 +17,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: function() {
+    return {
+      items: [
+        { link: "https://twitter.com/9sako6/", title: "Twitter" },
+        { link: "https://github.com/9sako6/", title: "GitHub" }
+      ]
+    };
+  }
+};
 </script>
 
 <style scoped>
