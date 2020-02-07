@@ -53,9 +53,7 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    script: [{
-      src: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML'
-    }],
+    script: [{}],
     link: [{
       rel: 'icon',
       type: 'image/x-icon',
@@ -71,9 +69,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' },
-  ],
+  css: [{
+    src: '~/node_modules/highlight.js/styles/hopscotch.css',
+    lang: 'css'
+  }, ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -111,12 +110,12 @@ export default {
       if (lang && hljs.getLanguage(lang)) {
         try {
           return '<pre class="hljs"><code>' +
-                  hljs.highlight(lang, str, true).value +
-                  '</code></pre>';
+            hljs.highlight(lang, str, true).value +
+            '</code></pre>';
         } catch (__) {}
       }
       // 言語設定がない場合、プレーンテキストとして表示する
-      return '<pre class="hljs"><code>' +  hljs.highlight('plaintext', str, true).value + '</code></pre>';
+      return '<pre class="hljs"><code>' + hljs.highlight('plaintext', str, true).value + '</code></pre>';
     },
   },
   router: {
