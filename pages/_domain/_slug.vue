@@ -6,7 +6,10 @@
       <time v-if="post.sys.updatedAt">, updated: {{ post.sys.updatedAt.split('T')[0] }}</time>
     </div>
     <div v-for="tag in post.fields.tags" :key="tag.id" class="post-tags">
-      <nuxt-link :to="`/${domain}/tag/${encodeURIComponent(tag.fields.slug)}`">
+      <nuxt-link
+        v-if="tag.hasOwnProperty('fields') && tag.fields.hasOwnProperty('slug')"
+        :to="`/${domain}/tag/${tag.fields.slug}`"
+      >
         <span class="post-tag">{{ tag.fields.name }}</span>
       </nuxt-link>
     </div>

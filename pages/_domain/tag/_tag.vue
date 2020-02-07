@@ -38,7 +38,11 @@ export default {
       const tags = post.fields.tags;
       if (tags) {
         tags.map(tag => {
-          if (tag.fields.slug === params.tag) {
+          if (
+            tag.hasOwnProperty("fields") &&
+            tag.fields.hasOwnProperty("slug") &&
+            tag.fields.slug === params.tag
+          ) {
             tagName = tag.fields.name;
             posts.push(post);
           }

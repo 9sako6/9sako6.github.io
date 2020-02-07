@@ -28,21 +28,24 @@ export async function fetchRoutes() {
       routes.push(`/${category}/${item.fields.slug}`)
       if (item.fields.tags) {
         item.fields.tags.map(tag => {
-          // add tag page
-          // e.g.: /blog/tag/programming
-          routes.push(`/${category}/tag/${tag.fields.slug}`)
+          if (tag.hasOwnProperty("fields") && tag.fields.hasOwnProperty("slug")) {
+            // add tag page
+            // e.g.: /blog/tag/programming
+            routes.push(`/${category}/tag/${tag.fields.slug}`)
+          }
         })
       }
     })
-    Object.keys(categoryCount).map(category => {
-      const oldestPageNum = Math.ceil(categoryCount[category] / 10);
-      Array.from(Array(oldestPageNum).keys(), x => x + 1).map(pageNum => {
-        // add page of pagenation
-        // e.g.: /blog/page/2
-        routes.push(`/${category}/page/${pageNum}`)
-      })
-    })
+    // Object.keys(categoryCount).map(category => {
+    //   const oldestPageNum = Math.ceil(categoryCount[category] / 10);
+    //   Array.from(Array(oldestPageNum).keys(), x => x + 1).map(pageNum => {
+    //     // add page of pagenation
+    //     // e.g.: /blog/page/2
+    //     routes.push(`/${category}/page/${pageNum}`)
+    //   })
+    // })
   }).catch(console.error)
+  routes = [...new Set(routes)]
   console.log(routes)
   return routes
 }
