@@ -15,6 +15,13 @@
     </div>
     <div v-html="$md.render(post.fields.body)" style="margin-bottom: 120px;"></div>
     <BackArrow :link="`/${domain}`" />
+    <div v-show="disqus_shortname" class="mt-10">
+      <vue-disqus
+        :shortname="disqus_shortname"
+        :identifier="post.fields.slug"
+        :url="`${base_url}/posts/${post.fields.slug}`"
+      ></vue-disqus>
+    </div>
   </section>
 </template>
 
@@ -25,6 +32,10 @@ import BackArrow from "~/components/BackArrow";
 import client from "~/plugins/contentful";
 
 export default {
+  data: () => ({
+    base_url: process.env.BASE_URL,
+    disqus_shortname: process.env.DISQUS_SHORTNAME
+  }),
   layout(context) {
     return context.params.domain;
   },
@@ -33,7 +44,7 @@ export default {
   },
   head() {
     return {
-      title: this.post.title,
+      title: this.post.fields.title,
       meta: [
         {
           hid: "og:title",

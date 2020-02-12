@@ -78,6 +78,7 @@ export default {
    */
   plugins: [
     // 'plugins/contentful'
+    '~/plugins/disqus'
   ],
   /*
    ** Nuxt.js dev-modules
@@ -147,13 +148,12 @@ export default {
     }
   },
   env: {
-    APP_URL: process.env.APP_URL,
-    MICROCMS_BASE_URL: process.env.MICROCMS_BASE_URL,
-    MICROCMS_X_API_KEY: process.env.MICROCMS_X_API_KEY,
-    MICROCMS_ENTRYPOINTS: process.env.MICROCMS_ENTRYPOINTS,
+    BASE_URL: process.env.BASE_URL,
     CTF_SPACE_ID: process.env.CTF_SPACE_ID,
     CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID,
-    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
+    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,
+    TWITTER_USER: process.env.TWITTER_USER,
+    DISQUS_SHORTNAME: process.env.DISQUS_SHORTNAME
   },
   styleResources: {
     scss: [
