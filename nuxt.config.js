@@ -70,9 +70,11 @@ export default {
    ** Global CSS
    */
   css: [{
-    src: '~/node_modules/highlight.js/styles/hopscotch.css',
-    lang: 'css'
-  }, ],
+      src: '~/node_modules/highlight.js/styles/hopscotch.css',
+      lang: 'css'
+    },
+    '~/assets/css/reset.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -86,6 +88,9 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module'
+    ['@nuxtjs/google-analytics', {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }]
   ],
   /*
    ** Nuxt.js modules

@@ -1,14 +1,14 @@
 <template>
   <div class="post">
     <div class="post-date">{{ createdAt.split('T')[0] }}</div>
-    <div>
+    <div class="post-title-wrap">
       <nuxt-link :to="link" class="post-title">{{ title }}</nuxt-link>
     </div>
     <div v-if="description" class="post-description">{{ description }}</div>
     <div v-for="tag in tags" :key="tag.id" class="post-tags">
       <nuxt-link
         v-if="tag.hasOwnProperty('fields') && tag.fields.hasOwnProperty('slug')"
-        :to="`/${entrypoint}/tag/${tag.fields.slug}`"
+        :to="`/tag/${tag.fields.slug}`"
       >
         <span class="post-tag">{{ tag.fields.name }}</span>
       </nuxt-link>
@@ -19,7 +19,6 @@
 <script>
 export default {
   props: {
-    entrypoint: { type: String, default: "" },
     link: { type: String, default: "" },
     title: { type: String, default: "" },
     createdAt: { type: String, default: "" },
@@ -35,6 +34,12 @@ export default {
   text-align: left;
   padding: 20px;
 }
+.post-title-wrap {
+  // height: 2em;
+  padding: 0.5em 0;
+  word-wrap: break-word;
+  line-height: 2em;
+}
 .post-title {
   font-weight: 700;
   font-size: 1.2em;
@@ -44,6 +49,7 @@ export default {
 }
 .post-description {
   color: $my-gray;
+  line-height: 1.5em;
 }
 .post-date {
   color: #717579;

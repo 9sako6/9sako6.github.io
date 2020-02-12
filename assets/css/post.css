@@ -15,9 +15,11 @@
     font-size: 1em;
   }
 }
+
 div.tex-equations {
   overflow-x: auto;
 }
+
 #page-title {
   margin: 1em 0 1em 0;
   border: none;
@@ -28,6 +30,7 @@ div.tex-equations {
     font-weight: 600;
     font-size: 1.7em;
   }
+
   .page>>>img {
     margin-left: 10%;
     width: 80%;
@@ -39,6 +42,7 @@ div.tex-equations {
     font-weight: 600;
     font-size: 2em;
   }
+
   .page>>>img {
     margin-left: 10%;
     width: 80%;
@@ -53,6 +57,7 @@ div.tex-equations {
 
 .page>>>h1 {
   font-size: 1.8em;
+  line-height: 1.8em;
   margin: 2.5em 0 1.5em 0;
   border-bottom: solid 1px #d8d8d8;
 }
@@ -66,7 +71,9 @@ div.tex-equations {
 }
 
 .page>>>p {
+  padding: 0.5em;
   margin: 1em 0 1em 0;
+  line-height: 1.5em;
 }
 
 .page>>>hr {
@@ -95,7 +102,16 @@ div.tex-equations {
   border-bottom: solid 1px rgb(187, 25, 87);
 } */
 
+.page>>>ul {
+  margin-left: 40px;
+}
+
+.page>>>ol {
+  margin-left: 40px;
+}
+
 .page>>>li {
+  display:list-item;
   margin: 0.5em 0 0.5em 0;
 }
 

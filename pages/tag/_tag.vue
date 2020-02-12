@@ -6,7 +6,7 @@
         :title="post.fields.title"
         :description="post.fields.description"
         :createdAt="post.fields.createdAt"
-        :link="`/${post.fields.slug}`"
+        :link="`/posts/${post.fields.slug}`"
         :tags="post.fields.tags"
       />
     </div>
@@ -50,49 +50,17 @@ export default {
     });
     return {
       tag: tagName,
-      posts: posts,
+      posts: posts
     };
-    // let tag = payload
-    // if (!tag) {
-    //   for (let i = 0; i < store.state.posts.length; i++) {
-    //     const tags = store.state.posts[i].fields.tags
-    //     if (tags) tag = tags.find(tag => tag.fields.slug === params.slug)
-    //     if (tag) break
-    //   }
-    // }
-    // if (tag) {
-    //   return { tag }
-    // } else {
-    //   error({ statusCode: 400 })
-    // }
   }
-  // async asyncData({ params, $axios }) {
-  //   // get the latest 10 articles
-  //   const data = await Promise.all([
-  //     microcms.get(
-  //       `${params.domain}?filters=tags[contains]${encodeURIComponent(
-  //         params.tag
-  //       )}`
-  //     )
-  //   ]);
-  //   const articles = data[0]["data"]["contents"];
-
-  //   // split tags to list of tag
-  //   articles.map(article => {
-  //     article["tags"] =
-  //       article["tags"] === undefined ? [] : article["tags"].split(":");
-  //   });
-  //   return {
-  //     articles: articles,
-  //     domain: params.domain,
-  //     tag: params.tag
-  //   };
-  // }
 };
 </script>
 
 <style lang="scss" scoped>
 .tag-title {
-  padding-left: 20px;
+  font-size: 1.8em;
+  line-height: 1.8em;
+  margin: 2.5em 0 1.5em 0;
+  border-bottom: solid 1px #d8d8d8;
 }
 </style>

@@ -1,8 +1,6 @@
 <template>
   <div id="root">
-    <!-- <Header style="flex: 1;" /> -->
     <div id="container-outer">
-      <!-- <TopTitle /> -->
       <div class="wrapper">
         <Squares />
         <div class="title">
@@ -84,6 +82,7 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+
 .button--green {
   display: inline-block;
   border-radius: 4px;

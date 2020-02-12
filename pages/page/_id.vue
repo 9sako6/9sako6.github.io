@@ -5,7 +5,7 @@
         :title="setPost(post).title"
         :description="post.fields.description"
         :createdAt="post.sys.createdAt"
-        :link="`/${post.fields.slug}`"
+        :link="`/posts/${post.fields.slug}`"
         :tags="post.fields.tags"
       />
     </div>

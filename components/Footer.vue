@@ -1,16 +1,19 @@
 <template>
   <footer class="footer">
-    <div>
-      <a id="repo-link" href="https://github.com/9sako6/9sako6-garden"
-        >9sako6/9sako6-garden</a
-      >
+    <div class="text-wrap">
+      <a class="link" href="https://github.com/9sako6/9sako6-garden">9sako6/9sako6-garden</a>
     </div>
-    <span id="copy-right">&copy; 2019 9sako6 All Rights Reserved</span>
+    <div class="text-wrap">
+      <nuxt-link class="link" to="/policy">プライバシーポリシー</nuxt-link>
+    </div>
+    <div class="text-wrap">
+      <span id="copy-right">&copy; 2019- 9sako6 All Rights Reserved</span>
+    </div>
   </footer>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style scoped lang="scss">
@@ -18,9 +21,18 @@ footer {
   margin-top: auto;
   text-align: center;
   padding: 1em;
-  color: $my-gray;
+  color: $my-white;
+  background-color: $my-gray;
 }
-#repo-link {
-  color: $my-gray;
+.text-wrap {
+  height: 2em;
+  line-height: 2em;
+}
+.link {
+  color: $my-white;
+  text-decoration: none;
+}
+.link:hover {
+  color: $my-red;
 }
 </style>

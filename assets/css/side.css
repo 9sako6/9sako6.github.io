@@ -5,11 +5,26 @@
   padding: 0 0 5px 5px;
   border-bottom: 1px solid #ECEEF1;
 }
+
 .side-description {
-  /* font-size: 85%; */
-  margin: 1em;
+  padding: 0.5em;
+  margin: 1em 0 1em 0;
+  line-height: 1.5em;
 }
 
 .list-item {
   margin-bottom: 0.5em;
+}
+
+ul {
+  margin-left: 40px;
+}
+
+ol {
+  margin-left: 40px;
+}
+
+li {
+  display: list-item;
+  margin: 0.5em 0 0.5em 0;
 }
