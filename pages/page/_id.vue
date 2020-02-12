@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div v-for="post in posts" :key="post.id">
+    <div v-for="post in posts.slice((pageNum-1)*10, pageNum*10)" :key="post.id">
       <Card
         :title="setPost(post).title"
         :description="post.fields.description"
@@ -9,7 +9,7 @@
         :tags="post.fields.tags"
       />
     </div>
-    <Pagenation :totalPostsCount="10"/>
+    <Pagenation :totalPostsCount="posts.length" :nowPage="pageNum.toString()" />
   </div>
 </template>
 
@@ -36,8 +36,9 @@ export default {
     ...mapState(["posts"]),
     ...mapGetters(["setPost", "draftChip", "linkTo"])
   },
-  // async asyncData({ params }) {
-  //   return { domain: params.domain };
-  // }
+  async asyncData({ params }) {
+    if (params.id === undefined) params.id = 1;
+    return { pageNum: params.id };
+  }
 };
 </script>

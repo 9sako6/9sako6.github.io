@@ -8,7 +8,8 @@
 <script>
 export default {
   props: {
-    totalPostsCount: { type: Number, default: 0 }
+    totalPostsCount: { type: Number, default: 0 },
+    nowPage: { type: String, default: "1" }
   },
   data: function() {
     const oldestPageNum = Math.ceil(this.totalPostsCount / 10);
@@ -16,6 +17,19 @@ export default {
     return {
       pages: pages
     };
+  },
+  mounted: function() {
+    this.$nextTick(function() {
+      // ビュー全体がレンダリングされた後にのみ実行されるコード
+      const pageBoxes = Array.prototype.slice.call(
+        document.getElementsByClassName("pagenation")
+      );
+      pageBoxes.map(pageBox => {
+        if (pageBox.innerText === this.nowPage) {
+          pageBox.classList.add("selected-pagenation");
+        }
+      });
+    });
   }
 };
 </script>
@@ -26,6 +40,9 @@ export default {
 }
 .pagenation {
   display: inline-block;
+}
+.selected-pagenation {
+  background-color: #ddd;
 }
 .link {
   color: $my-black;
