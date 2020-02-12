@@ -84,15 +84,3 @@ export const actions = {
   }
 
 }
-
-// async asyncData({ env, params }) {
-//   let article = null;
-//   await client
-//     .getEntries({
-//       content_type: env.CTF_BLOG_POST_TYPE_ID,
-//       "fields.slug": params.slug
-//     })
-//     .then(res => (article = res.items[0]))
-//     .catch(console.error);
-//   return { article, domain: params.domain };
-// },

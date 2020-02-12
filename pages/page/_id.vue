@@ -2,15 +2,14 @@
   <div class="container">
     <div v-for="post in posts" :key="post.id">
       <Card
-        :entrypoint="domain"
         :title="setPost(post).title"
         :description="post.fields.description"
         :createdAt="post.sys.createdAt"
-        :link="`/${domain}/${post.fields.slug}`"
+        :link="`/${post.fields.slug}`"
         :tags="post.fields.tags"
       />
     </div>
-    <Pagenation :domain="domain" :totalPostsCount="10"/>
+    <Pagenation :totalPostsCount="10"/>
   </div>
 </template>
 
@@ -21,9 +20,9 @@ import Card from "~/components/Card";
 import Pagenation from "~/components/Pagenation";
 
 export default {
-  layout(context) {
-    return context.params.domain;
-  },
+  // layout(context) {
+  //   return context.params.domain;
+  // },
   head() {
     return {
       titleTemplate: ""
@@ -37,8 +36,8 @@ export default {
     ...mapState(["posts"]),
     ...mapGetters(["setPost", "draftChip", "linkTo"])
   },
-  async asyncData({ params }) {
-    return { domain: params.domain };
-  }
+  // async asyncData({ params }) {
+  //   return { domain: params.domain };
+  // }
 };
 </script>

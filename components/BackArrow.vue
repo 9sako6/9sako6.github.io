@@ -16,6 +16,7 @@ export default {
 }
 div {
   // width: 120px;
+  margin: 4em 0 4em 0;
   padding: 1em;
   text-align: center;
   border: solid #e9e9e9;

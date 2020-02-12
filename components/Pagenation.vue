@@ -1,14 +1,13 @@
 <template>
   <div class="pagenation-wrapper">
     <div class="pagenation" v-for="pageNum in pages" :key="pageNum">
-      <nuxt-link class="link" :to="`/${domain}/page/${pageNum}`">{{pageNum}}</nuxt-link>
+      <nuxt-link class="link" :to="`/page/${pageNum}`">{{pageNum}}</nuxt-link>
     </div>
   </div>
 </template>
 <script>
 export default {
   props: {
-    domain: { type: String, default: "" },
     totalPostsCount: { type: Number, default: 0 }
   },
   data: function() {

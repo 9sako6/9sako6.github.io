@@ -3,11 +3,10 @@
     <h1 class="tag-title">#{{ tag }}</h1>
     <div v-for="post in posts" :key="post.id">
       <Card
-        :entrypoint="domain"
         :title="post.fields.title"
         :description="post.fields.description"
         :createdAt="post.fields.createdAt"
-        :link="`/${domain}/${post.fields.slug}`"
+        :link="`/${post.fields.slug}`"
         :tags="post.fields.tags"
       />
     </div>
@@ -19,9 +18,9 @@ import microcms from "~/plugins/microcms";
 import Card from "~/components/Card";
 
 export default {
-  layout(context) {
-    return context.params.domain;
-  },
+  // layout(context) {
+  //   return context.params.domain;
+  // },
   head() {
     return {
       titleTemplate: ""
@@ -52,7 +51,6 @@ export default {
     return {
       tag: tagName,
       posts: posts,
-      domain: params.domain
     };
     // let tag = payload
     // if (!tag) {

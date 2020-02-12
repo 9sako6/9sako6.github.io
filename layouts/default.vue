@@ -2,7 +2,14 @@
   <div id="root">
     <!-- <Header style="flex: 1;" /> -->
     <div id="container-outer">
-      <TopTitle />
+      <!-- <TopTitle /> -->
+      <div class="wrapper">
+        <Squares />
+        <div class="title">
+          <nuxt-link to="/" class="link">くさころガーデン</nuxt-link>
+          <div>=^._.^=</div>
+        </div>
+      </div>
       <div id="content">
         <nuxt id="page-main" />
         <aside id="side-menu">
@@ -14,32 +21,54 @@
     <Footer />
   </div>
 </template>
-
 <script>
 // import Header from '~/components/Header.vue'
-import TopTitle from '~/components/TopTitle.vue'
-import Profile from '~/components/Profile.vue'
-// import Tags from '~/components/Tags.vue'
-import Footer from '~/components/Footer.vue'
+import TopTitle from "~/components/TopTitle.vue";
+import Squares from "~/components/Squares.vue";
+import Profile from "~/components/Profile.vue";
+// import Tags from "~/components/Tags.vue";
+import Footer from "~/components/Footer.vue";
 export default {
   components: {
     // Header,
     TopTitle,
     Profile,
     // Tags,
-    Footer
+    Footer,
+    Squares
   }
-}
+};
 </script>
 
-<style>
+<style lang="scss" scoped>
+$title-height: 150px;
+.wrapper {
+  width: 100%;
+  height: $title-height;
+  text-align: center;
+  // border-bottom: 1px solid #eceef1;
+}
+.title {
+  text-align: center;
+  color: $my-black;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: $title-height / 3;
+}
+.link {
+  color: $my-black;
+  font-family: serif;
+  text-decoration: none;
+  font-size: 2rem;
+}
 #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 html {
-  font-family: 'YuGothic', sans-serif;
+  font-family: "YuGothic", sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -105,13 +134,13 @@ html {
     border-left: 1px solid #eceef1;
   }
   #page-main {
-    width: 700px;
+    width: 800px;
   }
   #side-menu {
-    width: 290px;
+    width: 200px;
   }
   #content {
-    margin: 35px 55px;
+    margin: $title-height / 2 55px;
   }
 }
 #container-outer {

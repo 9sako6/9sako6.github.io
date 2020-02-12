@@ -8,13 +8,13 @@
     <div v-for="tag in post.fields.tags" :key="tag.id" class="post-tags">
       <nuxt-link
         v-if="tag.hasOwnProperty('fields') && tag.fields.hasOwnProperty('slug')"
-        :to="`/${domain}/tag/${tag.fields.slug}`"
+        :to="`/tag/${tag.fields.slug}`"
       >
         <span class="post-tag">{{ tag.fields.name }}</span>
       </nuxt-link>
     </div>
     <div v-html="$md.render(post.fields.body)" style="margin-bottom: 120px;"></div>
-    <BackArrow :link="`/${domain}`" />
+    <BackArrow :link="`/`" />
     <div v-show="disqus_shortname" class="mt-10">
       <vue-disqus
         :shortname="disqus_shortname"
@@ -36,9 +36,9 @@ export default {
     base_url: process.env.BASE_URL,
     disqus_shortname: process.env.DISQUS_SHORTNAME
   }),
-  layout(context) {
-    return context.params.domain;
-  },
+  // layout(context) {
+  //   return context.params.domain;
+  // },
   components: {
     BackArrow
   },
@@ -91,22 +91,11 @@ export default {
       (await store.state.posts.find(post => post.fields.slug === params.slug));
 
     if (post) {
-      return { post: post, domain: params.domain };
+      return { post: post };
     } else {
       return error({ statusCode: 400 });
     }
   },
-  // async asyncData({ env, params }) {
-  //   let article = null;
-  //   await client
-  //     .getEntries({
-  //       content_type: env.CTF_BLOG_POST_TYPE_ID,
-  //       "fields.slug": params.slug
-  //     })
-  //     .then(res => (article = res.items[0]))
-  //     .catch(console.error);
-  //   return { article, domain: params.domain };
-  // },
   computed: {
     ...mapGetters(["setPost"])
   },

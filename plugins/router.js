@@ -13,37 +13,28 @@ export async function fetchRoutes() {
     order: "-sys.createdAt",
     include: 1
   }).then(res => {
-    const categoryCount = {}
+    let totalPostsCount = 0;
     res.items.map(item => {
-      const category = item.fields.category.fields.slug
-      // add category page
-      // e.g.: /blog
-      routes.push(`/${category}`)
-      if (categoryCount[category] === undefined) {
-        categoryCount[category] = 0
-      }
-      categoryCount[category]++
       // add post page
-      // e.g.: /blog/nikki20200207
-      routes.push(`/${category}/${item.fields.slug}`)
+      // e.g.: /nikki20200207
+      routes.push(`/${item.fields.slug}`)
+      totalPostsCount++
       if (item.fields.tags) {
         item.fields.tags.map(tag => {
           if (tag.hasOwnProperty("fields") && tag.fields.hasOwnProperty("slug")) {
             // add tag page
-            // e.g.: /blog/tag/programming
-            routes.push(`/${category}/tag/${tag.fields.slug}`)
+            // e.g.: /tag/programming
+            routes.push(`/tag/${tag.fields.slug}`)
           }
         })
       }
     })
-    // Object.keys(categoryCount).map(category => {
-    //   const oldestPageNum = Math.ceil(categoryCount[category] / 10);
-    //   Array.from(Array(oldestPageNum).keys(), x => x + 1).map(pageNum => {
-    //     // add page of pagenation
-    //     // e.g.: /blog/page/2
-    //     routes.push(`/${category}/page/${pageNum}`)
-    //   })
-    // })
+    const oldestPageNum = Math.ceil(totalPostsCount / 10);
+    Array.from(Array(oldestPageNum).keys(), x => x + 1).map(pageNum => {
+      // add page of pagenation
+      // e.g.: /blog/page/2
+      routes.push(`/page/${pageNum}`)
+    })
   }).catch(console.error)
   routes = [...new Set(routes)]
   console.log(routes)
