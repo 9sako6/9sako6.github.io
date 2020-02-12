@@ -64,10 +64,12 @@ div.tex-equations {
 
 .page>>>h2 {
   margin: 2.5em 0 1.3em 0;
+  font-size: 1.5em;
 }
 
 .page>>>h3 {
   margin: 1em 0 1em 0;
+  font-size: 1.3em;
 }
 
 .page>>>p {
