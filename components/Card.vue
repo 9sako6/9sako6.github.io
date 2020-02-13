@@ -11,7 +11,7 @@
           class="mx-auto eye-catch-img"
         />
       </nuxt-link>
-    </div> -->
+    </div>-->
     <div class="right-box">
       <div class="post-date">{{ createdAt.split('T')[0] }}</div>
       <div class="post-title-wrap">
@@ -37,7 +37,7 @@ export default {
     title: { type: String, default: "" },
     createdAt: { type: String, default: "" },
     description: { type: String, default: "" },
-    tags: { type: Array, default: () => [] },
+    tags: { type: Array, default: () => [] }
     // imgLink: { type: String, default: "" }
   }
 };
@@ -47,51 +47,22 @@ export default {
 @import "@/assets/css/tag.css";
 .post {
   text-align: left;
-  // display: grid;
-  padding: 20px;
 }
-// @media screen and (max-width: 767px) {
-//   .post {
-//     grid-template-rows: 1fr 90px;
-//     // grid-template-columns: 50px 1fr;
-//     border-top: solid 1px #ddd;
-//     border-bottom: solid 1px #ddd;
-//   }
-//   .left-box {
-//     grid-column: 1 / 3;
-//     grid-row: 2/2;
-//   }
-//   .right-box {
-//     grid-column: 1 / 3;
-//     grid-row: 1/2;
-//     margin-bottom: 1em;
-//   }
-// }
+@media screen and (max-width: 767px) {
+  .post {
+    padding: 10px 0px 20px 0px;
+  }
+}
 
-// @media screen and (min-width: 768px) {
-//   .post {
-//     grid-template-columns: 160px 1fr;
-//   }
-//   .left-box {
-//     grid-column: 1 / 2;
-//   }
-//   .right-box {
-//     grid-column: 2 / 3;
-//   }
-// }
-// .left-box {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   .eye-catch-img {
-//     border-radius: 3px;
-//   }
-// }
+@media screen and (min-width: 768px) {
+  .post {
+    padding: 20px;
+  }
+}
 .right-box {
   padding-left: 1em;
 }
 .post-title-wrap {
-  padding: 0.5em 0;
   word-wrap: break-word;
   line-height: 2em;
 }
