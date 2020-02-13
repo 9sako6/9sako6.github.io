@@ -188,21 +188,16 @@ div.tex-equations {
 
 .page>>>.table-of-contents {
   padding: 0 0 1em 0;
-  border-bottom: solid 2px #d7d7d7;
   background-color: #fafafa;
 }
 .page>>>.table-of-contents::before {
   display: block;
   font-weight: 600;
   color: #494949;
-  width: 100%;
-  padding-left: 1em;
+  padding: 1em;
   content: "目次";
   font-size: 1.5em;
   margin-bottom: 1em;
-  color: #494949;
-  border-top: solid 2px #d7d7d7;
-  border-bottom: solid 2px #d7d7d7;
 }
 .page>>>.table-of-contents a {
   color: #494949;

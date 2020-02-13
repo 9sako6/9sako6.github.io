@@ -3,7 +3,7 @@
     <div id="root">
       <div id="container-outer">
         <div class="wrapper">
-          <!-- <Squares /> -->
+          <Squares />
           <div class="title">
             <nuxt-link to="/" class="link">庭に腐ったコロッケ</nuxt-link>
             <div>=^._.^=</div>
@@ -24,7 +24,7 @@
 <script>
 // import Header from '~/components/Header.vue'
 import TopTitle from "~/components/TopTitle.vue";
-// import Squares from "~/components/Squares.vue";
+import Squares from "~/components/Squares.vue";
 import Profile from "~/components/Profile.vue";
 // import Tags from "~/components/Tags.vue";
 import Footer from "~/components/Footer.vue";
@@ -35,7 +35,7 @@ export default {
     Profile,
     // Tags,
     Footer,
-    // Squares
+    Squares
   }
 };
 </script>
