@@ -1,21 +1,7 @@
-@media screen and (max-width: 767px) {
-  .page {
-    color: #3f3f3f;
-    /* width: 80%; */
-    /* margin: 25% 10% 25% 10%; */
-    font-size: 0.9em;
-  }
+.page {
+  color: #3f3f3f;
+  font-size: 1em;
 }
-
-@media screen and (min-width: 768px) {
-  .page {
-    color: #3f3f3f;
-    /* width: 50%;
-    margin: 10% 25% 10% 25%; */
-    font-size: 1em;
-  }
-}
-
 div.tex-equations {
   overflow-x: auto;
 }
