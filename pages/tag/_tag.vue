@@ -8,19 +8,17 @@
         :createdAt="post.fields.createdAt"
         :link="`/posts/${post.fields.slug}`"
         :tags="post.fields.tags"
+        :imgLink="setEyeCatch(post).url"
       />
     </div>
   </div>
 </template>
 
 <script>
-import microcms from "~/plugins/microcms";
 import Card from "~/components/Card";
+import { mapState, mapGetters } from "vuex";
 
 export default {
-  // layout(context) {
-  //   return context.params.domain;
-  // },
   head() {
     return {
       titleTemplate: ""
@@ -28,6 +26,10 @@ export default {
   },
   components: {
     Card
+  },
+  computed: {
+    ...mapState(["posts"]),
+    ...mapGetters(["setPost", "setEyeCatch"])
   },
   async asyncData({ payload, params, error, store, env }) {
     const allPosts = store.state.posts;

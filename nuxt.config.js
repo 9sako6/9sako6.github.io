@@ -71,8 +71,9 @@ export default {
   /*
    ** Global CSS
    */
-  css: [{
-      src: '~/node_modules/highlight.js/styles/hopscotch.css',
+  css: [
+    {
+      src: '~/node_modules/highlight.js/styles/atom-one-dark.css',
       lang: 'css'
     },
     '~/assets/css/reset.css'
@@ -82,7 +83,9 @@ export default {
    */
   plugins: [
     // 'plugins/contentful'
-    '~/plugins/disqus'
+    '~/plugins/disqus',
+    '~/plugins/markdownit.js',
+    '~/plugins/vuetify'
   ],
   /*
    ** Nuxt.js dev-modules
@@ -90,6 +93,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module'
+    '@nuxtjs/vuetify',
     ['@nuxtjs/google-analytics', {
       id: process.env.GOOGLE_ANALYTICS_ID
     }]
@@ -104,28 +108,6 @@ export default {
     '@/modules/hook',
     '@nuxtjs/markdownit'
   ],
-  markdownit: {
-    injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
-    breaks: true, // 改行コードを<br>に変換する
-    html: true, // HTML タグを有効にする
-    linkify: true, // URLに似たテキストをリンクに自動変換する
-    typography: true, // 言語に依存しないきれいな 置換 + 引用符 を有効にします。
-    use: [
-      // 'markdown-it-toc' // 目次を作るためのライブラリ。別途インストールが必要
-    ],
-    highlight: (str, lang) => {
-      const hljs = require('highlight.js');
-      if (lang && hljs.getLanguage(lang)) {
-        try {
-          return '<pre class="hljs"><code>' +
-            hljs.highlight(lang, str, true).value +
-            '</code></pre>';
-        } catch (__) {}
-      }
-      // 言語設定がない場合、プレーンテキストとして表示する
-      return '<pre class="hljs"><code>' + hljs.highlight('plaintext', str, true).value + '</code></pre>';
-    },
-  },
   router: {
     middleware: [
       'getContentful'
@@ -143,6 +125,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    transpile: ['vuetify/lib'],
     extend(config, ctx) {}
   },
   generate: {

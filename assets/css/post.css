@@ -22,7 +22,10 @@ div.tex-equations {
 
 #page-title {
   margin: 1em 0 1em 0;
+  margin-left: 0;
+  padding: 0;
   border: none;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 767px) {
@@ -56,20 +59,32 @@ div.tex-equations {
 }
 
 .page>>>h1 {
-  font-size: 1.8em;
-  line-height: 1.8em;
   margin: 2.5em 0 1.5em 0;
-  border-bottom: solid 1px #d8d8d8;
+  font-size: 1.8em;
+  padding: 0.4em 0.5em;
+  color: #494949;
+  background: #f4f4f4;
+  border-left: solid 5px #494949;
+  border-bottom: solid 3px #d7d7d7;
 }
 
 .page>>>h2 {
   margin: 2.5em 0 1.3em 0;
   font-size: 1.5em;
+  padding: 0.25em 0.5em;
+  color: #494949;
+  background: transparent;
+  border-left: solid 5px #494949;
 }
 
 .page>>>h3 {
-  margin: 1em 0 1em 0;
-  font-size: 1.3em;
+  margin: 2.5em 0 1.3em 0;
+  font-size: 1.5em;
+  padding: 0.25em 0.5em;
+  color: #494949;
+  background: transparent;
+  /* border-bottom: solid 2px #494949; */
+
 }
 
 .page>>>p {
@@ -131,21 +146,51 @@ div.tex-equations {
   right: 0;
   content: close-quote;
 } */
-/* .page>>>code {
+/* .page>>>p code {
   border-radius: 0.2em;
   padding: 0.1em 0.4em;
   background-color: #f5f5f5;
 } */
-
-/* .page>>>pre code {
-  padding: 1em 0 1em 2em;
-  background-color: #364549;
-} */
+.page>>>pre code {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  color: rgb(212, 214, 214);
+  box-shadow: 0px 0px 0px 0px transparent;
+}
+.page>>>pre code::before{
+  content: "";
+}
+.page>>>pre code::after{
+  content: "";
+}
 
 /* .page>>>.hljs-comment {
   color: rgb(124, 175, 102);
 } */
 
-.page>>>strong {
+/* .page>>>strong {
   font-weight: 900;
+} */
+
+.page>>>.table-of-contents {
+  padding: 0 0 1em 0;
+  border-bottom: solid 2px #d7d7d7;
+  background-color: #fafafa;
+}
+.page>>>.table-of-contents::before {
+  display: block;
+  font-weight: 600;
+  color: #494949;
+  width: 100%;
+  padding-left: 1em;
+  content: "目次";
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #494949;
+  border-top: solid 2px #d7d7d7;
+  border-bottom: solid 2px #d7d7d7;
+}
+.page>>>.table-of-contents a {
+  color: #494949;
 }

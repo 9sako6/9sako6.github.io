@@ -1,9 +1,23 @@
 <template>
   <section class="page">
     <h1 id="page-title">{{ post.fields.title }}</h1>
+    <!-- <v-img
+      :src="setEyeCatch(post).url"
+      alt="an eye-catch image"
+      :aspect-ratio="16/9"
+      width="640"
+      height="360"
+      class="mx-auto"
+    /> -->
     <div class="post-meta">
-      <time v-if="post.sys.createdAt">created: {{ post.sys.createdAt.split('T')[0] }}</time>
-      <time v-if="post.sys.updatedAt">, updated: {{ post.sys.updatedAt.split('T')[0] }}</time>
+      <span class="post-time">
+        <v-icon :small="true">fas fa-clock</v-icon>
+        <time v-if="post.sys.createdAt">created: {{ post.sys.createdAt.split('T')[0] }}</time>
+      </span>
+      <span class="post-time">
+        <v-icon :small="true">fas fa-history</v-icon>
+        <time v-if="post.sys.updatedAt">updated: {{ post.sys.updatedAt.split('T')[0] }}</time>
+      </span>
     </div>
     <div v-for="tag in post.fields.tags" :key="tag.id" class="post-tags">
       <nuxt-link
@@ -64,9 +78,9 @@ export default {
           content: process.env.BASE_URL + `/posts/${this.post.fields.slug}`
         },
         {
-          hid: 'og:image',
-          property: 'og:image',
-          content: this.post.fields.eyeCatchImage.fields.file.url || ""
+          hid: "og:image",
+          property: "og:image",
+          content: this.setEyeCatch(this.post).url
         },
         {
           hid: "twitter:card",
@@ -99,7 +113,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["setPost"])
+    ...mapGetters(["setPost", "setEyeCatch"])
   },
   mounted() {
     this.renderMathJax();
@@ -129,4 +143,7 @@ export default {
 <style scoped>
 @import "@/assets/css/post.css";
 @import "@/assets/css/tag.css";
+.post-time {
+  margin-left: 1em;
+}
 </style>

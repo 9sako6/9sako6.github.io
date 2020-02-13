@@ -1,10 +1,6 @@
-import client from '~/plugins/contentful' // 追記
+import client from '~/plugins/contentful'
+import defaultEyeCatch from '~/assets/img/defaultEyeCatch.jpeg'
 
-
-// import defaultEyeCatch from '~/assets/images/defaultEyeCatch.png'
-
-
-// 追記
 export const state = () => ({
   posts: [],
   categories: [],
@@ -12,6 +8,10 @@ export const state = () => ({
 })
 
 export const getters = {
+  setEyeCatch: () => (post) => {
+    if (!!post.fields.eyeCatchImage && !!post.fields.eyeCatchImage.fields) return { url: `https:${post.fields.eyeCatchImage.fields.file.url}`, title: post.fields.eyeCatchImage.fields.title }
+    else return { url: defaultEyeCatch, title: 'defaultImage' }
+  },
   setPost: () => (post) => {
     if (post.fields.title) {
       return {
@@ -26,7 +26,6 @@ export const getters = {
       }
     }
   },
-  // 追記
   linkTo: () => (name, obj) => {
     return {
       name: `${name}-slug`,
@@ -49,7 +48,6 @@ export const getters = {
   }
 }
 
-// 追記
 export const mutations = {
   setPosts(state, payload) {
     state.posts = payload
@@ -67,7 +65,6 @@ export const mutations = {
 
 }
 
-// 追記
 export const actions = {
   async getPosts({
     commit

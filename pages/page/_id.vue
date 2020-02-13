@@ -7,6 +7,7 @@
         :createdAt="post.sys.createdAt"
         :link="`/posts/${post.fields.slug}`"
         :tags="post.fields.tags"
+        :imgLink="setEyeCatch(post).url"
       />
     </div>
     <Pagenation :totalPostsCount="posts.length" :nowPage="pageNum.toString()" />
@@ -34,7 +35,7 @@ export default {
   },
   computed: {
     ...mapState(["posts"]),
-    ...mapGetters(["setPost", "draftChip", "linkTo"])
+    ...mapGetters(["setPost", "setEyeCatch"])
   },
   async asyncData({ params }) {
     if (params.id === undefined) params.id = 1;
