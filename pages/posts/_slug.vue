@@ -36,9 +36,6 @@ export default {
     base_url: process.env.BASE_URL,
     disqus_shortname: process.env.DISQUS_SHORTNAME
   }),
-  // layout(context) {
-  //   return context.params.domain;
-  // },
   components: {
     BackArrow
   },
@@ -49,23 +46,28 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: this.post.title || ""
+          content: this.post.fields.title || ""
         },
         {
           hid: "description",
           name: "description",
-          content: this.post.description || ""
+          content: this.post.fields.description || ""
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: this.post.description || ""
+          content: this.post.fields.description || ""
         },
-        // {
-        //   hid: 'og:image',
-        //   property: 'og:image',
-        //   content: this.post.img.url
-        // },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: process.env.BASE_URL + `/posts/${this.post.fields.slug}`
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.post.fields.eyeCatchImage.fields.file.url || ""
+        },
         {
           hid: "twitter:card",
           property: "twitter:card",

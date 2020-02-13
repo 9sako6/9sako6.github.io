@@ -4,7 +4,7 @@
       <div class="wrapper">
         <Squares />
         <div class="title">
-          <nuxt-link to="/" class="link">くさころガーデン</nuxt-link>
+          <nuxt-link to="/" class="link">庭に腐ったコロッケ</nuxt-link>
           <div>=^._.^=</div>
         </div>
       </div>

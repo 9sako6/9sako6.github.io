@@ -4,6 +4,8 @@ import {
 
 require('dotenv').config();
 
+const siteTitle = '庭に腐ったコロッケ'
+
 export default {
   mode: 'universal',
   /*
@@ -13,8 +15,8 @@ export default {
     htmlAttrs: {
       lang: 'ja'
     },
-    titleTemplate: '%s | ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s | ' + siteTitle,
+    title: siteTitle || '',
     meta: [{
         charset: 'utf-8'
       },
@@ -30,7 +32,7 @@ export default {
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: process.env.npm_package_name || ''
+        content: siteTitle || ''
       },
       {
         hid: 'og:type',
@@ -45,7 +47,7 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: process.env.npm_package_name || ''
+        content: siteTitle || ''
       },
       {
         hid: 'og:description',

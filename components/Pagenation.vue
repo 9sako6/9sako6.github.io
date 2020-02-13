@@ -1,7 +1,12 @@
 <template>
   <div class="pagenation-wrapper">
-    <div class="pagenation" v-for="pageNum in pages" :key="pageNum">
-      <nuxt-link class="link" :to="`/page/${pageNum}`">{{pageNum}}</nuxt-link>
+    <div v-for="pageNum in pages" :key="pageNum" style="display: inline;">
+      <div v-if="pageNum.toString() === nowPage" class="pagenation selected-pagenation">
+        <nuxt-link class="link" :to="`/page/${pageNum}`">{{pageNum}}</nuxt-link>
+      </div>
+      <div v-else class="pagenation">
+        <nuxt-link class="link" :to="`/page/${pageNum}`">{{pageNum}}</nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -17,19 +22,6 @@ export default {
     return {
       pages: pages
     };
-  },
-  mounted: function() {
-    this.$nextTick(function() {
-      // ビュー全体がレンダリングされた後にのみ実行されるコード
-      const pageBoxes = Array.prototype.slice.call(
-        document.getElementsByClassName("pagenation")
-      );
-      pageBoxes.map(pageBox => {
-        if (pageBox.innerText === this.nowPage) {
-          pageBox.classList.add("selected-pagenation");
-        }
-      });
-    });
   }
 };
 </script>
