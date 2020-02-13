@@ -1,7 +1,20 @@
-// plugins/markdownit.js
 import MarkdownIt from 'markdown-it'
 import markdownItAnchor from 'markdown-it-anchor'
 import markdownItTableOfContents from 'markdown-it-table-of-contents'
+
+import highlight from "highlight.js/lib/highlight";
+import javascript from "highlight.js/lib/languages/javascript";
+import ruby from "highlight.js/lib/languages/ruby";
+import bash from "highlight.js/lib/languages/bash";
+import css from "highlight.js/lib/languages/css";
+import plaintext from "highlight.js/lib/languages/plaintext";
+
+highlight.registerLanguage("javascript", javascript);
+highlight.registerLanguage("css", css);
+highlight.registerLanguage("bash", bash);
+highlight.registerLanguage("ruby", ruby);
+highlight.registerLanguage("plaintext", plaintext);
+
 export default ({ app }, inject) => {
 
     const md = new MarkdownIt({
@@ -14,7 +27,8 @@ export default ({ app }, inject) => {
           'markdown-it-toc' // 目次を作るためのライブラリ。別途インストールが必要
         ],
         highlight: (str, lang) => {
-          const hljs = require('highlight.js');
+          // const hljs = require('highlight.js');
+          const hljs = highlight;
           if (lang && hljs.getLanguage(lang)) {
             try {
               return '<pre class="hljs"><code>' +
