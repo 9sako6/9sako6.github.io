@@ -6,8 +6,8 @@
           :src="imgLink"
           alt="an eye-catch image"
           :aspect-ratio="16/9"
-          width="100"
-          height="100"
+          width="160"
+          height="90"
           class="mx-auto eye-catch-img"
         />
       </nuxt-link>
@@ -48,11 +48,38 @@ export default {
 .post {
   text-align: left;
   display: grid;
-  grid-template-columns: 100px 1fr;
   padding: 20px;
 }
+@media screen and (max-width: 767px) {
+  .post {
+    grid-template-rows: 1fr 90px;
+    // grid-template-columns: 50px 1fr;
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+  }
+  .left-box {
+    grid-column: 1 / 3;
+    grid-row: 2/2;
+  }
+  .right-box {
+    grid-column: 1 / 3;
+    grid-row: 1/2;
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .post {
+    grid-template-columns: 160px 1fr;
+  }
+  .left-box {
+    grid-column: 1 / 2;
+  }
+  .right-box {
+    grid-column: 2 / 3;
+  }
+}
 .left-box {
-  grid-column: 1 / 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,7 +89,6 @@ export default {
 }
 .right-box {
   padding-left: 1em;
-  grid-column: 2 / 3;
 }
 .post-title-wrap {
   padding: 0.5em 0;
