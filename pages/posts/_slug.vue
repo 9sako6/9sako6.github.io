@@ -10,14 +10,14 @@
       class="mx-auto"
     /> -->
     <div class="post-meta">
-      <span class="post-time">
-        <v-icon :small="true">fas fa-clock</v-icon>
+      <div class="post-time">
+        <!-- <v-icon :small="true">fas fa-clock</v-icon> -->
         <time v-if="post.sys.createdAt">created: {{ post.sys.createdAt.split('T')[0] }}</time>
-      </span>
-      <span class="post-time">
-        <v-icon :small="true">fas fa-history</v-icon>
+      </div>
+      <div class="post-time">
+        <!-- <v-icon :small="true">fas fa-history</v-icon> -->
         <time v-if="post.sys.updatedAt">updated: {{ post.sys.updatedAt.split('T')[0] }}</time>
-      </span>
+      </div>
     </div>
     <div v-for="tag in post.fields.tags" :key="tag.id" class="post-tags">
       <nuxt-link
@@ -29,13 +29,13 @@
     </div>
     <div v-html="$md.render(post.fields.body)" style="margin-bottom: 120px;"></div>
     <BackArrow :link="`/`" />
-    <div v-show="disqus_shortname" class="mt-10">
+    <!-- <div v-show="disqus_shortname" class="mt-10">
       <vue-disqus
         :shortname="disqus_shortname"
         :identifier="post.fields.slug"
         :url="`${base_url}/posts/${post.fields.slug}`"
       ></vue-disqus>
-    </div>
+    </div> -->
   </section>
 </template>
 
@@ -48,7 +48,7 @@ import client from "~/plugins/contentful";
 export default {
   data: () => ({
     base_url: process.env.BASE_URL,
-    disqus_shortname: process.env.DISQUS_SHORTNAME
+    // disqus_shortname: process.env.DISQUS_SHORTNAME
   }),
   components: {
     BackArrow

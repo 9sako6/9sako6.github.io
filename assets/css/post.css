@@ -159,11 +159,11 @@ div.tex-equations {
   right: 0;
   content: close-quote;
 } */
-/* .page>>>p code {
+.page>>>p code {
   border-radius: 0.2em;
   padding: 0.1em 0.4em;
-  background-color: #f5f5f5;
-} */
+  background-color: #ebebeb;
+}
 .page>>>pre code {
   background-color: transparent;
   margin: 0;

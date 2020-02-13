@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <!-- <v-app> -->
     <div id="root">
       <div id="container-outer">
         <div class="wrapper">
@@ -19,7 +19,7 @@
       </div>
       <Footer />
     </div>
-  </v-app>
+  <!-- </v-app> -->
 </template>
 <script>
 // import Header from '~/components/Header.vue'
