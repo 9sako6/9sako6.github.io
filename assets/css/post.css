@@ -119,26 +119,13 @@ div.tex-equations {
   border-bottom: solid 1px rgb(187, 25, 87);
 } */
 
-@media screen and (max-width: 767px) {
-  .page>>>ul {
-    margin-left: 15px;
-  }
-  
-  .page>>>ol {
-    margin-left: 15px;
-  }
+.page>>>ul {
+  margin-left: 40px;
 }
 
-@media screen and (min-width: 768px) {
-  .page>>>ul {
-    margin-left: 40px;
-  }
-  
-  .page>>>ol {
-    margin-left: 40px;
-  }
+.page>>>ol {
+  margin-left: 40px;
 }
-
 
 .page>>>li {
   display:list-item;
