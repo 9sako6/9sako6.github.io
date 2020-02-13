@@ -22,6 +22,9 @@ div.tex-equations {
 
 #page-title {
   margin: 1em 0 1em 0;
+  /* height: 2em; */
+  line-height: 2em;
+  word-wrap: break-word;
   margin-left: 0;
   padding: 0;
   border: none;
