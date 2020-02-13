@@ -18,42 +18,42 @@ export default {
     titleTemplate: '%s | ' + siteTitle,
     title: siteTitle || '',
     meta: [{
-        charset: 'utf-8'
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
-      },
-      {
-        hid: 'og:site_name',
-        property: 'og:site_name',
-        content: siteTitle || ''
-      },
-      {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'website'
-      },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: process.env.APP_URL || ''
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: siteTitle || ''
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: process.env.npm_package_description || ''
-      }
+      charset: 'utf-8'
+    },
+    {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1'
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content: process.env.npm_package_description || ''
+    },
+    {
+      hid: 'og:site_name',
+      property: 'og:site_name',
+      content: siteTitle || ''
+    },
+    {
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website'
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: process.env.APP_URL || ''
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: siteTitle || ''
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content: process.env.npm_package_description || ''
+    }
     ],
     script: [{}],
     link: [{
@@ -85,7 +85,6 @@ export default {
     // 'plugins/contentful'
     // '~/plugins/disqus',
     '~/plugins/markdownit.js',
-    // '~/plugins/vuetify'
   ],
   /*
    ** Nuxt.js dev-modules
@@ -103,6 +102,7 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/pwa',
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     '@/modules/hook',
@@ -126,7 +126,7 @@ export default {
      ** You can extend webpack config here
      */
     // transpile: ['vuetify/lib'],
-    extend(config, ctx) {}
+    extend(config, ctx) { }
   },
   generate: {
     fallback: true,

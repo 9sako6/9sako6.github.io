@@ -24,8 +24,8 @@ div.tex-equations {
   }
 
   .page>>>img {
-    margin-left: 10%;
-    width: 80%;
+    /* margin-left: 10%; */
+    width: 100%;
   }
 }
 
@@ -36,8 +36,8 @@ div.tex-equations {
   }
 
   .page>>>img {
-    margin-left: 10%;
-    width: 80%;
+    margin-left: 5%;
+    width: 90%;
     max-width: 500px;
   }
 }
@@ -177,4 +177,7 @@ div.tex-equations {
 }
 .page>>>.table-of-contents a {
   color: #494949;
+}
+.page>>>.table-of-contents li {
+  line-height: 1.3em;
 }

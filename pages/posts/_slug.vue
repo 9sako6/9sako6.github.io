@@ -12,7 +12,7 @@
     <div class="post-meta">
       <div class="post-time">
         <!-- <v-icon :small="true">fas fa-clock</v-icon> -->
-        <time v-if="post.sys.createdAt">created: {{ post.sys.createdAt.split('T')[0] }}</time>
+        <time v-if="post.sys.createdAt">created:&nbsp; {{ post.sys.createdAt.split('T')[0] }}</time>
       </div>
       <div class="post-time">
         <!-- <v-icon :small="true">fas fa-history</v-icon> -->
