@@ -143,7 +143,4 @@ export default {
 <style scoped>
 @import "@/assets/css/post.css";
 @import "@/assets/css/tag.css";
-.post-time {
-  margin-left: 1em;
-}
 </style>
