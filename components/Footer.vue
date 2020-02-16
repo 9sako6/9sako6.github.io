@@ -7,7 +7,10 @@
       <nuxt-link class="link" to="/policy">プライバシーポリシー</nuxt-link>
     </div>
     <div class="text-wrap">
-      <span id="copy-right">&copy; 2019- 9sako6 All Rights Reserved</span>
+      <nuxt-link class="link" to="/contact">お問い合わせ</nuxt-link>
+    </div>
+    <div class="text-wrap">
+      &copy; 2019-2020 9sako6 All Rights Reserved
     </div>
   </footer>
 </template>
@@ -25,8 +28,8 @@ footer {
   background-color: $my-gray;
 }
 .text-wrap {
-  height: 2em;
-  line-height: 2em;
+  padding: 0.4em 0;
+  word-wrap: break-word;
 }
 .link {
   color: $my-white;

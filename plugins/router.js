@@ -39,6 +39,8 @@ export async function fetchRoutes() {
 
   // /policy
   routes.push("/policy")
+  // /contact
+  routes.push("/contact")
   routes = [...new Set(routes)]
   console.log(routes)
   return routes

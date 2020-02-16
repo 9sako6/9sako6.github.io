@@ -9,7 +9,7 @@ div.tex-equations {
 #page-title {
   margin: 1em 0 1em 0;
   /* height: 2em; */
-  line-height: 2em;
+  line-height: 1.5em;
   word-wrap: break-word;
   margin-left: 0;
   padding: 0;
@@ -46,7 +46,10 @@ div.tex-equations {
   color: #696565;
   margin: 2em 0 2em 1em;
 }
-
+.post-time-title {
+  display: inline-block;
+  width: 75px;
+}
 .page>>>h1 {
   margin: 2.5em 0 1.5em 0;
   font-size: 1.8em;
@@ -141,11 +144,10 @@ div.tex-equations {
   background-color: #ebebeb;
 }
 .page>>>pre code {
+  font-size: 1.1em;
+  line-height: 1.2em;
   background-color: transparent;
-  margin: 0;
-  padding: 0;
   color: rgb(212, 214, 214);
-  box-shadow: 0px 0px 0px 0px transparent;
 }
 .page>>>pre code::before{
   content: "";

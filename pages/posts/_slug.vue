@@ -1,22 +1,12 @@
 <template>
   <section class="page">
     <h1 id="page-title">{{ post.fields.title }}</h1>
-    <!-- <v-img
-      :src="setEyeCatch(post).url"
-      alt="an eye-catch image"
-      :aspect-ratio="16/9"
-      width="640"
-      height="360"
-      class="mx-auto"
-    /> -->
     <div class="post-meta">
       <div class="post-time">
-        <!-- <v-icon :small="true">fas fa-clock</v-icon> -->
-        <time v-if="post.sys.createdAt">created:&nbsp; {{ post.sys.createdAt.split('T')[0] }}</time>
+        <time v-if="post.sys.createdAt"><div class="post-time-title">created:</div>{{ post.sys.createdAt.split('T')[0] }}</time>
       </div>
       <div class="post-time">
-        <!-- <v-icon :small="true">fas fa-history</v-icon> -->
-        <time v-if="post.sys.updatedAt">updated: {{ post.sys.updatedAt.split('T')[0] }}</time>
+        <time v-if="post.sys.updatedAt"><div class="post-time-title">updated:</div>{{ post.sys.updatedAt.split('T')[0] }}</time>
       </div>
     </div>
     <div v-for="tag in post.fields.tags" :key="tag.id" class="post-tags">
@@ -29,13 +19,6 @@
     </div>
     <div v-html="$md.render(post.fields.body)" style="margin-bottom: 120px;"></div>
     <BackArrow :link="`/`" />
-    <!-- <div v-show="disqus_shortname" class="mt-10">
-      <vue-disqus
-        :shortname="disqus_shortname"
-        :identifier="post.fields.slug"
-        :url="`${base_url}/posts/${post.fields.slug}`"
-      ></vue-disqus>
-    </div> -->
   </section>
 </template>
 
@@ -48,7 +31,6 @@ import client from "~/plugins/contentful";
 export default {
   data: () => ({
     base_url: process.env.BASE_URL,
-    // disqus_shortname: process.env.DISQUS_SHORTNAME
   }),
   components: {
     BackArrow
