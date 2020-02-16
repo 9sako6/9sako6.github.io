@@ -18,42 +18,42 @@ export default {
     titleTemplate: '%s | ' + siteTitle,
     title: siteTitle || '',
     meta: [{
-        charset: 'utf-8'
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
-      },
-      {
-        hid: 'og:site_name',
-        property: 'og:site_name',
-        content: siteTitle || ''
-      },
-      {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'website'
-      },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: process.env.APP_URL || ''
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: siteTitle || ''
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: process.env.npm_package_description || ''
-      },
+      charset: 'utf-8'
+    },
+    {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1'
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content: process.env.npm_package_description || ''
+    },
+    {
+      hid: 'og:site_name',
+      property: 'og:site_name',
+      content: siteTitle || ''
+    },
+    {
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website'
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: process.env.APP_URL || ''
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: siteTitle || ''
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content: process.env.npm_package_description || ''
+    },
     ],
     script: [{}],
     link: [{
@@ -72,9 +72,9 @@ export default {
    ** Global CSS
    */
   css: [{
-      src: '~/node_modules/highlight.js/styles/atom-one-dark.css',
-      lang: 'css'
-    },
+    src: '~/node_modules/highlight.js/styles/atom-one-dark.css',
+    lang: 'css'
+  },
     '~/assets/css/reset.css'
   ],
   /*
@@ -103,7 +103,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     '@/modules/hook',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxtjs/sitemap'
   ],
   router: {
     middleware: [
@@ -122,7 +123,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config: any, ctx: any) {}
+    extend(config: any, ctx: any) { }
   },
   /**
    * Generate configuration
@@ -149,5 +150,16 @@ export default {
       '~/assets/scss/media-query.scss',
       '~/assets/scss/size.scss',
     ]
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: process.env.BASE_URL,
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    routes: async () => {
+      return fetchRoutes().then((routes) => {
+        return routes
+      })
+    }
   }
 }
