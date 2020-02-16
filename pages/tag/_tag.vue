@@ -52,7 +52,6 @@ export default {
     });
     return {
       tag: tagName,
-      posts: posts
     };
   }
 };
@@ -63,6 +62,5 @@ export default {
   font-size: 1.8em;
   line-height: 1.8em;
   margin: 2.5em 0 1.5em 0;
-  // border-bottom: solid 1px #d8d8d8;
 }
 </style>

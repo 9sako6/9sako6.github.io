@@ -1,5 +1,5 @@
 const contentful = require('contentful')
-
+import { contentfulBlogPost, contentfulItems, contentfulBlogPostFields, contentfulTagFields } from "~/types/contentful"
 export async function fetchRoutes() {
   const config = {
     space: process.env.CTF_SPACE_ID,
@@ -7,20 +7,21 @@ export async function fetchRoutes() {
   }
   const client = contentful.createClient(config)
 
-  let routes = [];
+  let routes: string[] = [];
   await client.getEntries({
     content_type: process.env.CTF_BLOG_POST_TYPE_ID,
     order: "-sys.createdAt",
     include: 1
-  }).then(res => {
+  }).then((res: contentfulBlogPost) => {
     let totalPostsCount = 0;
-    res.items.map(item => {
+    res.items.map((item: contentfulItems) => {
+      const fields: contentfulBlogPostFields = item.fields
       // add post page
       // e.g.: /post/nikki20200207
-      routes.push(`/posts/${item.fields.slug}`)
+      routes.push(`/posts/${fields.slug}`)
       totalPostsCount++
-      if (item.fields.tags) {
-        item.fields.tags.map(tag => {
+      if (fields.tags) {
+        fields.tags.map((tag: contentfulTagFields) => {
           if (tag.hasOwnProperty("fields") && tag.fields.hasOwnProperty("slug")) {
             // add tag page
             // e.g.: /tag/programming
@@ -41,7 +42,7 @@ export async function fetchRoutes() {
   routes.push("/policy")
   // /contact
   routes.push("/contact")
-  routes = [...new Set(routes)]
+  routes = Array.from(new Set<string>(routes))
   console.log(routes)
   return routes
 }
