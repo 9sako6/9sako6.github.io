@@ -40,6 +40,15 @@
     </div>
   </section>
 </template>
+<script>
+export default {
+  head() {
+    return {
+      title: 'プライバシーポリシー'
+    }
+  }
+}
+</script>
 <style scoped>
 @import "@/assets/css/post.css";
 @import "@/assets/css/tag.css";
