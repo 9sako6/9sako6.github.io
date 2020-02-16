@@ -1,67 +1,32 @@
 <template>
-  <!-- <v-app> -->
-    <div id="root">
-      <div id="container-outer">
-        <div class="wrapper">
-          <Squares />
-          <div class="title">
-            <nuxt-link to="/" class="link">庭に腐ったコロッケ</nuxt-link>
-            <div>=^._.^=</div>
-          </div>
-        </div>
-        <div id="content">
-          <nuxt id="page-main" />
-          <aside id="side-menu">
-            <Profile />
-            <!-- <Tags /> -->
-          </aside>
-        </div>
+  <div id="root">
+    <div id="container-outer">
+      <Header />
+      <div id="content">
+        <nuxt id="page-main" />
+        <aside id="side-menu">
+          <Profile />
+          <!-- <Tags /> -->
+        </aside>
       </div>
-      <Footer />
     </div>
-  <!-- </v-app> -->
+    <Footer />
+  </div>
 </template>
 <script>
-// import Header from '~/components/Header.vue'
-import TopTitle from "~/components/TopTitle.vue";
-import Squares from "~/components/Squares.vue";
+import Header from '~/components/Header.vue'
 import Profile from "~/components/Profile.vue";
-// import Tags from "~/components/Tags.vue";
 import Footer from "~/components/Footer.vue";
 export default {
   components: {
-    // Header,
-    TopTitle,
+    Header,
     Profile,
-    // Tags,
     Footer,
-    Squares
   }
 };
 </script>
 
 <style lang="scss" scoped>
-$title-height: 150px;
-.wrapper {
-  width: 100%;
-  height: $title-height;
-  text-align: center;
-  // border-bottom: 1px solid #eceef1;
-}
-.title {
-  text-align: center;
-  color: $my-black;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: $title-height / 3;
-}
-.link {
-  color: $my-black;
-  font-family: serif;
-  text-decoration: none;
-  font-size: 2rem;
-}
 #root {
   display: flex;
   flex-direction: column;

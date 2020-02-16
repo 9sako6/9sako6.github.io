@@ -3,10 +3,16 @@
     <h1 id="page-title">{{ post.fields.title }}</h1>
     <div class="post-meta">
       <div class="post-time">
-        <time v-if="post.sys.createdAt"><div class="post-time-title">created:</div>{{ post.sys.createdAt.split('T')[0] }}</time>
+        <time v-if="post.sys.createdAt">
+          <div class="post-time-title">created:</div>
+          {{ post.sys.createdAt.split('T')[0] }}
+        </time>
       </div>
       <div class="post-time">
-        <time v-if="post.sys.updatedAt"><div class="post-time-title">updated:</div>{{ post.sys.updatedAt.split('T')[0] }}</time>
+        <time v-if="post.sys.updatedAt">
+          <div class="post-time-title">updated:</div>
+          {{ post.sys.updatedAt.split('T')[0] }}
+        </time>
       </div>
     </div>
     <div v-for="tag in post.fields.tags" :key="tag.id" class="post-tags">
@@ -30,7 +36,7 @@ import client from "~/plugins/contentful";
 
 export default {
   data: () => ({
-    base_url: process.env.BASE_URL,
+    base_url: process.env.BASE_URL
   }),
   components: {
     BackArrow

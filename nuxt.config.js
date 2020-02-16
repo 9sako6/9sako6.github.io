@@ -82,8 +82,6 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    // 'plugins/contentful'
-    // '~/plugins/disqus',
     '~/plugins/markdownit.js',
   ],
   /*
@@ -92,7 +90,6 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module'
-    // '@nuxtjs/vuetify',
     ['@nuxtjs/google-analytics', {
       id: process.env.GOOGLE_ANALYTICS_ID
     }]
@@ -143,11 +140,12 @@ export default {
     CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID,
     CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,
     TWITTER_USER: process.env.TWITTER_USER,
-    // DISQUS_SHORTNAME: process.env.DISQUS_SHORTNAME
   },
   styleResources: {
     scss: [
       '~/assets/scss/colors.scss',
+      '~/assets/scss/media-query.scss',
+      '~/assets/scss/size.scss',
     ]
   }
 }

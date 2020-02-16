@@ -1,17 +1,5 @@
 <template>
   <div class="post">
-    <!-- <div class="left-box">
-      <nuxt-link :to="link">
-        <v-img
-          :src="imgLink"
-          alt="an eye-catch image"
-          :aspect-ratio="16/9"
-          width="160"
-          height="90"
-          class="mx-auto eye-catch-img"
-        />
-      </nuxt-link>
-    </div>-->
     <div class="right-box">
       <div class="post-date">{{ createdAt.split('T')[0] }}</div>
       <div class="post-title-wrap">
@@ -38,7 +26,6 @@ export default {
     createdAt: { type: String, default: "" },
     description: { type: String, default: "" },
     tags: { type: Array, default: () => [] }
-    // imgLink: { type: String, default: "" }
   }
 };
 </script>
@@ -47,16 +34,11 @@ export default {
 @import "@/assets/css/tag.css";
 .post {
   text-align: left;
-}
-@media screen and (max-width: 767px) {
-  .post {
-    padding: 10px 0px 20px 0px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .post {
+  @include pc {
     padding: 20px;
+  }
+  @include mobile {
+    padding: 10px 0px 40px 0px;
   }
 }
 .right-box {
