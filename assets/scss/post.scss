@@ -127,18 +127,19 @@ div.tex-equations {
   }
 
   /deep/ pre code {
+    padding: 0;
     font-size: 1.1em;
     line-height: 1.2em;
     background-color: transparent;
     color: rgb(212, 214, 214);
   }
 
-  /deep/ pre code::before {
-    content: "";
+  /deep/ code::before {
+    content: none;
   }
 
-  /deep/ pre code::after {
-    content: "";
+  /deep/ code::after {
+    content: none;
   }
 
   /deep/ .table-of-contents {
