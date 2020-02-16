@@ -9,8 +9,14 @@ export const state = () => ({
 
 export const getters = {
   setEyeCatch: () => (post) => {
-    if (!!post.fields.eyeCatchImage && !!post.fields.eyeCatchImage.fields) return { url: `https:${post.fields.eyeCatchImage.fields.file.url}`, title: post.fields.eyeCatchImage.fields.title }
-    else return { url: defaultEyeCatch, title: 'defaultImage' }
+    if (!!post.fields.eyeCatchImage && !!post.fields.eyeCatchImage.fields) return {
+      url: `https:${post.fields.eyeCatchImage.fields.file.url}`,
+      title: post.fields.eyeCatchImage.fields.title
+    }
+    else return {
+      url: defaultEyeCatch,
+      title: 'defaultImage'
+    }
   },
   setPost: () => (post) => {
     if (post.fields.title) {
@@ -26,14 +32,14 @@ export const getters = {
       }
     }
   },
-  linkTo: () => (name, obj) => {
-    return {
-      name: `${name}-slug`,
-      params: {
-        slug: obj.fields.slug
-      }
-    }
-  },
+  // linkTo: () => (name, obj) => {
+  //   return {
+  //     name: `${name}-slug`,
+  //     params: {
+  //       slug: obj.fields.slug
+  //     }
+  //   }
+  // },
   associatePosts: state => (currentTag) => {
     const posts = []
     for (let i = 0; i < state.posts.length; i++) {
@@ -60,7 +66,14 @@ export const mutations = {
       if (entry.sys.contentType.sys.id === 'tag') state.tags.push(entry)
       else if (entry.sys.contentType.sys.id === 'category') state.categories.push(entry)
     }
-    state.categories.sort((a, b) => a.fields.sort - b.fields.sort)
+    state.tags.sort((a, b) => {
+      const firstName = a.fields.name.toUpperCase()
+      const secondName = b.fields.name.toUpperCase()
+      if (firstName < secondName) return -1
+      if (firstName > secondName) return 1
+      return 0
+    })
+    // state.categories.sort((a, b) => a.fields.sort - b.fields.sort)
   }
 
 }

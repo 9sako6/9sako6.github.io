@@ -6,7 +6,7 @@
         <nuxt id="page-main" />
         <aside id="side-menu">
           <Profile />
-          <!-- <Tags /> -->
+          <Tags />
         </aside>
       </div>
     </div>
@@ -16,11 +16,13 @@
 <script>
 import Header from "~/components/Header.vue";
 import Profile from "~/components/Profile.vue";
+import Tags from "~/components/Tags.vue";
 import Footer from "~/components/Footer.vue";
 export default {
   components: {
     Header,
     Profile,
+    Tags,
     Footer
   }
 };
