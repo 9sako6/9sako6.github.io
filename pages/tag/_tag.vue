@@ -52,7 +52,7 @@ export default {
     });
     return {
       tag: tagName,
-      taggedPosts: posts,
+      taggedPosts: posts
     };
   }
 };

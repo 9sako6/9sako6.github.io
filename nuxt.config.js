@@ -53,7 +53,7 @@ export default {
         hid: 'og:description',
         property: 'og:description',
         content: process.env.npm_package_description || ''
-      }
+      },
     ],
     script: [{}],
     link: [{
@@ -122,7 +122,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config: any, ctx: any) {}
+    extend(config, ctx) {}
   },
   /**
    * Generate configuration
@@ -131,7 +131,7 @@ export default {
     fallback: true,
     subFolders: false,
     routes() {
-      return fetchRoutes().then((routes: string[]) => {
+      return fetchRoutes().then((routes) => {
         return routes
       })
     }

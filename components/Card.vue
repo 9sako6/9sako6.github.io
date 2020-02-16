@@ -1,19 +1,26 @@
 <template>
   <div class="post">
-    <div class="right-box">
-      <div class="post-date">{{ createdAt.split('T')[0] }}</div>
-      <div class="post-title-wrap">
-        <nuxt-link :to="link" class="post-title">{{ title }}</nuxt-link>
-      </div>
-      <div v-if="description" class="post-description">{{ description }}</div>
-      <div v-for="tag in tags" :key="tag.id" class="post-tags">
-        <nuxt-link
-          v-if="tag.hasOwnProperty('fields') && tag.fields.hasOwnProperty('slug')"
-          :to="`/tag/${tag.fields.slug}`"
-        >
-          <span class="post-tag">{{ tag.fields.name }}</span>
+    <div class="post-date">{{ createdAt.split('T')[0] }}</div>
+    <div class="post-title-wrap">
+      <nuxt-link :to="link" class="post-title">{{ title }}</nuxt-link>
+    </div>
+    <div class="box">
+      <div class="left-box">
+        <nuxt-link :to="link">
+          <img :src="imgLink" :alt="title" class="eye-catch" />
         </nuxt-link>
       </div>
+      <div class="right-box">
+        <div v-if="description" class="post-description">{{ description }}</div>
+      </div>
+    </div>
+    <div v-for="tag in tags" :key="tag.id" class="post-tags">
+      <nuxt-link
+        v-if="tag.hasOwnProperty('fields') && tag.fields.hasOwnProperty('slug')"
+        :to="`/tag/${tag.fields.slug}`"
+      >
+        <span class="post-tag">{{ tag.fields.name }}</span>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -22,6 +29,7 @@
 export default {
   props: {
     link: { type: String, default: "" },
+    imgLink: { type: String, default: "" },
     title: { type: String, default: "" },
     createdAt: { type: String, default: "" },
     description: { type: String, default: "" },
@@ -34,6 +42,7 @@ export default {
 @import "@/assets/scss/tag.scss";
 .post {
   text-align: left;
+  padding-left: 1em;
   @include pc {
     padding: 20px;
   }
@@ -41,9 +50,7 @@ export default {
     padding: 10px 0px 40px 0px;
   }
 }
-.right-box {
-  padding-left: 1em;
-}
+
 .post-title-wrap {
   word-wrap: break-word;
   line-height: 2em;
@@ -66,5 +73,42 @@ export default {
 a {
   color: #3f3f3f;
   text-decoration: none;
+}
+.box {
+  display: grid;
+  justify-content: center;
+  @include pc {
+    grid-template-columns: 120px 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 90px 1fr;
+  }
+}
+
+.left-box {
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-box {
+  grid-column: 2/3;
+  padding: 1em;
+}
+.eye-catch {
+  @include pc {
+    width: 120px;
+    height: 120px;
+  }
+  @include mobile {
+    width: 90px;
+    height: 90px;
+  }
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  &:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
 }
 </style>

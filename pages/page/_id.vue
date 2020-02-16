@@ -7,6 +7,7 @@
         :createdAt="post.sys.createdAt"
         :link="`/posts/${post.fields.slug}`"
         :tags="post.fields.tags"
+        :imgLink="setEyeCatch(post).url"
       />
     </div>
     <Pagenation :totalPostsCount="posts.length" :nowPage="pageNum.toString()" />
@@ -22,7 +23,8 @@ import Pagenation from "~/components/Pagenation";
 export default {
   head() {
     return {
-      titleTemplate: ""
+      titleTemplate: "",
+      meta: []
     };
   },
   components: {
@@ -31,7 +33,7 @@ export default {
   },
   computed: {
     ...mapState(["posts"]),
-    ...mapGetters(["setPost"])
+    ...mapGetters(["setPost", "setEyeCatch"])
   },
   async asyncData({ params }) {
     if (params.id === undefined) params.id = 1;
