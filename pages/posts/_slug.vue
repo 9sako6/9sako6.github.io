@@ -1,9 +1,23 @@
 <template>
   <section class="page">
     <h1 id="page-title">{{ post.fields.title }}</h1>
+    <!-- <v-img
+      :src="setEyeCatch(post).url"
+      alt="an eye-catch image"
+      :aspect-ratio="16/9"
+      width="640"
+      height="360"
+      class="mx-auto"
+    /> -->
     <div class="post-meta">
-      <time v-if="post.sys.createdAt">created: {{ post.sys.createdAt.split('T')[0] }}</time>
-      <time v-if="post.sys.updatedAt">, updated: {{ post.sys.updatedAt.split('T')[0] }}</time>
+      <div class="post-time">
+        <!-- <v-icon :small="true">fas fa-clock</v-icon> -->
+        <time v-if="post.sys.createdAt">created:&nbsp; {{ post.sys.createdAt.split('T')[0] }}</time>
+      </div>
+      <div class="post-time">
+        <!-- <v-icon :small="true">fas fa-history</v-icon> -->
+        <time v-if="post.sys.updatedAt">updated: {{ post.sys.updatedAt.split('T')[0] }}</time>
+      </div>
     </div>
     <div v-for="tag in post.fields.tags" :key="tag.id" class="post-tags">
       <nuxt-link
@@ -15,13 +29,13 @@
     </div>
     <div v-html="$md.render(post.fields.body)" style="margin-bottom: 120px;"></div>
     <BackArrow :link="`/`" />
-    <div v-show="disqus_shortname" class="mt-10">
+    <!-- <div v-show="disqus_shortname" class="mt-10">
       <vue-disqus
         :shortname="disqus_shortname"
         :identifier="post.fields.slug"
         :url="`${base_url}/posts/${post.fields.slug}`"
       ></vue-disqus>
-    </div>
+    </div> -->
   </section>
 </template>
 
@@ -34,11 +48,8 @@ import client from "~/plugins/contentful";
 export default {
   data: () => ({
     base_url: process.env.BASE_URL,
-    disqus_shortname: process.env.DISQUS_SHORTNAME
+    // disqus_shortname: process.env.DISQUS_SHORTNAME
   }),
-  // layout(context) {
-  //   return context.params.domain;
-  // },
   components: {
     BackArrow
   },
@@ -49,23 +60,28 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: this.post.title || ""
+          content: this.post.fields.title || ""
         },
         {
           hid: "description",
           name: "description",
-          content: this.post.description || ""
+          content: this.post.fields.description || ""
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: this.post.description || ""
+          content: this.post.fields.description || ""
         },
-        // {
-        //   hid: 'og:image',
-        //   property: 'og:image',
-        //   content: this.post.img.url
-        // },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: process.env.BASE_URL + `/posts/${this.post.fields.slug}`
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.setEyeCatch(this.post).url
+        },
         {
           hid: "twitter:card",
           property: "twitter:card",
@@ -97,7 +113,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["setPost"])
+    ...mapGetters(["setPost", "setEyeCatch"])
   },
   mounted() {
     this.renderMathJax();

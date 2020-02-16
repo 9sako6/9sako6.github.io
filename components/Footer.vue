@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="text-wrap">
-      <a class="link" href="https://github.com/9sako6/9sako6-garden">9sako6/9sako6-garden</a>
+      <a class="link" href="https://github.com/9sako6/9sako6-garden" target="_blank" rel="noopener noreferrer">9sako6/9sako6-garden</a>
     </div>
     <div class="text-wrap">
       <nuxt-link class="link" to="/policy">プライバシーポリシー</nuxt-link>

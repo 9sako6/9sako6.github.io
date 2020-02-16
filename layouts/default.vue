@@ -1,23 +1,25 @@
 <template>
-  <div id="root">
-    <div id="container-outer">
-      <div class="wrapper">
-        <Squares />
-        <div class="title">
-          <nuxt-link to="/" class="link">くさころガーデン</nuxt-link>
-          <div>=^._.^=</div>
+  <!-- <v-app> -->
+    <div id="root">
+      <div id="container-outer">
+        <div class="wrapper">
+          <Squares />
+          <div class="title">
+            <nuxt-link to="/" class="link">庭に腐ったコロッケ</nuxt-link>
+            <div>=^._.^=</div>
+          </div>
+        </div>
+        <div id="content">
+          <nuxt id="page-main" />
+          <aside id="side-menu">
+            <Profile />
+            <!-- <Tags /> -->
+          </aside>
         </div>
       </div>
-      <div id="content">
-        <nuxt id="page-main" />
-        <aside id="side-menu">
-          <Profile />
-          <!-- <Tags /> -->
-        </aside>
-      </div>
+      <Footer />
     </div>
-    <Footer />
-  </div>
+  <!-- </v-app> -->
 </template>
 <script>
 // import Header from '~/components/Header.vue'

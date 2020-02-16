@@ -2,7 +2,7 @@
   <div id="profile">
     <div class="side-title">Profile</div>
     <div style="text-align: center;">
-      <img id="profile-avatar" src="~/static/icon2.jpg" alt="a picture drawn by 9sako6" />
+      <img id="profile-avatar" src="~/static/icon.png" alt="a picture drawn by 9sako6" />
     </div>
     <div class="side-description">
       くさころといいます。

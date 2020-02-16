@@ -17,8 +17,11 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/google-analytics": "^2.2.3",
     "@nuxtjs/markdownit": "^1.2.7",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
     "highlight.js": "^9.18.1",
     "install": "^0.13.0",
+    "markdown-it-anchor": "^5.2.5",
+    "markdown-it-table-of-contents": "^0.4.4",
     "node-sass": "^4.13.0",
     "npm": "^6.13.6",
     "nuxt": "^2.0.0",
@@ -30,9 +33,11 @@
     "vue-mq": "^1.0.1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/vuetify": "^1.10.3",
     "babel-eslint": "^10.0.1",
     "contentful": "^7.13.1",
     "eslint": "^6.1.0",

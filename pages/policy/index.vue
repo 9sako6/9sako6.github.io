@@ -2,7 +2,7 @@
   <section class="page">
     <h1 id="page-title">プライバシーポリシー</h1>
     <div class="post-meta">
-      <time>created: 2020/02/12</time>
+      <time>制定日: 2020-02-12</time>
       <!-- <time v-if="post.sys.updatedAt">, updated: {{ post.sys.updatedAt.split('T')[0] }}</time> -->
     </div>
     <div style="margin-bottom: 120px;">

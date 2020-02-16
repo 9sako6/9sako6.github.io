@@ -1,17 +1,31 @@
 <template>
   <div class="post">
-    <div class="post-date">{{ createdAt.split('T')[0] }}</div>
-    <div class="post-title-wrap">
-      <nuxt-link :to="link" class="post-title">{{ title }}</nuxt-link>
-    </div>
-    <div v-if="description" class="post-description">{{ description }}</div>
-    <div v-for="tag in tags" :key="tag.id" class="post-tags">
-      <nuxt-link
-        v-if="tag.hasOwnProperty('fields') && tag.fields.hasOwnProperty('slug')"
-        :to="`/tag/${tag.fields.slug}`"
-      >
-        <span class="post-tag">{{ tag.fields.name }}</span>
+    <!-- <div class="left-box">
+      <nuxt-link :to="link">
+        <v-img
+          :src="imgLink"
+          alt="an eye-catch image"
+          :aspect-ratio="16/9"
+          width="160"
+          height="90"
+          class="mx-auto eye-catch-img"
+        />
       </nuxt-link>
+    </div>-->
+    <div class="right-box">
+      <div class="post-date">{{ createdAt.split('T')[0] }}</div>
+      <div class="post-title-wrap">
+        <nuxt-link :to="link" class="post-title">{{ title }}</nuxt-link>
+      </div>
+      <div v-if="description" class="post-description">{{ description }}</div>
+      <div v-for="tag in tags" :key="tag.id" class="post-tags">
+        <nuxt-link
+          v-if="tag.hasOwnProperty('fields') && tag.fields.hasOwnProperty('slug')"
+          :to="`/tag/${tag.fields.slug}`"
+        >
+          <span class="post-tag">{{ tag.fields.name }}</span>
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -24,6 +38,7 @@ export default {
     createdAt: { type: String, default: "" },
     description: { type: String, default: "" },
     tags: { type: Array, default: () => [] }
+    // imgLink: { type: String, default: "" }
   }
 };
 </script>
@@ -32,15 +47,27 @@ export default {
 @import "@/assets/css/tag.css";
 .post {
   text-align: left;
-  padding: 20px;
+}
+@media screen and (max-width: 767px) {
+  .post {
+    padding: 10px 0px 20px 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .post {
+    padding: 20px;
+  }
+}
+.right-box {
+  padding-left: 1em;
 }
 .post-title-wrap {
-  // height: 2em;
-  padding: 0.5em 0;
   word-wrap: break-word;
   line-height: 2em;
 }
 .post-title {
+  color: $my-black;
   font-weight: 700;
   font-size: 1.2em;
 }
