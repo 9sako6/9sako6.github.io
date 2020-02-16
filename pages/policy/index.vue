@@ -49,7 +49,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
 @import "@/assets/css/post.css";
-@import "@/assets/css/tag.css";
+@import "@/assets/scss/tag.scss";
 </style>

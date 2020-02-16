@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="tag-title">#{{ tag }}</h1>
-    <div v-for="post in posts" :key="post.id">
+    <div v-for="post in taggedPosts" :key="post.id">
       <Card
         :title="post.fields.title"
         :description="post.fields.description"
@@ -52,6 +52,7 @@ export default {
     });
     return {
       tag: tagName,
+      taggedPosts: posts,
     };
   }
 };

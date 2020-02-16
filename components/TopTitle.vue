@@ -18,8 +18,16 @@
   text-align: center;
   color: $my-black;
   position: absolute;
-  left: 0;
-  right: 0;
+  @include pc {
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  @include mobile {
+    left: 0;
+    right: 0;
+  }
+  margin: auto;
   top: $title-height / 3;
 }
 .link {

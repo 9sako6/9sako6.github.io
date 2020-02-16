@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="header-wrapper">
     <Squares />
     <TopTitle />
   </div>
@@ -16,8 +16,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.wrapper {
-  width: 100%;
+.header-wrapper {
+  // width: 100%;
   height: $title-height;
   text-align: center;
 }

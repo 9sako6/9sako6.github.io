@@ -14,14 +14,14 @@
   </div>
 </template>
 <script>
-import Header from '~/components/Header.vue'
+import Header from "~/components/Header.vue";
 import Profile from "~/components/Profile.vue";
 import Footer from "~/components/Footer.vue";
 export default {
   components: {
     Header,
     Profile,
-    Footer,
+    Footer
   }
 };
 </script>

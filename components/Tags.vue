@@ -21,7 +21,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style scoped lang="scss">
 @import "@/assets/css/side.css";
-@import "@/assets/css/tag.css";
+@import "@/assets/scss/tag.scss";
 </style>

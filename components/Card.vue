@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/css/tag.css";
+@import "@/assets/scss/tag.scss";
 .post {
   text-align: left;
   @include pc {
