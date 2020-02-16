@@ -1,12 +1,12 @@
 @import "./media-query.scss";
 
-.post-tags>>>a:hover {
-  border-bottom: none;
-}
-
 .post-tags {
   display: inline-block;
   margin-top: 0.5em;
+
+  /deep/ a:hover {
+    border-bottom: none;
+  }
 }
 
 .post-tag {
@@ -14,6 +14,10 @@
   display: inline-block;
   border: solid 1px #e6e6e6;
   border-radius: 1em;
+
+  &:hover {
+    color: rgb(187, 25, 87);
+  }
 
   @include pc {
     margin: 0 1em 0 0;
@@ -26,8 +30,4 @@
     margin: 0 0.5em 0 0;
     padding: 0.5em 0.5em;
   }
-}
-
-.post-tag:hover {
-  color: rgb(187, 25, 87);
 }

@@ -1,0 +1,167 @@
+@import "./media-query.scss";
+
+div.tex-equations {
+  overflow-x: auto;
+}
+
+#page-title {
+  margin: 1em 0 1em 0;
+  line-height: 1.5em;
+  word-wrap: break-word;
+  margin-left: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+
+  @include pc {
+    font-size: 2em;
+  }
+
+  @include mobile {
+    font-size: 1.7em;
+  }
+}
+
+.post-meta {
+  color: #696565;
+  margin: 2em 0 2em 1em;
+}
+
+.post-time-title {
+  display: inline-block;
+  width: 75px;
+}
+
+.page {
+  color: $my-black;
+  font-size: 1em;
+
+  /deep/ img {
+    @include pc {
+      margin-left: 5%;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    @include mobile {
+      width: 100%;
+
+    }
+  }
+
+  /deep/ h1 {
+    margin: 2.5em 0 1.5em 0;
+    font-size: 1.8em;
+    padding: 0.4em 0.5em;
+    color: #494949;
+    background: #f4f4f4;
+    border-left: solid 5px #494949;
+    border-bottom: solid 3px #d7d7d7;
+  }
+
+  /deep/ h2 {
+    margin: 2.5em 0 1.3em 0;
+    font-size: 1.5em;
+    padding: 0.25em 0.5em;
+    color: #494949;
+    background: transparent;
+    border-left: solid 5px #494949;
+  }
+
+  /deep/ h3 {
+    margin: 2.5em 0 1.3em 0;
+    font-size: 1.5em;
+    padding: 0.25em 0.5em;
+    color: #494949;
+    background: transparent;
+  }
+
+  /deep/ p {
+    padding: 0.5em;
+    margin: 1em 0 1em 0;
+    line-height: 1.5em;
+  }
+
+  /deep/ hr {
+    margin: 2em 0 2em 0;
+  }
+
+  /deep/ table {
+    width: 100%;
+  }
+
+  /deep/ th {
+    height: 2em;
+    border-bottom: solid 1px #eee;
+  }
+
+  /deep/ td {
+    height: 2em;
+    border-bottom: solid 1px #eee;
+  }
+
+  /deep/ ul {
+    margin-left: 40px;
+  }
+
+  /deep/ ol {
+    margin-left: 40px;
+  }
+
+  /deep/ li {
+    display: list-item;
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  /deep/ blockquote {
+    padding: 1em;
+    background-color: #f7f7f7;
+    color: rgb(72, 70, 70);
+  }
+
+
+  /deep/ p code {
+    border-radius: 0.2em;
+    padding: 0.1em 0.4em;
+    background-color: #ebebeb;
+  }
+
+  /deep/ pre code {
+    font-size: 1.1em;
+    line-height: 1.2em;
+    background-color: transparent;
+    color: rgb(212, 214, 214);
+  }
+
+  /deep/ pre code::before {
+    content: "";
+  }
+
+  /deep/ pre code::after {
+    content: "";
+  }
+
+  /deep/ .table-of-contents {
+    padding: 0 0 1em 0;
+    background-color: #fafafa;
+  }
+
+  /deep/ .table-of-contents::before {
+    display: block;
+    font-weight: 600;
+    color: #494949;
+    padding: 1em;
+    content: "目次";
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  /deep/ .table-of-contents a {
+    color: #494949;
+  }
+
+  /deep/ .table-of-contents li {
+    line-height: 1.3em;
+  }
+}

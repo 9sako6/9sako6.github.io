@@ -29,6 +29,6 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-@import "@/assets/css/post.css";
+@import "@/assets/scss/post.scss";
 @import "@/assets/scss/tag.scss";
 </style>
