@@ -7,11 +7,19 @@
     <div class="box">
       <div class="left-box">
         <nuxt-link :to="link">
-          <img :src="imgLink" :alt="title" class="eye-catch" />
+          <client-only>
+            <transition name="fade">
+              <lazy-component>
+                <img :src="imgLink" :alt="title" class="eye-catch" />
+              </lazy-component>
+            </transition>
+          </client-only>
         </nuxt-link>
       </div>
       <div class="right-box">
-        <div v-if="description" class="post-description">{{ description }}</div>
+        <div v-if="description" class="post-description">
+          <nuxt-link :to="link">{{ description }}</nuxt-link>
+        </div>
       </div>
     </div>
     <div v-for="tag in tags" :key="tag.id" class="post-tags">
@@ -59,13 +67,16 @@ export default {
   color: $my-black;
   font-weight: 700;
   font-size: 1.2em;
-}
-.post-title:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .post-description {
   color: $my-gray;
   line-height: 1.5em;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .post-date {
   color: #717579;
@@ -110,5 +121,11 @@ a {
   &:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
