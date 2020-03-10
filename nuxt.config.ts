@@ -4,7 +4,7 @@ import {
 
 require('dotenv').config();
 
-const siteTitle = '庭に腐ったコロッケ'
+const siteTitle = '腐ったコロッケ'
 
 export default {
   mode: 'universal',
