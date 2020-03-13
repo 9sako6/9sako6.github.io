@@ -1,8 +1,14 @@
 <template>
   <div id="profile">
     <div class="side-title">Profile</div>
-    <div style="text-align: center;">
-      <img id="profile-avatar" src="~/static/icon.png" alt="a picture drawn by 9sako6" />
+    <div class="img-wrapper">
+      <client-only>
+        <transition name="fade">
+          <lazy-component>
+            <img id="profile-avatar" src="~/static/icon.jpg" alt="a picture drawn by 9sako6" />
+          </lazy-component>
+        </transition>
+      </client-only>
     </div>
     <div class="side-description">
       <div>くさころ(9sako6)といいます。名前の由来は腐ったコロッケです。</div>
@@ -40,6 +46,13 @@ export default {
   border-radius: 100%;
   text-align: center;
 }
+.img-wrapper {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background-color: #f7f7f7;
+  border-radius: 100%;
+}
 .frame {
   width: 22px;
   text-align: center;
@@ -47,5 +60,12 @@ export default {
   background-color: $my-black;
   color: $my-white;
   transform: rotate(-20deg);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
