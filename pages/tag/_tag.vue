@@ -21,7 +21,7 @@ import { mapState, mapGetters } from "vuex";
 export default {
   head() {
     return {
-      titleTemplate: ""
+      title: this.tag
     };
   },
   components: {

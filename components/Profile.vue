@@ -44,9 +44,9 @@ export default {
 #profile-avatar {
   width: 200px;
   border-radius: 100%;
-  text-align: center;
 }
 .img-wrapper {
+  margin: auto;
   text-align: center;
   width: 200px;
   height: 200px;
