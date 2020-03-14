@@ -2,11 +2,11 @@
   <div class="post">
     <div class="post-date">{{ createdAt.split('T')[0] }}</div>
     <div class="post-title-wrap">
-      <nuxt-link :to="link" class="post-title">{{ title }}</nuxt-link>
+      <nuxt-link :aria-label="link" :to="link" class="post-title">{{ title }}</nuxt-link>
     </div>
     <div class="box">
       <div class="left-box">
-        <nuxt-link :to="link">
+        <nuxt-link :aria-label="link" :to="link">
           <client-only>
             <transition name="fade">
               <lazy-component>
@@ -18,7 +18,7 @@
       </div>
       <div class="right-box">
         <div v-if="description" class="post-description">
-          <nuxt-link :to="link">{{ description }}</nuxt-link>
+          <nuxt-link :aria-label="link" :to="link">{{ description }}</nuxt-link>
         </div>
       </div>
     </div>
@@ -122,8 +122,9 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
 }
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
