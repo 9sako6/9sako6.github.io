@@ -1,6 +1,9 @@
 <template>
   <div class="post">
-    <div class="post-date">{{ createdAt.split('T')[0] }}</div>
+    <div class="post-info-wrapper">
+      <div class="post-category">{{ categoryName(category) }}</div>
+      <div class="post-date">{{ createdAt.split('T')[0] }}</div>
+    </div>
     <div class="post-title-wrap">
       <nuxt-link :aria-label="link" :to="link" class="post-title">{{ title }}</nuxt-link>
     </div>
@@ -36,12 +39,24 @@
 <script>
 export default {
   props: {
+    title: { type: String, default: "" },
+    description: { type: String, default: "" },
+    createdAt: { type: String, default: "" },
+    category: { type: String, default: "" },
     link: { type: String, default: "" },
     imgLink: { type: String, default: "" },
-    title: { type: String, default: "" },
-    createdAt: { type: String, default: "" },
-    description: { type: String, default: "" },
     tags: { type: Array, default: () => [] }
+  },
+  methods: {
+    categoryName(category_slug) {
+      if (category_slug === "competitive_prog") {
+        return "競プロ";
+      } else if (category_slug === "tech_blog") {
+        return "技術";
+      } else {
+        return "雑記";
+      }
+    }
   }
 };
 </script>
@@ -58,7 +73,24 @@ export default {
     padding: 10px 0px 40px 0px;
   }
 }
-
+.post-info-wrapper {
+  display: flex;
+  line-height: 2em;
+}
+.post-category {
+  font-weight: 600;
+  padding: 0 0.3em;
+  width: 4em;
+  line-height: 2em;
+  text-align: center;
+  background-color: $my-gray;
+  color: white;
+}
+.post-date {
+  margin-left: 1em;
+  line-height: 2em;
+  color: #717579;
+}
 .post-title-wrap {
   word-wrap: break-word;
   line-height: 2em;
@@ -78,9 +110,7 @@ export default {
     text-decoration: underline;
   }
 }
-.post-date {
-  color: #717579;
-}
+
 a {
   color: #3f3f3f;
   text-decoration: none;

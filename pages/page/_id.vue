@@ -8,6 +8,7 @@
         :link="`/posts/${post.fields.slug}`"
         :tags="post.fields.tags"
         :imgLink="setEyeCatch(post).url"
+        :category="post.fields.category.fields.slug"
       />
     </div>
     <Pagenation :totalPostsCount="posts.length" :nowPage="pageNum.toString()" />
