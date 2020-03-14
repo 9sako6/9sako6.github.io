@@ -78,9 +78,6 @@ html {
   background-color: #3f3f3f;
 }
 @media screen and (max-width: 767px) {
-  * {
-    box-sizing: border-box;
-  }
   #container-outer {
     width: 90%;
     margin: auto;
@@ -96,6 +93,22 @@ html {
   }
 }
 @media screen and (min-width: 768px) {
+  #container-outer {
+    width: 90%;
+    border-right: 1px solid #eceef1;
+    border-left: 1px solid #eceef1;
+  }
+  #page-main {
+    width: 100%;
+  }
+  #side-menu {
+    width: 100%;
+  }
+  #content {
+    margin: $title-height / 2 55px;
+  }
+}
+@media screen and (min-width: 1200px) {
   #container-outer {
     width: 1140px;
     border-right: 1px solid #eceef1;

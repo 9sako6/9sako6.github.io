@@ -1,7 +1,12 @@
 <template>
   <footer class="footer">
     <div class="text-wrap">
-      <a class="link" href="https://github.com/9sako6/9sako6-garden" target="_blank" rel="noopener noreferrer">9sako6/9sako6-garden</a>
+      <a
+        class="link"
+        href="https://github.com/9sako6/9sako6-garden"
+        target="_blank"
+        rel="noopener noreferrer"
+      >9sako6/9sako6-garden</a>
     </div>
     <div class="text-wrap">
       <nuxt-link class="link" to="/policy">プライバシーポリシー</nuxt-link>
@@ -9,9 +14,7 @@
     <div class="text-wrap">
       <nuxt-link class="link" to="/contact">お問い合わせ</nuxt-link>
     </div>
-    <div class="text-wrap">
-      &copy; 2019-2020 9sako6 All Rights Reserved
-    </div>
+    <div class="text-wrap">&copy; 2019-2020 9sako6 All Rights Reserved</div>
   </footer>
 </template>
 
