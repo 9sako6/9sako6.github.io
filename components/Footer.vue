@@ -3,10 +3,10 @@
     <div class="text-wrap">
       <a
         class="link"
-        href="https://github.com/9sako6/9sako6-garden"
+        href="https://github.com/9sako6/9sako6-blog"
         target="_blank"
         rel="noopener noreferrer"
-      >9sako6/9sako6-garden</a>
+      >9sako6/9sako6-blog</a>
     </div>
     <div class="text-wrap">
       <nuxt-link class="link" to="/policy">プライバシーポリシー</nuxt-link>
