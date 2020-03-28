@@ -16,6 +16,7 @@
       <div>
         当サイト「
         <div class="frame">腐</div>ったコロッケ」では、Web開発と競技プログラミングの情報を発信します。
+        より詳細なプロフィールは<nuxt-link class="link" to="/about">こちら</nuxt-link>。
       </div>
       <ul>
         <li v-for="item in items" :key="item.id">

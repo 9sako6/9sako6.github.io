@@ -82,6 +82,11 @@ div.tex-equations {
     margin: 1em 0 1em 0;
     line-height: 1.5em;
   }
+  /deep/ section {
+    padding: 0.5em;
+    margin: 1em 0 1em 0;
+    line-height: 1.5em;
+  }
 
   /deep/ hr {
     margin: 2em 0 2em 0;
