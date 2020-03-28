@@ -2,8 +2,6 @@
   <div class="title">
     <nuxt-link to="/" class="link">
       <div class="wrapper">
-        <!-- <div class="frase frase-1">庭</div> -->
-        <!-- <div class="frase frase-2">に</div> -->
         <div class="frase frase-3">腐</div>
         <div class="frase frase-2">った</div>
         <div class="frase frase-4">コロッケ</div>

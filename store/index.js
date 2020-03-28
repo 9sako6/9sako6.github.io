@@ -1,5 +1,5 @@
 import client from '~/plugins/contentful'
-import defaultEyeCatch from '~/assets/img/defaultEyeCatch.png'
+import defaultEyeCatch from '~/assets/img/defaultEyeCatch.jpg'
 
 export const state = () => ({
   posts: [],

@@ -1,7 +1,7 @@
 <template>
   <div class="post">
     <div class="post-info-wrapper">
-      <div class="post-category">{{ categoryName(category) }}</div>
+      <div class="post-category" :style="`background-color: ${categoryColor(category)};`">{{ categoryName(category) }}</div>
       <div class="post-date">{{ createdAt.split('T')[0] }}</div>
     </div>
     <div class="post-title-wrap">
@@ -55,6 +55,15 @@ export default {
         return "技術";
       } else {
         return "雑記";
+      }
+    },
+    categoryColor(category_slug) {
+      if (category_slug === "competitive_prog") {
+        return "#364f6b";
+      } else if (category_slug === "tech_blog") {
+        return "#00adb5";
+      } else {
+        return "#222831";
       }
     }
   }
