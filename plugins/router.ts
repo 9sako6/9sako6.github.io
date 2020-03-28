@@ -38,6 +38,8 @@ export async function fetchRoutes() {
     })
   }).catch(console.error)
 
+  // /about
+  routes.push("/about")
   // /policy
   routes.push("/policy")
   // /contact
