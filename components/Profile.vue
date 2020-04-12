@@ -15,8 +15,8 @@
       <div>名古屋大学 → 名古屋大学大学院 → Web開発者。</div>
       <div>
         当サイト「
-        <div class="frame">腐</div>ったコロッケ」では、Web開発と競技プログラミングの情報を発信します。
-        より詳細なプロフィールは<nuxt-link class="link" to="/about">こちら</nuxt-link>。
+        <div class="frame">腐</div>ったコロッケ」では、Web開発と競技プログラミングについて書きます。
+        より詳細なプロフィールは「<nuxt-link class="link" to="/about">運営者情報</nuxt-link>」へ。
       </div>
       <ul>
         <li v-for="item in items" :key="item.id">

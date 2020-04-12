@@ -9,7 +9,7 @@
       >9sako6/9sako6-blog</a>
     </div>
     <div class="text-wrap">
-      <nuxt-link class="link" to="/about">くさころについて</nuxt-link>
+      <nuxt-link class="link" to="/about">運営者情報</nuxt-link>
     </div>
     <div class="text-wrap">
       <nuxt-link class="link" to="/policy">プライバシーポリシー</nuxt-link>
