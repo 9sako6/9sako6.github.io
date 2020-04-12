@@ -35,7 +35,7 @@ div.tex-equations {
 
 .page {
   color: $my-black;
-  font-size: 1em;
+  font-size: 16px;
 
   /deep/ img {
     @include pc {
@@ -46,18 +46,17 @@ div.tex-equations {
 
     @include mobile {
       width: 100%;
-
     }
   }
 
   /deep/ h1 {
     margin: 2.5em 0 1.5em 0;
     font-size: 1.8em;
-    padding: 0.4em 0.5em;
+    padding: 0.4em 0;
     color: #494949;
-    background: #f4f4f4;
-    border-left: solid 5px #494949;
-    border-bottom: solid 3px #d7d7d7;
+    // background: #f4f4f4;
+    // border-left: solid 5px #494949;
+    border-bottom: solid 3px #494949;
   }
 
   /deep/ h2 {
@@ -121,9 +120,35 @@ div.tex-equations {
   }
 
   /deep/ blockquote {
-    padding: 1em;
-    background-color: #f7f7f7;
-    color: rgb(72, 70, 70);
+    position: relative;
+    padding: 30px 15px 8px 15px;
+    box-sizing: border-box;
+    font-style: italic;
+    background: #efefef;
+    color: #555;
+  }
+  /deep/ blockquote:before {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    content: "“";
+    font-family: sans-serif;
+    color: #cfcfcf;
+    font-size: 90px;
+    line-height: 1;
+  }
+  /deep/ blockquote p {
+    padding: 0;
+    margin: 10px 0;
+    line-height: 1.7;
+  }
+
+  /deep/ blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
   }
 
   /deep/ code {

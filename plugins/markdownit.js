@@ -9,11 +9,15 @@ import javascript from "highlight.js/lib/languages/javascript";
 import ruby from "highlight.js/lib/languages/ruby";
 import bash from "highlight.js/lib/languages/bash";
 import css from "highlight.js/lib/languages/css";
+import cpp from "highlight.js/lib/languages/cpp";
+import xml from "highlight.js/lib/languages/xml";
 import plaintext from "highlight.js/lib/languages/plaintext";
 
 highlight.registerLanguage("javascript", javascript);
 highlight.registerLanguage("css", css);
+highlight.registerLanguage("cpp", css);
 highlight.registerLanguage("bash", bash);
+highlight.registerLanguage("xml", xml);
 highlight.registerLanguage("ruby", ruby);
 highlight.registerLanguage("plaintext", plaintext);
 
