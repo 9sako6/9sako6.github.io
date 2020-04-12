@@ -11,8 +11,7 @@
       </client-only>
     </div>
     <div class="side-description">
-      <div>くさころ(9sako6)といいます。名前の由来は腐ったコロッケです。</div>
-      <div>名古屋大学 → 名古屋大学大学院 → Web開発者。</div>
+      <div>くさころ(9sako6) / Nagoya Univ. → Web Developer</div>
       <div>
         当サイト「
         <div class="frame">腐</div>ったコロッケ」では、Web開発と競技プログラミングについて書きます。

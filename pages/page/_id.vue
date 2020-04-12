@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <div v-for="post in posts.slice((pageNum-1)*10, pageNum*10)" :key="post.id">
+    <div
+      v-for="post in posts.slice((pageNum-1)*postNumPerPage, pageNum*postNumPerPage)"
+      :key="post.id"
+    >
       <Card
         :title="setPost(post).title"
         :description="post.fields.description"
@@ -11,7 +14,7 @@
         :category="post.fields.category.fields.slug"
       />
     </div>
-    <Pagenation :totalPostsCount="posts.length" :nowPage="pageNum.toString()" />
+    <Pagenation :totalPostsCount="posts.length" :nowPage="pageNum.toString()" :postNumPerPage="postNumPerPage" />
   </div>
 </template>
 
@@ -28,6 +31,9 @@ export default {
       meta: []
     };
   },
+  data: () => ({
+    postNumPerPage: 5
+  }),
   components: {
     Card,
     Pagenation

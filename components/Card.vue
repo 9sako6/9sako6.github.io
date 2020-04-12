@@ -103,6 +103,7 @@ export default {
 .post-title-wrap {
   word-wrap: break-word;
   line-height: 2em;
+  margin: 1em 0;
 }
 .post-title {
   color: $my-black;
