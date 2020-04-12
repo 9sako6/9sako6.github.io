@@ -85,7 +85,7 @@ export default {
         {
           id: "MathJax-script",
           async: true,
-          src: "https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js"
+          src: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/es5/tex-mml-chtml.js"
         }
       ]
     };
