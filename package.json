@@ -26,6 +26,7 @@
     "highlight.js": "^9.18.1",
     "install": "^0.13.0",
     "markdown-it-anchor": "^5.2.5",
+    "markdown-it-katex": "^2.0.3",
     "markdown-it-table-of-contents": "^0.4.4",
     "minimist": "1.2.3",
     "node-sass": "^4.13.0",
