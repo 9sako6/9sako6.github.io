@@ -127,9 +127,12 @@ div.tex-equations {
   }
 
   /deep/ code {
-    border-radius: 0.2em;
-    padding: 0.1em 0.4em;
-    background-color: #ebebeb;
+    margin: 30px 0;
+    font-family: monospace;
+    background: #f5f7f9;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 2px;
   }
 
   /deep/ pre code {
@@ -137,6 +140,7 @@ div.tex-equations {
     font-size: 1.1em;
     line-height: 1.2em;
     background-color: transparent;
+    border: none;
     color: rgb(212, 214, 214);
   }
 
