@@ -83,8 +83,9 @@ export default {
       ],
       script: [
         {
-          src:
-            "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"
+          id: "MathJax-script",
+          async: true,
+          src: "https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js"
         }
       ]
     };
@@ -109,20 +110,15 @@ export default {
   methods: {
     renderMathJax() {
       if (window.MathJax) {
-        window.MathJax.Hub.Config({
-          TeX: { equationNumbers: { autoNumber: "AMS" } },
-          tex2jax: {
+        window.MathJax = {
+          tex: {
             inlineMath: [
               ["$", "$"],
               ["\\(", "\\)"]
             ],
-            processEscapes: true
-          },
-          "HTML-CSS": { matchFontHeight: false },
-          displayAlign: "center",
-          displayIndent: "2em"
-        });
-        window.MathJax.Hub.Queue(["Typeset", window.MathJax.Hub]);
+            tags: "ams"
+          }
+        };
       }
     }
   }
