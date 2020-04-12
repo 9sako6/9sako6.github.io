@@ -80,13 +80,6 @@ export default {
           property: "twitter:site",
           content: `@${process.env.TWITTER_USER}`
         }
-      ],
-      script: [
-        {
-          id: "MathJax-script",
-          async: true,
-          src: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/es5/tex-mml-chtml.js"
-        }
       ]
     };
   },
@@ -103,24 +96,6 @@ export default {
   },
   computed: {
     ...mapGetters(["setPost", "setEyeCatch"])
-  },
-  mounted() {
-    this.renderMathJax();
-  },
-  methods: {
-    renderMathJax() {
-      if (window.MathJax) {
-        window.MathJax = {
-          tex: {
-            inlineMath: [
-              ["$", "$"],
-              ["\\(", "\\)"]
-            ],
-            tags: "ams"
-          }
-        };
-      }
-    }
   }
 };
 </script>

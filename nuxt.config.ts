@@ -71,11 +71,12 @@ export default {
   /*
    ** Global CSS
    */
-  css: [{
-    src: '~/node_modules/highlight.js/styles/atom-one-dark.css',
-    lang: 'css'
-  },
-    '~/assets/css/reset.css'
+  css: [
+    {
+      src: '~/node_modules/highlight.js/styles/atom-one-dark.css',
+      lang: 'css'
+    },
+    '~/assets/css/reset.css',
   ],
   /*
    ** Plugins to load before mounting the App
