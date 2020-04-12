@@ -15,7 +15,7 @@ import plaintext from "highlight.js/lib/languages/plaintext";
 
 highlight.registerLanguage("javascript", javascript);
 highlight.registerLanguage("css", css);
-highlight.registerLanguage("cpp", css);
+highlight.registerLanguage("cpp", cpp);
 highlight.registerLanguage("bash", bash);
 highlight.registerLanguage("xml", xml);
 highlight.registerLanguage("ruby", ruby);
