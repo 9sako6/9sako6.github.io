@@ -4,7 +4,7 @@ import markdownItTableOfContents from 'markdown-it-table-of-contents'
 import markdownItKatex from 'markdown-it-katex'
 import "~/node_modules/katex/dist/katex.min.css"
 
-import highlight from "highlight.js/lib/highlight";
+import hljs from "highlight.js/lib/highlight";
 import javascript from "highlight.js/lib/languages/javascript";
 import ruby from "highlight.js/lib/languages/ruby";
 import bash from "highlight.js/lib/languages/bash";
@@ -13,13 +13,13 @@ import cpp from "highlight.js/lib/languages/cpp";
 import xml from "highlight.js/lib/languages/xml";
 import plaintext from "highlight.js/lib/languages/plaintext";
 
-highlight.registerLanguage("javascript", javascript);
-highlight.registerLanguage("css", css);
-highlight.registerLanguage("cpp", cpp);
-highlight.registerLanguage("bash", bash);
-highlight.registerLanguage("xml", xml);
-highlight.registerLanguage("ruby", ruby);
-highlight.registerLanguage("plaintext", plaintext);
+hljs.registerLanguage("javascript", javascript);
+hljs.registerLanguage("css", css);
+hljs.registerLanguage("cpp", cpp);
+hljs.registerLanguage("bash", bash);
+hljs.registerLanguage("xml", xml);
+hljs.registerLanguage("ruby", ruby);
+hljs.registerLanguage("plaintext", plaintext);
 
 export default ({ app }, inject) => {
 
@@ -34,8 +34,6 @@ export default ({ app }, inject) => {
       "markdown-it-katex",
     ],
     highlight: (str, lang) => {
-      // const hljs = require('highlight.js');
-      const hljs = highlight;
       if (lang && hljs.getLanguage(lang)) {
         try {
           return '<pre class="hljs"><code>' +

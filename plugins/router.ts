@@ -1,5 +1,6 @@
 const contentful = require('contentful')
 import { contentfulBlogPost, contentfulItems, contentfulBlogPostFields, contentfulTagFields } from "~/types/contentful"
+
 export async function fetchRoutes() {
   const config = {
     space: process.env.CTF_SPACE_ID,
@@ -16,24 +17,21 @@ export async function fetchRoutes() {
     let totalPostsCount = 0;
     res.items.map((item: contentfulItems) => {
       const fields: contentfulBlogPostFields = item.fields
-      // add post page
-      // e.g.: /post/nikki20200207
+      // add post page (e.g.: /post/nikki20200207)
       routes.push(`/posts/${fields.slug}`)
       totalPostsCount++
       if (fields.tags) {
         fields.tags.map((tag: contentfulTagFields) => {
           if (tag.hasOwnProperty("fields") && tag.fields.hasOwnProperty("slug")) {
-            // add tag page
-            // e.g.: /tag/programming
+            // add tag page (e.g.: /tag/programming)
             routes.push(`/tag/${tag.fields.slug}`)
           }
         })
       }
     })
-    const oldestPageNum = Math.ceil(totalPostsCount / 10);
+    const oldestPageNum = Math.ceil(totalPostsCount / 5); // TODO Fix
     Array.from(Array(oldestPageNum).keys(), x => x + 1).map(pageNum => {
-      // add page of pagenation
-      // e.g.: /blog/page/2
+      // add page of pagenation (e.g.: /blog/page/2)
       routes.push(`/page/${pageNum}`)
     })
   }).catch(console.error)
