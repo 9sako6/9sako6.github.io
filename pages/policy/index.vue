@@ -2,52 +2,35 @@
   <section class="page">
     <h1 id="page-title">プライバシーポリシー</h1>
     <div class="post-meta">
-      <time>制定日: 2020-02-12</time>
-      <!-- <time v-if="post.sys.updatedAt">, updated: {{ post.sys.updatedAt.split('T')[0] }}</time> -->
+      <div class="post-time">
+        <time>
+          <div class="post-time-title">created:</div>2020-02-12
+        </time>
+      </div>
+      <div class="post-time">
+        <time>
+          <div class="post-time-title">updated:</div>2020-02-12
+        </time>
+      </div>
     </div>
-    <div style="margin-bottom: 120px;">
-      <h1>免責事項</h1>
-      <p>
-        当サイトからリンクやバナーなどによって他のサイトに移動された場合、移動先サイトで提供される情報、サービス等について一切の責任を負いません。
-        <br />当サイトのコンテンツ・情報につきまして、可能な限り正確な情報を掲載するよう努めておりますが、誤情報が入り込んだり、情報が古くなっていることもございます。
-        <br />当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。
-      </p>
-      <h1>Google アナリティクスの利用</h1>
-      <p>
-        当サイトでは、サイトの分析と改善のためにGoogleアナリティクスを使用しています。
-        <br />このGoogleアナリティクスはトラフィックデータの収集のためにCookieを使用しています。
-        このトラフィックデータは匿名で収集されており、個人を特定するものではありません。
-        <br />この機能はCookieを無効にすることで収集を拒否することが出来ます。
-        Chromeアプリをご利用の方は
-        <a
-          href="https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DAndroid&hl=ja"
-          target="_blank"
-        >こちら</a>
-        を参考に無効化してください。
-      </p>
-      <h1>プライバシーポリシーの変更について</h1>
-      <p>
-        当サイトは、個人情報に関して適用される日本の法令を遵守するとともに、本ポリシーの内容を適宜見直しその改善に努めます。
-        <br />修正された最新のプライバシーポリシーは常に本ページにて開示されます。
-      </p>
-      <!-- <p>
-        当サイトではGoogleアドセンスを利用しており、 第三者配信事業者や広告ネットワークの配信する広告がサイトに掲載されます。
-        <br>
-        Googleなどの第三者配信事業者は、Cookieを使用して、ユーザーがそのウェブサイトや他のウェブサイトに過去にアクセスした際の情報に基づいて広告を配信します。 Googleは広告Cookieを使用することにより、ユーザーがそのサイトや他のサイトにアクセスした際の情報に基づいて、Googleやそのパートナーが適切な広告をユーザーに表示できます。
-        <br>
-        ユーザーは、広告設定でパーソナライズ広告を無効にできます。または、www.aboutads.info にアクセスすれば、パーソナライズ広告に使われる第三者配信事業者のCookieを無効にできます。
-      </p> --->
-    </div>
+    <div v-html="$md.render(policy)" style="margin-bottom: 120px;"></div>
   </section>
 </template>
 <script>
+import policy from "~/assets/md/policy.md";
+
 export default {
   head() {
     return {
-      title: 'プライバシーポリシー'
+      title: "プライバシーポリシー"
+    };
+  },
+  computed: {
+    policy() {
+      return policy;
     }
   }
-}
+};
 </script>
 <style scoped lang="scss">
 @import "@/assets/scss/post.scss";
