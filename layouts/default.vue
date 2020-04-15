@@ -36,7 +36,8 @@ export default {
   // background-color: $my-white;
 }
 html {
-  font-family: "YuGothic", sans-serif;
+  // font-family: "YuGothic", sans-serif;
+  @apply font-medium;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

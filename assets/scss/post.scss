@@ -37,6 +37,13 @@ div.tex-equations {
   color: $my-black;
   font-size: 16px;
 
+  /deep/ a {
+    color: $my-red;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   /deep/ img {
     @include pc {
       margin-left: 5%;
@@ -106,10 +113,12 @@ div.tex-equations {
   }
 
   /deep/ ul {
+    @apply list-disc;
     margin-left: 40px;
   }
 
   /deep/ ol {
+    @apply list-disc;
     margin-left: 40px;
   }
 
@@ -153,16 +162,22 @@ div.tex-equations {
 
   /deep/ code {
     margin: 30px 0;
-    font-family: monospace;
+    @apply font-mono;
     background: #f5f7f9;
     border: 1px solid #ccc;
     border-radius: 2px;
     padding: 2px;
   }
+  /deep/ pre {
+    border-radius: 0.25rem;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
 
   /deep/ pre code {
+    @apply font-mono;
     padding: 0;
-    font-size: 1.1em;
     line-height: 1.2em;
     background-color: transparent;
     border: none;

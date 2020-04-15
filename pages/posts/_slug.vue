@@ -1,46 +1,48 @@
 <template>
-  <section class="page">
-    <h1 id="page-title">{{ post.fields.title }}</h1>
-    <div class="post-meta">
-      <div class="post-time">
-        <time v-if="post.sys.createdAt">
-          <div class="post-time-title">created:</div>
-          {{ post.sys.createdAt.split('T')[0] }}
-        </time>
+  <div>
+    <section class="page">
+      <h1 id="page-title">{{ post.fields.title }}</h1>
+      <div class="post-meta">
+        <div class="post-time">
+          <time v-if="post.sys.createdAt">
+            <div class="post-time-title">created:</div>
+            {{ post.sys.createdAt.split('T')[0] }}
+          </time>
+        </div>
+        <div class="post-time">
+          <time v-if="post.sys.updatedAt">
+            <div class="post-time-title">updated:</div>
+            {{ post.sys.updatedAt.split('T')[0] }}
+          </time>
+        </div>
       </div>
-      <div class="post-time">
-        <time v-if="post.sys.updatedAt">
-          <div class="post-time-title">updated:</div>
-          {{ post.sys.updatedAt.split('T')[0] }}
-        </time>
+      <div v-for="tag in post.fields.tags" :key="tag.id" class="post-tags">
+        <nuxt-link
+          v-if="tag.hasOwnProperty('fields') && tag.fields.hasOwnProperty('slug')"
+          :to="`/tag/${tag.fields.slug}`"
+        >
+          <span class="post-tag">{{ tag.fields.name }}</span>
+        </nuxt-link>
       </div>
-    </div>
-    <div v-for="tag in post.fields.tags" :key="tag.id" class="post-tags">
-      <nuxt-link
-        v-if="tag.hasOwnProperty('fields') && tag.fields.hasOwnProperty('slug')"
-        :to="`/tag/${tag.fields.slug}`"
-      >
-        <span class="post-tag">{{ tag.fields.name }}</span>
-      </nuxt-link>
-    </div>
-    <div v-html="$md.render(post.fields.body)" style="margin-bottom: 120px;"></div>
-    <BackArrow :link="`/`" />
-  </section>
+      <div v-html="$md.render(post.fields.body)" style="margin-bottom: 120px;"></div>
+    </section>
+    <back-arrow :link="`/`" />
+  </div>
 </template>
 
 <script>
 import { mapState, mapGetters } from "vuex";
 
-import BackArrow from "~/components/BackArrow";
+// import BackArrow from "~/components/BackArrow";
 import client from "~/plugins/contentful";
 
 export default {
   data: () => ({
     base_url: process.env.BASE_URL
   }),
-  components: {
-    BackArrow
-  },
+  // components: {
+  //   BackArrow
+  // },
   head() {
     return {
       title: this.post.fields.title,

@@ -4,6 +4,7 @@
 </template>
 <script>
 export default {
+  name: "BackArrow",
   props: {
     link: { type: String, default: "" }
   }
@@ -13,6 +14,9 @@ export default {
 .link {
   color: $my-black;
   text-decoration: none;
+  &:hover {
+    color: $my-red;
+  }
 }
 div {
   // width: 120px;

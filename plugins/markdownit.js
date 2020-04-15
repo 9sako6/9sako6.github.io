@@ -22,15 +22,14 @@ hljs.registerLanguage("ruby", ruby);
 hljs.registerLanguage("plaintext", plaintext);
 
 export default ({ app }, inject) => {
-
   const md = new MarkdownIt({
     injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
     breaks: true, // 改行コードを<br>に変換する
-    html: true, // HTML タグを有効にする
+    html: true, // HTMLタグを有効にする
     linkify: true, // URLに似たテキストをリンクに自動変換する
-    typography: true, // 言語に依存しないきれいな 置換 + 引用符 を有効にします。
+    typography: true, // 言語に依存しないきれいな 置換 + 引用符 を有効にする
     use: [
-      'markdown-it-toc', // 目次を作るためのライブラリ。別途インストールが必要
+      'markdown-it-toc',
       "markdown-it-katex",
     ],
     highlight: (str, lang) => {
@@ -39,7 +38,7 @@ export default ({ app }, inject) => {
           return '<pre class="hljs"><code>' +
             hljs.highlight(lang, str, true).value +
             '</code></pre>';
-        } catch (__) { }
+        } catch (_) { }
       }
       // 言語設定がない場合、プレーンテキストとして表示する
       return '<pre class="hljs"><code>' + hljs.highlight('plaintext', str, true).value + '</code></pre>';
