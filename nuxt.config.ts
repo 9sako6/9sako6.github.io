@@ -95,7 +95,8 @@ export default {
     ['@nuxtjs/google-analytics', {
       id: process.env.GOOGLE_ANALYTICS_ID
     }],
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
+    '~/modules/global-components/',
   ],
   /*
    ** Nuxt.js modules

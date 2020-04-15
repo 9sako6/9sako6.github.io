@@ -4,6 +4,7 @@
 </template>
 <script>
 export default {
+  name: "BackArrow",
   props: {
     link: { type: String, default: "" }
   }

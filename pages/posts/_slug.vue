@@ -26,23 +26,23 @@
       </div>
       <div v-html="$md.render(post.fields.body)" style="margin-bottom: 120px;"></div>
     </section>
-    <BackArrow :link="`/`" />
+    <back-arrow :link="`/`" />
   </div>
 </template>
 
 <script>
 import { mapState, mapGetters } from "vuex";
 
-import BackArrow from "~/components/BackArrow";
+// import BackArrow from "~/components/BackArrow";
 import client from "~/plugins/contentful";
 
 export default {
   data: () => ({
     base_url: process.env.BASE_URL
   }),
-  components: {
-    BackArrow
-  },
+  // components: {
+  //   BackArrow
+  // },
   head() {
     return {
       title: this.post.fields.title,
