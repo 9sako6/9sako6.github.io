@@ -15,9 +15,10 @@
       <div>
         当サイト「
         <div class="frame">腐</div>ったコロッケ」では、Web開発と競技プログラミングについて書きます。
-        より詳細なプロフィールは「<nuxt-link class="link" to="/about">運営者情報</nuxt-link>」へ。
+        より詳細なプロフィールは「
+        <nuxt-link class="link" to="/about">運営者情報</nuxt-link>」へ。
       </div>
-      <ul>
+      <ul class="list-disc">
         <li v-for="item in items" :key="item.id">
           <a :href="item.link" target="_blank" rel="noopener noreferrer">{{item.title}}</a>
         </li>
@@ -68,5 +69,11 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+a {
+  color: thme('colors.light.surface');
+  &:hover {
+    text-decoration: underline;
+  }
 }
 </style>

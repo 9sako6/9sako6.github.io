@@ -13,6 +13,9 @@ export default {
 .link {
   color: $my-black;
   text-decoration: none;
+  &:hover {
+    color: $my-red;
+  }
 }
 div {
   // width: 120px;

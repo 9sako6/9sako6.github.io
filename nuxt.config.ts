@@ -86,15 +86,16 @@ export default {
     { src: '~/plugins/vue-lazyload.js', ssr: false }
   ],
   /*
-   ** Nuxt.js dev-modules
-   */
+  ** Nuxt.js dev-modules
+  */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module'
+    '@nuxtjs/tailwindcss',
     ['@nuxtjs/google-analytics', {
       id: process.env.GOOGLE_ANALYTICS_ID
     }],
-    ['@nuxt/typescript-build']
+    '@nuxt/typescript-build'
   ],
   /*
    ** Nuxt.js modules
