@@ -91,7 +91,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module'
-    '@nuxtjs/tailwindcss',
+    // '@nuxtjs/tailwindcss',
     ['@nuxtjs/google-analytics', {
       id: process.env.GOOGLE_ANALYTICS_ID
     }],

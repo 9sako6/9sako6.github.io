@@ -37,12 +37,12 @@ div.tex-equations {
   color: $my-black;
   font-size: 16px;
 
-  /deep/ a {
-    color: $my-red;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+  // /deep/ a {
+  //   color: $my-red;
+  //   &:hover {
+  //     text-decoration: underline;
+  //   }
+  // }
 
   /deep/ img {
     @include pc {
@@ -177,6 +177,7 @@ div.tex-equations {
 
   /deep/ pre code {
     @apply font-mono;
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     padding: 0;
     line-height: 1.2em;
     background-color: transparent;
