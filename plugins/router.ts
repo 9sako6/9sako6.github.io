@@ -43,6 +43,5 @@ export async function fetchRoutes() {
   // /contact
   routes.push("/contact")
   routes = Array.from(new Set<string>(routes))
-  console.log(routes)
   return routes
 }

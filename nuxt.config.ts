@@ -111,7 +111,7 @@ export default {
     '@nuxtjs/sitemap'
   ],
   purgeCSS: {
-    whitelistPatterns: [/.*$/],
+    whitelistPatterns: [/hljs.*$/, /katex.*$/],
   },
   router: {
     middleware: [
