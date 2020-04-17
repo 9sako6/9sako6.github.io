@@ -6,6 +6,8 @@ export default async function () {
   options.purgeCSS = {
     whitelistPatterns: [
       /hljs.*/,
+      /backquote/,
+      /table-of-contents/
     ],
     whitelist: katexSelectorsList()
   }
