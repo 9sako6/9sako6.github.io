@@ -7,6 +7,7 @@ export default async function () {
     whitelistPatterns: [
       /hljs.*/,
       /backquote/,
+      /blockquote/,
       /table-of-contents/
     ],
     whitelist: katexSelectorsList()
