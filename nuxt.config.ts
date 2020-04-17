@@ -96,6 +96,7 @@ export default {
     }],
     '@nuxt/typescript-build',
     '~/modules/global-components/',
+    '~/modules/purgecss-whitelist',
     '@nuxtjs/tailwindcss',
   ],
   /*
@@ -110,9 +111,6 @@ export default {
     '@nuxtjs/markdownit',
     '@nuxtjs/sitemap'
   ],
-  purgeCSS: {
-    whitelistPatterns: [/hljs.*$/, /katex.*$/],
-  },
   router: {
     middleware: [
       'getContentful'
