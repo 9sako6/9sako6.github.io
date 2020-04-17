@@ -71,7 +71,7 @@ export default {
   opacity: 0;
 }
 a {
-  color: thme('colors.light.surface');
+  color: $my-red;
   &:hover {
     text-decoration: underline;
   }

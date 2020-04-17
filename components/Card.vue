@@ -59,9 +59,9 @@ export default {
     },
     categoryColor(category_slug) {
       if (category_slug === "competitive_prog") {
-        return "#364f6b";
+        return "#754242";
       } else if (category_slug === "tech_blog") {
-        return "#00adb5";
+        return "#e65a5a";
       } else {
         return "#222831";
       }
