@@ -3,7 +3,7 @@
     <div id="container-outer">
       <Header />
       <div id="content">
-        <nuxt id="page-main" />
+        <nuxt id="page-main" keep-alive />
         <aside id="side-menu">
           <Profile />
           <Tags />

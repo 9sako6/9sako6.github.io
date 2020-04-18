@@ -1,18 +1,11 @@
 <template>
   <div class="pagenation-wrapper">
     <div v-for="pageNum in pages" :key="pageNum" style="display: inline;">
-      <div
-        v-if="pageNum.toString() === nowPage"
-        class="pagenation selected-pagenation"
-      >
-        <nuxt-link class="link" :to="`/page/${pageNum}`">
-          {{ pageNum }}
-        </nuxt-link>
+      <div v-if="pageNum.toString() === nowPage" class="pagenation selected-pagenation">
+        <nuxt-link class="link" :to="`/page/${pageNum}`">{{ pageNum }}</nuxt-link>
       </div>
       <div v-else class="pagenation">
-        <nuxt-link class="link" :to="`/page/${pageNum}`">
-          {{ pageNum }}
-        </nuxt-link>
+        <nuxt-link class="link" :to="`/page/${pageNum}`">{{ pageNum }}</nuxt-link>
       </div>
     </div>
   </div>
@@ -24,11 +17,11 @@ export default {
     nowPage: { type: String, default: "1" },
     postNumPerPage: { type: Number, default: 5 },
   },
-  data: function () {
+  data() {
     const oldestPageNum = Math.ceil(this.totalPostsCount / this.postNumPerPage)
     const pages = Array.from(Array(oldestPageNum).keys(), (x) => x + 1)
     return {
-      pages: pages,
+      pages,
     }
   },
 }
