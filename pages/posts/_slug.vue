@@ -47,7 +47,7 @@ export default {
       (await store.state.posts.find((post) => post.fields.slug === params.slug))
 
     if (post) {
-      return { post: post }
+      return { post }
     } else {
       return error({ statusCode: 400 })
     }

@@ -17,7 +17,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .header-wrapper {
-  // width: 100%;
   height: $title-height;
   text-align: center;
 }
