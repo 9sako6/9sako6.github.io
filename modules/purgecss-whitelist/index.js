@@ -1,4 +1,4 @@
-const katexSelectorsList = require('./katex.js')
+const katexSelectorsList = require("./katex.js")
 
 export default async function () {
   const { options } = this.nuxt

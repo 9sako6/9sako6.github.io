@@ -2,9 +2,15 @@
   <div class="title">
     <nuxt-link to="/" class="link">
       <div class="wrapper">
-        <div class="frase frase-3">腐</div>
-        <div class="frase frase-2">った</div>
-        <div class="frase frase-4">コロッケ</div>
+        <div class="frase frase-3">
+          腐
+        </div>
+        <div class="frase frase-2">
+          った
+        </div>
+        <div class="frase frase-4">
+          コロッケ
+        </div>
       </div>
     </nuxt-link>
     <div>=^._.^=</div>

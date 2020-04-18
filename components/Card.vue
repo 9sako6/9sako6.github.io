@@ -1,8 +1,11 @@
 <template>
   <div class="post">
     <div class="post-info-wrapper">
-      <div class="post-category" :style="`background-color: ${categoryColor(category)};`">{{ categoryName(category) }}</div>
-      <div class="post-date">{{ createdAt.split('T')[0] }}</div>
+      <div
+        class="post-category"
+        :style="`background-color: ${categoryColor(category)};`"
+      >{{ categoryName(category) }}</div>
+      <div class="post-date">{{ createdAt.split("T")[0] }}</div>
     </div>
     <div class="post-title-wrap">
       <nuxt-link :aria-label="link" :to="link" class="post-title">{{ title }}</nuxt-link>
@@ -45,29 +48,29 @@ export default {
     category: { type: String, default: "" },
     link: { type: String, default: "" },
     imgLink: { type: String, default: "" },
-    tags: { type: Array, default: () => [] }
+    tags: { type: Array, default: () => [] },
   },
   methods: {
     categoryName(category_slug) {
       if (category_slug === "competitive_prog") {
-        return "競プロ";
+        return "競プロ"
       } else if (category_slug === "tech_blog") {
-        return "技術";
+        return "技術"
       } else {
-        return "雑記";
+        return "雑記"
       }
     },
     categoryColor(category_slug) {
       if (category_slug === "competitive_prog") {
-        return "#754242";
+        return "#754242"
       } else if (category_slug === "tech_blog") {
-        return "#e65a5a";
+        return "#e65a5a"
       } else {
-        return "#222831";
+        return "#222831"
       }
-    }
-  }
-};
+    },
+  },
+}
 </script>
 
 <style scoped lang="scss">

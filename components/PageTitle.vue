@@ -3,14 +3,15 @@
     h1#blog-title
       nuxt-link(to="/").nav-link 9sako6 Garden
     Navi
-</template>>
+</template
+>>
 
 <script>
-import Navi from '~/components/Navi.vue'
+import Navi from "~/components/Navi.vue"
 export default {
   components: {
-    Navi
-  }
+    Navi,
+  },
 }
 </script>
 

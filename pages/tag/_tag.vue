@@ -5,10 +5,10 @@
       <Card
         :title="post.fields.title"
         :description="post.fields.description"
-        :createdAt="post.fields.createdAt"
+        :created-at="post.fields.createdAt"
         :link="`/posts/${post.fields.slug}`"
         :tags="post.fields.tags"
-        :imgLink="setEyeCatch(post).url"
+        :img-link="setEyeCatch(post).url"
         :category="post.fields.category.fields.slug"
       />
     </div>
@@ -16,47 +16,48 @@
 </template>
 
 <script>
-import Card from "~/components/Card";
-import { mapState, mapGetters } from "vuex";
+import Card from "~/components/Card"
+import { mapState, mapGetters } from "vuex"
 
 export default {
-  head() {
-    return {
-      title: this.tag
-    };
-  },
   components: {
-    Card
+    Card,
   },
+
   computed: {
     ...mapState(["posts"]),
-    ...mapGetters(["setPost", "setEyeCatch"])
+    ...mapGetters(["setPost", "setEyeCatch"]),
   },
-  async asyncData({ payload, params, error, store, env }) {
-    const allPosts = store.state.posts;
-    let posts = [];
-    let tagName = "";
-    allPosts.map(post => {
-      const tags = post.fields.tags;
+  async asyncData({ params, store }) {
+    const allPosts = store.state.posts
+    let posts = []
+    let tagName = ""
+    allPosts.map((post) => {
+      const tags = post.fields.tags
       if (tags) {
-        tags.map(tag => {
+        tags.map((tag) => {
           if (
-            tag.hasOwnProperty("fields") &&
-            tag.fields.hasOwnProperty("slug") &&
+            Object.prototype.hasOwnProperty.call(tag, "fields") &&
+            Object.prototype.hasOwnProperty.call(tag.fields, "slug") &&
             tag.fields.slug === params.tag
           ) {
-            tagName = tag.fields.name;
-            posts.push(post);
+            tagName = tag.fields.name
+            posts.push(post)
           }
-        });
+        })
       }
-    });
+    })
     return {
       tag: tagName,
-      taggedPosts: posts
-    };
-  }
-};
+      taggedPosts: posts,
+    }
+  },
+  head() {
+    return {
+      title: this.tag,
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>

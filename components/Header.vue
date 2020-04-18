@@ -5,15 +5,15 @@
   </div>
 </template>
 <script>
-import TopTitle from "~/components/TopTitle.vue";
-import Squares from "~/components/Squares.vue";
+import TopTitle from "~/components/TopTitle.vue"
+import Squares from "~/components/Squares.vue"
 
 export default {
   components: {
     TopTitle,
-    Squares
-  }
-};
+    Squares,
+  },
+}
 </script>
 <style lang="scss" scoped>
 .header-wrapper {

@@ -1,4 +1,4 @@
-<template lang='pug'>
+<template lang="pug">
   div#root
     TopTitle
     //- PageTitle
@@ -8,14 +8,14 @@
 
 <script>
 // import PageTitle from '~/components/PageTitle.vue'
-import TopTitle from '~/components/TopTitle.vue'
-import Footer from '~/components/Footer.vue'
+import TopTitle from "~/components/TopTitle.vue"
+import Footer from "~/components/Footer.vue"
 export default {
   components: {
     TopTitle,
     // PageTitle,
-    Footer
-  }
+    Footer,
+  },
 }
 </script>
 
@@ -27,7 +27,7 @@ export default {
 }
 
 html {
-  font-family: 'YuGothic', sans-serif;
+  font-family: "YuGothic", sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
