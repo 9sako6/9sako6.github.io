@@ -30,7 +30,7 @@
         <p class="form-area">
           <label>
             <div class="form-title form-required">本文</div>
-            <textarea class="input" name="message" rows="8" required></textarea>
+            <textarea class="input" name="message" rows="8" required />
           </label>
         </p>
         <p class="form-area" align="center">

@@ -6,9 +6,9 @@
 export default {
   name: "BackArrow",
   props: {
-    link: { type: String, default: "" }
-  }
-};
+    link: { type: String, default: "" },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .link {

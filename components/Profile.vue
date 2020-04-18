@@ -20,7 +20,11 @@
       </div>
       <ul class="list-disc">
         <li v-for="item in items" :key="item.id">
-          <a :href="item.link" target="_blank" rel="noopener noreferrer">{{item.title}}</a>
+          <a :href="item.link" target="_blank" rel="noopener noreferrer">
+            {{
+            item.title
+            }}
+          </a>
         </li>
       </ul>
     </div>
@@ -29,16 +33,16 @@
 
 <script>
 export default {
-  data: function() {
+  data: function () {
     return {
       items: [
         { link: "https://twitter.com/9sako6/", title: "Twitter" },
         { link: "https://github.com/9sako6/", title: "GitHub" },
-        { link: "https://atcoder.jp/users/qsako6/", title: "AtCoder" }
-      ]
-    };
-  }
-};
+        { link: "https://atcoder.jp/users/qsako6/", title: "AtCoder" },
+      ],
+    }
+  },
+}
 </script>
 
 <style scoped lang="scss">

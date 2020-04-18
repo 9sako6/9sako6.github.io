@@ -3,7 +3,9 @@
     <h1>{{ title }}</h1>
     <div class="content">
       <p>{{ description }}</p>
-      <nuxt-link class="link button" :to="link">Read more</nuxt-link>
+      <nuxt-link class="link button" :to="link">
+        Read more
+      </nuxt-link>
     </div>
     <div class="img">
       <img
@@ -14,27 +16,27 @@
   </section>
 </template>
 <script>
-import eleph from '~/assets/img/eleph.jpg'
-import bird from '~/assets/img/bird.jpg'
-import ox from '~/assets/img/ox.jpg'
+import eleph from "~/assets/img/eleph.jpg"
+import bird from "~/assets/img/bird.jpg"
+import ox from "~/assets/img/ox.jpg"
 
 const images = {
   blog: ox,
   competitive_prog: eleph,
-  tech_blog: bird
+  tech_blog: bird,
 }
 
 export default {
-  data(){
-    return {
-      images: images
-    }
-  },
   props: {
-    link: { type: String, default: '' },
+    link: { type: String, default: "" },
     // imglink: { type: String, default: '~assets/img/eleph.jpg' },
-    title: { type: String, default: '' },
-    description: { type: String, default: '' },
+    title: { type: String, default: "" },
+    description: { type: String, default: "" },
+  },
+  data() {
+    return {
+      images: images,
+    }
   },
   // data() {
   //   return {
