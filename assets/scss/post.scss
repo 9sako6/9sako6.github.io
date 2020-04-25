@@ -45,6 +45,7 @@ div.tex-equations {
 
   /deep/ a {
     color: $my-red;
+
     &:hover {
       text-decoration: underline;
     }
@@ -94,6 +95,7 @@ div.tex-equations {
     margin: 1em 0 1em 0;
     @apply leading-relaxed;
   }
+
   /deep/ section {
     padding: 0.5em;
     margin: 1em 0 1em 0;
@@ -124,7 +126,7 @@ div.tex-equations {
   }
 
   /deep/ ol {
-    @apply list-disc;
+    @apply list-decimal;
     margin-left: 40px;
   }
 
@@ -142,6 +144,7 @@ div.tex-equations {
     background: #efefef;
     color: #555;
   }
+
   /deep/ blockquote:before {
     display: inline-block;
     position: absolute;
@@ -153,6 +156,7 @@ div.tex-equations {
     font-size: 90px;
     line-height: 1;
   }
+
   /deep/ blockquote p {
     padding: 0;
     margin: 10px 0;
@@ -172,6 +176,7 @@ div.tex-equations {
     background: #e2e6e9;
     padding: 2px;
   }
+
   /deep/ pre {
     @apply rounded;
     padding: 0.7rem;
