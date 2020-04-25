@@ -83,6 +83,7 @@ export default {
    */
   plugins: [
     '~/plugins/markdownit.js',
+    '~/plugins/theme.js',
     { src: '~/plugins/vue-lazyload.js', ssr: false }
   ],
   /*
@@ -166,5 +167,8 @@ export default {
         return routes
       })
     }
-  }
+  },
+  // theme: {
+  //   value: 'light'
+  // }
 }

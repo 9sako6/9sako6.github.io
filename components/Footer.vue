@@ -6,33 +6,30 @@
         href="https://github.com/9sako6/9sako6-blog"
         target="_blank"
         rel="noopener noreferrer"
-      >
-        9sako6/9sako6-blog
-      </a>
+      >9sako6/9sako6-blog</a>
     </div>
     <div class="text-wrap">
-      <nuxt-link class="link" to="/about">
-        運営者情報
-      </nuxt-link>
+      <nuxt-link class="link" to="/about">運営者情報</nuxt-link>
     </div>
     <div class="text-wrap">
-      <nuxt-link class="link" to="/policy">
-        プライバシーポリシー
-      </nuxt-link>
+      <nuxt-link class="link" to="/policy">プライバシーポリシー</nuxt-link>
     </div>
     <div class="text-wrap">
-      <nuxt-link class="link" to="/contact">
-        お問い合わせ
-      </nuxt-link>
+      <nuxt-link class="link" to="/contact">お問い合わせ</nuxt-link>
     </div>
-    <div class="text-wrap">
-      &copy; 2019-2020 9sako6 All Rights Reserved
-    </div>
+    <div class="text-wrap">&copy; 2019-2020 9sako6 All Rights Reserved</div>
+    <dark-mode-toggle />
   </footer>
 </template>
 
 <script>
-export default {}
+import DarkModeToggle from '@/components/DarkModeToggle'
+
+export default {
+  components: {
+    DarkModeToggle
+  }
+}
 </script>
 
 <style scoped lang="scss">
