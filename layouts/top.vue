@@ -8,14 +8,14 @@
 
 <script>
 // import PageTitle from '~/components/PageTitle.vue'
-import TopTitle from "~/components/TopTitle.vue"
-import Footer from "~/components/Footer.vue"
+import TopTitle from '~/components/TopTitle.vue'
+import Footer from '~/components/Footer.vue'
 export default {
   components: {
     TopTitle,
     // PageTitle,
-    Footer,
-  },
+    Footer
+  }
 }
 </script>
 

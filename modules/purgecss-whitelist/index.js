@@ -1,6 +1,6 @@
-const katexSelectorsList = require("./katex.js")
+const katexSelectorsList = require('./katex.js')
 
-export default async function () {
+export default function () {
   const { options } = this.nuxt
 
   options.purgeCSS = {

@@ -16,29 +16,29 @@
 </template>
 
 <script>
-import Card from "~/components/Card"
-import { mapState, mapGetters } from "vuex"
+import { mapState, mapGetters } from 'vuex'
+import Card from '~/components/Card'
 
 export default {
   components: {
-    Card,
+    Card
   },
 
   computed: {
-    ...mapState(["posts"]),
-    ...mapGetters(["setPost", "setEyeCatch"]),
+    ...mapState(['posts']),
+    ...mapGetters(['setPost', 'setEyeCatch'])
   },
-  async asyncData({ params, store }) {
+  asyncData ({ params, store }) {
     const allPosts = store.state.posts
-    let posts = []
-    let tagName = ""
+    const posts = []
+    let tagName = ''
     allPosts.map((post) => {
       const tags = post.fields.tags
       if (tags) {
         tags.map((tag) => {
           if (
-            Object.prototype.hasOwnProperty.call(tag, "fields") &&
-            Object.prototype.hasOwnProperty.call(tag.fields, "slug") &&
+            Object.prototype.hasOwnProperty.call(tag, 'fields') &&
+            Object.prototype.hasOwnProperty.call(tag.fields, 'slug') &&
             tag.fields.slug === params.tag
           ) {
             tagName = tag.fields.name
@@ -49,14 +49,14 @@ export default {
     })
     return {
       tag: tagName,
-      taggedPosts: posts,
+      taggedPosts: posts
     }
   },
-  head() {
+  head () {
     return {
-      title: this.tag,
+      title: this.tag
     }
-  },
+  }
 }
 </script>
 

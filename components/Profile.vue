@@ -5,7 +5,11 @@
       <client-only>
         <transition name="fade">
           <lazy-component>
-            <img id="profile-avatar" src="~/static/icon.jpg" alt="a picture drawn by 9sako6" />
+            <img
+              id="profile-avatar"
+              src="~/static/icon.jpg"
+              alt="a picture drawn by 9sako6"
+            />
           </lazy-component>
         </transition>
       </client-only>
@@ -14,16 +18,15 @@
       <div>くさころ(9sako6) / Nagoya Univ. → Web Developer</div>
       <div>
         当サイト「
-        <div class="frame">腐</div>ったコロッケ」では、Web開発と競技プログラミングについて書きます。
+        <div class="frame">腐</div>
+        ったコロッケ」では、Web開発と競技プログラミングについて書きます。
         より詳細なプロフィールは「
         <nuxt-link class="link" to="/about">運営者情報</nuxt-link>」へ。
       </div>
       <ul class="list-disc">
         <li v-for="item in items" :key="item.id">
           <a :href="item.link" target="_blank" rel="noopener noreferrer">
-            {{
-            item.title
-            }}
+            {{ item.title }}
           </a>
         </li>
       </ul>
@@ -33,15 +36,15 @@
 
 <script>
 export default {
-  data: function () {
+  data () {
     return {
       items: [
-        { link: "https://twitter.com/9sako6/", title: "Twitter" },
-        { link: "https://github.com/9sako6/", title: "GitHub" },
-        { link: "https://atcoder.jp/users/qsako6/", title: "AtCoder" },
-      ],
+        { link: 'https://twitter.com/9sako6/', title: 'Twitter' },
+        { link: 'https://github.com/9sako6/', title: 'GitHub' },
+        { link: 'https://atcoder.jp/users/qsako6/', title: 'AtCoder' }
+      ]
     }
-  },
+  }
 }
 </script>
 
@@ -75,7 +78,8 @@ export default {
   opacity: 0;
 }
 a {
-  color: $my-red;
+  @apply text-blue-500;
+
   &:hover {
     text-decoration: underline;
   }

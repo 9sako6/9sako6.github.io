@@ -65,11 +65,15 @@
 .frase-3 {
   @include pc {
     font-size: 60px;
-    padding: 3px;
+    line-height: 72px;
+    width: 72px;
+    height: 72px;
   }
   @include mobile {
     font-size: 40px;
-    padding: 2px;
+    line-height: 48px;
+    width: 48px;
+    height: 48px;
   }
   color: $my-white;
   background-color: $my-black;

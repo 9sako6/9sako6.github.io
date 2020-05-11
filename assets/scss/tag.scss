@@ -16,7 +16,7 @@
   border-radius: 1em;
 
   &:hover {
-    color: rgb(187, 25, 87);
+    @apply text-blue-500;
   }
 
   @include pc {

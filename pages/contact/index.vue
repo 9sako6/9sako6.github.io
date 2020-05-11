@@ -14,18 +14,18 @@
   </section>
 </template>
 <script>
-import ContactForm from "~/components/ContactForm"
+import ContactForm from '~/components/ContactForm'
 
 export default {
   components: {
-    ContactForm,
+    ContactForm
   },
-  head() {
+  head () {
     return {
-      title: "お問い合わせ",
-      meta: [],
+      title: 'お問い合わせ',
+      meta: []
     }
-  },
+  }
 }
 </script>
 <style scoped lang="scss">
