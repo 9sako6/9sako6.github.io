@@ -76,14 +76,12 @@ export default {
       src: '~/node_modules/highlight.js/styles/atom-one-dark.css',
       lang: 'css'
     },
-    '~/assets/css/reset.css',
   ],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
     '~/plugins/markdownit.js',
-    { src: '~/plugins/vue-lazyload.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules

@@ -26,31 +26,31 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex"
-import Card from "~/components/Card"
-import Pagenation from "~/components/Pagenation"
+import { mapState, mapGetters } from 'vuex'
+import Card from '~/components/Card'
+import Pagenation from '~/components/Pagenation'
 
 export default {
   components: {
     Card,
-    Pagenation,
+    Pagenation
   },
   computed: {
-    ...mapState(["posts"]),
-    ...mapGetters(["setPost", "setEyeCatch"]),
+    ...mapState(['posts']),
+    ...mapGetters(['setPost', 'setEyeCatch'])
   },
-  async asyncData({ params }) {
-    if (params.id === undefined) params.id = 1
+  asyncData ({ params }) {
+    if (params.id === undefined) { params.id = 1 }
     return { pageNum: params.id }
   },
   data: () => ({
-    postNumPerPage: 5,
+    postNumPerPage: 5
   }),
-  head() {
+  head () {
     return {
-      titleTemplate: "",
-      meta: [],
+      titleTemplate: '',
+      meta: []
     }
-  },
+  }
 }
 </script>

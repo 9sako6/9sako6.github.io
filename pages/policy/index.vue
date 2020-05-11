@@ -21,19 +21,19 @@
   </section>
 </template>
 <script>
-import policy from "~/assets/md/policy.md"
+import policy from '~/assets/md/policy.md'
 
 export default {
   computed: {
-    policy() {
+    policy () {
       return policy
-    },
-  },
-  head() {
-    return {
-      title: "プライバシーポリシー",
     }
   },
+  head () {
+    return {
+      title: 'プライバシーポリシー'
+    }
+  }
 }
 </script>
 <style scoped lang="scss">

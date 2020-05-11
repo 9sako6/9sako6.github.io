@@ -44,7 +44,7 @@ div.tex-equations {
   }
 
   /deep/ a {
-    color: $my-red;
+    @apply text-blue-500;
 
     &:hover {
       text-decoration: underline;

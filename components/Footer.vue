@@ -52,6 +52,6 @@ footer {
   text-decoration: none;
 }
 .link:hover {
-  color: $my-red;
+  @apply text-teal-400;
 }
 </style>

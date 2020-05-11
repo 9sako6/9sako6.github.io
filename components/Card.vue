@@ -1,25 +1,22 @@
 <template>
   <div class="post">
     <div class="post-info-wrapper">
-      <div
-        class="post-category"
-        :style="`background-color: ${categoryColor(category)};`"
-      >{{ categoryName(category) }}</div>
+      <div :class="`post-category ${categoryColor(category)}`">
+        {{ categoryName(category) }}
+      </div>
       <div class="post-date">{{ createdAt.split("T")[0] }}</div>
     </div>
     <div class="post-title-wrap">
-      <nuxt-link :aria-label="link" :to="link" class="post-title">{{ title }}</nuxt-link>
+      <nuxt-link :aria-label="link" :to="link" class="post-title">
+        {{
+          title
+        }}
+      </nuxt-link>
     </div>
     <div class="box">
       <div class="left-box">
         <nuxt-link :aria-label="link" :to="link">
-          <client-only>
-            <transition name="fade">
-              <lazy-component>
-                <img :src="imgLink" :alt="title" class="eye-catch" />
-              </lazy-component>
-            </transition>
-          </client-only>
+          <img :src="imgLink" :alt="title" class="eye-catch" />
         </nuxt-link>
       </div>
       <div class="right-box">
@@ -42,34 +39,34 @@
 <script>
 export default {
   props: {
-    title: { type: String, default: "" },
-    description: { type: String, default: "" },
-    createdAt: { type: String, default: "" },
-    category: { type: String, default: "" },
-    link: { type: String, default: "" },
-    imgLink: { type: String, default: "" },
-    tags: { type: Array, default: () => [] },
+    title: { type: String, default: '' },
+    description: { type: String, default: '' },
+    createdAt: { type: String, default: '' },
+    category: { type: String, default: '' },
+    link: { type: String, default: '' },
+    imgLink: { type: String, default: '' },
+    tags: { type: Array, default: () => [] }
   },
   methods: {
-    categoryName(category_slug) {
-      if (category_slug === "competitive_prog") {
-        return "競プロ"
-      } else if (category_slug === "tech_blog") {
-        return "技術"
+    categoryName (categorySlug) {
+      if (categorySlug === 'competitive_prog') {
+        return '競プロ'
+      } else if (categorySlug === 'tech_blog') {
+        return '技術'
       } else {
-        return "雑記"
+        return '雑記'
       }
     },
-    categoryColor(category_slug) {
-      if (category_slug === "competitive_prog") {
-        return "#754242"
-      } else if (category_slug === "tech_blog") {
-        return "#e65a5a"
+    categoryColor (categorySlug) {
+      if (categorySlug === 'competitive_prog') {
+        return 'bg-purple-600'
+      } else if (categorySlug === 'tech_blog') {
+        return 'bg-blue-600'
       } else {
-        return "#222831"
+        return 'bg-gray-700'
       }
-    },
-  },
+    }
+  }
 }
 </script>
 
@@ -95,7 +92,6 @@ export default {
   width: 4em;
   line-height: 2em;
   text-align: center;
-  background-color: $my-gray;
   color: white;
 }
 .post-date {
@@ -161,15 +157,10 @@ a {
   object-fit: cover;
   border-radius: 3px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  @apply border-gray-300;
+  @apply bg-gray-300;
   &:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
 }
 </style>

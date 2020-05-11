@@ -4,10 +4,10 @@
 </template>
 <script>
 export default {
-  name: "BackArrow",
+  name: 'BackArrow',
   props: {
-    link: { type: String, default: "" },
-  },
+    link: { type: String, default: '' }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -15,7 +15,7 @@ export default {
   color: $my-black;
   text-decoration: none;
   &:hover {
-    color: $my-red;
+    @apply text-blue-500;
   }
 }
 div {

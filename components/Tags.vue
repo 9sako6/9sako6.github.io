@@ -21,17 +21,17 @@
 </template>
 
 <script>
-import { mapState } from "vuex"
+import { mapState } from 'vuex'
 
 export default {
   computed: {
-    ...mapState(["tags"]),
-    postCount() {
+    ...mapState(['tags']),
+    postCount () {
       return (currentTag) => {
         return this.$store.getters.associatePosts(currentTag).length
       }
-    },
-  },
+    }
+  }
 }
 </script>
 <style scoped lang="scss">
