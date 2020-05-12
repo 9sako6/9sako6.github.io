@@ -2,17 +2,11 @@
   <div id="profile">
     <div class="side-title">Profile</div>
     <div class="img-wrapper">
-      <client-only>
-        <transition name="fade">
-          <lazy-component>
-            <img
-              id="profile-avatar"
-              src="~/static/icon.jpg"
-              alt="a picture drawn by 9sako6"
-            />
-          </lazy-component>
-        </transition>
-      </client-only>
+      <img
+        id="profile-avatar"
+        src="~/static/icon.jpg"
+        alt="a picture drawn by 9sako6"
+      />
     </div>
     <div class="side-description">
       <div>くさころ(9sako6) / Nagoya Univ. → Web Developer</div>
@@ -36,16 +30,16 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       items: [
-        { link: 'https://twitter.com/9sako6/', title: 'Twitter' },
-        { link: 'https://github.com/9sako6/', title: 'GitHub' },
-        { link: 'https://atcoder.jp/users/qsako6/', title: 'AtCoder' }
-      ]
-    }
-  }
-}
+        { link: "https://twitter.com/9sako6/", title: "Twitter" },
+        { link: "https://github.com/9sako6/", title: "GitHub" },
+        { link: "https://atcoder.jp/users/qsako6/", title: "AtCoder" },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -69,13 +63,6 @@ export default {
   background-color: $my-black;
   color: $my-white;
   transform: rotate(-20deg);
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
 }
 a {
   @apply text-blue-500;
