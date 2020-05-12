@@ -10,7 +10,7 @@
 
 9sako6's personal website and blog, powered by Nuxt.js.
 
-- <a href="https://github.com/9sako6/9sako6-blog" target="_blank" rel="noopener noreferrer">9sako6/9sako6-blogr</a>
+- <a href="https://github.com/9sako6/9sako6-blog" target="_blank" rel="noopener noreferrer">9sako6/9sako6-blog</a>
 
 # Background
 
