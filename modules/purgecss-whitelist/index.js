@@ -6,7 +6,7 @@ export default function () {
   options.purgeCSS = {
     whitelistPatterns: [
       /hljs.*/,
-      /backquote/,
+      /ol/,
       /blockquote/,
       /table-of-contents/
     ],
