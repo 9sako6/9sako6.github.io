@@ -54,9 +54,6 @@ export default {
       return error({ statusCode: 400 });
     }
   },
-  beforeDestroy() {
-    delete window.twttr;
-  },
   mounted(){
     this.loadEmbedJS();
   },
