@@ -38,69 +38,85 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex";
 
 export default {
-  async asyncData ({ payload, store, params, error }) {
+  async asyncData({ payload, store, params, error }) {
     const post =
       payload ||
-      (await store.state.posts.find(post => post.fields.slug === params.slug))
+      (await store.state.posts.find(
+        (post) => post.fields.slug === params.slug
+      ));
 
     if (post) {
-      return { post }
+      return { post };
     } else {
-      return error({ statusCode: 400 })
+      return error({ statusCode: 400 });
     }
   },
+  beforeDestroy() {
+    delete window.twttr;
+  },
+  mounted(){
+    this.loadEmbedJS();
+  },
+  methods: {
+    loadEmbedJS() {
+      const script = document.createElement("script");
+      script.async = script.defer = true;
+      script.src = "https://platform.twitter.com/widgets.js";
+      this.$el.appendChild(script);
+    },
+  },
   data: () => ({
-    base_url: process.env.BASE_URL
+    base_url: process.env.BASE_URL,
   }),
   computed: {
-    ...mapGetters(['setPost', 'setEyeCatch'])
+    ...mapGetters(["setPost", "setEyeCatch"]),
   },
-  head () {
+  head() {
     return {
       title: this.post.fields.title,
       meta: [
         {
-          hid: 'og:title',
-          property: 'og:title',
-          content: this.post.fields.title || ''
+          hid: "og:title",
+          property: "og:title",
+          content: this.post.fields.title || "",
         },
         {
-          hid: 'description',
-          name: 'description',
-          content: this.post.fields.description || ''
+          hid: "description",
+          name: "description",
+          content: this.post.fields.description || "",
         },
         {
-          hid: 'og:description',
-          property: 'og:description',
-          content: this.post.fields.description || ''
+          hid: "og:description",
+          property: "og:description",
+          content: this.post.fields.description || "",
         },
         {
-          hid: 'og:url',
-          property: 'og:url',
-          content: process.env.BASE_URL + `/posts/${this.post.fields.slug}`
+          hid: "og:url",
+          property: "og:url",
+          content: process.env.BASE_URL + `/posts/${this.post.fields.slug}`,
         },
         {
-          hid: 'og:image',
-          property: 'og:image',
-          content: this.setEyeCatch(this.post).url
+          hid: "og:image",
+          property: "og:image",
+          content: this.setEyeCatch(this.post).url,
         },
         {
-          hid: 'twitter:card',
-          property: 'twitter:card',
-          content: 'summary'
+          hid: "twitter:card",
+          property: "twitter:card",
+          content: "summary",
         },
         {
-          hid: 'twitter:site',
-          property: 'twitter:site',
-          content: `@${process.env.TWITTER_USER}`
-        }
-      ]
-    }
-  }
-}
+          hid: "twitter:site",
+          property: "twitter:site",
+          content: `@${process.env.TWITTER_USER}`,
+        },
+      ],
+    };
+  },
+};
 </script>
 <style scoped lang="scss">
 @import "@/assets/scss/post.scss";
