@@ -45,6 +45,7 @@ div.tex-equations {
 
   /deep/ a {
     @apply text-blue-500;
+    word-break: break-all;
 
     &:hover {
       text-decoration: underline;

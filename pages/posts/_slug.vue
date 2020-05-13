@@ -34,34 +34,66 @@
       />
     </section>
     <back-arrow :link="`/`" />
+    <div class="mt-8 mb-8" v-if="nextPost">
+      <nuxt-link
+        class="text-blue-500 hover:underline flex leading-5 justify-start"
+        :to="`/posts/${nextPost.fields.slug}`"
+        ><ArrowLeft class="h-5 mr-2 text-gray-800" />{{
+          nextPost.fields.title
+        }}</nuxt-link
+      >
+    </div>
+    <div class="mt-8 mb-8" v-if="prevPost">
+      <nuxt-link
+        class="text-blue-500 hover:underline flex leading-5 justify-end"
+        :to="`/posts/${prevPost.fields.slug}`"
+        >{{ prevPost.fields.title }}<ArrowRight class="h-5 ml-2 text-gray-800"
+      /></nuxt-link>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
+import ArrowLeft from "@/components/svg/ArrowLeft";
+import ArrowRight from "@/components/svg/ArrowRight";
 
 export default {
+  components: {
+    ArrowLeft,
+    ArrowRight,
+  },
+  computed: {
+    ...mapGetters(["setPost", "setEyeCatch", "getPost"]),
+  },
   async asyncData({ payload, store, params, error }) {
+    let postIndex = -1;
     const post =
       payload ||
-      (await store.state.posts.find(
-        (post) => post.fields.slug === params.slug
-      ));
+      (await store.state.posts.find((post, i) => {
+        postIndex = i;
+        return post.fields.slug === params.slug;
+      }));
+
+    let prevPost = undefined;
+    if (postIndex < store.state.posts.length - 1) {
+      prevPost = store.getters.getPost(postIndex + 1);
+    }
+    let nextPost = undefined;
+    if (postIndex > 0) {
+      nextPost = store.getters.getPost(postIndex - 1);
+    }
 
     if (post) {
-      return { post };
+      return { post, prevPost, nextPost };
     } else {
       return error({ statusCode: 400 });
     }
   },
   beforeMount() {
-    window.twttr.widgets.load();
-  },
-  data: () => ({
-    base_url: process.env.BASE_URL,
-  }),
-  computed: {
-    ...mapGetters(["setPost", "setEyeCatch"]),
+    if (window.twttr && window.twttr.widgets) {
+      window.twttr.widgets.load();
+    }
   },
   head() {
     return {
