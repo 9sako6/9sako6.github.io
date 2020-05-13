@@ -90,7 +90,7 @@ export default {
       return error({ statusCode: 400 });
     }
   },
-  beforeMount() {
+  mounted() {
     if (window.twttr && window.twttr.widgets) {
       window.twttr.widgets.load();
     }
