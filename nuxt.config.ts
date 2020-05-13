@@ -55,7 +55,9 @@ export default {
       content: process.env.npm_package_description || ''
     },
     ],
-    script: [{}],
+    script: [
+      { src: 'https://platform.twitter.com/widgets.js', async: true }
+    ],
     link: [{
       rel: 'icon',
       type: 'image/x-icon',
@@ -96,6 +98,7 @@ export default {
     '~/modules/global-components/',
     '~/modules/purgecss-whitelist',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/sitemap'
   ],
   /*
    ** Nuxt.js modules
@@ -107,7 +110,6 @@ export default {
     '@nuxtjs/style-resources',
     '@/modules/hook',
     '@nuxtjs/markdownit',
-    '@nuxtjs/sitemap'
   ],
   router: {
     middleware: [

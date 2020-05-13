@@ -54,16 +54,8 @@ export default {
       return error({ statusCode: 400 });
     }
   },
-  mounted(){
-    this.loadEmbedJS();
-  },
-  methods: {
-    loadEmbedJS() {
-      const script = document.createElement("script");
-      script.async = script.defer = true;
-      script.src = "https://platform.twitter.com/widgets.js";
-      this.$el.appendChild(script);
-    },
+  beforeMount() {
+    window.twttr.widgets.load();
   },
   data: () => ({
     base_url: process.env.BASE_URL,
