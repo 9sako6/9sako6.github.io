@@ -14,18 +14,18 @@
   </div>
 </template>
 <script>
-import Header from '~/components/Header.vue'
-import Profile from '~/components/Profile.vue'
-import Tags from '~/components/Tags.vue'
-import Footer from '~/components/Footer.vue'
+import Header from "~/components/Header.vue";
+import Profile from "~/components/Profile.vue";
+import Tags from "~/components/Tags.vue";
+import Footer from "~/components/Footer.vue";
 export default {
   components: {
     Header,
     Profile,
     Tags,
-    Footer
-  }
-}
+    Footer,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -142,6 +142,11 @@ html {
   height: 100%;
 }
 a {
+  @apply text-blue-500;
   word-break: break-all;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 </style>
