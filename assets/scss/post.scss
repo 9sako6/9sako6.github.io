@@ -53,6 +53,7 @@ div.tex-equations {
 
   /deep/ img {
     text-align: center;
+
     @include pc {
       width: 90%;
       max-width: 500px;
@@ -133,6 +134,7 @@ div.tex-equations {
 
   /deep/ li {
     display: list-item;
+    word-break: break-all;
     margin: 0.5em 0 0.5em 0;
     @apply leading-normal;
   }
@@ -174,6 +176,7 @@ div.tex-equations {
   /deep/ code {
     @apply font-mono;
     @apply rounded;
+    word-break: break-all;
     background: #e2e6e9;
     padding: 2px;
   }
@@ -224,5 +227,9 @@ div.tex-equations {
 
   /deep/ .table-of-contents li {
     line-height: 1.3em;
+  }
+
+  /deep/ .katex-display {
+    overflow: scroll;
   }
 }
