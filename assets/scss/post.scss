@@ -52,10 +52,11 @@ div.tex-equations {
   }
 
   /deep/ img {
+    text-align: center;
     @include pc {
-      margin-left: 5%;
       width: 90%;
       max-width: 500px;
+      margin: auto;
     }
 
     @include mobile {
