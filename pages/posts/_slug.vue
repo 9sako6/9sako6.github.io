@@ -91,9 +91,7 @@ export default {
     }
   },
   mounted() {
-    if (window.twttr && window.twttr.widgets) {
-      window.twttr.widgets.load();
-    }
+    window?.twttr?.widgets?.load();
   },
   head() {
     return {
