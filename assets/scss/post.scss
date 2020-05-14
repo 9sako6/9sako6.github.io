@@ -44,7 +44,7 @@ div.tex-equations {
   }
 
   /deep/ a {
-    @apply text-blue-500;
+    @apply text-blue-700;
     word-break: break-all;
 
     &:hover {
@@ -57,7 +57,7 @@ div.tex-equations {
 
     @include pc {
       width: 90%;
-      max-width: 500px;
+      max-width: 600px;
       margin: auto;
     }
 

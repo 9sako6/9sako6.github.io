@@ -14,7 +14,9 @@
     <div class="box">
       <div class="left-box">
         <nuxt-link :aria-label="link" :to="link">
-          <img :src="imgLink" :alt="title" class="eye-catch" />
+          <lazy-component class="eye-catch">
+            <img :src="imgLink" alt="eye catch" class="eye-catch" />
+          </lazy-component>
         </nuxt-link>
       </div>
       <div class="right-box">
@@ -63,7 +65,7 @@ export default {
       if (categorySlug === "competitive_prog") {
         return "bg-purple-600";
       } else if (categorySlug === "tech_blog") {
-        return "bg-blue-600";
+        return "bg-blue-700";
       } else {
         return "bg-gray-700";
       }

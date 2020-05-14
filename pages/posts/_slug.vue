@@ -36,7 +36,7 @@
     <back-arrow :link="`/`" />
     <div class="mt-8 mb-8" v-if="nextPost">
       <nuxt-link
-        class="text-blue-500 hover:underline flex leading-5 justify-start"
+        class="text-blue-700 hover:underline flex leading-5 justify-start"
         :to="`/posts/${nextPost.fields.slug}`"
         ><ArrowLeft class="h-5 mr-2 text-gray-800" />{{
           nextPost.fields.title
@@ -45,7 +45,7 @@
     </div>
     <div class="mt-8 mb-8" v-if="prevPost">
       <nuxt-link
-        class="text-blue-500 hover:underline flex leading-5 justify-end"
+        class="text-blue-700 hover:underline flex leading-5 justify-end"
         :to="`/posts/${prevPost.fields.slug}`"
         >{{ prevPost.fields.title }}<ArrowRight class="h-5 ml-2 text-gray-800"
       /></nuxt-link>

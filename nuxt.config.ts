@@ -8,6 +8,10 @@ const siteTitle = '腐ったコロッケ'
 
 export default {
   mode: 'universal',
+  meta: [
+    { charset: 'utf-8' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+  ],
   /*
    ** Headers of the page
    */
@@ -56,7 +60,7 @@ export default {
     },
     ],
     script: [
-      { src: 'https://platform.twitter.com/widgets.js', async: true }
+      { src: 'https://platform.twitter.com/widgets.js', async: true, defer: true }
     ],
     link: [{
       rel: 'icon',
@@ -84,6 +88,7 @@ export default {
    */
   plugins: [
     '~/plugins/markdownit.js',
+    '~/plugins/vue-lazyload.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -98,18 +103,18 @@ export default {
     '~/modules/global-components/',
     '~/modules/purgecss-whitelist',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/markdownit',
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/pwa',
+    '@/modules/hook',
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/pwa',
-    '@nuxtjs/axios',
-    '@nuxtjs/style-resources',
-    '@/modules/hook',
-    '@nuxtjs/markdownit',
   ],
   router: {
     middleware: [

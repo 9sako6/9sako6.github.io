@@ -65,7 +65,7 @@ export default {
   transform: rotate(-20deg);
 }
 a {
-  @apply text-blue-500;
+  @apply text-blue-700;
 
   &:hover {
     text-decoration: underline;
