@@ -142,7 +142,7 @@ html {
   height: 100%;
 }
 a {
-  @apply text-blue-500;
+  @apply text-blue-700;
   word-break: break-all;
 
   &:hover {

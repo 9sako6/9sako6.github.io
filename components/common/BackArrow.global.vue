@@ -15,7 +15,7 @@ export default {
   color: $my-black;
   text-decoration: none;
   &:hover {
-    @apply text-blue-500;
+    @apply text-blue-700;
   }
 }
 div {

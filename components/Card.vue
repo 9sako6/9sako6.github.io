@@ -63,7 +63,7 @@ export default {
       if (categorySlug === "competitive_prog") {
         return "bg-purple-600";
       } else if (categorySlug === "tech_blog") {
-        return "bg-blue-600";
+        return "bg-blue-700";
       } else {
         return "bg-gray-700";
       }
