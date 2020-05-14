@@ -14,7 +14,7 @@
     <div class="box">
       <div class="left-box">
         <nuxt-link :aria-label="link" :to="link">
-          <img :src="imgLink" :alt="title" class="eye-catch" />
+          <img v-lazy="imgLink" alt="eye catch" class="eye-catch" />
         </nuxt-link>
       </div>
       <div class="right-box">
