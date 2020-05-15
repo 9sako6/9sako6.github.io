@@ -5,11 +5,13 @@ export default function () {
 
   options.purgeCSS = {
     whitelistPatterns: [
-      /hljs.*/,
-      /ol/,
-      /blockquote/,
-      /table-of-contents/
+      /hljs.*/
     ],
-    whitelist: katexSelectorsList()
+    whitelist: [
+      ...katexSelectorsList(),
+      'ol',
+      'blockquote',
+      'table-of-contents'
+    ]
   }
 }
