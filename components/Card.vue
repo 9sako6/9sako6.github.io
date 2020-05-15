@@ -21,11 +21,13 @@
       </div>
       <div class="right-box">
         <div v-if="description" class="post-description">
-          <nuxt-link :aria-label="link" :to="link">{{
-            `${description.substr(0, 160)}${
-              description.length > 160 ? "..." : ""
-            }`
-          }}</nuxt-link>
+          <nuxt-link :aria-label="link" :to="link">
+            {{
+              `${description.substr(0, 160)}${
+                description.length > 160 ? "..." : ""
+              }`
+            }}
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -43,35 +45,35 @@
 <script>
 export default {
   props: {
-    title: { type: String, default: "" },
-    description: { type: String, default: "" },
-    createdAt: { type: String, default: "" },
-    category: { type: String, default: "" },
-    link: { type: String, default: "" },
-    imgLink: { type: String, default: "" },
-    tags: { type: Array, default: () => [] },
+    title: { type: String, default: '' },
+    description: { type: String, default: '' },
+    createdAt: { type: String, default: '' },
+    category: { type: String, default: '' },
+    link: { type: String, default: '' },
+    imgLink: { type: String, default: '' },
+    tags: { type: Array, default: () => [] }
   },
   methods: {
-    categoryName(categorySlug) {
-      if (categorySlug === "competitive_prog") {
-        return "競プロ";
-      } else if (categorySlug === "tech_blog") {
-        return "技術";
+    categoryName (categorySlug) {
+      if (categorySlug === 'competitive_prog') {
+        return '競プロ'
+      } else if (categorySlug === 'tech_blog') {
+        return '技術'
       } else {
-        return "雑記";
+        return '雑記'
       }
     },
-    categoryColor(categorySlug) {
-      if (categorySlug === "competitive_prog") {
-        return "bg-purple-600";
-      } else if (categorySlug === "tech_blog") {
-        return "bg-blue-700";
+    categoryColor (categorySlug) {
+      if (categorySlug === 'competitive_prog') {
+        return 'bg-purple-600'
+      } else if (categorySlug === 'tech_blog') {
+        return 'bg-blue-700'
       } else {
-        return "bg-gray-700";
+        return 'bg-gray-700'
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">

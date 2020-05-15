@@ -30,16 +30,16 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       items: [
-        { link: "https://twitter.com/9sako6/", title: "Twitter" },
-        { link: "https://github.com/9sako6/", title: "GitHub" },
-        { link: "https://atcoder.jp/users/qsako6/", title: "AtCoder" },
-      ],
-    };
-  },
-};
+        { link: 'https://twitter.com/9sako6/', title: 'Twitter' },
+        { link: 'https://github.com/9sako6/', title: 'GitHub' },
+        { link: 'https://atcoder.jp/users/qsako6/', title: 'AtCoder' }
+      ]
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">

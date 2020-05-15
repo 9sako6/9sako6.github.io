@@ -34,108 +34,110 @@
       />
     </section>
     <back-arrow :link="`/`" />
-    <div class="mt-8 mb-8" v-if="nextPost">
+    <div v-if="nextPost" class="mt-8 mb-8">
       <nuxt-link
         class="text-blue-700 hover:underline flex leading-5 justify-start"
         :to="`/posts/${nextPost.fields.slug}`"
-        ><ArrowLeft class="h-5 mr-2 text-gray-800" />{{
-          nextPost.fields.title
-        }}</nuxt-link
       >
+        <ArrowLeft class="h-5 mr-2 text-gray-800" />{{
+          nextPost.fields.title
+        }}
+      </nuxt-link>
     </div>
-    <div class="mt-8 mb-8" v-if="prevPost">
+    <div v-if="prevPost" class="mt-8 mb-8">
       <nuxt-link
         class="text-blue-700 hover:underline flex leading-5 justify-end"
         :to="`/posts/${prevPost.fields.slug}`"
-        >{{ prevPost.fields.title }}<ArrowRight class="h-5 ml-2 text-gray-800"
-      /></nuxt-link>
+      >
+        {{ prevPost.fields.title }}<ArrowRight class="h-5 ml-2 text-gray-800"/>
+      </nuxt-link>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import ArrowLeft from "@/components/svg/ArrowLeft";
-import ArrowRight from "@/components/svg/ArrowRight";
+import { mapGetters } from 'vuex'
+import ArrowLeft from '@/components/svg/ArrowLeft'
+import ArrowRight from '@/components/svg/ArrowRight'
 
 export default {
   components: {
     ArrowLeft,
-    ArrowRight,
+    ArrowRight
   },
   computed: {
-    ...mapGetters(["setPost", "setEyeCatch", "getPost"]),
+    ...mapGetters(['setPost', 'setEyeCatch', 'getPost'])
   },
-  async asyncData({ payload, store, params, error }) {
-    let postIndex = -1;
+  async asyncData ({ payload, store, params, error }) {
+    let postIndex = -1
     const post =
       payload ||
       (await store.state.posts.find((post, i) => {
-        postIndex = i;
-        return post.fields.slug === params.slug;
-      }));
+        postIndex = i
+        return post.fields.slug === params.slug
+      }))
 
-    let prevPost = undefined;
+    let prevPost
     if (postIndex < store.state.posts.length - 1) {
-      prevPost = store.getters.getPost(postIndex + 1);
+      prevPost = store.getters.getPost(postIndex + 1)
     }
-    let nextPost = undefined;
+    let nextPost
     if (postIndex > 0) {
-      nextPost = store.getters.getPost(postIndex - 1);
+      nextPost = store.getters.getPost(postIndex - 1)
     }
 
     if (post) {
-      return { post, prevPost, nextPost };
+      return { post, prevPost, nextPost }
     } else {
-      return error({ statusCode: 400 });
+      return error({ statusCode: 400 })
     }
   },
-  mounted() {
-    window?.twttr?.widgets?.load();
+  mounted () {
+    window?.twttr?.widgets?.load()
   },
-  head() {
+  head () {
     return {
       title: this.post.fields.title,
       meta: [
         {
-          hid: "og:title",
-          property: "og:title",
-          content: this.post.fields.title || "",
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.post.fields.title || ''
         },
         {
-          hid: "description",
-          name: "description",
-          content: this.post.fields.description || "",
+          hid: 'description',
+          name: 'description',
+          content: this.post.fields.description || ''
         },
         {
-          hid: "og:description",
-          property: "og:description",
-          content: this.post.fields.description || "",
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.post.fields.description || ''
         },
         {
-          hid: "og:url",
-          property: "og:url",
-          content: process.env.BASE_URL + `/posts/${this.post.fields.slug}`,
+          hid: 'og:url',
+          property: 'og:url',
+          content: process.env.BASE_URL + `/posts/${this.post.fields.slug}`
         },
         {
-          hid: "og:image",
-          property: "og:image",
-          content: this.setEyeCatch(this.post).url,
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.setEyeCatch(this.post).url
         },
         {
-          hid: "twitter:card",
-          property: "twitter:card",
-          content: "summary",
+          hid: 'twitter:card',
+          property: 'twitter:card',
+          content: 'summary'
         },
         {
-          hid: "twitter:site",
-          property: "twitter:site",
-          content: `@${process.env.TWITTER_USER}`,
-        },
-      ],
-    };
-  },
-};
+          hid: 'twitter:site',
+          property: 'twitter:site',
+          content: `@${process.env.TWITTER_USER}`
+        }
+      ]
+    }
+  }
+}
 </script>
 <style scoped lang="scss">
 @import "@/assets/scss/post.scss";
