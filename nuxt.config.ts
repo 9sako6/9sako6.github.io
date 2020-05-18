@@ -99,9 +99,6 @@ export default {
     ['@nuxtjs/google-analytics', {
       id: process.env.GOOGLE_ANALYTICS_ID
     }],
-    ['@nuxtjs/google-adsense', {
-      id: process.env.GOOGLE_ADSENSE_ID
-    }],
     '@nuxt/typescript-build',
     '~/modules/global-components/',
     '~/modules/purgecss-whitelist',
