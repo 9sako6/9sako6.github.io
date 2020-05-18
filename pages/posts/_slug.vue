@@ -33,7 +33,10 @@
         v-html="$md.render(post.fields.body)"
       />
       Share:
-      <a :href="hatenaUrl" target="_blank" rel="nofollow"><Hatena class="h-10" /></a>
+      <span class="flex">
+        <a :href="twitterUrl" target="_blank" rel="nofollow"><Twitter class="h-10 mr-3" /></a>
+        <a :href="hatenaUrl" target="_blank" rel="nofollow"><Hatena class="h-10 mr-3" /></a>
+      </span>
     </section>
     <back-arrow :link="`/`" />
     <div v-if="nextPost" class="mt-8 mb-8">
@@ -60,12 +63,14 @@ import { mapGetters } from 'vuex'
 import ArrowLeft from '@/components/svg/ArrowLeft'
 import ArrowRight from '@/components/svg/ArrowRight'
 import Hatena from '@/components/svg/Hatena'
+import Twitter from '@/components/svg/Twitter'
 
 export default {
   components: {
     ArrowLeft,
     ArrowRight,
-    Hatena
+    Hatena,
+    Twitter
   },
   computed: {
     ...mapGetters(['setPost', 'setEyeCatch', 'getPost'])
@@ -96,14 +101,21 @@ export default {
   },
   data () {
     return {
-      hatenaUrl: ''
+      hatenaUrl: '',
+      twitterUrl: ''
     }
   },
   mounted () {
     window?.twttr?.widgets?.load()
     this.createHatenaUrl()
+    this.createTwitterUrl()
   },
   methods: {
+    createTwitterUrl () {
+      const url = encodeURIComponent(`${process.env.BASE_URL}/posts/${this.post.fields.slug}`)
+      const txt = encodeURIComponent(`${this.post.fields.title} | 腐ったコロッケ`)
+      this.twitterUrl = `https://twitter.com/intent/tweet?text=${txt}&url=${url}`
+    },
     createHatenaUrl () {
       const url = encodeURIComponent(`${process.env.BASE_URL}/posts/${this.post.fields.slug}`)
       this.hatenaUrl = `https://b.hatena.ne.jp/add?mode=confirm&url=${url}&text=${this.post.fields.title}`
