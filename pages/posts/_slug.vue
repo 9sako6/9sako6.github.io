@@ -32,6 +32,8 @@
         style="margin-bottom: 120px;"
         v-html="$md.render(post.fields.body)"
       />
+      Share:
+      <a :href="hatenaUrl" target="_blank" rel="nofollow"><Hatena class="h-10" /></a>
     </section>
     <back-arrow :link="`/`" />
     <div v-if="nextPost" class="mt-8 mb-8">
@@ -39,9 +41,7 @@
         class="text-blue-700 hover:underline flex leading-5 justify-start"
         :to="`/posts/${nextPost.fields.slug}`"
       >
-        <ArrowLeft class="h-5 mr-2 text-gray-800" />{{
-          nextPost.fields.title
-        }}
+        <ArrowLeft class="h-5 mr-2 text-gray-800" />{{ nextPost.fields.title }}
       </nuxt-link>
     </div>
     <div v-if="prevPost" class="mt-8 mb-8">
@@ -49,7 +49,7 @@
         class="text-blue-700 hover:underline flex leading-5 justify-end"
         :to="`/posts/${prevPost.fields.slug}`"
       >
-        {{ prevPost.fields.title }}<ArrowRight class="h-5 ml-2 text-gray-800"/>
+        {{ prevPost.fields.title }}<ArrowRight class="h-5 ml-2 text-gray-800" />
       </nuxt-link>
     </div>
   </div>
@@ -59,11 +59,13 @@
 import { mapGetters } from 'vuex'
 import ArrowLeft from '@/components/svg/ArrowLeft'
 import ArrowRight from '@/components/svg/ArrowRight'
+import Hatena from '@/components/svg/Hatena'
 
 export default {
   components: {
     ArrowLeft,
-    ArrowRight
+    ArrowRight,
+    Hatena
   },
   computed: {
     ...mapGetters(['setPost', 'setEyeCatch', 'getPost'])
@@ -92,8 +94,20 @@ export default {
       return error({ statusCode: 400 })
     }
   },
+  data () {
+    return {
+      hatenaUrl: ''
+    }
+  },
   mounted () {
     window?.twttr?.widgets?.load()
+    this.createHatenaUrl()
+  },
+  methods: {
+    createHatenaUrl () {
+      const url = encodeURIComponent(`${process.env.BASE_URL}/posts/${this.post.fields.slug}`)
+      this.hatenaUrl = `https://b.hatena.ne.jp/add?mode=confirm&url=${url}&text=${this.post.fields.title}`
+    }
   },
   head () {
     return {
