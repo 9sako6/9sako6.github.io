@@ -1,10 +1,10 @@
 import {
   fetchRoutes
-} from './plugins/router'
+} from './plugins/router';
 
 require('dotenv').config();
 
-const siteTitle = '腐ったコロッケ'
+const siteTitle = '腐ったコロッケ';
 
 export default {
   mode: 'universal',
@@ -57,7 +57,7 @@ export default {
       hid: 'og:description',
       property: 'og:description',
       content: process.env.npm_package_description || ''
-    },
+    }
     ],
     script: [
       { src: 'https://platform.twitter.com/widgets.js', async: true, defer: true }
@@ -81,7 +81,7 @@ export default {
     {
       src: '~/node_modules/highlight.js/styles/atom-one-dark.css',
       lang: 'css'
-    },
+    }
   ],
   /*
    ** Plugins to load before mounting the App
@@ -108,7 +108,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
-    '@/modules/hook',
+    '@/modules/hook'
   ],
   /*
    ** Nuxt.js modules
@@ -133,7 +133,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config: any, ctx: any) { }
+    extend (config: any, ctx: any) { }
   },
   /**
    * Generate configuration
@@ -141,10 +141,12 @@ export default {
   generate: {
     fallback: true,
     subFolders: false,
-    routes() {
-      return fetchRoutes().then((routes) => {
-        return routes
-      })
+    async routes () {
+      try {
+        return await fetchRoutes();
+      } catch (error) {
+        console.error(error);
+      }
     }
   },
   env: {
@@ -152,13 +154,13 @@ export default {
     CTF_SPACE_ID: process.env.CTF_SPACE_ID,
     CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID,
     CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,
-    TWITTER_USER: process.env.TWITTER_USER,
+    TWITTER_USER: process.env.TWITTER_USER
   },
   styleResources: {
     scss: [
       '~/assets/scss/colors.scss',
       '~/assets/scss/media-query.scss',
-      '~/assets/scss/size.scss',
+      '~/assets/scss/size.scss'
     ]
   },
   sitemap: {
@@ -166,10 +168,12 @@ export default {
     hostname: process.env.BASE_URL,
     cacheTime: 1000 * 60 * 15,
     gzip: true,
-    routes: async () => {
-      return fetchRoutes().then((routes) => {
-        return routes
-      })
+    async routes () {
+      try {
+        return await fetchRoutes();
+      } catch (error) {
+        console.error(error);
+      }
     }
   }
-}
+};

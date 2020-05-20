@@ -2,29 +2,29 @@
   <div class="container">
     <client-only>
       <form name="contact" netlify-honeypot="bot-field" data-netlify="true" method="post">
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="contact">
         <p class="hidden" style="display: none;">
           <label>
             Don’t fill this out:
-            <input name="bot-field" />
+            <input name="bot-field">
           </label>
         </p>
         <p class="form-area">
           <label for="name">
             <div class="form-title form-required">名前</div>
-            <input class="input" type="text" name="name" required />
+            <input class="input" type="text" name="name" required>
           </label>
         </p>
         <p class="form-area">
           <label for="email">
             <div class="form-title form-required">メールアドレス</div>
-            <input class="input" type="email" name="email" required />
+            <input class="input" type="email" name="email" required>
           </label>
         </p>
         <p class="form-area">
           <label>
             <div class="form-title form-required">件名</div>
-            <input class="input" type="text" name="subject" required />
+            <input class="input" type="text" name="subject" required>
           </label>
         </p>
         <p class="form-area">
@@ -34,7 +34,9 @@
           </label>
         </p>
         <p class="form-area" align="center">
-          <button class="button" type="submit">送信</button>
+          <button class="button" type="submit">
+            送信
+          </button>
         </p>
       </form>
     </client-only>

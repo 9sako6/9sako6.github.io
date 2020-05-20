@@ -8,7 +8,7 @@ export default {
   props: {
     link: { type: String, default: '' }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 .link {

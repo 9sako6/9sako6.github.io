@@ -8,12 +8,12 @@
       :key="post.id"
     >
       <Card
-        :title="setPost(post).title"
+        :title="post.fields.title"
         :description="post.fields.description"
         :created-at="post.sys.createdAt"
         :link="`/posts/${post.fields.slug}`"
         :tags="post.fields.tags"
-        :img-link="setEyeCatch(post).url"
+        :img-link="getEyeCatch(post).url"
         :category="post.fields.category.fields.slug"
       />
     </div>
@@ -26,31 +26,33 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
-import Card from '~/components/Card'
-import Pagenation from '~/components/Pagenation'
+import { mapState, mapGetters } from 'vuex';
+import Card from '~/components/Card';
+import Pagenation from '~/components/Pagenation';
 
 export default {
   components: {
     Card,
     Pagenation
   },
-  computed: {
-    ...mapState(['posts']),
-    ...mapGetters(['setPost', 'setEyeCatch'])
-  },
   asyncData ({ params }) {
-    if (params.id === undefined) { params.id = 1 }
-    return { pageNum: params.id }
+    if (params.id === undefined) {
+      params.id = 1;
+    }
+    return { pageNum: params.id };
   },
   data: () => ({
     postNumPerPage: 5
   }),
+  computed: {
+    ...mapState(['posts']),
+    ...mapGetters(['getEyeCatch'])
+  },
   head () {
     return {
       titleTemplate: '',
       meta: []
-    }
+    };
   }
-}
+};
 </script>

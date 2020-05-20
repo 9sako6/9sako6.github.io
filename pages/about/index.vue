@@ -21,20 +21,20 @@
   </section>
 </template>
 <script>
-import about from '~/assets/md/about.md'
+import about from '~/assets/md/about.md';
 
 export default {
   computed: {
     about () {
-      return about
+      return about;
     }
   },
   head () {
     return {
       title: 'About 9sako6'
-    }
+    };
   }
-}
+};
 </script>
 <style scoped lang="scss">
 @import "@/assets/scss/post.scss";

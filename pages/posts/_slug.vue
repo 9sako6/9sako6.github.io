@@ -34,8 +34,20 @@
       />
       Share:
       <span class="flex">
-        <a :href="twitterUrl" target="_blank" rel="nofollow"><Twitter class="h-10 mr-3" /></a>
-        <a :href="hatenaUrl" target="_blank" rel="nofollow"><Hatena class="h-10 mr-3" /></a>
+        <a
+          :href="twitterUrl"
+          target="_blank"
+          rel="nofollow"
+        ><Twitter
+          class="h-10 mr-3"
+        /></a>
+        <a
+          :href="hatenaUrl"
+          target="_blank"
+          rel="nofollow"
+        ><Hatena
+          class="h-10 mr-3"
+        /></a>
       </span>
     </section>
     <back-arrow :link="`/`" />
@@ -59,11 +71,11 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import ArrowLeft from '@/components/svg/ArrowLeft'
-import ArrowRight from '@/components/svg/ArrowRight'
-import Hatena from '@/components/svg/Hatena'
-import Twitter from '@/components/svg/Twitter'
+import { mapGetters } from 'vuex';
+import ArrowLeft from '@/components/svg/ArrowLeft';
+import ArrowRight from '@/components/svg/ArrowRight';
+import Hatena from '@/components/svg/Hatena';
+import Twitter from '@/components/svg/Twitter';
 
 export default {
   components: {
@@ -72,53 +84,60 @@ export default {
     Hatena,
     Twitter
   },
-  computed: {
-    ...mapGetters(['setPost', 'setEyeCatch', 'getPost'])
-  },
+
   async asyncData ({ payload, store, params, error }) {
-    let postIndex = -1
+    let postIndex = -1;
     const post =
       payload ||
       (await store.state.posts.find((post, i) => {
-        postIndex = i
-        return post.fields.slug === params.slug
-      }))
+        postIndex = i;
+        return post.fields.slug === params.slug;
+      }));
 
-    let prevPost
+    let prevPost;
     if (postIndex < store.state.posts.length - 1) {
-      prevPost = store.getters.getPost(postIndex + 1)
+      prevPost = store.getters.getPost(postIndex + 1);
     }
-    let nextPost
+    let nextPost;
     if (postIndex > 0) {
-      nextPost = store.getters.getPost(postIndex - 1)
+      nextPost = store.getters.getPost(postIndex - 1);
     }
 
     if (post) {
-      return { post, prevPost, nextPost }
+      return { post, prevPost, nextPost };
     } else {
-      return error({ statusCode: 400 })
+      return error({ statusCode: 400 });
     }
   },
   data () {
     return {
       hatenaUrl: '',
       twitterUrl: ''
-    }
+    };
+  },
+  computed: {
+    ...mapGetters(['getEyeCatch', 'getPost'])
   },
   mounted () {
-    window?.twttr?.widgets?.load()
-    this.createHatenaUrl()
-    this.createTwitterUrl()
+    window?.twttr?.widgets?.load();
+    this.createHatenaUrl();
+    this.createTwitterUrl();
   },
   methods: {
     createTwitterUrl () {
-      const url = encodeURIComponent(`${process.env.BASE_URL}/posts/${this.post.fields.slug}`)
-      const txt = encodeURIComponent(`${this.post.fields.title} | 腐ったコロッケ`)
-      this.twitterUrl = `https://twitter.com/intent/tweet?text=${txt}&url=${url}`
+      const url = encodeURIComponent(
+        `${process.env.BASE_URL}/posts/${this.post.fields.slug}`
+      );
+      const txt = encodeURIComponent(
+        `${this.post.fields.title} | 腐ったコロッケ`
+      );
+      this.twitterUrl = `https://twitter.com/intent/tweet?text=${txt}&url=${url}`;
     },
     createHatenaUrl () {
-      const url = encodeURIComponent(`${process.env.BASE_URL}/posts/${this.post.fields.slug}`)
-      this.hatenaUrl = `https://b.hatena.ne.jp/add?mode=confirm&url=${url}&text=${this.post.fields.title}`
+      const url = encodeURIComponent(
+        `${process.env.BASE_URL}/posts/${this.post.fields.slug}`
+      );
+      this.hatenaUrl = `https://b.hatena.ne.jp/add?mode=confirm&url=${url}&text=${this.post.fields.title}`;
     }
   },
   head () {
@@ -148,7 +167,7 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: this.setEyeCatch(this.post).url
+          content: this.getEyeCatch(this.post).url
         },
         {
           hid: 'twitter:card',
@@ -161,9 +180,9 @@ export default {
           content: `@${process.env.TWITTER_USER}`
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 <style scoped lang="scss">
 @import "@/assets/scss/post.scss";

@@ -4,7 +4,7 @@ module.exports = function () {
       path: '/',
       component: 'pages/page/_id.vue',
       name: 'blog-page-id'
-    }
-    routes.unshift(blogPages)
-  })
-}
+    };
+    routes.unshift(blogPages);
+  });
+};
