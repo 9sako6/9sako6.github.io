@@ -4,7 +4,9 @@
       <div :class="`post-category ${categoryColor(category)}`">
         {{ categoryName(category) }}
       </div>
-      <div class="post-date">{{ createdAt.split("T")[0] }}</div>
+      <div class="post-date">
+        {{ createdAt.split("T")[0] }}
+      </div>
     </div>
     <div class="post-title-wrap">
       <nuxt-link :aria-label="link" :to="link" class="post-title">
@@ -15,7 +17,7 @@
       <div class="left-box">
         <nuxt-link :aria-label="link" :to="link">
           <lazy-component class="eye-catch">
-            <img :src="imgLink" alt="eye catch" class="eye-catch" />
+            <img :src="imgLink" alt="eye catch" class="eye-catch">
           </lazy-component>
         </nuxt-link>
       </div>
@@ -56,24 +58,24 @@ export default {
   methods: {
     categoryName (categorySlug) {
       if (categorySlug === 'competitive_prog') {
-        return '競プロ'
+        return '競プロ';
       } else if (categorySlug === 'tech_blog') {
-        return '技術'
+        return '技術';
       } else {
-        return '雑記'
+        return '雑記';
       }
     },
     categoryColor (categorySlug) {
       if (categorySlug === 'competitive_prog') {
-        return 'bg-purple-600'
+        return 'bg-purple-600';
       } else if (categorySlug === 'tech_blog') {
-        return 'bg-blue-700'
+        return 'bg-blue-700';
       } else {
-        return 'bg-gray-700'
+        return 'bg-gray-700';
       }
     }
   }
-}
+};
 </script>
 
 <style scoped lang="scss">

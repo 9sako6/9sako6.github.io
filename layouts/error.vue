@@ -18,7 +18,7 @@
 <script>
 export default {
   props: ['error']
-}
+};
 </script>
 
 <style scoped lang="scss">

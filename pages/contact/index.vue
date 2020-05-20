@@ -14,7 +14,7 @@
   </section>
 </template>
 <script>
-import ContactForm from '~/components/ContactForm'
+import ContactForm from '~/components/ContactForm';
 
 export default {
   components: {
@@ -24,9 +24,9 @@ export default {
     return {
       title: 'お問い合わせ',
       meta: []
-    }
+    };
   }
-}
+};
 </script>
 <style scoped lang="scss">
 @import "@/assets/scss/post.scss";
