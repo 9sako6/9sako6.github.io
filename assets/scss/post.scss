@@ -24,7 +24,6 @@ div.tex-equations {
 }
 
 .post-meta {
-  color: #696565;
   margin: 2em 0 2em 1em;
 }
 
@@ -34,7 +33,6 @@ div.tex-equations {
 }
 
 .page {
-  color: $my-black;
   @apply text-lg;
 
   /deep/ ::before,
@@ -44,7 +42,6 @@ div.tex-equations {
   }
 
   /deep/ a {
-    @apply text-blue-700;
     word-break: break-all;
 
     &:hover {
@@ -70,26 +67,19 @@ div.tex-equations {
     margin: 2.5em 0 1.5em 0;
     font-size: 1.8em;
     padding: 0.4em 0;
-    color: #494949;
-    // background: #f4f4f4;
-    // border-left: solid 5px #494949;
-    border-bottom: solid 3px #494949;
   }
 
   /deep/ h2 {
     margin: 2.5em 0 1.3em 0;
     font-size: 1.5em;
     padding: 0.25em 0.5em;
-    color: #494949;
     background: transparent;
-    border-left: solid 5px #494949;
   }
 
   /deep/ h3 {
     margin: 2.5em 0 1.3em 0;
     font-size: 1.5em;
     padding: 0.25em 0.5em;
-    color: #494949;
     background: transparent;
   }
 
@@ -145,8 +135,8 @@ div.tex-equations {
     padding: 30px 15px 8px 15px;
     box-sizing: border-box;
     font-style: italic;
-    background: #efefef;
-    color: #555;
+    // background: #efefef;
+    // color: #555;
   }
 
   /deep/ blockquote:before {
@@ -178,7 +168,6 @@ div.tex-equations {
     @apply font-mono;
     @apply rounded;
     word-break: break-all;
-    background: #e2e6e9;
     padding: 2px;
   }
 
@@ -209,21 +198,17 @@ div.tex-equations {
 
   /deep/ .table-of-contents {
     padding: 0 0 1em 0;
-    background-color: #fafafa;
+    // background-color: #fafafa;
   }
 
   /deep/ .table-of-contents::before {
     display: block;
     font-weight: 600;
-    color: #494949;
+    // color: #494949;
     padding: 1em;
     content: "目次";
     font-size: 1.5em;
     margin-bottom: 1em;
-  }
-
-  /deep/ .table-of-contents a {
-    color: #494949;
   }
 
   /deep/ .table-of-contents li {
@@ -232,5 +217,84 @@ div.tex-equations {
 
   /deep/ .katex-display {
     overflow: scroll;
+  }
+
+}
+
+.light .page {
+  /deep/ h1 {
+    border-bottom: solid 3px #494949;
+    transition: border-bottom 0.3s ease-in-out;
+  }
+
+  /deep/ h2 {
+    border-left: solid 5px #494949;
+    transition: border-left 0.3s ease-in-out;
+  }
+
+  /deep/ code {
+    background: #e2e6e9;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  /deep/ pre code {
+    @apply bg-transparent;
+    transition: 0.3s ease-in-out;
+  }
+
+  /deep/ a {
+    @apply text-blue-700;
+    transition: 0.3s ease-in-out;
+  }
+
+  /deep/ .table-of-contents {
+    @apply bg-gray-100;
+  }
+
+  /deep/ blockquote {
+    @apply bg-gray-200;
+  }
+
+  /deep/ .post-tag {
+    @apply text-black;
+  }
+}
+
+.dark .page {
+  /deep/ h1 {
+    border-bottom: solid 3px #bfbfbf;
+    transition: border-bottom 0.3s ease-in-out;
+  }
+
+  /deep/ h2 {
+    border-left: solid 5px #bfbfbf;
+    transition: border-left 0.3s ease-in-out;
+  }
+
+  /deep/ code {
+    @apply bg-gray-900;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  /deep/ pre code {
+    @apply bg-transparent;
+    transition: 0.3s ease-in-out;
+  }
+
+  /deep/ a {
+    @apply text-teal-400;
+    transition: 0.3s ease-in-out;
+  }
+
+  /deep/ .table-of-contents {
+    @apply bg-gray-900;
+  }
+
+  /deep/ blockquote {
+    @apply bg-gray-900;
+  }
+
+  /deep/ .post-tag {
+    @apply text-gray-400;
   }
 }

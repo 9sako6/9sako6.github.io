@@ -1,15 +1,17 @@
 <template>
-  <div id="root">
+  <div id="root" :class="mode">
     <div id="container-outer">
       <Header />
+      <DarkModeToggle :toggle-mode="toggleMode" :mode="mode" />
       <div id="content">
         <nuxt id="page-main" keep-alive />
         <aside id="side-menu">
-          <Profile />
+          <Profile :mode="mode" />
           <Tags />
         </aside>
       </div>
     </div>
+    <DarkModeToggle :toggle-mode="toggleMode" :mode="mode" />
     <Footer />
   </div>
 </template>
@@ -18,12 +20,34 @@ import Header from '~/components/Header.vue';
 import Profile from '~/components/Profile.vue';
 import Tags from '~/components/Tags.vue';
 import Footer from '~/components/Footer.vue';
+import DarkModeToggle from '~/components/DarkModeToggle.vue';
 export default {
   components: {
     Header,
     Profile,
     Tags,
-    Footer
+    Footer,
+    DarkModeToggle
+  },
+  data () {
+    return {
+      mode: 'dark'
+    };
+  },
+  mounted () {
+    this.mode = localStorage.getItem('mode') || 'dark';
+    document.querySelector('html').style.backgroundColor =
+      this.mode === 'dark' ? 'rgb(42, 56, 72)' : 'rgb(255, 255, 255)';
+  },
+  methods: {
+    toggleMode () {
+      const mode = localStorage.getItem('mode');
+      const newMode = mode === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('mode', newMode);
+      this.mode = newMode;
+      document.querySelector('html').style.backgroundColor =
+        this.mode === 'dark' ? 'rgb(42, 56, 72)' : 'rgb(255, 255, 255)';
+    }
   }
 };
 </script>
@@ -33,10 +57,20 @@ export default {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  // background-color: $my-white;
 }
+
+.light {
+  @apply bg-white;
+  transition: 0.3s ease-in-out;
+}
+
+.dark {
+  @apply bg-gray-800;
+  @apply text-gray-400;
+  transition: 0.3s ease-in-out;
+}
+
 html {
-  // font-family: "YuGothic", sans-serif;
   @apply font-medium;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",

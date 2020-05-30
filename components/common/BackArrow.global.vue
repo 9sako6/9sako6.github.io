@@ -11,12 +11,19 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.link {
-  color: $my-black;
-  text-decoration: none;
+.light .link {
   &:hover {
     @apply text-blue-700;
   }
+}
+
+.dark .link {
+  &:hover {
+    @apply text-teal-400;
+  }
+}
+.link {
+  text-decoration: none;
 }
 div {
   margin: 4em 0 4em 0;

@@ -53,18 +53,18 @@
     <back-arrow :link="`/`" />
     <div v-if="nextPost" class="mt-8 mb-8">
       <nuxt-link
-        class="text-blue-700 hover:underline flex leading-5 justify-start"
+        class="hover:underline flex leading-5 justify-start"
         :to="`/posts/${nextPost.fields.slug}`"
       >
-        <ArrowLeft class="h-5 mr-2 text-gray-800" />{{ nextPost.fields.title }}
+        <ArrowLeft class="h-5 mr-2 arrow" />{{ nextPost.fields.title }}
       </nuxt-link>
     </div>
     <div v-if="prevPost" class="mt-8 mb-8">
       <nuxt-link
-        class="text-blue-700 hover:underline flex leading-5 justify-end"
+        class="hover:underline flex leading-5 justify-end"
         :to="`/posts/${prevPost.fields.slug}`"
       >
-        {{ prevPost.fields.title }}<ArrowRight class="h-5 ml-2 text-gray-800" />
+        {{ prevPost.fields.title }}<ArrowRight class="h-5 mr-2 arrow" />
       </nuxt-link>
     </div>
   </div>
@@ -187,4 +187,30 @@ export default {
 <style scoped lang="scss">
 @import "@/assets/scss/post.scss";
 @import "@/assets/scss/tag.scss";
+
+.light {
+  a {
+    @apply text-blue-700;
+
+    &:hover {
+      @apply text-blue-700;
+    }
+  }
+  .arrow {
+    @apply text-gray-800;
+  }
+}
+
+.dark {
+  a {
+    @apply text-teal-400;
+
+    &:hover {
+      @apply text-teal-400;
+    }
+  }
+  .arrow {
+    @apply text-gray-300;
+  }
+}
 </style>
