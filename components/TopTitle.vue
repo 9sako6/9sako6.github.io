@@ -20,7 +20,6 @@
 <style lang="scss" scoped>
 .title {
   text-align: center;
-  color: $my-black;
   position: absolute;
   @include pc {
     left: 50%;
@@ -35,7 +34,6 @@
   top: $title-height / 3;
 }
 .link {
-  color: $my-black;
   font-family: serif;
   text-decoration: none;
   font-size: 0;
@@ -62,6 +60,19 @@
     font-size: 25px;
   }
 }
+
+.light .frase-3 {
+  color: $my-white;
+  background-color: $my-black;
+  transition: 0.3s ease-in-out;
+}
+
+.dark .frase-3 {
+  @apply text-gray-800;
+  @apply bg-gray-400;
+  transition: 0.3s ease-in-out;
+}
+
 .frase-3 {
   @include pc {
     font-size: 60px;
@@ -75,8 +86,6 @@
     width: 48px;
     height: 48px;
   }
-  color: $my-white;
-  background-color: $my-black;
   transform: rotate(-20deg);
 }
 .frase-4 {

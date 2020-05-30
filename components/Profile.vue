@@ -5,6 +5,13 @@
     </div>
     <div class="img-wrapper">
       <img
+        v-if="mode === 'dark'"
+        id="profile-avatar"
+        src="~/static/icon2.jpg"
+        alt="a picture drawn by 9sako6"
+      >
+      <img
+        v-else
         id="profile-avatar"
         src="~/static/icon.jpg"
         alt="a picture drawn by 9sako6"
@@ -36,6 +43,9 @@
 
 <script>
 export default {
+  props: {
+    mode: String
+  },
   data () {
     return {
       items: [
@@ -54,24 +64,46 @@ export default {
   width: 200px;
   border-radius: 100%;
 }
+
 .img-wrapper {
   margin: auto;
   text-align: center;
   width: 200px;
   height: 200px;
-  background-color: #f7f7f7;
   border-radius: 100%;
 }
+
+.light {
+  .frame {
+    background-color: $my-black;
+    color: $my-white;
+  }
+}
+
+.dark {
+  .frame {
+    background-color: $my-white;
+    color: $my-black;
+  }
+}
+
 .frame {
   width: 22px;
   text-align: center;
   display: inline-block;
-  background-color: $my-black;
-  color: $my-white;
   transform: rotate(-20deg);
 }
-a {
+
+.light a {
   @apply text-blue-700;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.dark a {
+  @apply text-teal-400;
 
   &:hover {
     text-decoration: underline;

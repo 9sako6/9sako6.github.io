@@ -105,7 +105,7 @@ export default {
 .post-date {
   margin-left: 1em;
   line-height: 2em;
-  color: #717579;
+  // color: #717579;
 }
 .post-title-wrap {
   word-wrap: break-word;
@@ -113,7 +113,7 @@ export default {
   margin: 1em 0;
 }
 .post-title {
-  color: $my-black;
+  // color: $my-black;
   font-weight: 700;
   font-size: 1.2em;
   &:hover {
@@ -121,7 +121,7 @@ export default {
   }
 }
 .post-description {
-  color: $my-gray;
+  // color: $my-gray;
   line-height: 1.5em;
   &:hover {
     text-decoration: underline;
@@ -129,7 +129,7 @@ export default {
 }
 
 a {
-  color: #3f3f3f;
+  // color: #3f3f3f;
   text-decoration: none;
 }
 .box {

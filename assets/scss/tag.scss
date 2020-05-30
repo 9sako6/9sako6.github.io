@@ -9,15 +9,22 @@
   }
 }
 
-.post-tag {
-  color: $my-black;
-  display: inline-block;
-  border: solid 1px #e6e6e6;
-  border-radius: 1em;
-
+.light .post-tag {
   &:hover {
     @apply text-blue-700;
   }
+}
+
+.dark .post-tag {
+  &:hover {
+    @apply text-teal-400;
+  }
+}
+
+.post-tag {
+  display: inline-block;
+  border: solid 1px #e6e6e6;
+  border-radius: 1em;
 
   @include pc {
     margin: 0 1em 0 0;

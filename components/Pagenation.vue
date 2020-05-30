@@ -1,7 +1,10 @@
 <template>
   <div class="pagenation-wrapper">
     <div v-for="pageNum in pages" :key="pageNum" style="display: inline;">
-      <div v-if="pageNum.toString() === nowPage" class="pagenation selected-pagenation">
+      <div
+        v-if="pageNum.toString() === nowPage"
+        class="pagenation selected-pagenation"
+      >
         <nuxt-link class="link" :to="`/page/${pageNum}`">
           {{ pageNum }}
         </nuxt-link>
@@ -38,18 +41,27 @@ export default {
 .pagenation {
   display: inline-block;
 }
-.selected-pagenation {
-  background-color: #ddd;
+.light {
+  .selected-pagenation {
+    @apply bg-gray-300;
+  }
+  .pagenation:hover {
+    @apply bg-gray-300;
+  }
+}
+
+.dark {
+  .selected-pagenation {
+    @apply bg-gray-900;
+  }
+  .pagenation:hover {
+    @apply bg-gray-900;
+  }
 }
 .link {
-  color: $my-black;
   float: left;
   padding: 8px 16px;
   text-decoration: none;
   border: 1px solid #ddd;
-}
-
-.pagenation:hover {
-  background-color: #ddd;
 }
 </style>

@@ -40,18 +40,25 @@ footer {
   margin-top: auto;
   text-align: center;
   padding: 1em;
-  color: $my-white;
-  background-color: $my-gray;
 }
 .text-wrap {
   padding: 0.4em 0;
   word-wrap: break-word;
 }
-.link {
-  color: $my-white;
-  text-decoration: none;
+.light a {
+  word-break: break-all;
+
+  &:hover {
+    @apply text-blue-700;
+    text-decoration: underline;
+  }
 }
-.link:hover {
-  @apply text-teal-400;
+.dark a {
+  word-break: break-all;
+
+  &:hover {
+    @apply text-teal-400;
+    text-decoration: underline;
+  }
 }
 </style>

@@ -19,7 +19,7 @@ $height: 100%;
   width: 100%;
   overflow: hidden;
   background-repeat: no-repeat;
-  z-index: -1;
+  // z-index: -1;
 }
 @for $i from 0 through 29 {
   @keyframes square-animation-#{$i} {
