@@ -1,17 +1,17 @@
 <template>
-  <div id="root" :class="mode">
+  <div id="root" :class="$theme.value">
     <div id="container-outer">
       <Header />
-      <DarkModeToggle :toggle-mode="toggleMode" :mode="mode" />
+      <DarkModeToggle :toggle-mode="toggleMode" :mode="$theme.value" />
       <div id="content">
         <nuxt id="page-main" keep-alive />
         <aside id="side-menu">
-          <Profile :mode="mode" />
+          <Profile />
           <Tags />
         </aside>
       </div>
     </div>
-    <DarkModeToggle :toggle-mode="toggleMode" :mode="mode" />
+    <DarkModeToggle :toggle-mode="toggleMode" :mode="$theme.value" />
     <Footer />
   </div>
 </template>
@@ -29,24 +29,19 @@ export default {
     Footer,
     DarkModeToggle
   },
-  data () {
-    return {
-      mode: 'dark'
-    };
-  },
   mounted () {
-    this.mode = localStorage.getItem('mode') || 'dark';
-    document.querySelector('html').style.backgroundColor =
-      this.mode === 'dark' ? 'rgb(42, 56, 72)' : 'rgb(255, 255, 255)';
+    this.$theme.set(localStorage.getItem('mode') || 'dark');
+    this.setHtmlBgColor(this.$theme.value);
   },
   methods: {
-    toggleMode () {
-      const mode = localStorage.getItem('mode');
-      const newMode = mode === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('mode', newMode);
-      this.mode = newMode;
+    setHtmlBgColor (value) {
       document.querySelector('html').style.backgroundColor =
-        this.mode === 'dark' ? 'rgb(42, 56, 72)' : 'rgb(255, 255, 255)';
+        value === 'dark' ? 'rgb(42, 56, 72)' : 'rgb(255, 255, 255)';
+    },
+    toggleMode () {
+      const newMode = this.$theme.value === 'dark' ? 'light' : 'dark';
+      this.$theme.set(newMode);
+      this.setHtmlBgColor(newMode);
     }
   }
 };

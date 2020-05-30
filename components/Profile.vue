@@ -5,13 +5,6 @@
     </div>
     <div class="img-wrapper">
       <img
-        v-if="mode === 'dark'"
-        id="profile-avatar"
-        src="~/static/icon2.jpg"
-        alt="a picture drawn by 9sako6"
-      >
-      <img
-        v-else
         id="profile-avatar"
         src="~/static/icon.jpg"
         alt="a picture drawn by 9sako6"
@@ -43,9 +36,6 @@
 
 <script>
 export default {
-  props: {
-    mode: String
-  },
   data () {
     return {
       items: [
