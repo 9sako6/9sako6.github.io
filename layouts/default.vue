@@ -30,7 +30,7 @@ export default {
     DarkModeToggle
   },
   mounted () {
-    this.$theme.set(localStorage.getItem('mode') || 'dark');
+    this.$theme.set(localStorage.getItem(this.$theme.keyName) || 'dark');
     this.setHtmlBgColor(this.$theme.value);
   },
   methods: {

@@ -5,11 +5,12 @@ export default function (context, inject) {
   const theme = Vue.observable({
     value: (process.client && !process.static ? window.__nuxt_theme : 'dark')
   });
+  theme.keyName = '9sako6-blog:mode';
   const setTheme = (value) => {
     theme.value = value;
     if (process.client) {
-      document.cookie = serialize('mode', value);
-      localStorage.setItem('mode', value);
+      document.cookie = serialize(theme.keyName, value);
+      localStorage.setItem(theme.keyName, value);
     }
   };
   theme.set = setTheme;
