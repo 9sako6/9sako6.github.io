@@ -221,7 +221,7 @@ div.tex-equations {
 
 }
 
-.light .page {
+.light-mode .page, .sepia-mode .page {
   /deep/ h1 {
     border-bottom: solid 3px #494949;
     transition: border-bottom 0.3s ease-in-out;
@@ -243,12 +243,12 @@ div.tex-equations {
   }
 
   /deep/ a {
-    @apply text-blue-700;
+    // @apply text-blue-700;
     transition: 0.3s ease-in-out;
   }
 
   /deep/ .table-of-contents {
-    @apply bg-gray-100;
+    // @apply bg-gray-100;
   }
 
   /deep/ blockquote {
@@ -260,7 +260,7 @@ div.tex-equations {
   }
 }
 
-.dark .page {
+.dark-mode .page {
   /deep/ h1 {
     border-bottom: solid 3px #bfbfbf;
     transition: border-bottom 0.3s ease-in-out;
@@ -282,12 +282,12 @@ div.tex-equations {
   }
 
   /deep/ a {
-    @apply text-teal-400;
+    // @apply text-teal-400;
     transition: 0.3s ease-in-out;
   }
 
   /deep/ .table-of-contents {
-    @apply bg-gray-900;
+    // @apply bg-gray-900;
   }
 
   /deep/ blockquote {

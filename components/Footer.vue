@@ -45,19 +45,19 @@ footer {
   padding: 0.4em 0;
   word-wrap: break-word;
 }
-.light a {
+.light-mode a, .sepia-mode a {
   word-break: break-all;
 
   &:hover {
-    @apply text-blue-700;
+    // @apply text-blue-700;
     text-decoration: underline;
   }
 }
-.dark a {
+.dark-mode a {
   word-break: break-all;
 
   &:hover {
-    @apply text-teal-400;
+    // @apply text-teal-400;
     text-decoration: underline;
   }
 }

@@ -188,12 +188,12 @@ export default {
 @import "@/assets/scss/post.scss";
 @import "@/assets/scss/tag.scss";
 
-.light {
+.light-mode .sepia-mode {
   a {
-    @apply text-blue-700;
+    // @apply text-blue-700;
 
     &:hover {
-      @apply text-blue-700;
+      // @apply text-blue-700;
     }
   }
   .arrow {
@@ -201,12 +201,12 @@ export default {
   }
 }
 
-.dark {
+.dark-mode {
   a {
-    @apply text-teal-400;
+    // @apply text-teal-400;
 
     &:hover {
-      @apply text-teal-400;
+      // @apply text-teal-400;
     }
   }
   .arrow {

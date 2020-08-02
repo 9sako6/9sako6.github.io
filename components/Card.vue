@@ -23,7 +23,7 @@
       </div>
       <div class="right-box">
         <div v-if="description" class="post-description">
-          <nuxt-link :aria-label="link" :to="link">
+          <nuxt-link :aria-label="link" :to="link" class="post-description-link">
             {{
               `${description.substr(0, 160)}${
                 description.length > 160 ? "..." : ""
@@ -169,6 +169,17 @@ a {
   @apply bg-gray-300;
   &:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+.light-mode,
+.sepia-mode {
+  .post-title, .post-description-link {
+    color: $my-black;
+  }
+}
+.dark-mode {
+  .post-title, .post-description-link {
+    color: $my-white;
   }
 }
 </style>

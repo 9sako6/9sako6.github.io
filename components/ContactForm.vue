@@ -83,4 +83,10 @@ textarea {
     background-color: rgb(131, 128, 128);
   }
 }
+
+.dark-mode {
+  input, textarea {
+    background-color: black;
+  }
+}
 </style>

@@ -1,6 +1,4 @@
-import {
-  fetchRoutes
-} from './plugins/router';
+import { fetchRoutes } from './plugins/router';
 
 require('dotenv').config();
 
@@ -81,15 +79,15 @@ export default {
     {
       src: '~/node_modules/highlight.js/styles/atom-one-dark.css',
       lang: 'css'
-    }
+    },
+    '@/assets/scss/theme.scss'
   ],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
     '~/plugins/markdownit.js',
-    '~/plugins/vue-lazyload.js',
-    '~/plugins/theme.js'
+    '~/plugins/vue-lazyload.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -109,7 +107,9 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
-    '@/modules/hook'
+    '@/modules/hook',
+    '@nuxtjs/svg',
+    '@nuxtjs/color-mode'
   ],
   /*
    ** Nuxt.js modules
