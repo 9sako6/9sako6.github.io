@@ -70,6 +70,7 @@
   }
   .frase-2,
   .frase-4 {
+    transition: 0.3s ease-in-out;
     color: $my-black;
   }
 }
@@ -82,6 +83,7 @@
   }
   .frase-2,
   .frase-4 {
+    transition: 0.3s ease-in-out;
     color: $my-white;
   }
 }
