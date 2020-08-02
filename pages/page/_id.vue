@@ -42,7 +42,7 @@ export default {
     return { pageNum: params.id };
   },
   data: () => ({
-    postNumPerPage: 5
+    postNumPerPage: 7
   }),
   computed: {
     ...mapState(['posts']),

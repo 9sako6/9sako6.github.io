@@ -21,16 +21,16 @@
 export default {
   props: {
     totalPostsCount: { type: Number, default: 0 },
-    nowPage: { type: String, default: '1' },
-    postNumPerPage: { type: Number, default: 5 }
+    nowPage: { type: String, default: "1" },
+    postNumPerPage: { type: Number, default: 5 },
   },
-  data () {
+  data() {
     const oldestPageNum = Math.ceil(this.totalPostsCount / this.postNumPerPage);
-    const pages = Array.from(Array(oldestPageNum).keys(), x => x + 1);
+    const pages = Array.from(Array(oldestPageNum).keys(), (x) => x + 1);
     return {
-      pages
+      pages,
     };
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -41,27 +41,44 @@ export default {
 .pagenation {
   display: inline-block;
 }
-.light {
+.light-mode {
   .selected-pagenation {
-    @apply bg-gray-300;
+    @apply bg-gray-200;
   }
   .pagenation:hover {
-    @apply bg-gray-300;
+    @apply bg-gray-200;
+  }
+  .link {
+    border: 1px solid #ddd;
   }
 }
 
-.dark {
+.sepia-mode {
   .selected-pagenation {
-    @apply bg-gray-900;
+    background-color: #ded0bf;
   }
   .pagenation:hover {
-    @apply bg-gray-900;
+    background-color: #ded0bf;
+  }
+  .link {
+    border: 1px solid #ded0bf;
+  }
+}
+
+.dark-mode {
+  .selected-pagenation {
+    @apply bg-black;
+  }
+  .pagenation:hover {
+    @apply bg-black;
+  }
+  .link {
+    border: 1px solid rgb(62, 62, 62);
   }
 }
 .link {
   float: left;
   padding: 8px 16px;
   text-decoration: none;
-  border: 1px solid #ddd;
 }
 </style>

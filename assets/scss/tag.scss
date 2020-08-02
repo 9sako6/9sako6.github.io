@@ -9,21 +9,29 @@
   }
 }
 
-.light .post-tag {
+.light-mode .post-tag,
+.sepia-mode .post-tag {
+  border: solid 1px #c7c7c7;
+
   &:hover {
-    @apply text-blue-700;
+    border: solid 1px #41b38a;
+    text-decoration: underline;
   }
 }
 
-.dark .post-tag {
+.dark-mode .post-tag {
+  border: solid 1px #525252;
+
   &:hover {
-    @apply text-teal-400;
+    // @apply text-teal-400;
+    border: solid 1px #41b38a;
+    text-decoration: underline;
   }
 }
 
 .post-tag {
   display: inline-block;
-  border: solid 1px #e6e6e6;
+  // border: solid 1px #e6e6e6;
   border-radius: 1em;
 
   @include pc {

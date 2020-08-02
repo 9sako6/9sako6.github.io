@@ -63,14 +63,14 @@ export default {
   border-radius: 100%;
 }
 
-.light {
+.light-mode, .sepia-mode {
   .frame {
     background-color: $my-black;
     color: $my-white;
   }
 }
 
-.dark {
+.dark-mode {
   .frame {
     background-color: $my-white;
     color: $my-black;

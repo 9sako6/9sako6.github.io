@@ -61,16 +61,29 @@
   }
 }
 
-.light .frase-3 {
-  color: $my-white;
-  background-color: $my-black;
-  transition: 0.3s ease-in-out;
+.light-mode,
+.sepia-mode {
+  .frase-3 {
+    color: $my-white;
+    background-color: $my-black;
+    transition: 0.3s ease-in-out;
+  }
+  .frase-2,
+  .frase-4 {
+    color: $my-black;
+  }
 }
 
-.dark .frase-3 {
-  @apply text-gray-800;
-  @apply bg-gray-400;
-  transition: 0.3s ease-in-out;
+.dark-mode {
+  .frase-3 {
+    @apply text-gray-800;
+    background-color: $my-white;
+    transition: 0.3s ease-in-out;
+  }
+  .frase-2,
+  .frase-4 {
+    color: $my-white;
+  }
 }
 
 .frase-3 {

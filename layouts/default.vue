@@ -1,8 +1,10 @@
 <template>
-  <div id="root" :class="$theme.value">
+  <div id="root">
     <div id="container-outer">
       <Header />
-      <DarkModeToggle :toggle-mode="toggleMode" :mode="$theme.value" />
+      <div class="color-mode-picker-container">
+        <ColorModePicker />
+      </div>
       <div id="content">
         <nuxt id="page-main" keep-alive />
         <aside id="side-menu">
@@ -11,39 +13,27 @@
         </aside>
       </div>
     </div>
-    <DarkModeToggle :toggle-mode="toggleMode" :mode="$theme.value" />
+    <div class="color-mode-picker-container">
+      <ColorModePicker />
+    </div>
     <Footer />
   </div>
 </template>
 <script>
-import Header from '~/components/Header.vue';
-import Profile from '~/components/Profile.vue';
-import Tags from '~/components/Tags.vue';
-import Footer from '~/components/Footer.vue';
-import DarkModeToggle from '~/components/DarkModeToggle.vue';
+import Header from "~/components/Header.vue";
+import Profile from "~/components/Profile.vue";
+import Tags from "~/components/Tags.vue";
+import Footer from "~/components/Footer.vue";
+import ColorModePicker from "@/components/ColorModePicker";
+
 export default {
   components: {
     Header,
     Profile,
     Tags,
     Footer,
-    DarkModeToggle
+    ColorModePicker,
   },
-  mounted () {
-    this.$theme.set(localStorage.getItem(this.$theme.keyName) || 'dark');
-    this.setHtmlBgColor(this.$theme.value);
-  },
-  methods: {
-    setHtmlBgColor (value) {
-      document.querySelector('html').style.backgroundColor =
-        value === 'dark' ? 'rgb(42, 56, 72)' : 'rgb(255, 255, 255)';
-    },
-    toggleMode () {
-      const newMode = this.$theme.value === 'dark' ? 'light' : 'dark';
-      this.$theme.set(newMode);
-      this.setHtmlBgColor(newMode);
-    }
-  }
 };
 </script>
 
@@ -53,17 +43,20 @@ export default {
   flex-direction: column;
   min-height: 100vh;
 }
-
-.light {
-  @apply bg-white;
-  transition: 0.3s ease-in-out;
+.color-mode-picker-container {
+  text-align: center;
+  padding: 50px;
 }
+// .light-mode, .sepia-mode {
+//   @apply bg-white;
+//   // transition: 0.3s ease-in-out;
+// }
 
-.dark {
-  @apply bg-gray-800;
-  @apply text-gray-400;
-  transition: 0.3s ease-in-out;
-}
+// .dark-mode {
+//   @apply bg-gray-800;
+//   @apply text-gray-400;
+//   // transition: 0.3s ease-in-out;
+// }
 
 html {
   @apply font-medium;
@@ -129,8 +122,6 @@ html {
 @media screen and (min-width: 768px) {
   #container-outer {
     width: 90%;
-    border-right: 1px solid #eceef1;
-    border-left: 1px solid #eceef1;
   }
   #page-main {
     width: 100%;
@@ -145,8 +136,8 @@ html {
 @media screen and (min-width: 1200px) {
   #container-outer {
     width: 1140px;
-    border-right: 1px solid #eceef1;
-    border-left: 1px solid #eceef1;
+    // border-right: 1px solid #eceef1;
+    // border-left: 1px solid #eceef1;
   }
   #page-main {
     width: 800px;
@@ -171,7 +162,7 @@ html {
   height: 100%;
 }
 a {
-  @apply text-blue-700;
+  // @apply text-blue-700;
   word-break: break-all;
 
   &:hover {
