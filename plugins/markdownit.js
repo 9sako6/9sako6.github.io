@@ -10,12 +10,14 @@ import ruby from 'highlight.js/lib/languages/ruby';
 import bash from 'highlight.js/lib/languages/bash';
 import css from 'highlight.js/lib/languages/css';
 import cpp from 'highlight.js/lib/languages/cpp';
+import diff from 'highlight.js/lib/languages/diff';
 import xml from 'highlight.js/lib/languages/xml';
 import plaintext from 'highlight.js/lib/languages/plaintext';
 
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
 hljs.registerLanguage('cpp', cpp);
+hljs.registerLanguage('diff', diff);
 hljs.registerLanguage('bash', bash);
 hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('ruby', ruby);
