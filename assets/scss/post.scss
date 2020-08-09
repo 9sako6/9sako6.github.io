@@ -186,6 +186,7 @@ div.tex-equations {
     background-color: transparent;
     border: none;
     color: rgb(212, 214, 214);
+    transition: 0.3s ease-in-out;
   }
 
   /deep/ code::before {
@@ -198,7 +199,7 @@ div.tex-equations {
 
   /deep/ .table-of-contents {
     padding: 0 0 1em 0;
-    // background-color: #fafafa;
+    border-radius: .5rem;
   }
 
   /deep/ .table-of-contents::before {
@@ -221,7 +222,8 @@ div.tex-equations {
 
 }
 
-.light-mode .page, .sepia-mode .page {
+.light-mode .page,
+.sepia-mode .page {
   /deep/ h1 {
     border-bottom: solid 3px #494949;
     transition: border-bottom 0.3s ease-in-out;
@@ -239,7 +241,6 @@ div.tex-equations {
 
   /deep/ pre code {
     @apply bg-transparent;
-    transition: 0.3s ease-in-out;
   }
 
   /deep/ a {
@@ -260,6 +261,30 @@ div.tex-equations {
   }
 }
 
+.light-mode .page {
+  /deep/ .table-of-contents {
+    @apply bg-gray-100;
+  }
+}
+
+.sepia-mode .page {
+  /deep/ .table-of-contents {
+    background-color: #ded0bf;
+  }
+
+  /deep/ code {
+    background-color: #ded0bf;
+  }
+
+  /deep/ blockquote {
+    background-color: #ded0bf;
+  }
+
+  /deep/ blockquote:before {
+    color: #504231;
+  }
+}
+
 .dark-mode .page {
   /deep/ h1 {
     border-bottom: solid 3px #bfbfbf;
@@ -272,13 +297,12 @@ div.tex-equations {
   }
 
   /deep/ code {
-    @apply bg-gray-900;
+    background-color: rgb(39, 44, 51);
     transition: background-color 0.3s ease-in-out;
   }
 
   /deep/ pre code {
     @apply bg-transparent;
-    transition: 0.3s ease-in-out;
   }
 
   /deep/ a {
@@ -287,11 +311,11 @@ div.tex-equations {
   }
 
   /deep/ .table-of-contents {
-    // @apply bg-gray-900;
+    background-color: #171717;
   }
 
   /deep/ blockquote {
-    @apply bg-gray-900;
+    background-color: rgb(39, 44, 51);
   }
 
   /deep/ .post-tag {
