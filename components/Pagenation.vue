@@ -21,16 +21,16 @@
 export default {
   props: {
     totalPostsCount: { type: Number, default: 0 },
-    nowPage: { type: String, default: "1" },
-    postNumPerPage: { type: Number, default: 5 },
+    nowPage: { type: String, default: '1' },
+    postNumPerPage: { type: Number, default: 5 }
   },
-  data() {
+  data () {
     const oldestPageNum = Math.ceil(this.totalPostsCount / this.postNumPerPage);
-    const pages = Array.from(Array(oldestPageNum).keys(), (x) => x + 1);
+    const pages = Array.from(Array(oldestPageNum).keys(), x => x + 1);
     return {
-      pages,
+      pages
     };
-  },
+  }
 };
 </script>
 <style lang="scss" scoped>
