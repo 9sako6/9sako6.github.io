@@ -28,6 +28,7 @@
     "node-sass": "^4.13.0",
     "npm": "^6.13.6",
     "nuxt": "2.12.2",
+    "vue-disqus": "^4.0.1",
     "vue-mq": "^1.0.1"
   },
   "devDependencies": {
