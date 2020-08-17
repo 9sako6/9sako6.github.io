@@ -4,10 +4,10 @@
 </template>
 <script>
 export default {
-  name: "BackArrow",
+  name: 'BackArrow',
   props: {
-    link: { type: String, default: "" },
-  },
+    link: { type: String, default: '' }
+  }
 };
 </script>
 <style lang="scss" scoped>

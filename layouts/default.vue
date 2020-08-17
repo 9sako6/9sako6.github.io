@@ -20,11 +20,11 @@
   </div>
 </template>
 <script>
-import Header from "~/components/Header.vue";
-import Profile from "~/components/Profile.vue";
-import Tags from "~/components/Tags.vue";
-import Footer from "~/components/Footer.vue";
-import ColorModePicker from "@/components/ColorModePicker";
+import Header from '~/components/Header.vue';
+import Profile from '~/components/Profile.vue';
+import Tags from '~/components/Tags.vue';
+import Footer from '~/components/Footer.vue';
+import ColorModePicker from '@/components/ColorModePicker';
 
 export default {
   components: {
@@ -32,8 +32,8 @@ export default {
     Profile,
     Tags,
     Footer,
-    ColorModePicker,
-  },
+    ColorModePicker
+  }
 };
 </script>
 
