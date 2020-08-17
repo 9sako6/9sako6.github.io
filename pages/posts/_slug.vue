@@ -67,6 +67,13 @@
         {{ prevPost.fields.title }}<ArrowRight class="h-5 mr-2 arrow" />
       </nuxt-link>
     </div>
+    <div v-show="disqus_shortname" class="mt-10">
+      <disqus
+        :identifier="post.fields.slug"
+        :url="`${base_url}/posts/${post.fields.slug}`"
+        :shortname="disqus_shortname"
+      />
+    </div>
   </div>
 </template>
 
@@ -112,7 +119,9 @@ export default {
   data () {
     return {
       hatenaUrl: '',
-      twitterUrl: ''
+      twitterUrl: '',
+      disqus_shortname: process.env.DISQUS_SHORTNAME,
+      base_url: process.env.BASE_URL
     };
   },
   computed: {
