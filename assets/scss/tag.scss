@@ -23,7 +23,6 @@
   border: solid 1px #525252;
 
   &:hover {
-    // @apply text-teal-400;
     border: solid 1px #41b38a;
     text-decoration: underline;
   }
@@ -31,7 +30,6 @@
 
 .post-tag {
   display: inline-block;
-  // border: solid 1px #e6e6e6;
   border-radius: 1em;
 
   @include pc {
