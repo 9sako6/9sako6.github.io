@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="tag-title">
-      #{{ tag }}
+      {{ tag }}
     </h1>
     <div v-for="post in taggedPosts" :key="post.id">
       <Card
@@ -63,6 +63,7 @@ export default {
 
 <style lang="scss" scoped>
 .tag-title {
+  font-weight: 600;
   font-size: 1.8em;
   line-height: 1.8em;
   margin: 2.5em 0 1.5em 0;

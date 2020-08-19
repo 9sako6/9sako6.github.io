@@ -3,7 +3,7 @@
     <div id="page-title">
       お問い合わせ
     </div>
-    <h1>サイトからのお問い合わせ</h1>
+    <h2>サイトからのお問い合わせ</h2>
     <p>
       <nuxt-link to="/policy">
         プライバシーポリシー

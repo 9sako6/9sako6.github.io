@@ -22,15 +22,15 @@
         </nuxt-link>
       </div>
       <div class="right-box">
-        <div v-if="description" class="post-description">
-          <nuxt-link :aria-label="link" :to="link" class="post-description-link">
+        <nuxt-link :aria-label="link" :to="link" class="post-description-link">
+          <div v-if="description" class="post-description">
             {{
               `${description.substr(0, 160)}${
                 description.length > 160 ? "..." : ""
               }`
             }}
-          </nuxt-link>
-        </div>
+          </div>
+        </nuxt-link>
       </div>
     </div>
     <div v-for="tag in tags" :key="tag.id" class="post-tags">
@@ -173,12 +173,14 @@ a {
 }
 .light-mode,
 .sepia-mode {
-  .post-title, .post-description-link {
+  .post-title,
+  .post-description-link {
     color: $my-black;
   }
 }
 .dark-mode {
-  .post-title, .post-description-link {
+  .post-title,
+  .post-description-link {
     color: $my-white;
   }
 }

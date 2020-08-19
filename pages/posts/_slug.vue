@@ -30,7 +30,7 @@
       </div>
       <div
         style="margin-bottom: 120px;"
-        v-html="$md.render(post.fields.body)"
+        v-html="$md.render(downsizeHtag(post.fields.body))"
       />
       Share:
       <span class="flex">
@@ -138,6 +138,9 @@ export default {
         `${process.env.BASE_URL}/posts/${this.post.fields.slug}`
       );
       this.hatenaUrl = `https://b.hatena.ne.jp/add?mode=confirm&url=${url}&text=${this.post.fields.title}`;
+    },
+    downsizeHtag (markdownText) {
+      return markdownText.replace(/(^#)|(\n#)/g, '\n##');
     }
   },
   head () {
@@ -189,26 +192,12 @@ export default {
 @import "@/assets/scss/tag.scss";
 
 .light-mode .sepia-mode {
-  a {
-    // @apply text-blue-700;
-
-    &:hover {
-      // @apply text-blue-700;
-    }
-  }
   .arrow {
     @apply text-gray-800;
   }
 }
 
 .dark-mode {
-  a {
-    // @apply text-teal-400;
-
-    &:hover {
-      // @apply text-teal-400;
-    }
-  }
   .arrow {
     @apply text-gray-300;
   }
