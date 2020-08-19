@@ -14,7 +14,7 @@
         :link="`/posts/${post.fields.slug}`"
         :tags="post.fields.tags"
         :img-link="getEyeCatch(post).url"
-        :category="post.fields.category.fields.slug"
+        :category="post.fields.category ? post.fields.category.fields.slug : ''"
       />
     </div>
     <Pagenation
