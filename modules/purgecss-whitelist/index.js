@@ -10,6 +10,7 @@ export default function () {
     whitelist: [
       ...katexSelectorsList(),
       'ol',
+      'h3',
       'blockquote',
       'table-of-contents'
     ]
