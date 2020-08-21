@@ -1,16 +1,14 @@
-<template lang="pug">
-  div.squares-wrapper
-    - for (var x = 0; x < 30; x++)
-      div(class="square")
+<template>
+  <div class="squares-wrapper">
+    <div v-for="i in 30" :key="i" class="square" />
+  </div>
 </template>
+
 <style lang="scss" scoped>
 @function random-num($min, $max) {
   @return floor(random() * ($max - $min) + $min);
 }
-@media screen and (max-width: 767px) {
-}
-@media screen and (min-width: 768px) {
-}
+
 $height: 100%;
 
 .squares-wrapper {
@@ -19,7 +17,6 @@ $height: 100%;
   width: 100%;
   overflow: hidden;
   background-repeat: no-repeat;
-  // z-index: -1;
 }
 @for $i from 0 through 29 {
   @keyframes square-animation-#{$i} {
@@ -37,10 +34,10 @@ $height: 100%;
     $color: hsl(0, 0%, 63%);
     height: $size;
     width: $size;
+    box-shadow: 0px 0px 10px $color;
     @if $i % random(3) == 0 {
       background-color: $color;
     }
-    box-shadow: 0px 0px 10px $color;
     animation: square-animation-#{$i}
       linear
       (random(10) + 10) +

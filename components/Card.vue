@@ -1,28 +1,26 @@
 <template>
-  <div class="post">
-    <div class="post-info-wrapper">
-      <div :class="`post-category ${categoryColor(category)}`">
-        {{ categoryName(category) }}
+  <nuxt-link :aria-label="link" :to="link" class="post-description-link">
+    <div class="post">
+      <div class="post-info-wrapper">
+        <div :class="`post-category ${categoryColor(category)}`">
+          {{ categoryName(category) }}
+        </div>
+        <div class="post-date">
+          {{ createdAt.split("T")[0] }}
+        </div>
       </div>
-      <div class="post-date">
-        {{ createdAt.split("T")[0] }}
+      <div class="post-title-wrap">
+        <nuxt-link :aria-label="link" :to="link" class="post-title">
+          {{ title }}
+        </nuxt-link>
       </div>
-    </div>
-    <div class="post-title-wrap">
-      <nuxt-link :aria-label="link" :to="link" class="post-title">
-        {{ title }}
-      </nuxt-link>
-    </div>
-    <div class="box">
-      <div class="left-box">
-        <nuxt-link :aria-label="link" :to="link">
+      <div class="box">
+        <div class="left-box">
           <lazy-component class="eye-catch">
             <img :src="imgLink" alt="eye catch" class="eye-catch">
           </lazy-component>
-        </nuxt-link>
-      </div>
-      <div class="right-box">
-        <nuxt-link :aria-label="link" :to="link" class="post-description-link">
+        </div>
+        <div class="right-box">
           <div v-if="description" class="post-description">
             {{
               `${description.substr(0, 160)}${
@@ -30,18 +28,20 @@
               }`
             }}
           </div>
+        </div>
+      </div>
+      <div v-for="tag in tags" :key="tag.id" class="post-tags">
+        <nuxt-link
+          v-if="
+            tag.hasOwnProperty('fields') && tag.fields.hasOwnProperty('slug')
+          "
+          :to="`/tag/${tag.fields.slug}`"
+        >
+          <span class="post-tag">{{ tag.fields.name }}</span>
         </nuxt-link>
       </div>
     </div>
-    <div v-for="tag in tags" :key="tag.id" class="post-tags">
-      <nuxt-link
-        v-if="tag.hasOwnProperty('fields') && tag.fields.hasOwnProperty('slug')"
-        :to="`/tag/${tag.fields.slug}`"
-      >
-        <span class="post-tag">{{ tag.fields.name }}</span>
-      </nuxt-link>
-    </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -81,15 +81,33 @@ export default {
 <style scoped lang="scss">
 @import "@/assets/scss/tag.scss";
 .post {
+  @apply rounded;
+  margin-bottom: 1em;
   text-align: left;
   padding-left: 1em;
+  &:hover {
+    @apply shadow-xl;
+  }
   @include pc {
     padding: 20px;
   }
   @include mobile {
-    padding: 10px 0px 40px 0px;
+    padding: 1em;
   }
 }
+
+.light-mode .post {
+  @apply bg-gray-100;
+}
+
+.sepia-mode .post {
+  background-color: #f0e2d0;
+}
+
+.dark-mode .post {
+  background-color: rgb(32, 32, 33);
+}
+
 .post-info-wrapper {
   display: flex;
   line-height: 2em;
@@ -105,7 +123,6 @@ export default {
 .post-date {
   margin-left: 1em;
   line-height: 2em;
-  // color: #717579;
 }
 .post-title-wrap {
   word-wrap: break-word;
@@ -113,7 +130,6 @@ export default {
   margin: 1em 0;
 }
 .post-title {
-  // color: $my-black;
   font-weight: 700;
   font-size: 1.2em;
   &:hover {
@@ -121,7 +137,6 @@ export default {
   }
 }
 .post-description {
-  // color: $my-gray;
   line-height: 1.5em;
   &:hover {
     text-decoration: underline;
@@ -129,38 +144,53 @@ export default {
 }
 
 a {
-  // color: #3f3f3f;
   text-decoration: none;
 }
-.box {
-  display: grid;
-  justify-content: center;
-  @include pc {
-    grid-template-columns: 120px 1fr;
+
+@include pc {
+  .box {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 256px 1fr;
   }
-  @include mobile {
-    grid-template-columns: 90px 1fr;
+  .left-box {
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .right-box {
+    grid-column: 2/3;
+    padding: 1em;
   }
 }
 
-.left-box {
-  grid-column: 1/2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@include mobile {
+  .box {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 144px 1fr;
+  }
+  .left-box {
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .right-box {
+    grid-row: 2/3;
+    padding: 1em;
+  }
 }
-.right-box {
-  grid-column: 2/3;
-  padding: 1em;
-}
+
 .eye-catch {
   @include pc {
-    width: 120px;
-    height: 120px;
+    width: 256px;
+    height: 144px;
   }
   @include mobile {
-    width: 90px;
-    height: 90px;
+    width: 256px;
+    height: 144px;
   }
   object-fit: cover;
   border-radius: 3px;

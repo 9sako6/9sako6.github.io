@@ -1,7 +1,9 @@
-<template lang="pug">
-  nuxt-link(:to="link").link
-    div 記事一覧
+<template>
+  <nuxt-link :to="link" class="link">
+    <div>記事一覧</div>
+  </nuxt-link>
 </template>
+
 <script>
 export default {
   name: 'BackArrow',
@@ -25,7 +27,7 @@ export default {
 }
 .dark-mode {
   div {
-    border: solid #e9e9e9;
+    border: solid #181717;
     border-width: 1px 0px 1px 0px;
   }
 }
