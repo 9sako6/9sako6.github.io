@@ -98,7 +98,7 @@ html {
 }
 @media screen and (max-width: 767px) {
   #container-outer {
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
   #page-main {
@@ -129,12 +129,6 @@ html {
   #container-outer {
     width: 1140px;
   }
-  #page-main {
-    width: 800px;
-  }
-  #side-menu {
-    width: 200px;
-  }
   #content {
     margin: $title-height / 2 55px;
   }
@@ -147,10 +141,7 @@ html {
   float: left;
   margin-bottom: 100px;
 }
-#side-menu {
-  float: right;
-  height: 100%;
-}
+
 a {
   word-break: break-all;
 

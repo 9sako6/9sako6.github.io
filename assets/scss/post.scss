@@ -34,6 +34,9 @@ div.tex-equations {
 
 .page {
   @apply text-base;
+  padding: 1em;
+  @apply rounded;
+  @apply shadow-xl;
 
   /deep/ ::before,
   ::after {
@@ -51,6 +54,7 @@ div.tex-equations {
 
   /deep/ img {
     text-align: center;
+    @apply rounded;
 
     @include pc {
       width: 90%;
@@ -248,12 +252,16 @@ div.tex-equations {
 }
 
 .light-mode .page {
+  @apply bg-gray-100;
+
   /deep/ .table-of-contents {
     @apply bg-gray-100;
   }
 }
 
 .sepia-mode .page {
+  background-color: #f0e2d0;
+
   /deep/ .table-of-contents {
     background-color: #ded0bf;
   }
@@ -272,6 +280,7 @@ div.tex-equations {
 }
 
 .dark-mode .page {
+  background-color: rgb(32, 32, 33);
   /deep/ h1 {
     border-bottom: solid 3px #bfbfbf;
     transition: border-bottom 0.3s ease-in-out;

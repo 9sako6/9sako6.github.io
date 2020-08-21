@@ -31,6 +31,9 @@
 .post-tag {
   display: inline-block;
   border-radius: 1em;
+  &:hover {
+    @apply shadow-lg;
+  }
 
   @include pc {
     margin: 0 1em 0 0;
