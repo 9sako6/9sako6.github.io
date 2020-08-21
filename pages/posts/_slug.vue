@@ -37,14 +37,14 @@
         <a
           :href="twitterUrl"
           target="_blank"
-          rel="nofollow"
+          rel="noreferrer"
         ><Twitter
           class="h-10 mr-3"
         /></a>
         <a
           :href="hatenaUrl"
           target="_blank"
-          rel="nofollow"
+          rel="noreferrer"
         ><Hatena
           class="h-10 mr-3"
         /></a>
