@@ -87,7 +87,7 @@ export default {
    */
   plugins: [
     '~/plugins/markdownit.js',
-    '~/plugins/vue-lazyload.js'
+    { src: '~/plugins/vue-lazyload.js', ssr: false },
   ],
   /*
   ** Nuxt.js dev-modules
