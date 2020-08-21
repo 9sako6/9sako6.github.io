@@ -1,5 +1,10 @@
 <template>
   <div class="container">
+    <Pagenation
+      :total-posts-count="posts.length"
+      :now-page="pageNum.toString()"
+      :post-num-per-page="postNumPerPage"
+    />
     <div
       v-for="post in posts.slice(
         (pageNum - 1) * postNumPerPage,
