@@ -24,12 +24,12 @@
     "markdown-it-anchor": "^5.2.5",
     "markdown-it-katex": "^2.0.3",
     "markdown-it-table-of-contents": "^0.4.4",
-    "nuxt": "2.12.2"
+    "nuxt": "^2.14.3"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
-    "@nuxt/typescript-build": "^0.5.6",
-    "@nuxt/typescript-runtime": "^0.3.8",
+    "@nuxt/typescript-build": "^2.0.2",
+    "@nuxt/typescript-runtime": "^1.0.0",
     "@nuxtjs/color-mode": "^1.0.2",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/eslint-config": "^1.0.1",
