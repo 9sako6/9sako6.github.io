@@ -35,7 +35,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .pagenation-wrapper {
-  margin-top: 2em;
+  margin: 2em 0;
   text-align: center;
 }
 .pagenation {

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Pagenation
+    <Pagination
       :total-posts-count="posts.length"
       :now-page="pageNum.toString()"
       :post-num-per-page="postNumPerPage"
@@ -22,7 +22,7 @@
         :category="post.fields.category ? post.fields.category.fields.slug : ''"
       />
     </div>
-    <Pagenation
+    <Pagination
       :total-posts-count="posts.length"
       :now-page="pageNum.toString()"
       :post-num-per-page="postNumPerPage"
@@ -33,12 +33,12 @@
 <script>
 import { mapState, mapGetters } from 'vuex';
 import Card from '~/components/Card';
-import Pagenation from '~/components/Pagenation';
+import Pagination from '~/components/Pagination';
 
 export default {
   components: {
     Card,
-    Pagenation
+    Pagination
   },
   asyncData ({ params }) {
     if (params.id === undefined) {

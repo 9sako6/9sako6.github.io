@@ -1,6 +1,6 @@
 <template>
   <section class="page">
-    <h1>{{ error.statusCode }}</h1>
+    <h2>{{ error.statusCode }}</h2>
     <p v-if="error.statusCode === 404">
       The requested URL was not found on this server.
     </p>

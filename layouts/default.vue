@@ -127,13 +127,7 @@ html {
 }
 @media screen and (min-width: 1200px) {
   #container-outer {
-    width: 1140px;
-  }
-  #page-main {
-    width: 800px;
-  }
-  #side-menu {
-    width: 200px;
+    width: 1000px;
   }
   #content {
     margin: $title-height / 2 55px;
@@ -147,10 +141,10 @@ html {
   float: left;
   margin-bottom: 100px;
 }
-#side-menu {
-  float: right;
-  height: 100%;
-}
+// #side-menu {
+//   float: right;
+//   height: 100%;
+// }
 a {
   word-break: break-all;
 
