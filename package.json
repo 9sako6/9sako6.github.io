@@ -10,7 +10,7 @@
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
-    "deploy": "yarn generate && netlify deploy --prod",
+    "deploy": "NODE_ENV=production yarn generate && netlify deploy --prod",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .ts,.js,.vue --ignore-path .gitignore .",
     "precommit": "yarn lint"
