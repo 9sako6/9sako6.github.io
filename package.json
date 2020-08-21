@@ -16,7 +16,7 @@
     "precommit": "yarn lint"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/axios": "^5.12.1",
     "@nuxtjs/google-analytics": "^2.2.3",
     "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
