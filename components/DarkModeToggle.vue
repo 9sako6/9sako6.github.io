@@ -27,8 +27,8 @@ export default {
     Moon
   },
   props: {
-    mode: String,
-    toggleMode: Function
+    mode: { type: String, default: 'light' },
+    toggleMode: { type: Function, default: () => {} }
   }
 };
 </script>
