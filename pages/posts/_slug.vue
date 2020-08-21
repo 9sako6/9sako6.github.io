@@ -29,7 +29,7 @@
         </nuxt-link>
       </div>
       <div
-        style="margin-bottom: 120px;"
+        class="post-content"
         v-html="$md.render(downsizeHtag(post.fields.body))"
       />
       Share:
@@ -39,14 +39,14 @@
           target="_blank"
           rel="noreferrer"
         ><Twitter
-          class="h-10 mr-3"
+          class="h-10 w-10 mr-3 rounded"
         /></a>
         <a
           :href="hatenaUrl"
           target="_blank"
           rel="noreferrer"
         ><Hatena
-          class="h-10 mr-3"
+          class="h-10 mr-3 rounded"
         /></a>
       </span>
     </section>

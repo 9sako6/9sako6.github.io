@@ -32,6 +32,24 @@ div.tex-equations {
   width: 75px;
 }
 
+.post-content {
+  margin-bottom: 120px;
+  /deep/ img {
+    text-align: center;
+    @apply rounded;
+
+    @include pc {
+      width: 90%;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
 .page {
   @apply text-base;
   padding: 1em;
@@ -49,21 +67,6 @@ div.tex-equations {
 
     &:hover {
       text-decoration: underline;
-    }
-  }
-
-  /deep/ img {
-    text-align: center;
-    @apply rounded;
-
-    @include pc {
-      width: 90%;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    @include mobile {
-      width: 100%;
     }
   }
 
