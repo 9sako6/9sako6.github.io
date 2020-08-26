@@ -5,13 +5,7 @@
       :now-page="pageNum.toString()"
       :post-num-per-page="postNumPerPage"
     />
-    <div
-      v-for="post in posts.slice(
-        (pageNum - 1) * postNumPerPage,
-        pageNum * postNumPerPage
-      )"
-      :key="post.id"
-    >
+    <div v-for="post in postsInPage" :key="post.id">
       <Card
         :title="post.fields.title"
         :description="post.fields.description"
@@ -51,12 +45,16 @@ export default {
   }),
   computed: {
     ...mapState(['posts']),
-    ...mapGetters(['getEyeCatch'])
+    ...mapGetters(['getEyeCatch']),
+    postsInPage () {
+      return this.posts.slice((this.pageNum - 1) * this.postNumPerPage, this.pageNum * this.postNumPerPage);
+    }
   },
   head () {
     return {
       titleTemplate: '',
-      meta: []
+      meta: [],
+      link: this.posts.map(post => ({ rel: 'preload', href: this.getEyeCatch(post).url, as: 'image' }))
     };
   }
 };
