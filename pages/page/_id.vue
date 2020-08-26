@@ -5,7 +5,7 @@
       :now-page="pageNum.toString()"
       :post-num-per-page="postNumPerPage"
     />
-    <div v-for="post in postsInPage" :key="post.id">
+    <div v-for="post in $options.nonReactivePosts" :key="post.id">
       <Card
         :title="post.fields.title"
         :description="post.fields.description"
@@ -45,16 +45,17 @@ export default {
   }),
   computed: {
     ...mapState(['posts']),
-    ...mapGetters(['getEyeCatch']),
-    postsInPage () {
-      return this.posts.slice((this.pageNum - 1) * this.postNumPerPage, this.pageNum * this.postNumPerPage);
-    }
+    ...mapGetters(['getEyeCatch'])
   },
+  created () {
+    this.$options.nonReactivePosts = this.posts.slice((this.pageNum - 1) * this.postNumPerPage, this.pageNum * this.postNumPerPage);
+  },
+  nonReactivePosts: null,
   head () {
     return {
       titleTemplate: '',
       meta: [],
-      link: this.posts.map(post => ({ rel: 'preload', href: this.getEyeCatch(post).url, as: 'image' }))
+      link: this.$options.nonReactivePosts.map(post => ({ rel: 'preload', href: this.getEyeCatch(post).url, as: 'image' }))
     };
   }
 };
