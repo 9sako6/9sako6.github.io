@@ -46,7 +46,7 @@ export default {
 
 .color-mode-picker-container {
   text-align: center;
-  padding: 50px;
+  padding: 1rem;
 }
 
 html {
@@ -122,7 +122,7 @@ html {
     width: 100%;
   }
   #content {
-    margin: $title-height / 2 55px;
+    margin: 0px 55px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -130,7 +130,7 @@ html {
     width: 1140px;
   }
   #content {
-    margin: $title-height / 2 55px;
+    margin: 0px 55px;
   }
 }
 #container-outer {

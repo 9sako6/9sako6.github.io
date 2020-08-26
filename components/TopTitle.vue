@@ -13,7 +13,6 @@
         </div>
       </div>
     </nuxt-link>
-    <div>=^._.^=</div>
   </div>
 </template>
 
