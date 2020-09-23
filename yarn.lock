@@ -6390,10 +6390,9 @@ markdown-it-anchor@^5.3.0:
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-5.3.0.tgz#d549acd64856a8ecd1bea58365ef385effbac744"
   integrity sha512-/V1MnLL/rgJ3jkMWo84UR+K+jF1cxNG1a+KwqeXqTIJ+jtA8aWSHuigx8lTzauiIjBDbwF3NcWQMotd0Dm39jA==
 
-markdown-it-katex@^2.0.3:
+"markdown-it-katex@https://github.com/418sec/markdown-it-katex":
   version "2.0.3"
-  resolved "https://registry.yarnpkg.com/markdown-it-katex/-/markdown-it-katex-2.0.3.tgz#d7b86a1aea0b9d6496fab4e7919a18fdef589c39"
-  integrity sha1-17hqGuoLnWSW+rTnkZoY/e9YnDk=
+  resolved "https://github.com/418sec/markdown-it-katex#405b599f6133a8309ca318c3e074fa38fbc413d2"
   dependencies:
     katex "^0.6.0"
 
