@@ -4,4 +4,4 @@
 
 > My blog
 
-https://blog.9sako6.site/
+https://9sako6.com/
