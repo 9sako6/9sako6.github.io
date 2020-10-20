@@ -13,7 +13,7 @@
       <div class="post-time">
         <time>
           <div class="post-time-title">updated:</div>
-          2020-08-17
+          2020-10-20
         </time>
       </div>
     </div>

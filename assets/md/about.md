@@ -36,8 +36,11 @@ Markdown, KaTeX で記事を書けて、ツイート埋め込み可能、複数�
 - macOS, Ubuntu
 
 ## 活動
-- AtCoder 1273 水 (2020-08-17)
-  - <a href="https://atcoder.jp/users/qsako6/" target="_blank" rel="noopener noreferrer">qsako6</a>
-  - [6ヶ月停滞したけどAtCoderで水色になりました！ | 腐ったコロッケ](https://blog.9sako6.site/posts/mizuiro_nattayo)
-- [言語処理学会第25回年次大会 (NLP2019)優秀ポスター賞](http://133.6.82.174/about-nu/public-relations/publication/upload_images/top311jushou.pdf)
+- AtCoder 1273 水 (2020-08-17) [<a href="https://atcoder.jp/users/qsako6/" target="_blank" rel="noopener noreferrer">qsako6</a>] [[blog](https://9sako6.com/posts/mizuiro_nattayo)]
+
+**2020**
+- Kaigi on Rails 登壇 [[YouTube](https://www.youtube.com/watch?v=cRjJOXlZgEo&feature=youtu.be)]
+
+**2019**
+- 言語処理学会第25回年次大会 (NLP2019) 優秀ポスター賞 [[link](http://133.6.82.174/about-nu/public-relations/publication/upload_images/top311jushou.pdf)]
 
