@@ -4,7 +4,7 @@ import markdownItTableOfContents from 'markdown-it-table-of-contents';
 import markdownItKatex from 'markdown-it-katex';
 import '~/node_modules/katex/dist/katex.min.css';
 
-import hljs from 'highlight.js/lib/highlight';
+import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 import ruby from 'highlight.js/lib/languages/ruby';
 import bash from 'highlight.js/lib/languages/bash';
