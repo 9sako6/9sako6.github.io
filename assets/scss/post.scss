@@ -34,7 +34,7 @@ div.tex-equations {
 
 .post-content {
   margin-bottom: 120px;
-  /deep/ img {
+  ::v-deep img {
     text-align: center;
     @apply rounded;
 
@@ -56,13 +56,13 @@ div.tex-equations {
   @apply rounded;
   @apply shadow-xl;
 
-  /deep/ ::before,
+  ::v-deep ::before,
   ::after {
     // this is necessary bacause of a border added by '@tailwind base'
     border: none;
   }
 
-  /deep/ a {
+  ::v-deep a {
     word-break: break-all;
 
     &:hover {
@@ -70,68 +70,68 @@ div.tex-equations {
     }
   }
 
-  /deep/ h2 {
+  ::v-deep h2 {
     margin: 2.5em 0 1.3em 0;
     font-size: 1.5em;
     padding: 0.25em 0.5em;
     background: transparent;
   }
 
-  /deep/ h3 {
+  ::v-deep h3 {
     margin: 2.5em 0 0 0;
     font-size: 1.5em;
     padding: 0.25em 0em;
     background: transparent;
   }
 
-  /deep/ p {
+  ::v-deep p {
     padding: 0.5em;
     margin: 1em 0 1em 0;
     @apply leading-relaxed;
   }
 
-  /deep/ section {
+  ::v-deep section {
     padding: 0.5em;
     margin: 1em 0 1em 0;
     line-height: 1.5em;
   }
 
-  /deep/ hr {
+  ::v-deep hr {
     margin: 2em 0 2em 0;
   }
 
-  /deep/ table {
+  ::v-deep table {
     width: 100%;
   }
 
-  /deep/ th {
+  ::v-deep th {
     height: 2em;
     border-bottom: solid 1px #eee;
   }
 
-  /deep/ td {
+  ::v-deep td {
     height: 2em;
     border-bottom: solid 1px #eee;
   }
 
-  /deep/ ul {
+  ::v-deep ul {
     @apply list-disc;
     margin-left: 40px;
   }
 
-  /deep/ ol {
+  ::v-deep ol {
     @apply list-decimal;
     margin-left: 40px;
   }
 
-  /deep/ li {
+  ::v-deep li {
     display: list-item;
     word-break: break-all;
     margin: 0.3em 0 0.3em 0;
     @apply leading-normal;
   }
 
-  /deep/ blockquote {
+  ::v-deep blockquote {
     position: relative;
     padding: 30px 15px 8px 15px;
     box-sizing: border-box;
@@ -139,7 +139,7 @@ div.tex-equations {
     @apply rounded;
   }
 
-  /deep/ blockquote:before {
+  ::v-deep blockquote:before {
     display: inline-block;
     position: absolute;
     top: 5px;
@@ -151,34 +151,34 @@ div.tex-equations {
     line-height: 1;
   }
 
-  /deep/ blockquote p {
+  ::v-deep blockquote p {
     padding: 0;
     margin: 10px 0;
     line-height: 1.7;
   }
 
-  /deep/ blockquote cite {
+  ::v-deep blockquote cite {
     display: block;
     text-align: right;
     color: #888888;
     font-size: 0.9em;
   }
 
-  /deep/ code {
+  ::v-deep code {
     @apply font-mono;
     @apply rounded;
     word-break: break-all;
     padding: 2px;
   }
 
-  /deep/ pre {
+  ::v-deep pre {
     @apply rounded;
     padding: 0.7rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
 
-  /deep/ pre code {
+  ::v-deep pre code {
     @apply font-mono;
     padding: 0;
     line-height: 1.2em;
@@ -188,20 +188,20 @@ div.tex-equations {
     transition: 0.3s ease-in-out;
   }
 
-  /deep/ code::before {
+  ::v-deep code::before {
     content: none;
   }
 
-  /deep/ code::after {
+  ::v-deep code::after {
     content: none;
   }
 
-  /deep/ .table-of-contents {
+  ::v-deep .table-of-contents {
     padding: 0 0 1em 0;
     @apply rounded;
   }
 
-  /deep/ .table-of-contents::before {
+  ::v-deep .table-of-contents::before {
     display: block;
     font-weight: 600;
     padding: 1em;
@@ -210,11 +210,11 @@ div.tex-equations {
     margin-bottom: 1em;
   }
 
-  /deep/ .table-of-contents li {
+  ::v-deep .table-of-contents li {
     line-height: 1.3em;
   }
 
-  /deep/ .katex-display {
+  ::v-deep .katex-display {
     overflow: scroll;
   }
 
@@ -222,34 +222,34 @@ div.tex-equations {
 
 .light-mode .page,
 .sepia-mode .page {
-  /deep/ h1 {
+  ::v-deep h1 {
     border-bottom: solid 3px #494949;
     transition: border-bottom 0.3s ease-in-out;
   }
 
-  /deep/ h2 {
+  ::v-deep h2 {
     border-left: solid 5px #494949;
     transition: border-left 0.3s ease-in-out;
   }
 
-  /deep/ code {
+  ::v-deep code {
     background: #e2e6e9;
     transition: background-color 0.3s ease-in-out;
   }
 
-  /deep/ pre code {
+  ::v-deep pre code {
     @apply bg-transparent;
   }
 
-  /deep/ a {
+  ::v-deep a {
     transition: 0.3s ease-in-out;
   }
 
-  /deep/ blockquote {
+  ::v-deep blockquote {
     @apply bg-gray-200;
   }
 
-  /deep/ .post-tag {
+  ::v-deep .post-tag {
     @apply text-black;
   }
 }
@@ -257,7 +257,7 @@ div.tex-equations {
 .light-mode .page {
   @apply bg-gray-100;
 
-  /deep/ .table-of-contents {
+  ::v-deep .table-of-contents {
     @apply bg-gray-200;
   }
 }
@@ -265,57 +265,57 @@ div.tex-equations {
 .sepia-mode .page {
   background-color: #f0e2d0;
 
-  /deep/ .table-of-contents {
+  ::v-deep .table-of-contents {
     background-color: #ded0bf;
   }
 
-  /deep/ code {
+  ::v-deep code {
     background-color: #ded0bf;
   }
 
-  /deep/ blockquote {
+  ::v-deep blockquote {
     background-color: #ded0bf;
   }
 
-  /deep/ blockquote:before {
+  ::v-deep blockquote:before {
     color: #504231;
   }
 }
 
 .dark-mode .page {
   background-color: rgb(32, 32, 33);
-  /deep/ h1 {
+  ::v-deep h1 {
     border-bottom: solid 3px #bfbfbf;
     transition: border-bottom 0.3s ease-in-out;
   }
 
-  /deep/ h2 {
+  ::v-deep h2 {
     border-left: solid 5px #bfbfbf;
     transition: border-left 0.3s ease-in-out;
   }
 
-  /deep/ code {
+  ::v-deep code {
     background-color: rgb(39, 44, 51);
     transition: background-color 0.3s ease-in-out;
   }
 
-  /deep/ pre code {
+  ::v-deep pre code {
     @apply bg-transparent;
   }
 
-  /deep/ a {
+  ::v-deep a {
     transition: 0.3s ease-in-out;
   }
 
-  /deep/ .table-of-contents {
+  ::v-deep .table-of-contents {
     background-color: #171717;
   }
 
-  /deep/ blockquote {
+  ::v-deep blockquote {
     background-color: #171717;
   }
 
-  /deep/ .post-tag {
+  ::v-deep .post-tag {
     @apply text-gray-400;
   }
 }

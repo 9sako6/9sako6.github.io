@@ -1,4 +1,6 @@
 import { fetchRoutes } from './plugins/router';
+import Fiber from 'fibers' // dart-sass用
+import Sass from 'sass' // dart-sass用
 
 require('dotenv').config();
 
@@ -134,6 +136,14 @@ export default {
      ** You can extend webpack config here
      */
     // extend (config: any, ctx: any) { }
+    loaders: {
+      scss: {
+        implementation: Sass,
+        sassOptions: {
+          fiber: Fiber
+        }
+      }
+    }
   },
   /**
    * Generate configuration

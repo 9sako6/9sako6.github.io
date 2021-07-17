@@ -4,7 +4,7 @@
   display: inline-block;
   margin-top: 0.5em;
 
-  /deep/ a:hover {
+  ::v-deep a:hover {
     border-bottom: none;
   }
 }
