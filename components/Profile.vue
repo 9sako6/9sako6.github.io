@@ -11,7 +11,7 @@
       >
     </div>
     <div class="side-description">
-      <div>くさころ(9sako6) / Nagoya Univ. → Web Developer</div>
+      <div>くさころ(9sako6) / A software engineer</div>
       <div>
         当サイト「
         <div class="frame">

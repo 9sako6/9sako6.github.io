@@ -7,13 +7,13 @@
       <div class="post-time">
         <time>
           <div class="post-time-title">created:</div>
-          2020-03-28
+          2020年03月28
         </time>
       </div>
       <div class="post-time">
         <time>
           <div class="post-time-title">updated:</div>
-          2020-10-20
+          2021年07月17日
         </time>
       </div>
     </div>
