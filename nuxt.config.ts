@@ -5,7 +5,7 @@ require('dotenv').config();
 const siteTitle = '腐ったコロッケ';
 
 export default {
-  mode: 'universal',
+  ssr: true,
   target: 'static',
   meta: [
     { charset: 'utf-8' },
