@@ -27,6 +27,6 @@ module.exports = {
   variants: {},
   plugins: [],
   purge: {
-    enabled: true
+    layers: ['components', 'layouts', 'pages']
   }
 }
