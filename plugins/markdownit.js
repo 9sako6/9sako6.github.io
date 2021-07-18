@@ -1,7 +1,7 @@
 import MarkdownIt from 'markdown-it'
 import markdownItAnchor from 'markdown-it-anchor'
 import markdownItTableOfContents from 'markdown-it-table-of-contents'
-import markdownItKatex from 'markdown-it-katex'
+import markdownItKatex from '@traptitech/markdown-it-katex'
 import '~/node_modules/katex/dist/katex.min.css'
 
 import hljs from 'highlight.js/lib/core'
