@@ -44,38 +44,45 @@
   </nuxt-link>
 </template>
 
-<script>
-export default {
-  props: {
-    title: { type: String, default: '' },
-    description: { type: String, default: '' },
-    createdAt: { type: String, default: '' },
-    category: { type: String, default: '' },
-    link: { type: String, default: '' },
-    imgLink: { type: String, default: '' },
-    tags: { type: Array, default: () => [] }
-  },
-  methods: {
-    categoryName (categorySlug) {
-      if (categorySlug === 'competitive_prog') {
-        return '競プロ';
-      } else if (categorySlug === 'tech_blog') {
-        return '技術';
-      } else {
-        return '雑記';
-      }
-    },
-    categoryColor (categorySlug) {
-      if (categorySlug === 'competitive_prog') {
-        return 'bg-purple-600';
-      } else if (categorySlug === 'tech_blog') {
-        return 'bg-blue-700';
-      } else {
-        return 'bg-gray-700';
-      }
+<script lang='ts'>
+import { Component, Prop, Vue } from 'vue-property-decorator';
+
+@Component
+export default class Card extends Vue {
+  @Prop({ type: String })
+  title!: string;
+  @Prop({ type: String })
+  description!: string;
+  @Prop({ type: String })
+  createdAt!: string;
+  @Prop({ type: String })
+  category!: string;
+  @Prop({ type: String })
+  link!: string;
+  @Prop({ type: String })
+  imgLink!: string;
+  @Prop({ type: Array })
+  tags!: string[];
+
+  categoryName(categorySlug: string) {
+    if (categorySlug === 'competitive_prog') {
+      return '競プロ';
+    } else if (categorySlug === 'tech_blog') {
+      return '技術';
+    } else {
+      return '雑記';
     }
   }
-};
+  categoryColor (categorySlug: string) {
+    if (categorySlug === 'competitive_prog') {
+      return 'bg-purple-600';
+    } else if (categorySlug === 'tech_blog') {
+      return 'bg-blue-700';
+    } else {
+      return 'bg-gray-700';
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">

@@ -5,11 +5,11 @@
   "author": "9sako6",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts --port 3000",
-    "analyze": "nuxt-ts build --analyze",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
+    "dev": "nuxt --port 3000",
+    "analyze": "nuxt build --analyze",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
     "deploy": "NODE_ENV=production yarn generate && netlify deploy --prod",
     "lint": "npx standard",
     "lintfix": "npx standard --fix",
@@ -33,8 +33,7 @@
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
-    "@nuxt/typescript-build": "^2.0.2",
-    "@nuxt/typescript-runtime": "^1.0.0",
+    "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/color-mode": "^1.0.2",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/sitemap": "^2.0.1",
@@ -50,6 +49,8 @@
     "sass": "1.32.12",
     "sass-loader": "10.1.1",
     "standard": "^16.0.3",
-    "vue-lazyload": "^1.3.3"
+    "vue-class-component": "^7.2.6",
+    "vue-lazyload": "^1.3.3",
+    "vue-property-decorator": "^9.1.2"
   }
 }
