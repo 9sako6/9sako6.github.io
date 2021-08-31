@@ -1,5 +1,10 @@
 <template>
-  <nuxt-link :aria-label="link" :to="link" class="post-description-link">
+  <nuxt-link
+    :aria-label="link"
+    :to="link"
+    class="post-description-link"
+    @click="handleClick"
+  >
     <div class="post">
       <div class="post-info-wrapper">
         <div :class="`post-category ${categoryColor(category)}`">
@@ -17,7 +22,7 @@
       <div class="box">
         <div class="left-box">
           <lazy-component class="eye-catch">
-            <img :src="imgLink" alt="eye catch" class="eye-catch">
+            <img :src="imgLink" alt="eye catch" class="eye-catch" />
           </lazy-component>
         </div>
         <div class="right-box">
@@ -44,8 +49,8 @@
   </nuxt-link>
 </template>
 
-<script lang='ts'>
-import { Component, Prop, Vue } from 'vue-property-decorator';
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class Card extends Vue {
@@ -63,24 +68,29 @@ export default class Card extends Vue {
   imgLink!: string;
   @Prop({ type: Array })
   tags!: string[];
+  @Prop({ type: Object })
+  $gtm!: any;
 
   categoryName(categorySlug: string) {
-    if (categorySlug === 'competitive_prog') {
-      return '競プロ';
-    } else if (categorySlug === 'tech_blog') {
-      return '技術';
+    if (categorySlug === "competitive_prog") {
+      return "競プロ";
+    } else if (categorySlug === "tech_blog") {
+      return "技術";
     } else {
-      return '雑記';
+      return "雑記";
     }
   }
-  categoryColor (categorySlug: string) {
-    if (categorySlug === 'competitive_prog') {
-      return 'bg-purple-600';
-    } else if (categorySlug === 'tech_blog') {
-      return 'bg-blue-700';
+  categoryColor(categorySlug: string) {
+    if (categorySlug === "competitive_prog") {
+      return "bg-purple-600";
+    } else if (categorySlug === "tech_blog") {
+      return "bg-blue-700";
     } else {
-      return 'bg-gray-700';
+      return "bg-gray-700";
     }
+  }
+  handleClick() {
+    this.$gtm.push({ event: "demo" });
   }
 }
 </script>

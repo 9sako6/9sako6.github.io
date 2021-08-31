@@ -96,9 +96,9 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    ['@nuxtjs/google-analytics', {
-      id: process.env.GOOGLE_ANALYTICS_ID
-    }],
+    // ['@nuxtjs/google-analytics', {
+    //   id: process.env.GOOGLE_ANALYTICS_ID
+    // }],
     '@nuxt/typescript-build',
     '~/modules/global-components/',
     '~/modules/purgecss-whitelist',
@@ -117,7 +117,13 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/gtm'
   ],
+  publicRuntimeConfig: {
+    gtm: {
+      id: process.env.GOOGLE_TAG_MANAGER_ID
+    }
+  },
   router: {
     middleware: [
       'getContentful'
@@ -151,7 +157,7 @@ export default {
   generate: {
     fallback: true,
     subFolders: false,
-    async routes () {
+    async routes() {
       try {
         return await fetchRoutes();
       } catch (error) {
@@ -179,7 +185,7 @@ export default {
     hostname: process.env.BASE_URL,
     cacheTime: 1000 * 60 * 15,
     gzip: true,
-    async routes () {
+    async routes() {
       try {
         return await fetchRoutes();
       } catch (error) {
