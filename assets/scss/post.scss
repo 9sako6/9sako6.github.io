@@ -224,12 +224,12 @@ div.tex-equations {
 .light-mode .page,
 .sepia-mode .page {
   ::v-deep h2 {
-    border-bottom: solid 3px #494949;
+    border-left: solid 5px #494949;
     transition: border-left 0.3s ease-in-out;
   }
 
   ::v-deep h3 {
-    border-left: solid 5px #494949;
+    border-bottom: solid 3px #494949;
     transition: border-left 0.3s ease-in-out;
   }
 
@@ -287,13 +287,13 @@ div.tex-equations {
   background-color: rgb(32, 32, 33);
 
   ::v-deep h2 {
-    border-bottom: solid 3px #bfbfbf;
-    transition: border-bottom 0.3s ease-in-out;
+    border-left: solid 5px #bfbfbf;
+    transition: border-left 0.3s ease-in-out;
   }
 
   ::v-deep h3 {
-    border-left: solid 5px #bfbfbf;
-    transition: border-left 0.3s ease-in-out;
+    border-bottom: solid 3px #bfbfbf;
+    transition: border-bottom 0.3s ease-in-out;
   }
 
   ::v-deep code {
