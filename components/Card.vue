@@ -6,7 +6,7 @@
           {{ categoryName(category) }}
         </div>
         <div class="post-date">
-          {{ createdAt.split("T")[0] }}
+          {{ new Date(createdAt) }}
         </div>
       </div>
       <div class="post-title-wrap">

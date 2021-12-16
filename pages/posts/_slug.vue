@@ -8,13 +8,13 @@
         <div class="post-time">
           <time v-if="post.sys.createdAt">
             <div class="post-time-title">created:</div>
-            {{ post.sys.createdAt.split("T")[0] }}
+            {{ new Date(post.sys.createdAt) }}
           </time>
         </div>
         <div class="post-time">
           <time v-if="post.sys.updatedAt">
             <div class="post-time-title">updated:</div>
-            {{ post.sys.updatedAt.split("T")[0] }}
+            {{ new Date(post.sys.updatedAt) }}
           </time>
         </div>
       </div>
