@@ -7,7 +7,7 @@
       <Card
         :title="post.fields.title"
         :description="post.fields.description"
-        :created-at="post.fields.createdAt"
+        :created-at="post.sys.createdAt"
         :link="`/posts/${post.fields.slug}`"
         :tags="post.fields.tags"
         :img-link="getEyeCatch(post).url"
