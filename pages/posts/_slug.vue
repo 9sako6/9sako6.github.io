@@ -8,13 +8,13 @@
         <div class="post-time">
           <time v-if="post.sys.createdAt">
             <div class="post-time-title">created:</div>
-            {{ new Date(post.sys.createdAt) }}
+            {{ postCreatedAt }}
           </time>
         </div>
         <div class="post-time">
           <time v-if="post.sys.updatedAt">
             <div class="post-time-title">updated:</div>
-            {{ new Date(post.sys.updatedAt) }}
+            {{ postUpdatedAt }}
           </time>
         </div>
       </div>
@@ -76,6 +76,7 @@ import ArrowLeft from '@/components/svg/ArrowLeft';
 import ArrowRight from '@/components/svg/ArrowRight';
 import Hatena from '@/components/svg/Hatena';
 import Twitter from '@/components/svg/Twitter';
+import { formattedDateString } from "@/lib";
 
 export default {
   components: {
@@ -116,6 +117,12 @@ export default {
     };
   },
   computed: {
+    postCreatedAt: function () {
+      return formattedDateString(new Date(this.post.sys.createdAt));
+    },
+    postUpdatedAt: function () {
+      return formattedDateString(new Date(this.post.sys.updatedAt));
+    },
     ...mapGetters(['getEyeCatch', 'getPost'])
   },
   mounted () {
