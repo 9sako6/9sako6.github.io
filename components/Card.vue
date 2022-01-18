@@ -6,7 +6,7 @@
           {{ categoryName }}
         </div>
         <div class="post-date">
-          {{ new Date(createdAt) }}
+          {{ postCreatedAt }}
         </div>
       </div>
       <div class="post-title-wrap">
@@ -46,6 +46,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import { formattedDateString } from "@/lib";
 
 @Component
 export default class Card extends Vue {
@@ -63,6 +64,10 @@ export default class Card extends Vue {
   imgLink!: string;
   @Prop({ type: Array })
   tags!: string[];
+
+  get postCreatedAt() {
+    return formattedDateString(new Date(this.createdAt));
+  }
 
   get categoryName() {
     switch (this.category) {
