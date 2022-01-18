@@ -2,8 +2,8 @@
   <nuxt-link :aria-label="link" :to="link" class="post-description-link">
     <div class="post">
       <div class="post-info-wrapper">
-        <div :class="`post-category ${categoryColor(category)}`">
-          {{ categoryName(category) }}
+        <div :class="`post-category ${categoryColor}`">
+          {{ categoryName }}
         </div>
         <div class="post-date">
           {{ new Date(createdAt) }}
@@ -17,7 +17,7 @@
       <div class="box">
         <div class="left-box">
           <lazy-component class="eye-catch">
-            <img :src="imgLink" alt="eye catch" class="eye-catch">
+            <img :src="imgLink" alt="eye catch" class="eye-catch" />
           </lazy-component>
         </div>
         <div class="right-box">
@@ -44,8 +44,8 @@
   </nuxt-link>
 </template>
 
-<script lang='ts'>
-import { Component, Prop, Vue } from 'vue-property-decorator';
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class Card extends Vue {
@@ -64,22 +64,24 @@ export default class Card extends Vue {
   @Prop({ type: Array })
   tags!: string[];
 
-  categoryName(categorySlug: string) {
-    if (categorySlug === 'competitive_prog') {
-      return '競プロ';
-    } else if (categorySlug === 'tech_blog') {
-      return '技術';
-    } else {
-      return '雑記';
+  get categoryName() {
+    switch (this.category) {
+      case "competitive_prog":
+        return "競プロ";
+      case "tech_blog":
+        return "技術";
+      default:
+        return "雑記";
     }
   }
-  categoryColor (categorySlug: string) {
-    if (categorySlug === 'competitive_prog') {
-      return 'bg-purple-600';
-    } else if (categorySlug === 'tech_blog') {
-      return 'bg-blue-700';
-    } else {
-      return 'bg-gray-700';
+  get categoryColor() {
+    switch (this.category) {
+      case "competitive_prog":
+        return "bg-purple-600";
+      case "tech_blog":
+        return "bg-blue-700";
+      default:
+        return "bg-gray-700";
     }
   }
 }
