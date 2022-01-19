@@ -1,0 +1,15 @@
+query enumPosts($where: BlogPostFilter) {
+  blogPostCollection(where: $where) {
+    items {
+      body
+      title
+      description
+      slug
+      sys {
+        id
+        publishedAt
+        firstPublishedAt
+      }
+    }
+  }
+}
