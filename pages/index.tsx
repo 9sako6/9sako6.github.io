@@ -9,12 +9,13 @@ import {
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import type { Post } from "../types";
+import type { GetStaticProps } from "next";
 
 type Props = {
   posts: Post[];
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const result = await client.query<EnumPostsQuery>({
     query: EnumPostsDocument,
   });
@@ -24,13 +25,14 @@ export async function getStaticProps() {
       props: { posts: [] as Post[] },
     };
   }
-  const posts: (Post | null | undefined)[] =
-    result.data.blogPostCollection.items;
+  const posts: Post[] = result.data.blogPostCollection.items.filter(
+    (post): post is Post => post !== null && post !== undefined
+  );
 
   return {
     props: { posts },
   };
-}
+};
 
 const Home: NextPage<Props> = ({ posts }) => {
   return (
