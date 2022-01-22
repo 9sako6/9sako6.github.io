@@ -3,6 +3,7 @@
   color: #0070f3;
   border-color: #0070f3;
   width: 600px;
+  word-break: break-all;
 }
 
 .postBody a:hover,
