@@ -9,6 +9,8 @@ import {
 import type { Post } from "../../types";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
+import { PostBody } from "../../components/atoms";
+import styles from "../../styles/Home.module.css";
 
 type Props = Post & {
   bodyHtml: string;
@@ -71,17 +73,12 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 
 const Post: NextPage<Props> = (props) => {
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
-          integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"
-          crossOrigin="anonymous"
-        ></link>
+        <title>{props.title} - 腐ったコロッケ</title>
       </Head>
       <h1>{props.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: props.bodyHtml }} />
+      <PostBody html={props.bodyHtml} />
     </div>
   );
 };
