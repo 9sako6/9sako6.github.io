@@ -1,0 +1,18 @@
+query enumPosts($where: BlogPostFilter) {
+  blogPostCollection(where: $where, order: sys_firstPublishedAt_DESC) {
+    items {
+      body
+      title
+      description
+      slug
+      eyeCatchImage {
+        url
+      }
+      sys {
+        id
+        publishedAt
+        firstPublishedAt
+      }
+    }
+  }
+}
