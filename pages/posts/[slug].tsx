@@ -8,9 +8,7 @@ import {
 } from "../../graphql/queries/enumPosts.generated";
 import type { Post } from "../../types";
 import type { GetStaticPaths, GetStaticProps } from "next";
-import Head from "next/head";
-import { PostBody } from "../../components/atoms";
-import styles from "../../styles/Home.module.css";
+import { PostPage } from "../../components/templates";
 
 type Props = Post & {
   bodyHtml: string;
@@ -72,21 +70,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 };
 
 const Post: NextPage<Props> = (props) => {
-  return (
-    <div>
-      <Head>
-        <title>{props.title} - 腐ったコロッケ</title>
-        <meta property="og:title" content={props.title || ""} />
-        <meta property="og:description" content={props.description || ""} />
-        <meta
-          property="og:image"
-          content={props.eyeCatchImage?.url || undefined}
-        />
-      </Head>
-      <h1>{props.title}</h1>
-      <PostBody html={props.bodyHtml} />
-    </div>
-  );
+  return <PostPage {...props} />;
 };
 
 export default Post;
