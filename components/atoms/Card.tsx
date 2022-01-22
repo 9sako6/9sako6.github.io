@@ -20,10 +20,10 @@ export const Card = ({
   imageUrl,
 }: Props): JSX.Element => {
   const postPath = `/posts/${slug}`;
-  const [imageQuority, setImageQuority] = useState(1);
+  const [imageQuality, setImageQuality] = useState(50);
 
   useEffect(() => {
-    setImageQuority(100);
+    setImageQuality(100);
   }, []);
 
   return (
@@ -43,7 +43,7 @@ export const Card = ({
             src={imageUrl}
             layout="fill"
             objectFit="contain"
-            quality={imageQuority}
+            quality={imageQuality}
             priority
           />
         </div>
