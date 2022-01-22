@@ -3,6 +3,7 @@ import remarkParse from "remark-parse";
 import remarkMath from "remark-math";
 import remarkRehype from "remark-rehype";
 import rehypeKatex from "rehype-katex";
+import rehypePrism from "rehype-prism-plus";
 import rehypeStringify from "rehype-stringify";
 
 export const markdownToHtml = async (markdown: string) => {
@@ -12,6 +13,7 @@ export const markdownToHtml = async (markdown: string) => {
       .use(remarkMath)
       .use(remarkRehype)
       .use(rehypeKatex)
+      .use(rehypePrism)
       .use(rehypeStringify)
       .process(markdown)
   ).toString();
