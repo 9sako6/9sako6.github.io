@@ -1,24 +1,16 @@
-import Head from "next/head";
 import type { Post } from "../../types";
-import { Card } from "../atoms";
 import { Layout } from "../layouts";
+import { Card, PostTitle } from "../atoms";
 
 type Props = {
   posts: Post[];
+  year: string;
 };
 
-export const TopPage = ({ posts }: Props): JSX.Element => {
+export const YearlyArchivesPage = ({ posts, year }: Props) => {
   return (
     <Layout>
-      <Head>
-        <title>腐ったコロッケ</title>
-        <meta
-          name="description"
-          content="Webアプリケーション開発を専門とするエンジニアの技術ブログ"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      <PostTitle title={`${year}年に公開された記事 ... ${posts.length}件`} />
       {posts.length === 0 ? (
         <p>There are no posts.</p>
       ) : (

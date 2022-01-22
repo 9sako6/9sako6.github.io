@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useFormattedDate } from "../../hooks";
-import styles from "./PostCard.module.css";
+import styles from "./Card.module.css";
+import { PostDate } from "./PostDate";
 
 type Props = {
   slug: string;
@@ -11,14 +11,13 @@ type Props = {
   imageUrl?: string;
 };
 
-export const PostCard = ({
+export const Card = ({
   slug,
   title,
   description,
   createdAt,
   imageUrl,
 }: Props): JSX.Element => {
-  const formattedCreatedAt = useFormattedDate(new Date(createdAt));
   const postPath = `/posts/${slug}`;
 
   return (
@@ -42,7 +41,7 @@ export const PostCard = ({
           />
         </div>
       )}
-      <time>{formattedCreatedAt}</time>
+      <PostDate date={new Date(createdAt)} />
     </div>
   );
 };
