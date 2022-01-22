@@ -21,6 +21,18 @@
   border-radius: 5px;
 }
 
+.postBody blockquote {
+  margin: 0;
+  padding: 1em;
+  border-left: 3px #1d2f43 solid;
+}
+
+.postBody code {
+  padding: 0.2em 0.4em;
+  background: #215aa012;
+  border-radius: 4px;
+}
+
 @media (max-width: 600px) {
   .postBody img {
     max-width: 100%;
