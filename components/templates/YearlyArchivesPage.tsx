@@ -18,7 +18,10 @@ export const YearlyArchivesPage = ({ posts, year }: Props) => {
         <title>{seoTitle}</title>
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={process.env.siteDescription} />
-        <meta property="og:image" content="/icon.webp" />
+        <meta
+          property="og:image"
+          content={`${process.env.siteUrl}/icon.webp`}
+        />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="@9sako6" />
         <link rel="icon" href="/favicon.ico" />
