@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./Card.module.css";
 import { PostDate } from "./PostDate";
+import { useEffect, useState } from "react";
 
 type Props = {
   slug: string;
@@ -19,6 +20,11 @@ export const Card = ({
   imageUrl,
 }: Props): JSX.Element => {
   const postPath = `/posts/${slug}`;
+  const [imageQuority, setImageQuority] = useState(1);
+
+  useEffect(() => {
+    setImageQuority(100);
+  }, []);
 
   return (
     <div className={styles.card}>
@@ -37,6 +43,7 @@ export const Card = ({
             src={imageUrl}
             layout="fill"
             objectFit="contain"
+            quality={imageQuority}
             priority
           />
         </div>

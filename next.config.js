@@ -4,4 +4,7 @@ module.exports = {
   images: {
     domains: ["images.ctfassets.net", "picsum.photos"],
   },
+  env: {
+    siteTitle: "腐ったコロッケ",
+  },
 };
