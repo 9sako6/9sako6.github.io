@@ -1,7 +1,7 @@
 overwrite: true
 # NOTE: Please replace the schema with the following URL.
 # `https://graphql.contentful.com/content/v1/spaces/${process.env.CTF_SPACE_ID}?access_token=${process.env.CTF_CDA_ACCESS_TOKEN}`
-schema: ""
+schema: "https://graphql.contentful.com/content/v1/spaces/57a83iqiwfit?access_token=hcG-hv1vhjqwUNes2pJV1JdwDGY1xWYFwoK58GZh1i0"
 documents: graphql/**/*.gql
 generates:
   graphql/graphql.d.ts:

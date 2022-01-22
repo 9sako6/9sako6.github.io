@@ -21,7 +21,7 @@ type Params = {
 };
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const result = await client.query<EnumPostsQuery>({
+  const result = await client.query<EnumPostsQuery, EnumPostsQueryVariables>({
     query: EnumPostsDocument,
   });
 
@@ -73,7 +73,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 
 const Post: NextPage<Props> = (props) => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>{props.title} - 腐ったコロッケ</title>
       </Head>

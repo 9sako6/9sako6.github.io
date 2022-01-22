@@ -1,0 +1,28 @@
+.postBody a {
+  cursor: pointer;
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.postBody a:hover,
+.postBody a:focus,
+.postBody a:active {
+  text-decoration: underline;
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.postBody img {
+  margin: auto;
+  display: block;
+  max-height: 400px;
+  height: auto;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .postBody img {
+    max-width: 100%;
+    height: auto;
+  }
+}
