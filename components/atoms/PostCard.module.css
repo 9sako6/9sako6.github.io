@@ -1,0 +1,63 @@
+.card {
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.card > h2 {
+  display: inline-block;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card > h2:hover,
+.card > h2:focus,
+.card > h2:active {
+  cursor: pointer;
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card > p {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.card > p:hover,
+.card > p:focus,
+.card > p:active {
+  cursor: pointer;
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.description {
+  padding-bottom: 1em;
+}
+
+.card > time {
+  color: #686868;
+  display: block;
+  position: relative;
+  text-align: right;
+  padding-top: 1em;
+}
+
+.imageWrapper {
+  position: relative;
+  display: block;
+  width: 600px;
+  height: 400px;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  .imageWrapper {
+    width: 300px;
+    height: 200px;
+  }
+}
