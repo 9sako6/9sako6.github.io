@@ -11,7 +11,7 @@ export const TopPage = ({ posts }: Props): JSX.Element => {
   return (
     <Layout>
       <Head>
-        <title>腐ったコロッケ</title>
+        <title>{process.env.siteTitle}</title>
         <meta
           name="description"
           content="Webアプリケーション開発を専門とするエンジニアの技術ブログ"

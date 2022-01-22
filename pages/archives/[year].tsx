@@ -37,8 +37,6 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
   }
   const paths = Array.from(years).map((year) => ({ params: { year } }));
 
-  console.log(paths);
-
   return {
     paths,
     fallback: false,

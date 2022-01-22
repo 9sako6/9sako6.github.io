@@ -20,7 +20,9 @@ export const PostPage = ({
   return (
     <Layout>
       <Head>
-        <title>{title} - 腐ったコロッケ</title>
+        <title>
+          {title} - {process.env.siteTitle}
+        </title>
         <meta property="og:title" content={title || ""} />
         <meta property="og:description" content={description || ""} />
         <meta property="og:image" content={eyeCatchImage?.url || undefined} />

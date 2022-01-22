@@ -6,7 +6,7 @@ export const Header = (): JSX.Element => {
     <header className={styles.header}>
       <div className={styles.title}>
         <Link href="/">
-          <a>腐ったコロッケ</a>
+          <a>{process.env.siteTitle}</a>
         </Link>
       </div>
     </header>
