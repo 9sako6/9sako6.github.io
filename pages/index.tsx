@@ -1,15 +1,12 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import { client } from "../lib/client";
 import {
   EnumPostsQuery,
   EnumPostsDocument,
 } from "../graphql/queries/enumPosts.generated";
-import styles from "../styles/Home.module.css";
 import type { Post } from "../types";
 import type { GetStaticProps } from "next";
-import { PostCard } from "../components/atoms";
+import { TopPage } from "../components/templates";
 
 type Props = {
   posts: Post[];
@@ -35,29 +32,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 const Home: NextPage<Props> = ({ posts }) => {
-  return (
-    <div>
-      <Head>
-        <title>腐ったコロッケ</title>
-        <meta
-          name="description"
-          content="Webアプリケーション開発を専門とするエンジニアの技術ブログ"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      {posts.map((post) => (
-        <PostCard
-          key={post.sys.id}
-          slug={post.slug || ""}
-          title={post.title || ""}
-          description={post.description || ""}
-          createdAt={post.sys.firstPublishedAt}
-          imageUrl={post.eyeCatchImage?.url || undefined}
-        />
-      ))}
-    </div>
-  );
+  return <TopPage posts={posts} />;
 };
 
 export default Home;

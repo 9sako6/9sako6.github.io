@@ -23,15 +23,23 @@ export const PostCard = ({
 
   return (
     <div className={styles.card}>
-      <Link href={postPath} passHref>
-        <h2>{title}</h2>
-      </Link>
+      <div>
+        <Link href={postPath} passHref>
+          <span className={styles.title}>{title}</span>
+        </Link>
+      </div>
       <Link href={postPath} passHref>
         <p className={styles.description}>{description}</p>
       </Link>
       {imageUrl && (
         <div className={styles.imageWrapper}>
-          <Image alt={title} src={imageUrl} layout="fill" objectFit="contain" />
+          <Image
+            alt={title}
+            src={imageUrl}
+            layout="fill"
+            objectFit="contain"
+            priority
+          />
         </div>
       )}
       <time>{formattedCreatedAt}</time>

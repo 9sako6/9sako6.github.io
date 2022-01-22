@@ -4,17 +4,19 @@
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid #eaeaea;
+  width: 600px;
 }
 
-.card > h2 {
+.card .title {
   display: inline-block;
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
-.card > h2:hover,
-.card > h2:focus,
-.card > h2:active {
+.card .title:hover,
+.card .title:focus,
+.card .title:active {
   cursor: pointer;
   color: #0070f3;
   border-color: #0070f3;
@@ -23,8 +25,6 @@
 .card > p {
   display: inline-block;
   margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
 }
 
 .card > p:hover,
@@ -49,15 +49,28 @@
 
 .imageWrapper {
   position: relative;
-  display: block;
+  display: flex;
   width: 600px;
   height: 400px;
   margin: auto;
+  text-align: center;
+}
+
+.imageWrapper > img {
+  max-width: 600px;
 }
 
 @media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+
   .imageWrapper {
     width: 300px;
     height: 200px;
+  }
+
+  .imageWrapper > img {
+    max-width: 300px;
   }
 }

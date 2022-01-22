@@ -2,10 +2,6 @@
   https://github.com/timlrx/rehype-prism-plus#styling
 */
 
-.language-ruby {
-  overflow-x: auto;
-}
-
 /**
  * Inspired by gatsby remark prism - https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/
  * 1. Make the element just wide enough to fit its content.
@@ -14,6 +10,14 @@
 .code-highlight {
   float: left; /* 1 */
   min-width: 100%; /* 2 */
+  max-width: 500px;
+}
+
+@media (max-width: 600px) {
+  .code-highlight {
+    width: 300px;
+    /* width: 100%; */
+  }
 }
 
 .code-line {

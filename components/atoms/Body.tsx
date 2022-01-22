@@ -4,7 +4,7 @@ type Props = {
   html: string;
 };
 
-export const PostBody = ({ html }: Props): JSX.Element => {
+export const Body = ({ html }: Props): JSX.Element => {
   return (
     <div
       className={styles.postBody}

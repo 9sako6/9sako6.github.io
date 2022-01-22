@@ -2,6 +2,7 @@
   cursor: pointer;
   color: #0070f3;
   border-color: #0070f3;
+  width: 600px;
 }
 
 .postBody a:hover,
