@@ -1,15 +1,13 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { PostCard } from "./postCard";
+import { Card } from "./Card";
 
 export default {
-  title: "atoms/PostCard",
-  component: PostCard,
-} as ComponentMeta<typeof PostCard>;
+  title: "atoms/Card",
+  component: Card,
+} as ComponentMeta<typeof Card>;
 
-const Template: ComponentStory<typeof PostCard> = (args) => (
-  <PostCard {...args} />
-);
+const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 
 export const WithoutImage = Template.bind({});
 WithoutImage.args = {

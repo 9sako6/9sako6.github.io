@@ -1,3 +1,4 @@
 export { Body } from "./Body";
-export { PostCard } from "./postCard";
+export { Card } from "./Card";
 export { PostTitle } from "./PostTitle";
+export { PostDate } from "./PostDate";

@@ -1,4 +1,4 @@
-import styles from "./PostBody.module.css";
+import styles from "./Body.module.css";
 
 type Props = {
   html: string;
