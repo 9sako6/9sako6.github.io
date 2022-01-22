@@ -20,11 +20,6 @@ export const Card = ({
   imageUrl,
 }: Props): JSX.Element => {
   const postPath = `/posts/${slug}`;
-  const [imageQuality, setImageQuality] = useState(50);
-
-  useEffect(() => {
-    setImageQuality(100);
-  }, []);
 
   return (
     <div className={styles.card}>
@@ -43,8 +38,9 @@ export const Card = ({
             src={imageUrl}
             layout="fill"
             objectFit="contain"
-            quality={imageQuality}
             priority
+            placeholder={"blur"}
+            blurDataURL={imageUrl}
           />
         </div>
       )}
