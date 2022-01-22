@@ -15,7 +15,6 @@ export const PostPage = ({
   eyeCatchImage,
   bodyHtml,
 }: Props): JSX.Element => {
-  console.log(bodyHtml);
   return (
     <Layout>
       <Head>
