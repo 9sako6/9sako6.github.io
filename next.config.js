@@ -6,5 +6,6 @@ module.exports = {
   },
   env: {
     siteTitle: "腐ったコロッケ",
+    siteDescription: "Webアプリケーション開発者くさころの技術ブログ。",
   },
 };

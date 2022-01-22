@@ -12,10 +12,11 @@ export const TopPage = ({ posts }: Props): JSX.Element => {
     <Layout>
       <Head>
         <title>{process.env.siteTitle}</title>
-        <meta
-          name="description"
-          content="Webアプリケーション開発を専門とするエンジニアの技術ブログ"
-        />
+        <meta property="og:title" content={process.env.siteTitle} />
+        <meta property="og:description" content={process.env.siteDescription} />
+        <meta property="og:image" content="/icon.webp" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@9sako6" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
