@@ -1,14 +1,14 @@
 import type { NextPage } from "next";
 import { client } from "../../lib/client";
+import { markdownToHtml } from "../../lib/markdown-html";
 import {
   EnumPostsQueryVariables,
   EnumPostsQuery,
   EnumPostsDocument,
 } from "../../graphql/queries/enumPosts.generated";
-import { remark } from "remark";
-import html from "remark-html";
 import type { Post } from "../../types";
 import type { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
 
 type Props = Post & {
   bodyHtml: string;
@@ -59,11 +59,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
     return { props: {} as Props };
   }
 
-  const bodyHtml = (
-    await remark()
-      .use(html)
-      .process(post.body || "")
-  ).value.toString();
+  const bodyHtml = await markdownToHtml(post.body || "");
 
   return {
     props: {
@@ -76,6 +72,14 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 const Post: NextPage<Props> = (props) => {
   return (
     <div>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+          integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"
+          crossOrigin="anonymous"
+        ></link>
+      </Head>
       <h1>{props.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: props.bodyHtml }} />
     </div>
