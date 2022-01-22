@@ -76,6 +76,12 @@ const Post: NextPage<Props> = (props) => {
     <div>
       <Head>
         <title>{props.title} - 腐ったコロッケ</title>
+        <meta property="og:title" content={props.title || ""} />
+        <meta property="og:description" content={props.description || ""} />
+        <meta
+          property="og:image"
+          content={props.eyeCatchImage?.url || undefined}
+        />
       </Head>
       <h1>{props.title}</h1>
       <PostBody html={props.bodyHtml} />
