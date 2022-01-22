@@ -1,0 +1,25 @@
+.header {
+  padding-top: 50px;
+  height: 100px;
+}
+
+.title a {
+  text-decoration: none;
+}
+
+.title {
+  height: 50%;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}

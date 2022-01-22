@@ -8,17 +8,20 @@ export type EnumPostsQueryVariables = Types.Exact<{
 }>;
 
 
-export type EnumPostsQuery = { __typename?: 'Query', blogPostCollection?: { __typename?: 'BlogPostCollection', items: Array<{ __typename?: 'BlogPost', body?: string | null | undefined, title?: string | null | undefined, description?: string | null | undefined, slug?: string | null | undefined, sys: { __typename?: 'Sys', id: string, publishedAt?: any | null | undefined, firstPublishedAt?: any | null | undefined } } | null | undefined> } | null | undefined };
+export type EnumPostsQuery = { __typename?: 'Query', blogPostCollection?: { __typename?: 'BlogPostCollection', items: Array<{ __typename?: 'BlogPost', body?: string | null | undefined, title?: string | null | undefined, description?: string | null | undefined, slug?: string | null | undefined, eyeCatchImage?: { __typename?: 'Asset', url?: string | null | undefined } | null | undefined, sys: { __typename?: 'Sys', id: string, publishedAt?: any | null | undefined, firstPublishedAt?: any | null | undefined } } | null | undefined> } | null | undefined };
 
 
 export const EnumPostsDocument = gql`
     query enumPosts($where: BlogPostFilter) {
-  blogPostCollection(where: $where) {
+  blogPostCollection(where: $where, order: sys_firstPublishedAt_DESC) {
     items {
       body
       title
       description
       slug
+      eyeCatchImage {
+        url
+      }
       sys {
         id
         publishedAt
