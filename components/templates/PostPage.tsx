@@ -26,6 +26,8 @@ export const PostPage = ({
         <meta property="og:title" content={title || ""} />
         <meta property="og:description" content={description || ""} />
         <meta property="og:image" content={eyeCatchImage?.url || undefined} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@9sako6" />
       </Head>
       <div className={styles.postPage}>
         <PostTitle title={title || ""} />
