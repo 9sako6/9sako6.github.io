@@ -16,6 +16,7 @@ export const YearlyArchivesPage = ({ posts, year }: Props) => {
     <Layout>
       <Head>
         <title>{seoTitle}</title>
+        <meta name="description" content={process.env.siteDescription} />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={process.env.siteDescription} />
         <meta

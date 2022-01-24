@@ -12,6 +12,7 @@ export const TopPage = ({ posts }: Props): JSX.Element => {
     <Layout>
       <Head>
         <title>{process.env.siteTitle}</title>
+        <meta name="description" content={process.env.siteDescription} />
         <meta property="og:title" content={process.env.siteTitle} />
         <meta property="og:description" content={process.env.siteDescription} />
         <meta
