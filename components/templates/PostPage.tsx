@@ -1,6 +1,11 @@
 import type { Post } from "../../types";
 import Head from "next/head";
-import { Body, PostTitle, PostDate } from "../../components/atoms";
+import {
+  Body,
+  PostTitle,
+  PostDate,
+  HatenaBookmark,
+} from "../../components/atoms";
 import { Layout } from "../../components/layouts";
 import styles from "./PostPage.module.css";
 import "prismjs/themes/prism-okaidia.min.css";
@@ -34,6 +39,7 @@ export const PostPage = ({
         <PostTitle title={title || ""} />
         <PostDate date={new Date(sys.firstPublishedAt as string)} />
         <Body html={bodyHtml} />
+        <HatenaBookmark />
       </div>
     </Layout>
   );
