@@ -9,6 +9,7 @@ import {
 import type { Post } from "../../types";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import { PostPage } from "../../components/templates";
+import { useRouter } from "next/router";
 
 type Props = Post & {
   bodyHtml: string;
@@ -70,7 +71,8 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 };
 
 const Post: NextPage<Props> = (props) => {
-  return <PostPage {...props} />;
+  const url = `${process.env.siteUrl}/posts/${props.slug}`;
+  return <PostPage {...props} url={url} />;
 };
 
 export default Post;
