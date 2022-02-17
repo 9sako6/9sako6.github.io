@@ -1,18 +1,15 @@
 import type { Post } from "../../types";
 import Head from "next/head";
-import {
-  Body,
-  PostTitle,
-  PostDate,
-  HatenaBookmark,
-} from "../../components/atoms";
+import { Body, PostTitle, PostDate } from "../../components/atoms";
 import { Layout } from "../../components/layouts";
 import styles from "./PostPage.module.css";
 import "prismjs/themes/prism-okaidia.min.css";
 import "../../node_modules/katex/dist/katex.min.css";
+import { ShareButtons } from "../organisms/ShareButtons";
 
 type Props = Post & {
   bodyHtml: string;
+  url: string;
 };
 
 export const PostPage = ({
@@ -21,6 +18,7 @@ export const PostPage = ({
   eyeCatchImage,
   bodyHtml,
   sys,
+  url,
 }: Props): JSX.Element => {
   return (
     <Layout>
@@ -39,7 +37,7 @@ export const PostPage = ({
         <PostTitle title={title || ""} />
         <PostDate date={new Date(sys.firstPublishedAt as string)} />
         <Body html={bodyHtml} />
-        <HatenaBookmark />
+        <ShareButtons title={title || ""} url={url} />
       </div>
     </Layout>
   );
