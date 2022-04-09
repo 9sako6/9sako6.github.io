@@ -2,6 +2,8 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import * as nextImage from "next/image";
 import nextConfig from "../next.config";
 
+import "../styles/globals.css";
+
 Object.defineProperty(nextImage, "default", {
   configurable: true,
   value: (props) => <img {...props} />,

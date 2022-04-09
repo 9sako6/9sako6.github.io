@@ -1,5 +1,4 @@
 import { HatenaShareButton, HatenaIcon, HatenaShareCount } from "react-share";
-import styles from "./HatenaBookmark.module.css";
 
 type Props = {
   title: string;
@@ -7,11 +6,11 @@ type Props = {
 };
 
 export const HatenaBookmark = ({ title, url }: Props) => (
-  <div className={styles.wrapper}>
+  <div className="w-8">
     <HatenaShareButton title={title} url={url}>
       <HatenaIcon size={32} round />
     </HatenaShareButton>
-    <div className={styles.count}>
+    <div className="text-center">
       <HatenaShareCount url={url} />
     </div>
   </div>
