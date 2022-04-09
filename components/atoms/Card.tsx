@@ -23,12 +23,10 @@ export const Card = ({
     <div className="pb-12 text-left w-full">
       <div className="pb-3">
         <Link href={postPath} passHref>
-          <a className="text-2xl hover:underline cursor-pointer font-semibold">
-            {title}
-          </a>
+          <a className="text-2xl hover:underline cursor-pointer">{title}</a>
         </Link>
       </div>
-      <p className="pb-3 text-gray-600">{description}</p>
+      <p className="pb-3 text-gray-600 dark:text-zinc-300">{description}</p>
       {imageUrl && (
         <div className="relative h-72">
           <Image
