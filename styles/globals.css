@@ -7,10 +7,10 @@
 }
 
 .markdown h1 {
-  @apply text-3xl pb-6 pt-6;
+  @apply text-3xl pb-6 pt-6 break-all;
 }
 .markdown h2 {
-  @apply text-2xl pb-6 pt-6;
+  @apply text-2xl pb-6 pt-6 break-all;
 }
 .markdown p {
   @apply break-all pb-6;
