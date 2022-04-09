@@ -1,3 +1,7 @@
+.postBody p {
+  word-break: break-all;
+}
+
 .postBody a {
   cursor: pointer;
   color: #0070f3;
