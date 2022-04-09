@@ -1,5 +1,3 @@
-import styles from "./Body.module.css";
-
 type Props = {
   html: string;
 };

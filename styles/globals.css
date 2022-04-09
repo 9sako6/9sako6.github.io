@@ -24,19 +24,11 @@
   @apply cursor-pointer text-blue-600 break-all hover:underline focus:underline active:underline;
 }
 .markdown img {
-  @apply max-h-96 max-w-xl m-auto rounded;
+  @apply max-h-96 max-w-full md:max-w-xl m-auto rounded;
 }
 .markdown blockquote {
   @apply p-4 mb-4 border-l-slate-700 border-l-4 bg-slate-100 rounded;
 }
-
 .markdown code {
   @apply pl-1 pr-1 bg-slate-100 rounded;
-}
-
-@media (max-width: 600px) {
-  .markdown img {
-    max-width: 100%;
-    height: auto;
-  }
 }

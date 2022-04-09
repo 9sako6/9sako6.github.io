@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { Header, Footer } from "../organisms";
-import styles from "./Layout.module.css";
 
 type Props = {
   children?: ReactNode;
@@ -8,10 +7,10 @@ type Props = {
 
 export const Layout = ({ children }: Props): JSX.Element => {
   return (
-    <div className={styles.container}>
+    <div className="pl-4 pr-4">
       <Header />
-      <main className={styles.main}>
-        <div className={styles.grid}>{children}</div>
+      <main className="flex min-h-screen items-center justify-center">
+        <div className="md:max-w-2xl">{children}</div>
       </main>
       <Footer />
     </div>
