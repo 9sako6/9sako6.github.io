@@ -1,5 +1,4 @@
 import { HatenaBookmark } from "../atoms";
-import styles from "./ShareButtons.module.css";
 
 type Props = {
   title: string;
@@ -8,7 +7,7 @@ type Props = {
 
 export const ShareButtons = ({ url, title }: Props) => {
   return (
-    <div className={styles.wrapper}>
+    <div className="pt-4 pb-4">
       <HatenaBookmark url={url} title={title} />
     </div>
   );

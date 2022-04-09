@@ -1,8 +1,8 @@
-.postBody p {
+.markdown p {
   word-break: break-all;
 }
 
-.postBody a {
+.markdown a {
   cursor: pointer;
   color: #0070f3;
   border-color: #0070f3;
@@ -10,15 +10,15 @@
   word-break: break-all;
 }
 
-.postBody a:hover,
-.postBody a:focus,
-.postBody a:active {
+.markdown a:hover,
+.markdown a:focus,
+.markdown a:active {
   text-decoration: underline;
   color: #0070f3;
   border-color: #0070f3;
 }
 
-.postBody img {
+.markdown img {
   margin: auto;
   display: block;
   max-height: 400px;
@@ -27,20 +27,20 @@
   border-radius: 5px;
 }
 
-.postBody blockquote {
+.markdown blockquote {
   margin: 0;
   padding: 1em;
   border-left: 3px #1d2f43 solid;
 }
 
-.postBody code {
+.markdown code {
   padding: 0.2em 0.4em;
   background: #215aa012;
   border-radius: 4px;
 }
 
 @media (max-width: 600px) {
-  .postBody img {
+  .markdown img {
     max-width: 100%;
     height: auto;
   }

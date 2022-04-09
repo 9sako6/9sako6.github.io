@@ -27,7 +27,9 @@ export const YearlyArchivesPage = ({ posts, year }: Props) => {
         <meta name="twitter:creator" content="@9sako6" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PostTitle title={pageTitle} />
+      <div className="l-0">
+        <PostTitle title={pageTitle} />
+      </div>
       {posts.length === 0 ? (
         <p>There are no posts.</p>
       ) : (

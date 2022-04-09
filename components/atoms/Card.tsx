@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./Card.module.css";
 import { PostDate } from "./PostDate";
-import { useEffect, useState } from "react";
 
 type Props = {
   slug: string;
@@ -22,17 +20,17 @@ export const Card = ({
   const postPath = `/posts/${slug}`;
 
   return (
-    <div className={styles.card}>
-      <div>
+    <div className="pb-12 text-left w-full">
+      <div className="pb-3">
         <Link href={postPath} passHref>
-          <span className={styles.title}>{title}</span>
+          <a className="text-2xl hover:underline cursor-pointer font-semibold">
+            {title}
+          </a>
         </Link>
       </div>
-      <Link href={postPath} passHref>
-        <p className={styles.description}>{description}</p>
-      </Link>
+      <p className="pb-3 text-gray-600">{description}</p>
       {imageUrl && (
-        <div className={styles.imageWrapper}>
+        <div className="relative h-72">
           <Image
             alt={title}
             src={imageUrl}
@@ -44,7 +42,9 @@ export const Card = ({
           />
         </div>
       )}
-      <PostDate date={new Date(createdAt)} />
+      <div className="text-right">
+        <PostDate date={new Date(createdAt)} />
+      </div>
     </div>
   );
 };

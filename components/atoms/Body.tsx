@@ -6,9 +6,6 @@ type Props = {
 
 export const Body = ({ html }: Props): JSX.Element => {
   return (
-    <div
-      className={styles.postBody}
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
+    <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
   );
 };

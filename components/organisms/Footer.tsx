@@ -1,13 +1,11 @@
-import styles from "./Footer.module.css";
-import Image from "next/image";
-
 export const Footer = (): JSX.Element => {
   return (
-    <footer className={styles.footer}>
+    <footer className="flex items-center h-20">
       <a
         href="https://github.com/9sako6"
         target="_blank"
         rel="noopener noreferrer"
+        className="m-auto"
       >
         9sako6
       </a>
