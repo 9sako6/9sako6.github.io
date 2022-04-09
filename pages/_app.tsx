@@ -1,5 +1,5 @@
-import "../styles/globals.css";
-import "../styles/rehype-prism-plus.css";
+import "@/styles/globals.css";
+import "@/styles/rehype-prism-plus.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 

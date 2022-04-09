@@ -3,10 +3,10 @@ import {
   EnumPostsDocument,
   EnumPostsQuery,
   EnumPostsQueryVariables,
-} from "../../graphql/queries/enumPosts.generated";
-import { client } from "../../lib/client";
-import type { Post } from "../../types";
-import { YearlyArchivesPage } from "../../components/templates";
+} from "@/graphql/queries/enumPosts.generated";
+import { client } from "@/lib/client";
+import type { Post } from "@/types";
+import { YearlyArchivesPage } from "@/components/templates";
 
 type Params = {
   year: string;

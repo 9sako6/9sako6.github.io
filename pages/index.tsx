@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
-import { client } from "../lib/client";
+import { client } from "@/lib/client";
 import {
   EnumPostsQuery,
   EnumPostsDocument,
-} from "../graphql/queries/enumPosts.generated";
-import type { Post } from "../types";
+} from "@/graphql/queries/enumPosts.generated";
+import type { Post } from "@/types";
 import type { GetStaticProps } from "next";
-import { TopPage } from "../components/templates";
+import { TopPage } from "@/components/templates";
 
 type Props = {
   posts: Post[];

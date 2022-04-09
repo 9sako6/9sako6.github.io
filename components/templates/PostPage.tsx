@@ -1,9 +1,9 @@
-import type { Post } from "../../types";
+import type { Post } from "@/types";
 import Head from "next/head";
-import { Body, PostTitle, PostDate } from "../../components/atoms";
-import { Layout } from "../../components/layouts";
+import { Body, PostTitle, PostDate } from "@/components/atoms";
+import { Layout } from "@/components/layouts";
 import "prismjs/themes/prism-okaidia.min.css";
-import "../../node_modules/katex/dist/katex.min.css";
+import "@/node_modules/katex/dist/katex.min.css";
 import { ShareButtons } from "../organisms/ShareButtons";
 
 type Props = Post & {

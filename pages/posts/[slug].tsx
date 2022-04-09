@@ -1,15 +1,14 @@
 import type { NextPage } from "next";
-import { client } from "../../lib/client";
-import { markdownToHtml } from "../../lib/markdown-html";
+import { client } from "@/lib/client";
+import { markdownToHtml } from "@/lib/markdown-html";
 import {
   EnumPostsQueryVariables,
   EnumPostsQuery,
   EnumPostsDocument,
-} from "../../graphql/queries/enumPosts.generated";
-import type { Post } from "../../types";
+} from "@/graphql/queries/enumPosts.generated";
+import type { Post } from "@/types";
 import type { GetStaticPaths, GetStaticProps } from "next";
-import { PostPage } from "../../components/templates";
-import { useRouter } from "next/router";
+import { PostPage } from "@/components/templates";
 
 type Props = Post & {
   bodyHtml: string;

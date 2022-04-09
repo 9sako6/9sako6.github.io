@@ -1,5 +1,5 @@
 import Head from "next/head";
-import type { Post } from "../../types";
+import type { Post } from "@/types";
 import { Card } from "../atoms";
 import { Layout } from "../layouts";
 
