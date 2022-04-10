@@ -21,12 +21,10 @@ export const WithPosts = Template.bind({});
 WithPosts.args = {
   posts: [
     buildPost({
-      sys: { id: "SMALLIMAGE" },
-      eyeCatchImage: {
-        url: "https://picsum.photos/200/100",
-      },
+      slug: "SMALLIMAGE",
+      eyecatch: "https://picsum.photos/200/100",
     }),
-    buildPost(),
-    buildPost({ sys: { id: "NORMAL" } }),
+    buildPost({}),
+    buildPost({ slug: "NORMAL" }),
   ],
 };

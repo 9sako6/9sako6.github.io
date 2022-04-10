@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof PostPage> = (args) => (
 );
 
 export const Primary = Template.bind({});
-const samplePost = buildPost();
+const samplePost = buildPost({});
 
 Primary.args = {
   ...samplePost,

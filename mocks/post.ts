@@ -1,33 +1,17 @@
-import type { Post } from "../types";
-
-const buildPostSys = (): Post["sys"] => {
-  return {
-    id: "123456",
-    firstPublishedAt: "2021-12-15T17:13:06.350Z",
-  };
+type Arg = {
+  slug?: string;
+  eyecatch?: string;
 };
 
-export const buildPost = (
-  { sys, eyeCatchImage }: Post = {
-    sys: buildPostSys(),
-  }
-): Post => {
-  sys = Object.assign(buildPostSys(), sys);
-  eyeCatchImage = Object.assign(
-    {
-      url: "https://picsum.photos/800/450",
-    },
-    eyeCatchImage
-  );
-
+export const buildPost = ({ slug, eyecatch }: Arg): Post => {
   return {
-    __typename: "BlogPost",
     title: "サンプルポスト",
+    topics: [],
+    published: true,
     description: "サンプル説明文です。",
-    slug: "sample-post",
-    body: `# タイトルです。\n\n本文はこちら。\n\n- a\n-b`,
-    sys,
-    eyeCatchImage,
+    date: "2020-02-07T23:38:00.000+09:00",
+    slug: slug || "sample-post",
+    eyecatch,
   };
 };
 
