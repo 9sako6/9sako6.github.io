@@ -7,11 +7,9 @@ export const Footer = (): JSX.Element => {
 
   return (
     <footer className="flex items-center h-20 justify-center">
-      {!isRootPath && (
-        <div className="p-10">
-          <Cd />
-        </div>
-      )}
+      <div className="p-10">
+        {isRootPath ? <Cd href="/about" text="cd /about" /> : <Cd />}
+      </div>
     </footer>
   );
 };

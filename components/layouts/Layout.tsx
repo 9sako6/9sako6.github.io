@@ -9,7 +9,7 @@ export const Layout = ({ children }: Props): JSX.Element => {
   return (
     <div className="pl-4 pr-4">
       <Header />
-      <main className="flex min-h-screen items-center justify-center">
+      <main className="flex items-center justify-center">
         <div className="md:max-w-2xl">{children}</div>
       </main>
       <Footer />

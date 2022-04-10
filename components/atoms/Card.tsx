@@ -35,8 +35,6 @@ export const Card = ({
             layout="fill"
             objectFit="contain"
             priority
-            placeholder={"blur"}
-            blurDataURL={imageUrl}
           />
         </div>
       )}
