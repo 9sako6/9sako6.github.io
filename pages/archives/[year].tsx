@@ -1,11 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import {
-  EnumPostsDocument,
-  EnumPostsQuery,
-  EnumPostsQueryVariables,
-} from "@/graphql/queries/enumPosts.generated";
-import { client } from "@/lib/client";
-import type { Post } from "@/types";
+import dayjs from "dayjs";
+import { allPostsSync } from "@/lib/all-posts";
 import { YearlyArchivesPage } from "@/components/templates";
 
 type Params = {
@@ -18,23 +13,12 @@ type Props = {
 };
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const result = await client.query<EnumPostsQuery, EnumPostsQueryVariables>({
-    query: EnumPostsDocument,
-  });
-
-  if (result.loading || !result.data || !result.data.blogPostCollection) {
-    return {
-      paths: [],
-      fallback: false,
-    };
-  }
-  const posts = result.data.blogPostCollection.items;
   const years = new Set<Params["year"]>();
-  for (const post of posts) {
-    if (post?.sys.firstPublishedAt) {
-      years.add(new Date(post.sys.firstPublishedAt).getFullYear().toString());
-    }
-  }
+
+  allPostsSync({ draft: false })
+    .map((post) => dayjs(post.date).format("YYYY"))
+    .forEach((year) => years.add(year));
+
   const paths = Array.from(years).map((year) => ({ params: { year } }));
 
   return {
@@ -58,26 +42,9 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
     return emptyResponse;
   }
 
-  const fromDate = `${year}-01-01T00:00:00.000+0900`;
-  const toDate = `${Number(year) + 1}-01-01T00:00:00.000+0900`;
-
-  const result = await client.query<EnumPostsQuery, EnumPostsQueryVariables>({
-    query: EnumPostsDocument,
-    variables: {
-      where: {
-        sys: {
-          firstPublishedAt_gte: fromDate,
-          firstPublishedAt_lt: toDate,
-        },
-      },
-    },
-  });
-
-  const posts = result.data.blogPostCollection?.items as Post[];
-
-  if (!posts) {
-    return emptyResponse;
-  }
+  const posts = allPostsSync({ draft: false }).filter(
+    (post) => dayjs(post.date).format("YYYY") === year
+  );
 
   return {
     props: {

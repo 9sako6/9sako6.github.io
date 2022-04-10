@@ -1,4 +1,3 @@
-import type { Post } from "@/types";
 import Head from "next/head";
 import { Body, PostTitle, PostDate } from "@/components/atoms";
 import { Layout } from "@/components/layouts";
@@ -14,9 +13,9 @@ type Props = Post & {
 export const PostPage = ({
   title,
   description,
-  eyeCatchImage,
+  eyecatch,
   bodyHtml,
-  sys,
+  date,
   url,
 }: Props): JSX.Element => {
   return (
@@ -25,20 +24,27 @@ export const PostPage = ({
         <title>
           {title} - {process.env.siteTitle}
         </title>
-        <meta name="description" content={description || ""} />
-        <meta property="og:title" content={title || ""} />
-        <meta property="og:description" content={description || ""} />
-        <meta property="og:image" content={eyeCatchImage?.url || undefined} />
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta
+          property="og:image"
+          content={
+            eyecatch
+              ? `${process.env.siteUrl}/${eyecatch}`
+              : `${process.env.siteUrl}/icon.webp`
+          }
+        />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="@9sako6" />
       </Head>
       <div>
-        <PostTitle title={title || ""} />
+        <PostTitle title={title} />
         <div className="pb-6 text-right">
-          <PostDate date={new Date(sys.firstPublishedAt as string)} />
+          <PostDate date={new Date(date)} />
         </div>
         <Body html={bodyHtml} />
-        <ShareButtons title={title || ""} url={url} />
+        <ShareButtons title={title} url={url} />
       </div>
     </Layout>
   );

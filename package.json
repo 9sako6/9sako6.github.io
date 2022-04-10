@@ -1,6 +1,9 @@
 {
   "name": "9sako6-blog",
   "private": true,
+  "bin": {
+    "post": "./bin/create-new-post.ts"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,13 +12,11 @@
     "prettier": "prettier --write .",
     "prettier-check": "prettier --check .",
     "tsc": "tsc --noEmit",
-    "gq:generate": "graphql-codegen --config codegen.yml",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "new": "deno run --allow-write bin/create-new-post.ts"
   },
   "dependencies": {
-    "@apollo/client": "^3.5.7",
-    "graphql": "^16.2.0",
     "next": "^12.0.9",
     "next-themes": "^0.1.1",
     "prismjs": "^1.26.0",
@@ -25,11 +26,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.10",
-    "@graphql-codegen/cli": "^2.3.1",
-    "@graphql-codegen/near-operation-file-preset": "^2.2.3",
-    "@graphql-codegen/typescript": "^2.4.2",
-    "@graphql-codegen/typescript-operations": "^2.2.2",
-    "@graphql-codegen/typescript-react-apollo": "^3.2.4",
     "@storybook/addon-actions": "^6.4.14",
     "@storybook/addon-essentials": "^6.4.14",
     "@storybook/addon-links": "^6.4.14",
@@ -41,8 +37,10 @@
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.4",
     "babel-loader": "^8.2.3",
+    "dayjs": "^1.11.0",
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8",
+    "gray-matter": "^4.0.3",
     "postcss": "^8.4.12",
     "prettier": "^2.5.1",
     "rehype-katex": "^6.0.2",

@@ -1,4 +1,3 @@
-import type { Post } from "../../types";
 import { Layout } from "../layouts";
 import { Card, PostTitle } from "../atoms";
 import Head from "next/head";
@@ -35,12 +34,12 @@ export const YearlyArchivesPage = ({ posts, year }: Props) => {
       ) : (
         posts.map((post) => (
           <Card
-            key={post.sys.id}
-            slug={post.slug || ""}
-            title={post.title || ""}
-            description={post.description || ""}
-            createdAt={post.sys.firstPublishedAt}
-            imageUrl={post.eyeCatchImage?.url || undefined}
+            key={post.slug}
+            slug={post.slug}
+            title={post.title}
+            description={post.description}
+            createdAt={post.date}
+            imageUrl={post.eyecatch}
           />
         ))
       )}

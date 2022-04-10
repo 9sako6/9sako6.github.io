@@ -3,7 +3,7 @@ import remarkParse from "remark-parse";
 import remarkMath from "remark-math";
 import remarkRehype from "remark-rehype";
 import rehypeSlug from "rehype-slug";
-import rehypeAnchorHeading from "./rehypeAnchorHeading";
+import rehypeAnchorHeading from "./rehype-anchor-heading";
 import rehypeKatex from "rehype-katex";
 import rehypePrism from "rehype-prism-plus";
 import rehypeStringify from "rehype-stringify";

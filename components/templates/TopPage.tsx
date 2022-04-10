@@ -1,7 +1,8 @@
 import Head from "next/head";
-import type { Post } from "@/types";
 import { Card } from "../atoms";
 import { Layout } from "../layouts";
+
+export type Post = Metadata & { slug: string };
 
 type Props = {
   posts: Post[];
@@ -27,14 +28,14 @@ export const TopPage = ({ posts }: Props): JSX.Element => {
       {posts.length === 0 ? (
         <p>There are no posts.</p>
       ) : (
-        posts.map((post) => (
+        posts.map(({ slug, title, description, date, eyecatch }) => (
           <Card
-            key={post.sys.id}
-            slug={post.slug || ""}
-            title={post.title || ""}
-            description={post.description || ""}
-            createdAt={post.sys.firstPublishedAt}
-            imageUrl={post.eyeCatchImage?.url || undefined}
+            key={slug}
+            slug={slug || ""}
+            title={title || ""}
+            description={description}
+            createdAt={date}
+            imageUrl={eyecatch}
           />
         ))
       )}

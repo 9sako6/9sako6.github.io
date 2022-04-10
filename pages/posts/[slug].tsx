@@ -1,13 +1,8 @@
-import type { NextPage } from "next";
-import { client } from "@/lib/client";
+import type { NextPage, GetStaticPaths, GetStaticProps } from "next";
+import { readFileSync } from "fs";
+import matter from "gray-matter";
+import { allPostsSync } from "@/lib/all-posts";
 import { markdownToHtml } from "@/lib/markdown-html";
-import {
-  EnumPostsQueryVariables,
-  EnumPostsQuery,
-  EnumPostsDocument,
-} from "@/graphql/queries/enumPosts.generated";
-import type { Post } from "@/types";
-import type { GetStaticPaths, GetStaticProps } from "next";
 import { PostPage } from "@/components/templates";
 
 type Props = Post & {
@@ -19,22 +14,9 @@ type Params = {
 };
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const result = await client.query<EnumPostsQuery, EnumPostsQueryVariables>({
-    query: EnumPostsDocument,
-  });
-
-  if (result.loading || !result.data || !result.data.blogPostCollection) {
-    return {
-      paths: [],
-      fallback: false,
-    };
-  }
-  const posts = result.data.blogPostCollection.items;
-  const paths = posts
-    .filter((post) => post?.slug)
-    .map((post) => ({
-      params: { slug: post!.slug! },
-    }));
+  const paths = allPostsSync({ draft: false }).map((post) => ({
+    params: { slug: post.slug },
+  }));
 
   return {
     paths,
@@ -46,25 +28,18 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
   params,
 }) => {
   if (!params) return { props: {} as Props };
-  // Get a post by slug.
-  const result = await client.query<EnumPostsQuery, EnumPostsQueryVariables>({
-    query: EnumPostsDocument,
-    variables: {
-      where: { slug: params.slug },
-    },
-  });
-  const post = result.data.blogPostCollection?.items[0];
 
-  if (!post) {
-    return { props: {} as Props };
-  }
+  const file = readFileSync(`articles/${params.slug}.md`, "utf-8");
+  const matterResult = matter(file);
+  const metadata = matterResult.data as Metadata;
 
-  const bodyHtml = await markdownToHtml(post.body || "");
+  const bodyHtml = await markdownToHtml(matterResult.content || "");
 
   return {
     props: {
+      slug: params.slug,
       bodyHtml,
-      ...post,
+      ...metadata,
     },
   };
 };

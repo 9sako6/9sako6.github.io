@@ -1,30 +1,15 @@
-import type { NextPage } from "next";
-import { client } from "@/lib/client";
-import {
-  EnumPostsQuery,
-  EnumPostsDocument,
-} from "@/graphql/queries/enumPosts.generated";
-import type { Post } from "@/types";
-import type { GetStaticProps } from "next";
+import type { NextPage, GetStaticProps } from "next";
+import dayjs from "dayjs";
+import { allPostsSync } from "@/lib/all-posts";
 import { TopPage } from "@/components/templates";
+import type { Post } from "@/components/templates/TopPage";
 
 type Props = {
   posts: Post[];
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const result = await client.query<EnumPostsQuery>({
-    query: EnumPostsDocument,
-  });
-
-  if (result.loading || !result?.data?.blogPostCollection?.items) {
-    return {
-      props: { posts: [] as Post[] },
-    };
-  }
-  const posts: Post[] = result.data.blogPostCollection.items.filter(
-    (post): post is Post => post !== null && post !== undefined
-  );
+  const posts = allPostsSync({ draft: false });
 
   return {
     props: { posts },
