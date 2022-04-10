@@ -40,7 +40,7 @@ export const PostPage = ({
       </Head>
       <div>
         <PostTitle title={title} />
-        <div className="pb-6 text-right">
+        <div className="pb-6">
           <PostDate date={new Date(date)} />
         </div>
         <Body html={bodyHtml} />
