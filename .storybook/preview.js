@@ -1,4 +1,5 @@
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { RouterContext } from "next/dist/shared/lib/router-context";
 import * as nextImage from "next/image";
 import nextConfig from "../next.config";
 
@@ -20,6 +21,9 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  nextRouter: {
+    Provider: RouterContext.Provider,
   },
   viewport: {
     viewports: INITIAL_VIEWPORTS,
