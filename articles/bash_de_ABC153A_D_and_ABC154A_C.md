@@ -4,7 +4,7 @@ description: "ABC153 A~DとABC154 A~Cの計7問をbashで解きました。 解�
 topics: ["AtCoder", "競技プログラミング", "bash"]
 published: true
 eyecatch: ""
-date: 2020-02-13 00:02:00 +0900
+date: "2020-02-13 00:02:00 +0900"
 ---
 
 ABC153 A~DとABC154 A~Cの計7問をbashで解きました。
