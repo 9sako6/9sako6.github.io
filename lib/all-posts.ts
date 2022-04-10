@@ -3,9 +3,9 @@ import dayjs from "dayjs";
 import matter from "gray-matter";
 
 export function allPostsSync({ draft }: { draft: boolean }): Post[] {
-  return readdirSync("articles")
+  return readdirSync("posts")
     .map((fileName) => {
-      const file = readFileSync(`articles/${fileName}`, "utf-8");
+      const file = readFileSync(`posts/${fileName}`, "utf-8");
       const metadata = matter(file).data as Metadata;
 
       if (metadata.published || draft) {

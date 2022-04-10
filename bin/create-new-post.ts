@@ -9,7 +9,7 @@ published: false
 eyecatch: ""
 date: "${datetime(new Date()).toISO()}"
 ---`;
-  await Deno.writeTextFile(`./articles/zzz${crypto.randomUUID()}.md`, template);
+  await Deno.writeTextFile(`./posts/zzz${crypto.randomUUID()}.md`, template);
 }
 
 run();

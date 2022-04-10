@@ -29,7 +29,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 }) => {
   if (!params) return { props: {} as Props };
 
-  const file = readFileSync(`articles/${params.slug}.md`, "utf-8");
+  const file = readFileSync(`posts/${params.slug}.md`, "utf-8");
   const matterResult = matter(file);
   const metadata = matterResult.data as Metadata;
 
