@@ -26,10 +26,12 @@ export const Card = ({
           <a className="text-2xl hover:underline cursor-pointer">{title}</a>
         </Link>
       </div>
-      <div className="pb-4">
-        <PostDate date={new Date(createdAt)} />
+      <div className="text-slate-500 dark:text-zinc-400">
+        <div className="pb-4">
+          <PostDate date={new Date(createdAt)} />
+        </div>
+        <p className="pb-3">{description}</p>
       </div>
-      <p className="pb-3 text-gray-600 dark:text-zinc-300">{description}</p>
       {imageUrl && (
         <div className="relative h-72">
           <Image

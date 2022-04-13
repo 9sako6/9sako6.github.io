@@ -11,9 +11,11 @@ export const PostDate = ({ date }: Props): JSX.Element => {
   const hours = String(date.getHours()).padStart(2, "0");
   const minutes = String(date.getMinutes()).padStart(2, "0");
   return (
-    <time className="text-slate-400 dark:text-zinc-500">
+    <time>
       <Link href={`/archives/${year}`} passHref>
-        <a className="hover:underline">{year}年</a>
+        <a className="hover:underline hover:text-black dark:hover:text-zinc-50">
+          {year}年
+        </a>
       </Link>
       {month}月{day}日 {hours}:{minutes}
     </time>
