@@ -39,7 +39,6 @@ export const Card = ({
             src={imageUrl}
             layout="fill"
             objectFit="contain"
-            priority
           />
         </div>
       )}
