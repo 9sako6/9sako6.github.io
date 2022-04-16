@@ -2,18 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-[data-theme="dark"] {
-  @apply text-gray-50 bg-zinc-900;
+.dark {
+  @apply text-gray-400 bg-zinc-900;
 }
 
 .markdown h1 {
-  @apply text-2xl pb-6 pt-6 break-all;
+  @apply text-2xl pb-6 pt-6 break-all dark:text-zinc-200;
 }
 .markdown h2 {
-  @apply text-xl pb-6 pt-6 break-all;
+  @apply text-xl pb-6 pt-6 break-all dark:text-zinc-200;
 }
 .markdown p {
   @apply break-all pb-6;
+}
+.markdown blockquote > p {
+  @apply pb-0;
 }
 .markdown ol {
   @apply list-decimal pl-10 pt-2 pb-2;
@@ -23,6 +26,9 @@
 }
 .markdown li {
   @apply p-0.5;
+}
+.markdown li::marker {
+  @apply dark:text-zinc-100;
 }
 .markdown a {
   @apply cursor-pointer text-teal-600 break-all hover:underline focus:underline active:underline dark:text-teal-400;
@@ -34,5 +40,9 @@
   @apply p-4 mb-4 border-l-slate-700 border-l-4 bg-slate-100 rounded dark:border-l-zinc-300 dark:bg-zinc-700;
 }
 .markdown code:not(.code-highlight) {
-  @apply pl-1 pr-1 bg-slate-100 rounded dark:bg-zinc-600;
+  @apply font-mono font-semibold dark:text-zinc-200;
+}
+.markdown code:not(.code-highlight)::after,
+.markdown code:not(.code-highlight)::before {
+  content: "`";
 }
