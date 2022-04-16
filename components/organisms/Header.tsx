@@ -1,19 +1,20 @@
 import Link from "next/link";
-import { ThemeChanger } from "../atoms/ThemeChanger";
+import { ThemeChanger } from "@/components/atoms/ThemeChanger";
+import { SiteTitle } from "@/components/atoms/SiteTitle";
 
 export const Header = (): JSX.Element => {
   return (
     <header>
-      <div className="text-center text-3xl font-serif items-center">
-        <div className="pt-12">
-          <Link href="/">
-            <a>{process.env.siteTitle}</a>
-          </Link>
-        </div>
-        <div className="pb-12">
+      <nav className="flex items-center pb-20 pt-20 md:max-w-2xl m-auto justify-between">
+        <Link href="/">
+          <a>
+            <SiteTitle />
+          </a>
+        </Link>
+        <div>
           <ThemeChanger />
         </div>
-      </div>
+      </nav>
     </header>
   );
 };
