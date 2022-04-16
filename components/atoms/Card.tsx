@@ -33,13 +33,20 @@ export const Card = ({
         <p className="pb-3">{description}</p>
       </div>
       {imageUrl && (
-        <div className="relative h-72">
-          <Image
-            alt={title}
-            src={imageUrl}
-            layout="fill"
-            objectFit="contain"
-          />
+        <div className="relative h-56 md:h-96">
+          <Link href={postPath}>
+            <a>
+              <Image
+                className="cursor-pointer rounded"
+                alt={title}
+                src={imageUrl}
+                layout="fill"
+                objectFit="cover"
+                placeholder="blur"
+                blurDataURL={imageUrl}
+              />
+            </a>
+          </Link>
         </div>
       )}
     </div>

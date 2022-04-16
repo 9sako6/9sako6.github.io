@@ -28,7 +28,7 @@
   @apply cursor-pointer text-teal-600 break-all hover:underline focus:underline active:underline dark:text-teal-400;
 }
 .markdown img {
-  @apply max-h-96 max-w-full md:max-w-xl m-auto rounded;
+  @apply rounded object-cover;
 }
 .markdown blockquote {
   @apply p-4 mb-4 border-l-slate-700 border-l-4 bg-slate-100 rounded dark:border-l-zinc-300 dark:bg-zinc-700;
