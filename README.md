@@ -6,4 +6,4 @@ https://9sako6.com
 
 ## Storybook
 
-https://9sako6.github.io/9sako6-blog/storybook/?path=/story/introduction--page
+https://9sako6.github.io/9sako6.com/storybook/?path=/story/introduction--page
