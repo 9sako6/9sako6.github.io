@@ -32,30 +32,14 @@ Yahoo! のヘルプ [パスワードを使ったログインに戻したい](htt
 次の流れでログインします。
 
 1. https://calendar.yahoo.co.jp にアクセス
+    - [https://login.yahoo.co.jp/config/login?.src=yc&.done=https%3A%2F%2Fcalendar.yahoo.co.jp%2F](https://login.yahoo.co.jp/config/login?.src=yc&.done=https%3A%2F%2Fcalendar.yahoo.co.jp%2F) にリダイレクトされ、下記の ID 入力フォームが表示されます。ログイン済みの場合はカレンダーが表示されます。
+    ![YahooのIDフォーム](//images.ctfassets.net/57a83iqiwfit/7djYF1KKJVvlQBqrQmGLsh/5599f50910cd0fe092f7a39d11a75086/20220314160316.png)
 2. ID、携帯電話番号、メールアドレスのいずれかを入力
+    - ID を入力して「次へ」を押して画面遷移すると、確認コードが送信されるとともに入力画面が表示されます。
 3. 確認コード入力
+    - 登録された電話番号に届いた SMS 記載の確認コードを入力します。
 4. ログイン完了
-
-### 1. https://calendar.yahoo.co.jp にアクセス
-
-https://login.yahoo.co.jp/config/login?.src=yc&.done=https%3A%2F%2Fcalendar.yahoo.co.jp%2F にリダイレクトされ、下記の ID 入力フォームが表示されます。ログイン済みの場合はカレンダーが表示されます。
-
-![YahooのIDフォーム](//images.ctfassets.net/57a83iqiwfit/7djYF1KKJVvlQBqrQmGLsh/5599f50910cd0fe092f7a39d11a75086/20220314160316.png)
-
-### 2. ID、携帯電話番号、メールアドレスのいずれかを入力
-
-ID を入力して「次へ」を押して画面遷移すると、確認コードが送信されるとともに入力画面が表示されます。
-
-![Yahooのコードフォーム](//images.ctfassets.net/57a83iqiwfit/2tQnY07QlkVoAYblONFvaW/40815266a8cf36e1d9d4faace105fd09/20220314192947.png)
-
-### 3. 確認コード入力
-
-登録された電話番号に届いた SMS 記載の確認コードを入力します。
-
-### 4. ログイン完了
-
-最初にアクセスした https://calendar.yahoo.co.jp にリダイレクトされ、カレンダーが表示されます。
-
+    - 最初にアクセスした https://calendar.yahoo.co.jp にリダイレクトされ、カレンダーが表示されます。
 ## 確認コードによる認証（メール）
 
 SMS で確認コードを受け取る場合と同じ流れでログインします。
