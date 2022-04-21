@@ -7,8 +7,9 @@ import rehypeAnchorHeading from "./rehype-anchor-heading";
 import rehypeKatex from "rehype-katex";
 import rehypePrism from "rehype-prism-plus";
 import rehypeStringify from "rehype-stringify";
+import { withMermaid } from "./mermaid";
 
-export const markdownToHtml = async (markdown: string) => {
+export const markdownToHtml = withMermaid(async (markdown: string) => {
   return (
     await unified()
       .use(remarkParse)
@@ -21,4 +22,4 @@ export const markdownToHtml = async (markdown: string) => {
       .use(rehypeStringify)
       .process(markdown)
   ).toString();
-};
+});

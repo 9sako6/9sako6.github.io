@@ -36,6 +36,9 @@
 .markdown img {
   @apply rounded object-cover;
 }
+.markdown svg {
+  @apply m-auto;
+}
 .markdown blockquote {
   @apply p-4 mb-4 border-l-slate-700 border-l-4 bg-slate-100 rounded dark:border-l-zinc-300 dark:bg-zinc-700;
 }
