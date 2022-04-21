@@ -46,8 +46,8 @@ export const withMermaid = (
       return marmaidedHtml;
     } finally {
       // Remove the working directory.
-      if (fs.existsSync("tmp")) {
-        fs.rmSync("tmp", { recursive: true, force: true });
+      if (fs.existsSync(workDir)) {
+        fs.rmSync(workDir, { recursive: true, force: true });
       }
     }
   };
