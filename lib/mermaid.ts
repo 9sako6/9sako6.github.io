@@ -47,7 +47,7 @@ export const withMermaid = (
 
       const markdown = fs.readFileSync(outputPath).toString();
       const html = await markdownToHtml(markdown);
-      let marmaidedHtml = html;
+      let mermaidedHtml = html;
       const svgPaths = await svgFiles(workDir);
 
       // Replace the img tag in HTML to svg.
@@ -56,10 +56,10 @@ export const withMermaid = (
         const svgInMarkdownRegexp = new RegExp(
           `<img src="\\.\\/${svgPath}" alt="\\w+">`
         );
-        marmaidedHtml = marmaidedHtml.replace(svgInMarkdownRegexp, svgTag);
+        mermaidedHtml = mermaidedHtml.replace(svgInMarkdownRegexp, svgTag);
       });
 
-      return marmaidedHtml;
+      return mermaidedHtml;
     } finally {
       // Remove the working directory.
       if (fs.existsSync(workDir)) {
