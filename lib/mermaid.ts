@@ -6,6 +6,12 @@ import { v4 as uuidv4 } from "uuid";
 
 const execPromise = util.promisify(exec);
 
+const svgFiles = async (dirPath: string) => {
+  const fileNames = await readdir(dirPath);
+
+  return fileNames.filter((fileName) => fileName.match(/\.svg$/));
+};
+
 export const withMermaid = (
   markdownToHtml: (markdown: string) => Promise<string>
 ) => {
@@ -21,27 +27,37 @@ export const withMermaid = (
 
       fs.writeFileSync(inputPath, originalMarkdown);
 
-      // Generate mermaid svgs and markdowns that reference these svgs.
+      // Generate mermaid light svgs and markdowns that reference these svgs.
       await execPromise(
-        `yarn -p @mermaid-js/mermaid-cli mmdc -i ${inputPath} -o ${outputPath}`
+        `yarn -p @mermaid-js/mermaid-cli mmdc -i ${inputPath} -o ${outputPath} -t default -b transparent`
+      );
+
+      const lightSVGs = (await svgFiles(workDir)).map((svgPath) =>
+        fs.readFileSync(`${workDir}/${svgPath}`).toString()
+      );
+
+      // Generate mermaid dark svgs and markdowns that reference these svgs.
+      await execPromise(
+        `yarn -p @mermaid-js/mermaid-cli mmdc -i ${inputPath} -o ${outputPath} -t dark -b transparent`
+      );
+
+      const darkSVGs = (await svgFiles(workDir)).map((svgPath) =>
+        fs.readFileSync(`${workDir}/${svgPath}`).toString()
       );
 
       const markdown = fs.readFileSync(outputPath).toString();
       const html = await markdownToHtml(markdown);
-
       let marmaidedHtml = html;
-      const generatedFiles = await readdir(workDir);
+      const svgPaths = await svgFiles(workDir);
 
       // Replace the img tag in HTML to svg.
-      for (const generatedFile of generatedFiles) {
-        if (generatedFile.match(/\.svg$/)) {
-          const svg = fs.readFileSync(`${workDir}/${generatedFile}`).toString();
-          const svgInMarkdownRegexp = new RegExp(
-            `<img src="\\.\\/${generatedFile}" alt="\\w+">`
-          );
-          marmaidedHtml = marmaidedHtml.replace(svgInMarkdownRegexp, svg);
-        }
-      }
+      svgPaths.forEach((svgPath, index) => {
+        const svgTag = `<div class="mermaid"><div class="mermaid-light">${lightSVGs[index]}</div><div class="mermaid-dark">${darkSVGs[index]}</div></div>`;
+        const svgInMarkdownRegexp = new RegExp(
+          `<img src="\\.\\/${svgPath}" alt="\\w+">`
+        );
+        marmaidedHtml = marmaidedHtml.replace(svgInMarkdownRegexp, svgTag);
+      });
 
       return marmaidedHtml;
     } finally {
