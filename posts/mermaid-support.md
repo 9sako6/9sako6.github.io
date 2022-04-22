@@ -4,7 +4,7 @@ description: ""
 topics: []
 published: true
 eyecatch: ""
-date: 2022-04-21 02:25:00 +0900
+date: "2022-04-21T02:25:00.000+09:00"
 ---
 
 [Mermaid](https://mermaid-js.github.io/mermaid/#/) is now available on this blog.
