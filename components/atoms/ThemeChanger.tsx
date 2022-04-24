@@ -17,14 +17,14 @@ export const ThemeChanger = () => {
     <div>
       {theme === "dark" ? (
         <div
-          className="hover:text-orange-200 ease-in-out duration-200 cursor-pointer"
+          className="hover:text-teal-600 dark:hover:text-teal-400 cursor-pointer"
           onClick={() => setTheme("light")}
         >
           <SunIcon />
         </div>
       ) : (
         <div
-          className="hover:text-indigo-700 ease-in-out duration-200 cursor-pointer"
+          className="hover:text-teal-600 dark:hover:text-teal-400 cursor-pointer"
           onClick={() => setTheme("dark")}
         >
           <MoonIcon />

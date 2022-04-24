@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ThemeChanger } from "@/components/atoms/ThemeChanger";
+import { BookmarkButton, UserButton } from "@/components/atoms";
 import { SiteTitle } from "@/components/atoms/SiteTitle";
 
 export const Header = (): JSX.Element => {
@@ -11,9 +12,17 @@ export const Header = (): JSX.Element => {
             <SiteTitle />
           </a>
         </Link>
-        <div>
-          <ThemeChanger />
-        </div>
+        <ul className="flex md:text-2xl text-xl">
+          <li className="mr-3">
+            <UserButton url="/about" />
+          </li>
+          <li className="mr-3">
+            <BookmarkButton url="/bookmarks" />
+          </li>
+          <li>
+            <ThemeChanger />
+          </li>
+        </ul>
       </nav>
     </header>
   );
