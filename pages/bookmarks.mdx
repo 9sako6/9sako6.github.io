@@ -1,0 +1,47 @@
+import { Layout } from "@/components/layouts";
+import { MarkdownWrapper } from "@/components/atoms";
+import { ShareButtons } from "@/components/organisms/ShareButtons";
+
+# Bookmarks
+
+Some of my favorite websites to develop an application.
+
+## Blog
+
+- [Martin Fowler's Bliki (ja)](https://bliki-ja.github.io/)
+
+## UI/UX
+
+- [Open UI](https://open-ui.org/)
+- [NIPPON COLORS - 日本の伝統色](https://nipponcolors.com/)
+
+## Syntax Highlight
+
+- [Carbon](https://carbon.now.sh/)
+
+## Git
+
+- [Commit Stalker](https://9sako6.github.io/commit-stalker/)
+
+## GraphQL
+
+- [GraphQL Voyager](https://apis.guru/graphql-voyager/)
+
+## Cheet Sheet
+
+- [Devhints — TL;DR for developer documentation](https://devhints.io/)
+
+## Checker
+
+- [Crontab.guru - The cron schedule expression editor](https://crontab.guru/)
+
+export default ({ children }) => (
+  <Layout>
+    <MarkdownWrapper>{children}</MarkdownWrapper>
+    <div style={{ margin: "100px" }} />
+    <ShareButtons
+      title={`9sako6's bookmarks`}
+      url={`${process.env.siteUrl}/bookmarks`}
+    />
+  </Layout>
+);

@@ -10,7 +10,7 @@ export const Layout = ({ children }: Props): JSX.Element => {
     <div className="pl-4 pr-4">
       <Header />
       <main className="flex items-center justify-center">
-        <div className="md:max-w-2xl">{children}</div>
+        <div className="md:w-2xl">{children}</div>
       </main>
       <Footer />
     </div>
