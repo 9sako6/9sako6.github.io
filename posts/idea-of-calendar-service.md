@@ -78,7 +78,6 @@ sequenceDiagram
   participant U as User
   participant F as Frontend
   participant Y as Y! Cal. API
-  participant B as Backend
   U->>F: /accounts/new/yahoo
   activate F
   rect rgba(106, 131, 114, 0.3)
@@ -300,6 +299,7 @@ OFFSET 0;
 ```
 
 これを実現するためには、あるユーザーがイベントを追加したとき、フォロワー全員の `timelines` テーブルにレコードを追加する必要がある。
+加えて、イベントの更新・削除とタイムラインを同期する必要がある。
 
 どう実装すべきかまだ答えは出ていないが、iCalendar の RFC を見ながらテーブル数を減らした設計ができないか考えたり、RDBMS
 を使わない道を考えたりしている。 下記の実装が参考になりそうな気がしている。
