@@ -1,5 +1,6 @@
 import { unified } from "unified";
 import remarkParse from "remark-parse";
+import remarkGfm from 'remark-gfm'
 import remarkMath from "remark-math";
 import remarkRehype from "remark-rehype";
 import rehypeSlug from "rehype-slug";
@@ -13,6 +14,7 @@ export const markdownToHtml = withMermaid(async (markdown: string) => {
   return (
     await unified()
       .use(remarkParse)
+      .use(remarkGfm)
       .use(remarkMath)
       .use(remarkRehype)
       .use(rehypeSlug)
