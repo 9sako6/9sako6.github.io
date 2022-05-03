@@ -196,8 +196,8 @@ erDiagram
 SELECT * FROM events
 INNER JOIN calendars ON events.calendar_id = calendars.id
 WHERE calendars.user_id IN (
-  SELECT follower_id FROM followers
-  WHERE followee_id = 1234 -- 自分の ID
+  SELECT followee_id FROM followers
+  WHERE follower_id = 1234 -- 自分の ID
 )
 ORDER BY events.start_at
 LIMIT 50
