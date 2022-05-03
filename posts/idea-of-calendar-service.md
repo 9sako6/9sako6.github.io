@@ -73,6 +73,39 @@ Yahoo! カレンダーとも連携できるようにする。 私は Yahoo! カ�
 という、独自の API を開発している。API の内部ではヘッドレスブラウザや WebSocket を使って涙ぐましい SMS
 認証突破とスクレイピングを行っている。
 
+```mermaid
+sequenceDiagram
+  participant U as User
+  participant F as Frontend
+  participant Y as Y! Cal. API
+  participant B as Backend
+  U->>F: /accounts/new/yahoo
+  activate F
+  rect rgba(106, 131, 114, 0.3)
+    note right of F: WebSocket
+    F->>Y: /sessions/new<br>WebSocket connection is opened
+    activate Y
+    F->>U: UserId Form
+    U->>F: Send UserId
+    F->>Y: {action: 'userid', message: '<userId>'}
+    Y->>Y: Send UserId in <br>actual Yahoo! login page in<br> a headless browser
+    Y->>U: Send Confirmation Code to <br>User's TEL or E-mail
+    F->>U: Confirmation Code From
+
+    U->>F: Send Confrimation Code
+
+    F->>Y: {action: 'code', message: '<code>'}
+    Y->>Y: Send Code in <br>actual Yahoo! login page in<br> a headless browser
+
+    Y->>F: {type: 'cookies', message: '<cookies>'}<br>Send cookies obtained from the page after login<br>WebSocket connection is closed
+
+    deactivate Y
+  end
+
+  F->>F: Save cookies in localStorage
+  deactivate F
+```
+
 以下は Yahoo! カレンダーの仕様調査の結果なので読み飛ばして構わない。
 
 Yahoo! カレンダーには Web 版とスマホアプリ版が存在する。アプリ版を使えば、Yahoo!
@@ -148,7 +181,7 @@ SNS を形成することにより、カレンダーを公開する側も公開�
 
 ## DB 設計
 
-iCalendar の RFC を見ればわかるが、スケジュール情報を作るためには複数のオブジェクトが必要である。
+<!-- iCalendar の RFC を見ればわかるが、スケジュール情報を作るためには複数のオブジェクトが必要である。 -->
 
 RDBMS
 でタイムライン機能を見据えた設計をしようとすると、設計が難しい。下記のナイーブな設計でタイムラインを表示しようとすると、フォロワーをとってきて、各カレンダーにはイベント等を
@@ -206,9 +239,69 @@ OFFSET 0;
 
 これは Read Heavy/ Wright Light である。フォロワーが増えるにつれてイベントを取得するのに時間がかかるようになる。
 
-Read Light / Wright Heavy にしたい。
+Read Light / Wright Heavy にしたい。 Read Light にするためには、タイムライン用の1つのテーブルから読み取るようする。
 
-どう設計すべきかまだ答えは出ていないが、iCalendar の RFC を見ながらテーブル数を減らした設計ができないか考えたり、RDBMS
+```mermaid
+erDiagram
+  User {
+    id id
+    string name
+    date created_at
+    date updated_at
+  }
+
+  Timeline {
+    id id
+    id user_id
+    id event_id
+    string event_name
+    string evant_description
+    date event_start_at
+    date event_end_at
+  }
+
+  User ||--o{ Timeline : has
+
+  Follow {
+    id id
+    id follower_id
+    id followee_id
+  }
+
+  User ||--o{ Follow : has
+
+  Calendar {
+    id id
+    id user_id
+    string name
+    string description
+  }
+
+  User ||--o{ Calendar : has
+
+  Event {
+    id id
+    id calendar_id
+    string name
+    string description
+    date start_at
+    date end_at
+  }
+
+  Calendar ||--o{ Event : has
+```
+
+```sql
+SELECT * FROM timelines
+WHERE user_id = 1234 -- 自分の ID
+ORDER BY event_start_at
+LIMIT 50
+OFFSET 0;
+```
+
+これを実現するためには、あるユーザーがイベントを追加したとき、フォロワー全員の `timelines` テーブルにレコードを追加する必要がある。
+
+どう実装すべきかまだ答えは出ていないが、iCalendar の RFC を見ながらテーブル数を減らした設計ができないか考えたり、RDBMS
 を使わない道を考えたりしている。 下記の実装が参考になりそうな気がしている。
 
 - [CyberZ が Amazon DynamoDB を使用してフォロータイムラインの表示に必要な Read-Light 方式を実現した方法 | Amazon Web Services ブログ](https://aws.amazon.com/jp/blogs/news/how-cyberz-performs-read-light-operations-to-display-followees-activities-in-the-timeline-using-amazon-dynamodb/)
