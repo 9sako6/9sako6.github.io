@@ -67,14 +67,20 @@ SNS 利用者は、SNS 上で予定を追加・編集できるし、普段から
 
 ## Yahoo! カレンダーと連携できる点
 
-結論から言うと、Yahoo! カレンダーは外部のカレンダーに連携できないという問題がある。API もないので連携するのが困難である。本サービスでは、工夫によって Yahoo! カレンダーとも連携できるようにする。
-私は Yahoo! カレンダーと連携するために [9sako6/yahoo-calendar-api](https://github.com/9sako6/yahoo-calendar-api) という、独自の API を開発している。API の内部ではヘッドレスブラウザや WebSocket を使って涙ぐましい SMS 認証突破とスクレイピングを行っている。
+結論から言うと、Yahoo! カレンダーは外部のカレンダーに連携できないという問題がある。API もないので連携するのが困難である。本サービスでは、工夫によって
+Yahoo! カレンダーとも連携できるようにする。 私は Yahoo! カレンダーと連携するために
+[9sako6/yahoo-calendar-api](https://github.com/9sako6/yahoo-calendar-api)
+という、独自の API を開発している。API の内部ではヘッドレスブラウザや WebSocket を使って涙ぐましい SMS
+認証突破とスクレイピングを行っている。
 
 以下は Yahoo! カレンダーの仕様調査の結果なので読み飛ばして構わない。
 
-Yahoo! カレンダーには Web 版とスマホアプリ版が存在する。アプリ版を使えば、Yahoo! カレンダー上で外部のカレンダーを表示する方法はある。しかし、逆に Yahoo! カレンダーを外部のカレンダーで表示する方法は見つけられていない。
+Yahoo! カレンダーには Web 版とスマホアプリ版が存在する。アプリ版を使えば、Yahoo!
+カレンダー上で外部のカレンダーを表示する方法はある。しかし、逆に Yahoo! カレンダーを外部のカレンダーで表示する方法は見つけられていない。
 
-Yahoo! カレンダーは iCalendar 形式の .ics ファイルでカレンダーをエクスポートできるが、あくまでその時点でのカレンダーをエクスポートするのみなので、外部のカレンダーにインポートしても Yahoo! カレンダーと同期することはできない。
+Yahoo! カレンダーは iCalendar 形式の .ics
+ファイルでカレンダーをエクスポートできるが、あくまでその時点でのカレンダーをエクスポートするのみなので、外部のカレンダーにインポートしても Yahoo!
+カレンダーと同期することはできない。
 
 ```mermaid
 sequenceDiagram
@@ -91,7 +97,6 @@ sequenceDiagram
     Y--xG: Yahoo! カレンダーの予定を Google カレンダーで表示不可
     G->>Y: Google カレンダーの予定を Yahoo! カレンダーで表示可
 ```
-
 
 なお、Yahoo! カレンダーどうしであれば連携して予定を共有することができる。連携設定は Web 版からのみ可能で、連携された予定はアプリ版でも表示はできる。
 
@@ -115,7 +120,9 @@ sequenceDiagram
 
 一見すると、Web 版とアプリ版が連携できるなら、アプリ版で連携した外部のカレンダーを Web 版でも表示できそうである。
 
-しかしながら、外部のカレンダーを表示できるのはアプリ版のみである。アプリ版の Yahoo! カレンダーは、スマホに登録された認証情報をつかって外部のカレンダーの情報を取得している。Web 版ではその認証情報を使えないので、外部のカレンダーの情報を得ることはできないのである。
+しかしながら、外部のカレンダーを表示できるのはアプリ版のみである。アプリ版の Yahoo!
+カレンダーは、スマホに登録された認証情報をつかって外部のカレンダーの情報を取得している。Web
+版ではその認証情報を使えないので、外部のカレンダーの情報を得ることはできないのである。
 
 ```mermaid
 sequenceDiagram
@@ -127,8 +134,6 @@ sequenceDiagram
     G->>Ya: Google カレンダーの予定をアプリ版で表示可
     Ya--xYw: Google カレンダーの予定を Web 版で表示不可
 ```
-
-
 
 ## SNS を形成する点
 
@@ -145,7 +150,66 @@ SNS を形成することにより、カレンダーを公開する側も公開�
 
 iCalendar の RFC を見ればわかるが、スケジュール情報を作るためには複数のオブジェクトが必要である。
 
-RDBMS でタイムライン機能を見据えた設計をしようとすると、設計が難しい。
-タイムラインを表示しようとすると、フォロワーをとってきて、カレンダーを `JOIN` し、各カレンダーにはイベント等を `JOIN` し、ソートする必要がある。明らかにヘビーである。Read Light / Wright Heavy にしたい。
+RDBMS
+でタイムライン機能を見据えた設計をしようとすると、設計が難しい。下記のナイーブな設計でタイムラインを表示しようとすると、フォロワーをとってきて、各カレンダーにはイベント等を
+`JOIN` し、ソートする必要がある。
 
-どう設計すべきかまだ答えは出ていないが、iCalendar の RFC を見ながらテーブル数を減らした設計ができないか考えたり、RDBMS を使わない道を考えたりしている。
+```mermaid
+erDiagram
+  User {
+    id id
+    string name
+    date created_at
+    date updated_at
+  }
+
+  Follow {
+    id id
+    id follower_id
+    id followee_id
+  }
+
+  User ||--o{ Follow : has
+
+  Calendar {
+    id id
+    id user_id
+    string name
+    string description
+  }
+
+  User ||--o{ Calendar : has
+
+  Event {
+    id id
+    id calendar_id
+    string name
+    string description
+    date start_at
+    date end_at
+  }
+
+  Calendar ||--o{ Event : has
+```
+
+```sql
+SELECT * FROM events
+INNER JOIN calendars ON events.calendar_id = calendars.id
+WHERE calendars.user_id IN (
+  SELECT follower_id FROM followers
+  WHERE followee_id = 1234 -- 自分の ID
+)
+ORDER BY events.start_at
+LIMIT 50
+OFFSET 0;
+```
+
+これは Read Heavy/ Wright Light である。フォロワーが増えるにつれてイベントを取得するのに時間がかかるようになる。
+
+Read Light / Wright Heavy にしたい。
+
+どう設計すべきかまだ答えは出ていないが、iCalendar の RFC を見ながらテーブル数を減らした設計ができないか考えたり、RDBMS
+を使わない道を考えたりしている。 下記の実装が参考になりそうな気がしている。
+
+- [CyberZ が Amazon DynamoDB を使用してフォロータイムラインの表示に必要な Read-Light 方式を実現した方法 | Amazon Web Services ブログ](https://aws.amazon.com/jp/blogs/news/how-cyberz-performs-read-light-operations-to-display-followees-activities-in-the-timeline-using-amazon-dynamodb/)
+- [1000万ユーザに耐えるサーバを作ってみた](https://zenn.dev/higashimura/articles/74c6e6bf63a133)
