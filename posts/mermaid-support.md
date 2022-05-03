@@ -1,6 +1,6 @@
 ---
 title: "Mermaid in Next.js markdown blog"
-description: ""
+description: "Mermaid is now available on this blog."
 topics: []
 published: true
 eyecatch: ""
