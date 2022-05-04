@@ -2,7 +2,7 @@
 title: "Mermaid in Next.js markdown blog"
 description: "Mermaid is now available on this blog."
 topics: []
-published: true
+published: false
 eyecatch: ""
 date: "2022-04-21T02:25:00.000+09:00"
 ---
