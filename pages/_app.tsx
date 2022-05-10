@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import "@/styles/nprogress.css";
 import "@/styles/rehype-prism-plus.css";
+import "@/styles/footnote.css"
 import type { AppProps } from "next/app";
 import Router from "next/router";
 import nProgress from "nprogress";
