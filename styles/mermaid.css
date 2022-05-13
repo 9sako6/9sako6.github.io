@@ -1,0 +1,9 @@
+.markdown .mermaid-dark {
+  @apply hidden;
+}
+.dark .markdown .mermaid-light {
+  @apply hidden;
+}
+.dark .markdown .mermaid-dark {
+  @apply block;
+}

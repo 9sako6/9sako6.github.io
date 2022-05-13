@@ -42,24 +42,10 @@
 .markdown blockquote {
   @apply p-4 mb-4 border-l-slate-700 border-l-4 bg-slate-100 rounded dark:border-l-zinc-300 dark:bg-zinc-700;
 }
-.markdown code.code-highlight {
-  @apply mt-4 mb-4;
-}
 .markdown code:not(.code-highlight) {
   @apply font-mono font-semibold dark:text-zinc-200;
 }
 .markdown code:not(.code-highlight)::after,
 .markdown code:not(.code-highlight)::before {
   content: "`";
-}
-
-/* mermaid */
-.markdown .mermaid-dark {
-  @apply hidden;
-}
-.dark .markdown .mermaid-light {
-  @apply hidden;
-}
-.dark .markdown .mermaid-dark {
-  @apply block;
 }
