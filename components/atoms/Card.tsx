@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { PostDate } from "./PostDate";
 
 type Props = {
@@ -35,21 +34,15 @@ export const Card = ({
         <p className="pb-3">{description}</p>
       </div>
       {imageUrl && (
-        <div className="relative h-56 md:h-96">
-          <Link href={postPath}>
-            <a>
-              <Image
-                className="cursor-pointer rounded"
-                alt={title}
-                src={imageUrl}
-                layout="fill"
-                objectFit="cover"
-                placeholder="blur"
-                blurDataURL={imageUrl}
-              />
-            </a>
-          </Link>
-        </div>
+        <Link href={postPath}>
+          <a>
+            <img
+              className="cursor-pointer rounded object-cover"
+              alt={title}
+              src={imageUrl}
+            />
+          </a>
+        </Link>
       )}
     </div>
   );
