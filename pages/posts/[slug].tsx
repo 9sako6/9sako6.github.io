@@ -4,9 +4,12 @@ import matter from "gray-matter";
 import { allPostsSync } from "@/lib/all-posts";
 import { markdownToHtml } from "@/lib/markdown-html";
 import { PostPage } from "@/components/templates";
+import { commitHistory, Commit } from "@/lib/update-history";
 
-type Props = Post & {
+export type Props = Post & {
   bodyHtml: string;
+  url: string;
+  commitHistory: Commit[]
 };
 
 type Params = {
@@ -29,7 +32,9 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 }) => {
   if (!params) return { props: {} as Props };
 
-  const file = readFileSync(`posts/${params.slug}.md`, "utf-8");
+  const postPath = `posts/${params.slug}.md`
+
+  const file = readFileSync(postPath, "utf-8");
   const matterResult = matter(file);
   const metadata = matterResult.data as Metadata;
 
@@ -39,14 +44,15 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
     props: {
       slug: params.slug,
       bodyHtml,
+      url: `${process.env.siteUrl}/posts/${params.slug}`,
+      commitHistory: commitHistory(postPath),
       ...metadata,
     },
   };
 };
 
 const Post: NextPage<Props> = (props) => {
-  const url = `${process.env.siteUrl}/posts/${props.slug}`;
-  return <PostPage {...props} url={url} />;
+  return <PostPage {...props} />;
 };
 
 export default Post;

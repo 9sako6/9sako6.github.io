@@ -4,11 +4,8 @@ import { Layout } from "@/components/layouts";
 import "prismjs/themes/prism-okaidia.min.css";
 import "@/node_modules/katex/dist/katex.min.css";
 import { ShareButtons } from "../organisms/ShareButtons";
-
-type Props = Post & {
-  bodyHtml: string;
-  url: string;
-};
+import { Props } from "@/pages/posts/[slug]";
+import { History } from "@/components/organisms";
 
 export const PostPage = ({
   title,
@@ -17,6 +14,7 @@ export const PostPage = ({
   bodyHtml,
   date,
   url,
+  commitHistory,
 }: Props): JSX.Element => {
   return (
     <Layout>
@@ -41,7 +39,7 @@ export const PostPage = ({
       <div>
         <PostTitle title={title} />
         <div className="pb-6">
-          <PostDate date={new Date(date)} />
+          <History commits={commitHistory} />
         </div>
         <Body html={bodyHtml} />
         <ShareButtons title={title} url={url} />
