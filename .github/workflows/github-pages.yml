@@ -20,16 +20,19 @@ jobs:
         with:
           node-version: "16"
       - name: Install dependencies
-        run: yarn
+        run: |
+          yarn
+        working-directory: ./9sako6.github.io
       - name: Build
         run: |
-          pwd
-          ls
           yarn build
+        working-directory: ./9sako6.github.io
       - name: Add nojekyll
-        run: touch ./out/.nojekyll
+        run: |
+          touch ./out/.nojekyll
+        working-directory: ./9sako6.github.io
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
+          publish_dir: ./9sako6.github.io/out
