@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/9sako6/9sako6.github.io.git
+          git clone https://github.com/9sako6/9sako6.github.io.git app
           cd app
           git pull
       - uses: actions/setup-node@v3
