@@ -7,11 +7,11 @@ on:
   pull_request:
 
 jobs:
-  deploy-storybook:
+  deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: ['16']
 
     steps:
       - name: checkout
@@ -32,10 +32,10 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install dependencies
         run: yarn
-      - name: Build storybook
-        run: yarn build-storybook -o ./dist/storybook
+      - name: Build
+        run: yarn build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./.next
