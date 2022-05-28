@@ -10,7 +10,7 @@ import rehypePrism from "rehype-prism-plus";
 import rehypeStringify from "rehype-stringify";
 import { withMermaid } from "./mermaid";
 
-export const markdownToHtml = withMermaid(async (markdown: string) => {
+export const markdownToHtml = async (markdown: string) => {
   return (
     await unified()
       .use(remarkParse)
@@ -24,4 +24,4 @@ export const markdownToHtml = withMermaid(async (markdown: string) => {
       .use(rehypeStringify)
       .process(markdown)
   ).toString();
-});
+};

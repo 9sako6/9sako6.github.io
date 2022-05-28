@@ -1,4 +1,5 @@
 export { Body } from "./Body";
+export { Button } from "./Button";
 export { Card } from "./Card";
 export { Cd } from "./Cd";
 export { PostTitle } from "./PostTitle";
