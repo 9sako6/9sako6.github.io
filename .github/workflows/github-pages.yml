@@ -15,6 +15,7 @@ jobs:
         run: |
           git clone https://github.com/9sako6/9sako6.github.io.git
           cd 9sako6.github.io
+          git pull
       - uses: actions/setup-node@v3
         with:
           node-version: "16"
