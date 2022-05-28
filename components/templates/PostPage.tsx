@@ -16,14 +16,14 @@ export const PostPage = ({
   url,
   commitHistory,
 }: Props): JSX.Element => {
+  const pageTitle = `${title} - ${process.env.siteTitle}`;
+
   return (
     <Layout>
       <Head>
-        <title>
-          {title} - {process.env.siteTitle}
-        </title>
+        <title>{pageTitle}</title>
         <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
