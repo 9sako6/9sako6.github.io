@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        run: |
+          git clone https://github.com/9sako6/9sako6.github.io.git
+          cd 9sako6.github.io
       - uses: actions/setup-node@v3
         with:
           node-version: "16"
           cache: "yarn"
-      - name: Clone
-        run: |
-          git clone https://github.com/9sako6/9sako6.github.io.git
-          cd 9sako6.github.io
       - name: Install dependencies
         run: yarn
       - name: Build
