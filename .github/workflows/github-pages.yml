@@ -22,7 +22,10 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Build
-        run: yarn build
+        run: |
+          pwd
+          ls
+          yarn build
       - name: Add nojekyll
         run: touch ./out/.nojekyll
       - name: Deploy
