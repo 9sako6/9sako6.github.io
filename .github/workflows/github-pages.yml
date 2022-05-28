@@ -14,25 +14,27 @@ jobs:
       - name: Checkout
         run: |
           git clone https://github.com/9sako6/9sako6.github.io.git
-          cd 9sako6.github.io
+          cd app
           git pull
       - uses: actions/setup-node@v3
         with:
           node-version: "16"
+          cache: "yarn"
+          cache-dependency-path: "**/yarn.lock"
       - name: Install dependencies
         run: |
           yarn
-        working-directory: ./9sako6.github.io
+        working-directory: ./app
       - name: Build
         run: |
           yarn build
-        working-directory: ./9sako6.github.io
+        working-directory: ./app
       - name: Add nojekyll
         run: |
           touch ./out/.nojekyll
-        working-directory: ./9sako6.github.io
+        working-directory: ./app
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./9sako6.github.io/out
+          publish_dir: ./app/out
