@@ -6,9 +6,8 @@ on:
       - master
 jobs:
   imgcmp:
-    if: startsWith(github.head_ref, 'actions/imgcmp/') != true
     runs-on: ubuntu-latest
     steps:
-      - uses: 9sako6/imgcmp@v2.0.1
+      - uses: 9sako6/imgcmp@v2.0.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
