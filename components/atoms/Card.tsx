@@ -37,7 +37,7 @@ export const Card = ({
         <Link href={postPath}>
           <a>
             <img
-              className="cursor-pointer rounded object-cover"
+              className="cursor-pointer rounded object-cover h-96 m-auto"
               alt={title}
               src={imageUrl}
             />
