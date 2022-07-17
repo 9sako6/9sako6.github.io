@@ -4,7 +4,7 @@ description: 'おいしいタコスの作り方をご紹介します。トルテ
 topics: ["料理"]
 published: true
 date: "2021-12-16T02:13:00.000+09:00"
-eyecatch: /images/eyecatch_tacos.jpg
+eyecatch: /images/eyecatch_tacos.webp
 ---
 
 この記事は、[ESM Advent Calender 2021](https://adventar.org/calendars/6972) の16日目の記事です。
