@@ -40,6 +40,7 @@ export const Card = ({
               className="cursor-pointer rounded object-cover h-96 m-auto"
               alt={title}
               src={imageUrl}
+              height={'384px'}
             />
           </a>
         </Link>
