@@ -1,22 +1,24 @@
 import Head from "next/head";
-import { Body, PostTitle, PostDate } from "@/components/atoms";
+import { Body, PostTitle } from "@/components/atoms";
 import { Layout } from "@/components/layouts";
 import "prismjs/themes/prism-okaidia.min.css";
 import "@/node_modules/katex/dist/katex.min.css";
 import { ShareButtons } from "../organisms/ShareButtons";
 import { Props } from "@/pages/posts/[slug]";
-import { History } from "@/components/organisms";
+import { History, SideBar } from "@/components/organisms";
+import { Cd } from "@/components/atoms";
 
 export const PostPage = ({
   title,
   description,
   eyecatch,
   bodyHtml,
-  date,
   url,
+  topics,
   commitHistory,
 }: Props): JSX.Element => {
   const pageTitle = `${title} - ${process.env.siteTitle}`;
+  const isTopicExist = topics.length > 0;
 
   return (
     <Layout>
@@ -36,13 +38,18 @@ export const PostPage = ({
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="@9sako6" />
       </Head>
-      <div>
-        <PostTitle title={title} />
-        <div className="pb-6">
-          <History commits={commitHistory} />
+      <div className="grid md:grid-cols-4 max-w-4xl">
+        <div className="hidden md:block">
+          <SideBar topics={topics} />
         </div>
-        <Body html={bodyHtml} />
-        <ShareButtons title={title} url={url} />
+        <div className="md:col-span-3">
+          <PostTitle title={title} />
+          <div className="pb-6">
+            <History commits={commitHistory} />
+          </div>
+          <Body html={bodyHtml} />
+          <ShareButtons title={title} url={url} />
+        </div>
       </div>
     </Layout>
   );
