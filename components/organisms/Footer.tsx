@@ -9,7 +9,9 @@ export const Footer = (): JSX.Element => {
   return (
     <div>
       <footer className="flex items-center h-20 justify-center">
-        <div className="p-10 md:hidden">{isRootPath ? null : <Cd />}</div>
+        <div className="p-10">
+          {isRootPath ? null : <Cd text="← Back to top" />}
+        </div>
       </footer>
       <div className="text-sm flex items-center justify-center text-slate-500 dark:text-zinc-600 p-12">
         2020-Present <CopyrightIcon /> 9sako6
