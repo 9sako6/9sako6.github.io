@@ -1,20 +1,21 @@
 import Head from "next/head";
-import { Card } from "../atoms";
+import { Card, PostTitle } from "../atoms";
 import { Layout } from "../layouts";
 
-export type Post = Metadata & { slug: string };
-
-type Props = {
+export type Props = {
   posts: Post[];
+  tag: string;
 };
 
-export const TopPage = ({ posts }: Props): JSX.Element => {
+export const TagPage = ({ posts, tag }: Props): JSX.Element => {
+  const pageTitle = `${tag} - ${process.env.siteTitle}`;
+
   return (
     <Layout>
       <Head>
-        <title>{process.env.siteTitle}</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={process.env.siteDescription} />
-        <meta property="og:title" content={process.env.siteTitle} />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={process.env.siteDescription} />
         <meta
           property="og:image"
@@ -24,7 +25,7 @@ export const TopPage = ({ posts }: Props): JSX.Element => {
         <meta name="twitter:creator" content="@9sako6" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <PostTitle title={tag} />
       {posts.length === 0 ? (
         <p>There are no posts.</p>
       ) : (

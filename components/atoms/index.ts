@@ -8,3 +8,4 @@ export { MarkdownWrapper } from "./MarkdownWrapper";
 export { BookmarkButton } from "./BookmarkButton";
 export { TwitterShare } from "./TwitterShare";
 export { UserButton } from "./UserButton";
+export { Tag } from "./Tag";
