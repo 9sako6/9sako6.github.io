@@ -1,21 +1,23 @@
-import { Cd } from "@/components/atoms";
+import { ShareButtons } from "./ShareButtons";
 
 type Props = {
   topics: string[];
+  title: string;
+  url: string;
 };
 
-export const SideBar = ({ topics }: Props) => (
-  <div className="pt-24">
-    <div className="fixed">
+export const SideBar = ({ topics, title, url }: Props) => (
+  <div className="p-8">
+    <div className="">
       {topics.length > 0 && (
-        <div className="pt-8 pb-8 border-t border-b w-36 text-center">
+        <div className="pt-8 pb-8 border-t text-center dark:border-zinc-800">
           {topics.map((topic) => (
-            <div key={topic}>#{topic}</div>
+            <div key={topic}>{topic}</div>
           ))}
         </div>
       )}
-      <div className="pt-8 pb-8 text-center">
-        <Cd text={"← Back to top"} />
+      <div className="pt-8 flex justify-center border-t dark:border-zinc-800">
+        <ShareButtons url={url} title={title} />
       </div>
     </div>
   </div>

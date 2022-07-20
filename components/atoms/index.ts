@@ -6,4 +6,5 @@ export { PostDate } from "./PostDate";
 export { HatenaBookmark } from "./HatenaBookmark";
 export { MarkdownWrapper } from "./MarkdownWrapper";
 export { BookmarkButton } from "./BookmarkButton";
+export { TwitterShare } from "./TwitterShare";
 export { UserButton } from "./UserButton";
