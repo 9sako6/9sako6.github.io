@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { Tag } from "../atoms";
 import { ShareButtons } from "./ShareButtons";
 
 type Props = {
@@ -12,7 +14,13 @@ export const SideBar = ({ topics, title, url }: Props) => (
       {topics.length > 0 && (
         <div className="pt-8 pb-8 border-t text-center dark:border-zinc-800">
           {topics.map((topic) => (
-            <div key={topic}>{topic}</div>
+            <div key={topic}>
+              <Link href={`/tags/${topic}`}>
+                <a>
+                  <Tag tag={topic} />
+                </a>
+              </Link>
+            </div>
           ))}
         </div>
       )}
