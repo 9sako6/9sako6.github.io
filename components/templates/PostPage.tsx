@@ -44,7 +44,7 @@ export const PostPage = ({
       <div className="flex justify-center pb-16">
         <PostDate date={new Date(date)} />
       </div>
-      <div className="grid md:grid-cols-4 max-w-4xl">
+      <div className="grid md:grid-cols-4 max-w-5xl">
         <div className="hidden md:block">
           <SideBar topics={topics} title={title} url={url} />
         </div>

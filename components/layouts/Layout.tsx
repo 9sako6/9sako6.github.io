@@ -18,7 +18,7 @@ export const Layout = ({ children }: Props): JSX.Element => {
       </Head>
       <Header />
       <main className="flex items-center justify-center">
-        <div className="md:max-w-4xl">{children}</div>
+        <div className="md:max-w-5xl">{children}</div>
       </main>
       <Footer />
     </div>
