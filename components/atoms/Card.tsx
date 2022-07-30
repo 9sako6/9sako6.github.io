@@ -39,10 +39,10 @@ export const Card = ({
           </Link>
         </div>
         <div className="text-slate-500 dark:text-zinc-400">
-          <div className="flex gap-3 pb-4">
+          <div className="pb-4">
             {tags.map((tag) => (
               <Link href={`/tags/${tag}`} key={tag}>
-                <a>
+                <a className="pr-2">
                   <Tag tag={tag} />
                 </a>
               </Link>
