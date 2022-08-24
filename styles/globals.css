@@ -34,7 +34,7 @@
   @apply cursor-pointer text-teal-600 break-all hover:underline focus:underline active:underline dark:text-teal-400;
 }
 .markdown img {
-  @apply md:max-w-xl;
+  @apply md:max-w-xl m-auto;
 }
 .markdown svg {
   @apply m-auto;
