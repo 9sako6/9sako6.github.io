@@ -470,6 +470,6 @@ type MyLowercase<StringType extends string> = StringType extends
 
 # 参考
 
-- [https://www.typescriptlang.org/docs/handbook/utility-types.html](https://www.typescriptlang.org/docs/handbook/utility-types.html)
-- [https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html)
-- [https://dev.to/svehla/typescript-transform-case-strings-450b](https://dev.to/svehla/typescript-transform-case-strings-450b)
+https://www.typescriptlang.org/docs/handbook/utility-types.html
+https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html
+https://dev.to/svehla/typescript-transform-case-strings-450b

@@ -46,7 +46,7 @@ GCCを使っているなら`#define int long long`しても問題なさそう。
 # 参考
 1. [Replacing text macros - cppreference.com](https://en.cppreference.com/w/cpp/preprocessor/replace)
 2. [3 Macros - GCC online documentation](https://gcc.gnu.org/onlinedocs/cpp/Macros.html#Macros)
-3. [https://twitter.com/__KasSA/status/1247178818076299265](https://twitter.com/__KasSA/status/1247178818076299265)
-4. [https://twitter.com/__KasSA/status/1247193760909254656](https://twitter.com/__KasSA/status/1247193760909254656)
+3. https://twitter.com/__KasSA/status/1247178818076299265
+4. https://twitter.com/__KasSA/status/1247193760909254656
 
 Thanks!

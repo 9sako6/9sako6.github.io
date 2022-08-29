@@ -9,6 +9,9 @@ const getOgp = async (url: string) => {
     // @ts-ignore
     downloadLimit: 5000000, // 5MB
     onlyGetOpenGraphInfo: true,
+    headers: {
+      "user-agent": "Googlebot/2.1 (+http://www.google.com/bot.html)",
+    },
   })
     .then((data) => {
       if (!data.result.success) return;

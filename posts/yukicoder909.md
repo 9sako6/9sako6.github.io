@@ -9,7 +9,7 @@ date: "2020-02-07T23:38:00.000+09:00"
 
 # 問題
 
-[No.909 たぴの配置](https://yukicoder.me/problems/no/909)
+https://yukicoder.me/problems/no/909
 
 # 考察
 
@@ -30,4 +30,4 @@ date: "2020-02-07T23:38:00.000+09:00"
 - $d > X_i$のとき、$X_i$に配置します。このとき、たぴ$N+1$から$Y_i$以下という条件もみたしています。なぜなら、$X_i + Y_i \geq d$より、$Y_i \geq d - X_i$だからです。
 
 
-[submission(Ruby)](https://yukicoder.me/submissions/397044)
+https://yukicoder.me/submissions/397044

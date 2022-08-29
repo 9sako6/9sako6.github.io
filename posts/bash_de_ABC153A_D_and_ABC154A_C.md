@@ -7,7 +7,7 @@ eyecatch: ""
 date: "2020-02-13T00:02:00.000+09:00"
 ---
 
-ABC153 A~DとABC154 A~Cの計7問をbashで解きました。
+ABC153 A-DとABC154 A-Cの計7問をbashで解きました。
 パズルみたいで面白かったです。
 解く中で得た知識を備忘録として残しておきます。
 
@@ -71,7 +71,7 @@ echo $(($(sed -e 's/ /+/g'))) # 空白区切りの文字列の空白を+に置�
 `${}`は付けた方がいいと言いましたが全然付けてません。（えー
 
 ## ABC153 A - Serval vs Monster
-[A - Serval vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_a)
+https://atcoder.jp/contests/abc153/tasks/abc153_a
 
 さっきの`$(())`を使います。
 
@@ -89,7 +89,7 @@ echo $(((h+a-1)/a))
 
 ## ABC153 B - Common Raccoon vs Monster
 
-[B - Common Raccoon vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_b)
+https://atcoder.jp/contests/abc153/tasks/abc153_b
 
 `sed`でスペースを+に置き換えてます。
 `sed`への渡し方ですが、変数なら`echo`、ファイルなら`cat`を使います。
@@ -108,7 +108,7 @@ fi
 
 ## ABC153 C - Fennec vs Monster
 
-[C - Fennec vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_c)
+https://atcoder.jp/contests/abc153/tasks/abc153_c
 
 $H$を降順に並べて、$1$行目から$K$行目まで削除して、改行を+に置換した文字列を計算しています。
 
@@ -127,7 +127,7 @@ fi
 `sed`の条件内で変数を使う時は、シングルクオーテーションで囲みます。
 
 ## ABC153 D - Caracal vs Monster
-[D - Caracal vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_d)
+https://atcoder.jp/contests/abc153/tasks/abc153_d
 
 `for`文の`(())`内は`$`を省略した変数を使っています。
 
@@ -159,7 +159,7 @@ echo $((2 ** n - 1))
 
 ## ABC154 A - Remaining Balls
 
-[A - Remaining Balls](https://atcoder.jp/contests/abc154/tasks/abc154_a)
+https://atcoder.jp/contests/abc154/tasks/abc154_a
 
 ```bash
 read s t
@@ -173,7 +173,7 @@ fi
 ```
 
 ## ABC154 B - I miss you...
-[B - I miss you...](https://atcoder.jp/contests/abc154/tasks/abc154_b)
+https://atcoder.jp/contests/abc154/tasks/abc154_b
 
 ```bash
 sed -e 's/./x/g'
@@ -183,7 +183,7 @@ sed -e 's/./x/g'
 
 ## ABC154 C - Distinct or Not
 
-[C - Distinct or Not](https://atcoder.jp/contests/abc154/tasks/abc154_c)
+https://atcoder.jp/contests/abc154/tasks/abc154_c
 
 ```bash
 read n
@@ -219,4 +219,5 @@ fi
 bashって今後も廃れない言語だと思うので、鍛えておくと得しそうです。
 
 # 参考
-- [Bashの括弧 - 超ウィザード級ハッカーのたのしみ](http://fj.hatenablog.jp/entry/2016/03/06/170907)
+
+http://fj.hatenablog.jp/entry/2016/03/06/170907

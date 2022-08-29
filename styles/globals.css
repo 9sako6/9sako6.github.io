@@ -56,7 +56,7 @@
 }
 
 .markdown .og-card-img {
-  @apply h-36 col-span-1 max-w-full object-contain border-r border-gray-300 dark:border-zinc-700;
+  @apply h-36 col-span-1 w-full object-contain border-r border-gray-300 dark:border-zinc-700;
 }
 
 .markdown .og-card-text {

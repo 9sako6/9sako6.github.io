@@ -8,7 +8,8 @@ date: "2020-02-16T03:14:00.000+09:00"
 ---
 
 # 問題
-[D - 桁和 / Digit Sum](https://atcoder.jp/contests/abc044/tasks/arc060_b)
+
+https://atcoder.jp/contests/abc044/tasks/arc060_b
 
 # 考察
 $n$,$s$に対して以下の変形ができます。
