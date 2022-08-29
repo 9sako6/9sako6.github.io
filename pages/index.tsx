@@ -9,7 +9,7 @@ type Props = {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const posts = allPostsSync({ draft: false });
+  const posts = allPostsSync({ draft: process.env.NODE_ENV === 'development' });
 
   return {
     props: { posts },

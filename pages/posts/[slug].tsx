@@ -17,7 +17,7 @@ type Params = {
 };
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const paths = allPostsSync({ draft: false }).map((post) => ({
+  const paths = allPostsSync({ draft: process.env.NODE_ENV === 'development' }).map((post) => ({
     params: { slug: post.slug },
   }));
 
