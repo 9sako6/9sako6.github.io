@@ -5,6 +5,7 @@ import { allPostsSync } from "@/lib/all-posts";
 import { markdownToHtml } from "@/lib/markdown-html";
 import { PostPage } from "@/components/templates";
 import { commitHistory, Commit } from "@/lib/update-history";
+import { withOgpCard } from '@/lib/with-ogp-card'
 
 export type Props = Post & {
   bodyHtml: string;
@@ -38,13 +39,14 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
   const matterResult = matter(file);
   const metadata = matterResult.data as Metadata;
 
-  const bodyHtml = await markdownToHtml(matterResult.content || "");
+  const bodyHtml = await withOgpCard(await markdownToHtml(matterResult.content || ""));
+  const url = `${process.env.siteUrl}/posts/${params.slug}`;
 
   return {
     props: {
       slug: params.slug,
       bodyHtml,
-      url: `${process.env.siteUrl}/posts/${params.slug}`,
+      url,
       commitHistory: commitHistory(postPath),
       ...metadata,
     },
