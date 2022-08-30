@@ -52,7 +52,7 @@
 
 /* OGP */
 .markdown .og-card {
-  @apply grid grid-cols-5 h-20 md:h-36 border border-gray-300 dark:border-zinc-700 no-underline hover:bg-gray-100 dark:hover:bg-zinc-800;
+  @apply grid grid-cols-5 h-20 md:h-36 box-content rounded border border-gray-300 dark:border-zinc-700 no-underline hover:bg-gray-100 dark:hover:bg-zinc-800;
 }
 
 .markdown .og-card-img {
