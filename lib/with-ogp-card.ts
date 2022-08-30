@@ -19,6 +19,7 @@ export const withOgpCard = async (html: string) => {
       if (!ogp) return;
 
       const { ogImage } = ogp;
+      const domain = anchor.href.split("/")[2];
       const image = Array.isArray(ogImage) ? ogImage[0] : ogImage;
       const title = !ogp.ogTitle ? "" : ogp.ogTitle;
       const description = !ogp.ogDescription ? "" : ogp.ogDescription;
@@ -30,6 +31,7 @@ export const withOgpCard = async (html: string) => {
             <div class="og-card-text">
               <div class="og-card-title">${title}</div>
               <div class="og-card-description">${description}</div>
+              <div class="og-card-domain">${domain}</div>
             </div>
           </div>
         </div>

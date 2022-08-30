@@ -60,7 +60,7 @@
 }
 
 .markdown .og-card-text {
-  @apply h-20 md:h-36 col-span-4 p-2 md:p-4 no-underline;
+  @apply h-20 md:h-36 col-span-4 p-2 md:p-4 no-underline flex flex-col;
 }
 
 .markdown .og-card-title {
@@ -69,4 +69,8 @@
 
 .markdown .og-card-description {
   @apply no-underline text-ellipsis overflow-hidden text-xs line-clamp-2 md:line-clamp-3 text-slate-500 dark:text-zinc-400;
+}
+
+.markdown .og-card-domain {
+  @apply text-xs text-slate-500 dark:text-zinc-400 text-right mt-auto;
 }
