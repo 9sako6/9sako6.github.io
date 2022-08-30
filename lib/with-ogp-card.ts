@@ -26,7 +26,7 @@ export const withOgpCard = async (html: string) => {
       const card = `<div>
           <div class="og-card">
             <img class="og-card-img" src="${
-              image?.url || ogp.twitterImageSrc
+              image?.url || ogp.twitterImageSrc || "/images/photo.webp"
             }"></img>
             <div class="og-card-text">
               <div class="og-card-title">${title}</div>
