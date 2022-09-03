@@ -18,6 +18,9 @@ export const PostPage = ({
   commitHistory,
 }: Props): JSX.Element => {
   const pageTitle = `${title} - ${process.env.siteTitle}`;
+  const imageUrl = eyecatch
+    ? `${process.env.siteUrl}/${eyecatch}`
+    : `${process.env.siteUrl}/icon.webp`;
 
   return (
     <Layout>
@@ -26,15 +29,9 @@ export const PostPage = ({
         <meta name="description" content={description} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
-        <meta
-          property="og:image"
-          content={
-            eyecatch
-              ? `${process.env.siteUrl}/${eyecatch}`
-              : `${process.env.siteUrl}/icon.webp`
-          }
-        />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:url" content={url} />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@9sako6" />
       </Head>
 
