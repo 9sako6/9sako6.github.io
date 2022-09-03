@@ -72,5 +72,9 @@
 }
 
 .markdown .og-card-domain {
-  @apply text-xs text-slate-500 dark:text-zinc-400 text-right mt-auto;
+  @apply flex text-xs text-slate-500 dark:text-zinc-400 text-right mt-auto;
+}
+
+.markdown .og-card-favicon {
+  @apply h-4 text-right m-0 ml-auto pl-1 pr-1;
 }

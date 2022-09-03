@@ -31,7 +31,9 @@ export const withOgpCard = async (html: string) => {
             <div class="og-card-text">
               <div class="og-card-title">${title}</div>
               <div class="og-card-description">${description}</div>
-              <div class="og-card-domain">${domain}</div>
+              <div class="og-card-domain">
+              <img class="og-card-favicon" src='${`//${domain}/favicon.ico`}'/>
+              ${domain}</div>
             </div>
           </div>
         </div>
