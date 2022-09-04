@@ -2,9 +2,7 @@
   "extends": "next/core-web-vitals",
   "overrides": [
     {
-      "files": [
-        "components/icons/*.tsx"
-      ],
+      "files": ["components/icons/*.tsx"],
       "rules": {
         "react/no-unknown-property": "off"
       }

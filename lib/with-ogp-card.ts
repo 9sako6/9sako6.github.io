@@ -1,5 +1,6 @@
 import { JSDOM } from "jsdom";
 import { getOgpAll } from "@/lib/get-ogp";
+import { staticLinkCard } from "@/components/organisms/LinkCard";
 
 export const withOgpCard = async (html: string) => {
   const jsdom = new JSDOM();
@@ -21,24 +22,16 @@ export const withOgpCard = async (html: string) => {
       const { ogImage } = ogp;
       const domain = anchor.href.split("/")[2];
       const image = Array.isArray(ogImage) ? ogImage[0] : ogImage;
+      const imageUrl =
+        image?.url || ogp.twitterImageSrc || "/images/photo.webp";
       const title = !ogp.ogTitle ? "" : ogp.ogTitle;
       const description = !ogp.ogDescription ? "" : ogp.ogDescription;
-      const card = `<div>
-          <div class="og-card">
-            <img class="og-card-img" src="${
-              image?.url || ogp.twitterImageSrc || "/images/photo.webp"
-            }"></img>
-            <div class="og-card-text">
-              <div class="og-card-title">${title}</div>
-              <div class="og-card-description">${description}</div>
-              <div class="og-card-domain">
-              <img class="og-card-favicon" src='${`//${domain}/favicon.ico`}'/>
-              ${domain}</div>
-            </div>
-          </div>
-        </div>
-        `;
-      anchor.innerHTML = card;
+      const card = staticLinkCard({
+        title,
+        description,
+        imageUrl,
+        domain,
+      });
       anchor.target = "_blank";
       anchor.rel = "noopener";
       anchor.setAttribute("style", "text-decoration: none;");

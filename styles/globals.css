@@ -49,32 +49,3 @@
 .markdown code:not(.code-highlight)::before {
   content: "`";
 }
-
-/* OGP */
-.markdown .og-card {
-  @apply grid grid-cols-5 h-20 md:h-36 box-content rounded border border-gray-300 dark:border-zinc-700 no-underline hover:bg-gray-100 dark:hover:bg-zinc-800;
-}
-
-.markdown .og-card-img {
-  @apply h-20 md:h-36 col-span-1 w-full object-contain border-r border-gray-300 dark:border-zinc-700;
-}
-
-.markdown .og-card-text {
-  @apply h-20 md:h-36 col-span-4 p-2 md:p-4 no-underline flex flex-col;
-}
-
-.markdown .og-card-title {
-  @apply no-underline text-sm md:text-lg text-ellipsis overflow-hidden whitespace-nowrap;
-}
-
-.markdown .og-card-description {
-  @apply no-underline text-ellipsis overflow-hidden text-xs line-clamp-2 md:line-clamp-3 text-slate-500 dark:text-zinc-400;
-}
-
-.markdown .og-card-domain {
-  @apply flex text-xs text-slate-500 dark:text-zinc-400 text-right mt-auto;
-}
-
-.markdown .og-card-favicon {
-  @apply h-4 text-right m-0 ml-auto pl-1 pr-1;
-}
