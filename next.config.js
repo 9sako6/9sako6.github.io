@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
-
-const withOptimizedImages = require("next-optimized-images");
+const withExportImages = require("next-export-optimize-images");
+// const withOptimizedImages = require("next-optimized-images");
 
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
@@ -26,8 +26,8 @@ const nextConfig = {
 };
 
 module.exports = withMDX(
-  withOptimizedImages({
+  withExportImages({
     ...nextConfig,
-    handleImages: ["jpeg", "png", "webp", "svg"],
+    // handleImages: ["jpeg", "png", "webp", "svg"],
   })
 );

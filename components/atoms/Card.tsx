@@ -1,6 +1,7 @@
 import { Tag } from "./Tag";
 import Link from "next/link";
 import { PostDate } from "./PostDate";
+import Image from "next/image";
 
 type Props = {
   slug: string;
@@ -58,17 +59,23 @@ export const Card = ({
           </div>
         </div>
       </div>
-      <div className="md:col-span-2 grid place-content-center">
+      <div className="md:col-span-2 grid place-content-center relative">
         {imageUrl ? (
-          <Link href={postPath}>
-            <a>
-              <img
-                className="rounded cursor-pointer md:max-h-48"
-                alt={title}
-                src={imageUrl}
-              />
-            </a>
-          </Link>
+          <div className="h-64 md:h-32">
+            <Link href={postPath}>
+              <a>
+                <Image
+                  className="cursor-pointer rounded"
+                  alt={title}
+                  src={imageUrl}
+                  layout="fill"
+                  objectFit="cover"
+                  placeholder="blur"
+                  blurDataURL={imageUrl}
+                />
+              </a>
+            </Link>
+          </div>
         ) : (
           placeholder
         )}
