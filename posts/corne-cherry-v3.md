@@ -4,7 +4,7 @@ description: "俺のキーボードかっこいい！キースイッチを交換
 キースイッチは Gateron Silent Yellow を使っています。静音です。"
 topics: ["キーボード"]
 published: true
-eyecatch: "/images/corne-cherry-v3-1.jpg"
+eyecatch: "/images/corne-cherry-v3-1.webp"
 date: "2022-08-24T20:48:06.841+09:00"
 ---
 
@@ -23,7 +23,7 @@ date: "2022-08-24T20:48:06.841+09:00"
 
 効率的なタイピングのために必要なのは優秀なキーボードです。早速手に入れました。
 
-![Corne Cherry V3](/images/corne-cherry-v3-2.jpg)
+![Corne Cherry V3](/images/corne-cherry-v3-2.webp)
 
 キースイッチを交換できる点と、コンパクトさに惹かれて Corne Cherry V3 を買って作りました。
 キースイッチは Gateron Silent Yellow を使っています。静音です。
@@ -31,7 +31,7 @@ date: "2022-08-24T20:48:06.841+09:00"
 本来 LED はもっと光るのですが、はんだ付けが下手くそだったので半分ほど失敗して光ってないです。
 LED の色やアニメーションはキー操作で変えることができます。
 
-![Corne Cherry V3](/images/corne-cherry-v3-1.jpg)
+![Corne Cherry V3](/images/corne-cherry-v3-1.webp)
 
 かっこいいですね。
 かっこいいのですが、今のところはただタイピング速度・精度の劣化を得ています。
@@ -39,7 +39,7 @@ LED の色やアニメーションはキー操作で変えることができま�
 比較のために、今まで使っていた MacBook のキーボードと自作キーボードで寿司打をしました。
 もともとは5.5タイプ/秒だったのですが、自作キーボードで打った場合は3.9タイプ/秒まで劣化しました。
 
-![寿司打](/images/sushida.jpg)
+![寿司打](/images/sushida.webp)
 
 冒頭の話に戻ります。そもそもなぜ私はコーディングスキルを高めたいのでしょうか。
 それは、かっこよくなりたいからです。スーパープログラマはかっこいいです。

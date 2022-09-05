@@ -54,7 +54,7 @@ END:VCALENDAR
 
 この例は有効な ics ファイルであり、Google Calendar にインポートすると次の予定が生えます。
 
-![bastille_day_party](/images/bastille_day_party.png)
+![bastille_day_party](/images/bastille_day_party.webp)
 
 # 登場人物
 
