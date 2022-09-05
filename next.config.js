@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const withExportImages = require("next-export-optimize-images");
-// const withOptimizedImages = require("next-optimized-images");
 
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
