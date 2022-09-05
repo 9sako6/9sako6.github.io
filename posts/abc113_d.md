@@ -35,20 +35,20 @@ $dp[h][w]$を、高さ$h$の$w$番目(0-indexed)に至るのに何通りある�
 遷移を考えます。
 今、高さ$h$、$w$番目の横線にいるとします。ここに至るまでに$dp[h][w]$通り存在します。
 
-![abc113_d_1](//images.ctfassets.net/57a83iqiwfit/6AmJkMBcMa5UdEt7RsS90S/18d367cd471ef33dd1d62008246f9dc1/1.webp)
+![abc113_d_1](//images.ctfassets.net/57a83iqiwfit/6AmJkMBcMa5UdEt7RsS90S/18d367cd471ef33dd1d62008246f9dc1/1.png)
 
 $w+1$に向かう横線があれば、$w+1$番目の横線に移動して次の高さに進みます。$dp[h+1][w+1] += dp[h][w]$
 
-![abc113_d_2](//images.ctfassets.net/57a83iqiwfit/3xqwgFCIiauCIcAELHld75/910452d6b74b90f2e80214f1e9c18703/2.webp)
+![abc113_d_2](//images.ctfassets.net/57a83iqiwfit/3xqwgFCIiauCIcAELHld75/910452d6b74b90f2e80214f1e9c18703/2.png)
 
 $w-1$に向かう横線があれば、$w-1$番目の横線に移動して次の高さに進みます。$dp[h+1][w-1] += dp[h][w]$
 
-![abc113_d_3](//images.ctfassets.net/57a83iqiwfit/2JABYZa1ARzbhlS2Pn5OC1/3aef42ed928ff66b11feecfb9e8dd430/3.webp)
+![abc113_d_3](//images.ctfassets.net/57a83iqiwfit/2JABYZa1ARzbhlS2Pn5OC1/3aef42ed928ff66b11feecfb9e8dd430/3.png)
 
 両隣に横線がなかったら、同じ$w$番目のまま次の高さに進みます。
 $dp[h+1][w] += dp[h][w]$
 
-![abc113_d_4](//images.ctfassets.net/57a83iqiwfit/5w4BR9vIutPrTz9nCXbqB9/22d55a7f930e8c3b091b582437a17cbe/4.webp)
+![abc113_d_4](//images.ctfassets.net/57a83iqiwfit/5w4BR9vIutPrTz9nCXbqB9/22d55a7f930e8c3b091b582437a17cbe/4.png)
 
 ちなみに、両隣に横線があることはありません。正しくないあみだくじだからです。そのような正しくないあみだくじは予め弾いておきます。
 
