@@ -1,9 +1,9 @@
+import dynamic from "next/dynamic";
 import type { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import { readFileSync } from "fs";
 import matter from "gray-matter";
 import { allPostsSync } from "@/lib/all-posts";
 import { markdownToHtml } from "@/lib/markdown-html";
-import { PostPage } from "@/components/templates";
 import { commitHistory, Commit } from "@/lib/update-history";
 import { withOgpCard } from '@/lib/with-ogp-card'
 
@@ -12,6 +12,8 @@ export type Props = Post & {
   url: string;
   commitHistory: Commit[]
 };
+
+const PostPage = dynamic<Props>(() => import("@/components/templates/PostPage").then(module => module.PostPage))
 
 type Params = {
   slug: string;
