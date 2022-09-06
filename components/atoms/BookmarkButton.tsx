@@ -8,7 +8,10 @@ type Props = {
 export const BookmarkButton = ({ url }: Props) => {
   return (
     <Link href={url}>
-      <a className="hover:text-teal-600 dark:hover:text-teal-400">
+      <a
+        className="hover:text-teal-600 dark:hover:text-teal-400"
+        aria-label="bookmarks"
+      >
         <BookmarkIcon />
       </a>
     </Link>

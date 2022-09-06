@@ -23,7 +23,10 @@ export const Card = ({
   const postPath = `/posts/${slug}`;
   const placeholder = (
     <Link href={postPath}>
-      <a className="hover:underline font-mono hidden md:block">
+      <a
+        className="hover:underline font-mono hidden md:block"
+        aria-label={title}
+      >
         <div>Read more →</div>
       </a>
     </Link>
@@ -43,7 +46,7 @@ export const Card = ({
           <div className="pb-4">
             {tags.map((tag) => (
               <Link href={`/tags/${tag}`} key={tag}>
-                <a className="pr-2">
+                <a className="mr-4">
                   <Tag tag={tag} />
                 </a>
               </Link>
@@ -54,7 +57,9 @@ export const Card = ({
           </div>
           <div className="pb-3">
             <Link href={postPath}>
-              <a className="hover:underline">{description}</a>
+              <a className="hover:underline" aria-label={title}>
+                {description}
+              </a>
             </Link>
           </div>
         </div>
@@ -63,7 +68,7 @@ export const Card = ({
         {imageUrl ? (
           <div className="h-64 md:h-32">
             <Link href={postPath}>
-              <a>
+              <a aria-label={title}>
                 <Image
                   className="cursor-pointer rounded"
                   alt={title}

@@ -1,11 +1,21 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import { Body, PostDate, PostTitle } from "@/components/atoms";
 import { Layout } from "@/components/layouts";
 import "prismjs/themes/prism-okaidia.min.css";
 import "@/node_modules/katex/dist/katex.min.css";
 import { ShareButtons } from "../organisms/ShareButtons";
 import { Props } from "@/pages/posts/[slug]";
-import { History, SideBar } from "@/components/organisms";
+import { SideBarProps } from "@/components/organisms/SideBar";
+import { HistoryProps } from "@/components/organisms/History";
+
+const SideBar = dynamic<SideBarProps>(() =>
+  import("@/components/organisms/SideBar").then((module) => module.SideBar)
+);
+
+const History = dynamic<HistoryProps>(() =>
+  import("@/components/organisms/History").then((module) => module.History)
+);
 
 export const PostPage = ({
   title,

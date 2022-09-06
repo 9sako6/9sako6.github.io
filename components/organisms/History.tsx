@@ -3,11 +3,11 @@ import { PostDate } from "../atoms";
 import { TimeIcon } from "../icons/TimeIcon";
 import { UserIcon } from "../icons/UserIcon";
 
-type Props = {
+export type HistoryProps = {
   commits: Commit[];
 };
 
-export const History = ({ commits }: Props): JSX.Element => (
+export const History = ({ commits }: HistoryProps) => (
   <details>
     <summary className="pb-2 cursor-pointer">Change log</summary>
     {commits.map(({ hash, date, author, url }) => (

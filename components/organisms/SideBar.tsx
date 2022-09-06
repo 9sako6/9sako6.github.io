@@ -2,13 +2,13 @@ import Link from "next/link";
 import { Tag } from "../atoms";
 import { ShareButtons } from "./ShareButtons";
 
-type Props = {
+export type SideBarProps = {
   topics: string[];
   title: string;
   url: string;
 };
 
-export const SideBar = ({ topics, title, url }: Props) => (
+export const SideBar = ({ topics, title, url }: SideBarProps) => (
   <div className="p-8">
     <div className="">
       {topics.length > 0 && (
