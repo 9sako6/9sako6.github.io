@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const withExportImages = require("next-export-optimize-images");
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
@@ -24,9 +27,11 @@ const nextConfig = {
   },
 };
 
-module.exports = withMDX(
-  withExportImages({
-    ...nextConfig,
-    // handleImages: ["jpeg", "png", "webp", "svg"],
-  })
+module.exports = withBundleAnalyzer(
+  withMDX(
+    withExportImages({
+      ...nextConfig,
+      // handleImages: ["jpeg", "png", "webp", "svg"],
+    })
+  )
 );
