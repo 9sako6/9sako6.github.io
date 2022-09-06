@@ -31,7 +31,6 @@ module.exports = withBundleAnalyzer(
   withMDX(
     withExportImages({
       ...nextConfig,
-      // handleImages: ["jpeg", "png", "webp", "svg"],
     })
   )
 );
