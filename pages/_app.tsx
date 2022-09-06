@@ -9,7 +9,7 @@ import Router from "next/router";
 import nProgress from "nprogress";
 import { ThemeProvider } from "next-themes";
 
-// import "@/lib/firebase/initApp"; // Initialize FirebaseApp
+import "@/lib/firebase/initApp"; // Initialize FirebaseApp
 
 Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);
