@@ -66,7 +66,7 @@ export const Card = ({
       </div>
       <div className="md:col-span-2 grid place-content-center relative">
         {imageUrl ? (
-          <div className="h-64 md:h-32">
+          <div className="h-80 md:h-32">
             <Link href={postPath}>
               <a aria-label={title}>
                 <Image
