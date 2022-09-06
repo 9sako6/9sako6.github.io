@@ -1,5 +1,4 @@
 import type { NextPage, GetStaticProps } from "next";
-import dayjs from "dayjs";
 import { allPostsSync } from "@/lib/all-posts";
 import { TopPage } from "@/components/templates";
 import type { Post } from "@/components/templates/TopPage";
