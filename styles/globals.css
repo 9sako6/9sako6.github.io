@@ -13,7 +13,7 @@
   @apply text-xl pb-6 pt-6 break-all dark:text-zinc-200;
 }
 .markdown p {
-  @apply break-all pb-6;
+  @apply break-all pb-3 pt-3;
 }
 .markdown blockquote > p {
   @apply pb-0;
