@@ -6,6 +6,12 @@
       "rules": {
         "react/no-unknown-property": "off"
       }
+    },
+    {
+      "files": ["components/**/*.tsx"],
+      "rules": {
+        "@next/next/no-img-element": "off"
+      }
     }
   ]
 }

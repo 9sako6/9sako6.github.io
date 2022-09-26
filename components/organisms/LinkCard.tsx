@@ -16,6 +16,7 @@ export const LinkCard = ({ title, description, imageUrl, domain }: Props) => {
         <img
           className="h-20 md:h-36 col-span-1 w-full object-contain border-r border-gray-300 dark:border-zinc-700"
           src={imageUrl}
+          alt={title}
         ></img>
         <div className="h-20 md:h-36 col-span-4 p-2 md:p-4 no-underline flex flex-col">
           <div className="no-underline text-sm md:text-lg text-ellipsis overflow-hidden whitespace-nowrap">
@@ -30,6 +31,7 @@ export const LinkCard = ({ title, description, imageUrl, domain }: Props) => {
               src={`//${domain}/favicon.ico`}
               // global.css を打ち消すための style 指定
               style={{ margin: "0 0 0 auto" }}
+              alt={"favicon"}
             />
             <span>{domain}</span>
           </div>
