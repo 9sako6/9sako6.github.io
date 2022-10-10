@@ -8,12 +8,16 @@ import rehypeAnchorHeading from "./rehype-anchor-heading";
 import rehypeKatex from "rehype-katex";
 import rehypePrism from "rehype-prism-plus";
 import rehypeStringify from "rehype-stringify";
+import remarkToc from "remark-toc";
 import { withMermaid } from "./mermaid";
 
 export const markdownToHtml = withMermaid(async (markdown: string) => {
   return (
     await unified()
       .use(remarkParse)
+      .use(remarkToc, {
+        heading: "toc|table[ -]of[ -]contents?|目次",
+      })
       .use(remarkGfm)
       .use(remarkMath)
       .use(remarkRehype)
