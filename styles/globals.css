@@ -7,7 +7,7 @@
 }
 
 .markdown h1 {
-  @apply text-2xl pb-6 pt-6 break-all dark:text-zinc-200;
+  @apply text-2xl pb-6 pt-6 break-all dark:text-zinc-200 relative;
 }
 .markdown h2 {
   @apply text-xl pb-6 pt-6 break-all dark:text-zinc-200;
@@ -30,9 +30,6 @@
 .markdown li::marker {
   @apply dark:text-zinc-100;
 }
-.markdown a {
-  @apply cursor-pointer text-teal-600 break-all hover:underline focus:underline active:underline dark:text-teal-400;
-}
 .markdown img {
   @apply md:max-w-xl m-auto;
 }
@@ -43,9 +40,15 @@
   @apply p-4 mb-4 border-l-slate-700 border-l-4 bg-slate-100 rounded dark:border-l-zinc-300 dark:bg-zinc-700;
 }
 .markdown code:not(.code-highlight) {
-  @apply font-mono font-semibold dark:text-zinc-200;
+  @apply font-mono font-semibold;
 }
 .markdown code:not(.code-highlight)::after,
 .markdown code:not(.code-highlight)::before {
   content: "`";
+}
+.markdown a {
+  @apply cursor-pointer text-teal-600 break-all hover:underline focus:underline active:underline dark:text-teal-400;
+}
+.markdown .anchor-of-heading {
+  @apply absolute -left-5;
 }
