@@ -50,5 +50,5 @@
   @apply cursor-pointer text-teal-600 break-all hover:underline focus:underline active:underline dark:text-teal-400;
 }
 .markdown .anchor-of-heading {
-  @apply absolute -left-5;
+  @apply md:absolute md:-left-5;
 }
