@@ -43,15 +43,11 @@ export const Card = ({
           </Link>
         </div>
         <div className="text-slate-500 dark:text-zinc-400">
-          <div className="pb-4">
+          <span className="pb-4">
             {tags.map((tag) => (
-              <Link href={`/tags/${tag}`} key={tag}>
-                <a className="mr-4">
-                  <Tag tag={tag} />
-                </a>
-              </Link>
+              <Tag tag={tag} className="mr-4" key={tag} />
             ))}
-          </div>
+          </span>
           <div className="pb-4">
             <PostDate date={new Date(createdAt)} />
           </div>
