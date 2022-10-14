@@ -1,17 +1,17 @@
-type Arg = {
-  slug?: string;
-  eyecatch?: string;
-};
-
-export const buildPost = ({ slug, eyecatch }: Arg): Post => {
-  return {
+export const buildPost = (params: Partial<Post>): Post => {
+  const defaultParams = {
     title: "サンプルポスト",
-    topics: [],
+    topics: ["Programming", "OCaml"],
     published: true,
     description: "サンプル説明文です。",
     date: "2020-02-07T23:38:00.000+09:00",
-    slug: slug || "sample-post",
-    eyecatch,
+    slug: "sample-post",
+    eyecatch: "https://placedog.net/500",
+  };
+
+  return {
+    ...defaultParams,
+    ...params,
   };
 };
 

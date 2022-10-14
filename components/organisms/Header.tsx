@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ThemeChanger } from "@/components/atoms/ThemeChanger";
-import { BookmarkButton, UserButton } from "@/components/atoms";
 import { SiteTitle } from "@/components/atoms/SiteTitle";
 
 export const Header = (): JSX.Element => {

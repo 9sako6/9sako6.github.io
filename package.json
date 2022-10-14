@@ -15,7 +15,8 @@
     "tsc": "tsc --noEmit",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "new": "deno run --allow-write bin/create-new-post.ts"
+    "new": "deno run --allow-write bin/create-new-post.ts",
+    "test": "vitest run"
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.0",
@@ -44,13 +45,14 @@
     "@storybook/builder-webpack5": "^6.4.22",
     "@storybook/manager-webpack5": "^6.4.22",
     "@storybook/react": "^6.4.22",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "@types/jsdom": "^20.0.0",
     "@types/node": "17.0.9",
     "@types/nprogress": "^0.2.0",
     "@types/open-graph-scraper": "^4.8.1",
-    "@types/react": "17.0.38",
-    "@types/react-dom": "^17.0.2",
     "@types/uuid": "^8.3.4",
+    "@vitejs/plugin-react": "^2.1.0",
     "autoprefixer": "^10.4.4",
     "babel-loader": "^8.2.3",
     "eslint": "8.7.0",
@@ -74,6 +76,7 @@
     "typescript": "4.5.4",
     "unified": "^10.1.1",
     "unist-util-visit": "^4.1.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "vitest": "^0.24.1"
   }
 }
