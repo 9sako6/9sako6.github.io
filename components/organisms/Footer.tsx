@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { Cd } from "@/components/atoms";
+import { Cd, Tag } from "@/components/atoms";
 import { CopyrightIcon } from "@/components/icons/CopyrightIcon";
 import { AuthButton } from "../atoms/AuthButton";
 import Image from "next/image";
@@ -8,6 +8,7 @@ import { GitHubIcon } from "../icons/GitHubIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
 import { LinkedinIcon } from "../icons/LinkedinIcon";
 import { isDevelopment } from "@/lib/is-development";
+import topics from "@/data/topics.json";
 
 export const Footer = (): JSX.Element => {
   const router = useRouter();
@@ -75,8 +76,12 @@ export const Footer = (): JSX.Element => {
               </p>
             </div>
             <div className="col-span-2">
-              <h2 className="text-lg">Categories</h2>
-              <p>comming soon...</p>
+              <h2 className="text-lg">Tags</h2>
+              <div className="">
+                {topics.map((topic) => (
+                  <Tag className="mr-4" tag={topic} key={topic} />
+                ))}
+              </div>
             </div>
             <div>{isDevelopment ? <AuthButton /> : null}</div>
           </div>

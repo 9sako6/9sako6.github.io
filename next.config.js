@@ -30,6 +30,12 @@ const nextConfig = {
     siteDescription: "Webアプリケーション開発者くさころの技術ブログ。",
     siteUrl: "https://9sako6.com",
   },
+  webpack: (config, { isServer, nextRuntime }) => {
+    if (isServer && nextRuntime === "nodejs") {
+      require("./scripts/generate-topics-json.js");
+    }
+    return config;
+  },
 };
 
 module.exports = withBundleAnalyzer(
