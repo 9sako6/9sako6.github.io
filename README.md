@@ -7,6 +7,8 @@ https://9sako6.com
 ```bash
 # Run server
 yarn dev
+# Run test
+yarn test
 ```
 
 ### Firebase
@@ -22,4 +24,11 @@ firebase emulators:export ./firebase/seed
 
 ```bash
 yarn storybook
+```
+
+## Deploy
+
+```bash
+// Deploy firestore.rules file
+firebase deploy --only firestore:rules
 ```
