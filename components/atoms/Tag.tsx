@@ -8,11 +8,11 @@ type Props = {
 export const Tag = ({ tag, className }: Props): JSX.Element => (
   <Link href={`/tags/${tag}`}>
     <a>
-      <span
-        className={`cursor-pointer text-teal-700 break-all hover:underline focus:underline active:underline dark:text-teal-400 ${className}`}
+      <div
+        className={`cursor-pointer py-1 inline-block break-words text-teal-700 hover:underline focus:underline active:underline dark:text-teal-400 ${className}`}
       >
         {tag}
-      </span>
+      </div>
     </a>
   </Link>
 );
