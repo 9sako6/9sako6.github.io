@@ -13,12 +13,6 @@ export const Header = (): JSX.Element => {
           </a>
         </Link>
         <ul className="flex md:text-2xl text-xl">
-          <li className="mr-3">
-            <UserButton url="/about" />
-          </li>
-          <li className="mr-3">
-            <BookmarkButton url="/bookmarks" />
-          </li>
           <li>
             <ThemeChanger />
           </li>

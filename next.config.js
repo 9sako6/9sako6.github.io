@@ -15,7 +15,12 @@ const withMDX = require("@next/mdx")({
 });
 
 const nextConfig = {
-  reactStrictMode: true,
+  // FIXME: If this is true, the following error occurs.
+  //
+  // ```
+  // Firebase: Firebase App named '[DEFAULT]-firebaseui-temp' already exists on auth (app/duplicate-app).
+  // ```
+  // reactStrictMode: true,
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   images: {
     domains: ["images.ctfassets.net", "picsum.photos"],

@@ -1,0 +1,27 @@
+{
+  "kind": "identitytoolkit#DownloadAccountResponse",
+  "users": [
+    {
+      "localId": "P49i2Ksv0OSFSm59UJz5xErUwCP8",
+      "createdAt": "1665730436547",
+      "lastLoginAt": "1665730436547",
+      "displayName": "Jane Doe",
+      "photoUrl": "https://placedog.net/500",
+      "screenName": "janedoe",
+      "email": "user1@gmail.com",
+      "emailVerified": true,
+      "providerUserInfo": [
+        {
+          "providerId": "google.com",
+          "rawId": "5151565962543789489531282121666033529057",
+          "federatedId": "5151565962543789489531282121666033529057",
+          "displayName": "Jane Doe",
+          "photoUrl": "https://placedog.net/500",
+          "email": "user1@gmail.com",
+          "screenName": "janedoe"
+        }
+      ],
+      "lastRefreshAt": "2022-10-14T06:53:56.547Z"
+    }
+  ]
+}
