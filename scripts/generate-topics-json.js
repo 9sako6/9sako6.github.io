@@ -6,6 +6,10 @@ const allTopics = readdirSync("posts").flatMap((fileName) => {
   const file = readFileSync(`posts/${fileName}`, "utf-8");
   const metadata = matter(file).data;
 
+  if (process.env.NODE_ENV === "production" && !metadata.published) {
+    return [];
+  }
+
   return metadata.topics;
 });
 
