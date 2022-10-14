@@ -12,8 +12,10 @@ yarn dev
 ### Firebase
 
 ```bash
-# エミュレーターの起動
-firebase emulators:start
+# Run emulator
+firebase emulators:start --import=./firebase/seed
+# Export emulator's data
+firebase emulators:export ./firebase/seed
 ```
 
 ### Storybook
