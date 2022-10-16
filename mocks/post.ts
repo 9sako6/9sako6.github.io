@@ -1,4 +1,4 @@
-export const buildPost = (params: Partial<Post>): Post => {
+export const buildPost = (params: Partial<Post> = {}): Post => {
   const defaultParams = {
     title: "サンプルポスト",
     topics: ["Programming", "OCaml"],

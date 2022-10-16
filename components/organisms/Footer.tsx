@@ -1,13 +1,11 @@
 import { useRouter } from "next/router";
 import { Cd, Tag } from "@/components/atoms";
 import { CopyrightIcon } from "@/components/icons/CopyrightIcon";
-import { AuthButton } from "../atoms/AuthButton";
 import Image from "next/image";
 import Link from "next/link";
 import { GitHubIcon } from "../icons/GitHubIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
 import { LinkedinIcon } from "../icons/LinkedinIcon";
-import { isDevelopment } from "@/lib/is-development";
 import topics from "@/data/topics.json";
 
 export const Footer = (): JSX.Element => {
@@ -82,7 +80,6 @@ export const Footer = (): JSX.Element => {
                 ))}
               </div>
             </div>
-            <div>{isDevelopment ? <AuthButton /> : null}</div>
           </div>
         </div>
 
