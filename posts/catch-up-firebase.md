@@ -500,6 +500,141 @@ service cloud.firestore {
 
 # Security
 
+# Tesitng
+
+`@firebase/rules-unit-testing` とエミュレーターを使ってテストできる。
+
+`__tests__/firebase/setup.ts`
+
+```typescript
+import { initializeTestEnvironment } from "@firebase/rules-unit-testing";
+import firebaseConfig from "@/firebase.json";
+import { readFileSync } from "fs";
+
+export const initializeFirebaseTestEnv = async () => {
+  return await initializeTestEnvironment({
+    projectId: "test-project",
+    firestore: {
+      rules: readFileSync(firebaseConfig.firestore.rules, "utf-8"),
+      port: firebaseConfig.emulators.firestore.port,
+      host: "localhost",
+    },
+  });
+};
+```
+
+```typescript
+import { assertFails, assertSucceeds } from "@firebase/rules-unit-testing";
+import { initializeFirebaseTestEnv } from "../setup";
+
+const testEnv = await initializeFirebaseTestEnv();
+
+afterEach(async () => {
+  await testEnv.clearFirestore();
+});
+
+afterAll(async () => {
+  await testEnv.cleanup();
+});
+
+describe("userId", () => {
+  test("Authenticated user can create a comment", async () => {
+    const context = testEnv.authenticatedContext("authed-uid");
+    const db = context.firestore();
+
+    await assertSucceeds(
+      db.collection("comments").add({
+        userId: "authed-uid",
+        text: "hello, world!",
+        displayName: "Jane Doe",
+        photoURL: "https://placedog.net/500",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        published: true,
+        slug: "how-to-test-firestore",
+      })
+    );
+  });
+
+  test("Unauthenticated user can not create a comment", async () => {
+    const context = testEnv.unauthenticatedContext();
+    const db = context.firestore();
+
+    await assertFails(
+      db.collection("comments").add({
+        userId: "unauthed-uid",
+        text: "hello, world!",
+        displayName: "Jane Doe",
+        photoURL: "https://placedog.net/500",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        published: true,
+        slug: "how-to-test-firestore",
+      })
+    );
+  });
+
+  test("Unauthenticated user can not create a comment with empty userId", async () => {
+    const context = testEnv.unauthenticatedContext();
+    const db = context.firestore();
+
+    await assertFails(
+      db.collection("comments").add({
+        userId: null,
+        text: "hello, world!",
+        displayName: "Jane Doe",
+        photoURL: "https://placedog.net/500",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        published: true,
+        slug: "how-to-test-firestore",
+      })
+    );
+  });
+});
+```
+
+## CI
+
+`firebase emulators:exec 'yarn test'` のように `firebase emulators:exec` を使うと、エミュレーターを起動してコマンドを実行し、終了時にエミュレーターを終了してくれる。
+
+```yaml
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: yarn prettier-check
+      - run: yarn lint
+      - name: Run tests
+        run: |
+          npm install -g firebase-tools
+          firebase emulators:exec 'yarn test'
+      - run: yarn build
+
+```
+
+## References
+
+1. https://firebase.google.com/docs/rules/unit-tests
+
+# Deploy
+
+
+
 # Ecosystems
 
 typesaurus
