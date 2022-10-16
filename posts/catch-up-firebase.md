@@ -633,6 +633,7 @@ jobs:
 
 # Deploy
 
+`firebase firestore:indexes` 現在設定されているインデックスの取得
 
 
 # Ecosystems
