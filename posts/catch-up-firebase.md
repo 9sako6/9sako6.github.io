@@ -640,3 +640,7 @@ jobs:
 typesaurus
 
 https://github.com/kossnocorp/typesaurus
+
+# Resources
+
+https://firebase.google.com/docs/reference/js
