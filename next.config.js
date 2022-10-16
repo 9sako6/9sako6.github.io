@@ -29,6 +29,7 @@ const nextConfig = {
     siteTitle: "腐ったコロッケ",
     siteDescription: "Webアプリケーション開発者くさころの技術ブログ。",
     siteUrl: "https://9sako6.com",
+    MAX_COMMENT_LENGTH: 400,
   },
   webpack: (config, { isServer, nextRuntime }) => {
     if (isServer && nextRuntime === "nodejs") {

@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /comments/{commentId} {
+      function validComment(comment) {
+        return comment.size() == 8// has 8 fields
+          && validCommentText(comment.text)
+          && comment.slug is string
+          && comment.userId is string // Authed user's uid
+          && comment.photoURL is string // Authed user's photoURL
+          && comment.displayName is string // Authed user's displayName
+          && comment.published is bool
+          && comment.createdAt is timestamp
+          && comment.updatedAt is timestamp;
+      }
+
+      function validCommentText(text) {
+        return text is string
+          && text.size() > 0
+          && text.size() <= 400;
+      }
+
+      allow read;
+      allow create: if request.resource.data.userId == request.auth.uid
+        && validComment(request.resource.data)
+    }
+  }
+}
