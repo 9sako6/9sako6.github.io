@@ -16,7 +16,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "new": "deno run --allow-write bin/create-new-post.ts",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.0",
@@ -39,6 +40,7 @@
     "@mermaid-js/mermaid-cli": "^9.0.0",
     "@next/bundle-analyzer": "^12.2.5",
     "@next/mdx": "^12.1.4",
+    "@playwright/test": "^1.27.1",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-links": "^6.4.22",
