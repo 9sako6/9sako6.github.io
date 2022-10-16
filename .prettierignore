@@ -1,5 +1,5 @@
 .next
 out
-posts
+posts/*.md
 storybook-static
 data
