@@ -13,7 +13,7 @@ const svgFiles = async (dirPath: string) => {
 };
 
 export const withMermaid = (
-  markdownToHtml: (markdown: string) => Promise<string>
+  markdownToHtml: (_markdownText: string) => Promise<string>
 ) => {
   return async (originalMarkdown: string) => {
     // Create a working directory.
