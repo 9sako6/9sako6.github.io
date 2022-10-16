@@ -65,14 +65,13 @@ export const Footer = (): JSX.Element => {
                   </div>
                 </nav>
               </div>
-              <p className="py-6">
-                I&apos;m 9sako6, a software engineer. A brief resume is{" "}
+              <p className="py-6 break-all">
+                I&apos;m 9sako6, a software engineer.
                 <Link href="/about">
                   <a className="text-teal-700 break-all hover:underline focus:underline active:underline dark:text-teal-400">
-                    here
+                    A brief resume is here.
                   </a>
                 </Link>
-                .
               </p>
             </div>
             <div className="col-span-2">
