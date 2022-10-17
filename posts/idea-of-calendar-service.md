@@ -2,7 +2,7 @@
 title: "カレンダーSNSの構想"
 description: "最近私は、カレンダーを使った SNS を構想している。 不特定多数に予定を公開することができるし、誰かの公開された予定を見ることもできるという代物である。"
 topics: ["思想"]
-published: true
+published: false
 eyecatch: ""
 date: "2022-05-04T02:04:14.653+09:00"
 ---
