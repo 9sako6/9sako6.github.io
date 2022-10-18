@@ -10,8 +10,5 @@ export const HatenaBookmark = ({ title, url }: Props) => (
     <HatenaShareButton title={title} url={url}>
       <HatenaIcon size={32} round />
     </HatenaShareButton>
-    <div className="text-center">
-      <HatenaShareCount url={url} />
-    </div>
   </div>
 );
