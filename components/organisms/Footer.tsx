@@ -52,7 +52,7 @@ export const Footer = (): JSX.Element => {
                       <TwitterIcon />
                     </a>
                   </div>
-                  <div className="hover:text-zinc-600 hover:dark:text-zinc-200">
+                  {/* <div className="hover:text-zinc-600 hover:dark:text-zinc-200">
                     <a
                       href="https://www.linkedin.com/in/9sako6/"
                       target="_blank"
@@ -60,7 +60,7 @@ export const Footer = (): JSX.Element => {
                     >
                       <LinkedinIcon />
                     </a>
-                  </div>
+                  </div> */}
                 </nav>
               </div>
               <p className="py-6 break-all">
