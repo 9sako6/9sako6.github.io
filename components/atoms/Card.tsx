@@ -37,21 +37,21 @@ export const Card = ({
       <div className="md:col-span-6">
         <div className="pb-3">
           <Link href={postPath} passHref>
-            <a className="text-2xl hover:underline cursor-pointer dark:text-zinc-200">
+            <a className="text-2xl hover:underline cursor-pointer dark:text-zinc-300">
               {title}
             </a>
           </Link>
         </div>
-        <div className="text-slate-500 dark:text-zinc-400">
+        <div>
           <span className="pb-4">
             {tags.map((tag) => (
               <Tag tag={tag} className="mr-4" key={tag} />
             ))}
           </span>
-          <div className="pb-4">
+          <div className="pb-4 text-slate-500 dark:text-zinc-400">
             <PostDate date={new Date(createdAt)} />
           </div>
-          <div className="pb-3">
+          <div className="pb-3 text-slate-500 dark:text-zinc-400">
             <Link href={postPath}>
               <a className="hover:underline" aria-label={title}>
                 {description}

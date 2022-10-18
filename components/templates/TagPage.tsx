@@ -25,7 +25,7 @@ export const TagPage = ({ posts, tag }: Props): JSX.Element => {
         <meta name="twitter:creator" content="@9sako6" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PostTitle title={tag} />
+      <PostTitle title={`#${tag}`} />
       {posts.length === 0 ? (
         <p>There are no posts.</p>
       ) : (
