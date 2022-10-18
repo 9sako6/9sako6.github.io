@@ -1,4 +1,4 @@
-import { HatenaShareButton, HatenaIcon, HatenaShareCount } from "react-share";
+import { HatenaShareButton, HatenaIcon } from "react-share";
 
 type Props = {
   title: string;
