@@ -65,19 +65,16 @@ export const Footer = (): JSX.Element => {
               <p className="py-6 break-all">
                 I&apos;m 9sako6, a software engineer.
                 <Link href="/about">
-                  <a className="text-teal-700 break-all hover:underline focus:underline active:underline dark:text-teal-400">
+                  <a className="break-all hover:underline focus:underline active:underline ">
                     A brief resume is here.
                   </a>
                 </Link>
               </p>
             </div>
-            <div className="col-span-2">
-              <h2 className="text-lg">Tags</h2>
-              <div className="">
-                {topics.map((topic) => (
-                  <Tag className="mr-4" tag={topic} key={topic} />
-                ))}
-              </div>
+            <div className="col-span-2 py-6">
+              {topics.map((topic) => (
+                <Tag className="mr-4" tag={topic} key={topic} />
+              ))}
             </div>
           </div>
         </div>
