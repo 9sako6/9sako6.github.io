@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { GitHubIcon } from "../icons/GitHubIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
-import { LinkedinIcon } from "../icons/LinkedinIcon";
 import topics from "@/data/topics.json";
 
 export const Footer = (): JSX.Element => {
