@@ -38,6 +38,7 @@ export const Footer = (): JSX.Element => {
                       href="https://github.com/9sako6"
                       target="_blank"
                       rel="noreferrer"
+                      aria-label="link to GitHub"
                     >
                       <GitHubIcon />
                     </a>
@@ -47,6 +48,7 @@ export const Footer = (): JSX.Element => {
                       href="https://twitter.com/9sako6"
                       target="_blank"
                       rel="noreferrer"
+                      aria-label="link to Twitter"
                     >
                       <TwitterIcon />
                     </a>
@@ -65,7 +67,7 @@ export const Footer = (): JSX.Element => {
               <p className="py-6 break-all">
                 I&apos;m 9sako6, a software engineer.
                 <Link href="/about">
-                  <a className="break-all hover:underline focus:underline active:underline ">
+                  <a className="break-all hover:underline focus:underline active:underline">
                     A brief resume is here.
                   </a>
                 </Link>
@@ -79,7 +81,7 @@ export const Footer = (): JSX.Element => {
           </div>
         </div>
 
-        <div className="text-sm flex items-center justify-center text-slate-500 dark:text-zinc-600 p-12">
+        <div className="text-sm flex items-center justify-center text-slate-500 dark:text-zinc-400 p-12">
           {year} <CopyrightIcon /> 9sako6
         </div>
       </div>

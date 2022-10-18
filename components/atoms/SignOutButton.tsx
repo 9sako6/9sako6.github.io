@@ -10,7 +10,11 @@ export const SignOutButton = () => {
   if (loading) return <LoadingBar className="rounded h-3 w-20" />;
 
   return (
-    <button className="hover:underline" onClick={() => signOut(auth)}>
+    <button
+      className="hover:underline"
+      aria-label="sign out button"
+      onClick={() => signOut(auth)}
+    >
       <span className="flex items-center">
         <SignOutIcon /> Sign out
       </span>

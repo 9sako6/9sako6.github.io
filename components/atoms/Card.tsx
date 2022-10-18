@@ -37,7 +37,10 @@ export const Card = ({
       <div className="md:col-span-6">
         <div className="pb-3">
           <Link href={postPath} passHref>
-            <a className="text-2xl hover:underline cursor-pointer dark:text-zinc-300">
+            <a
+              className="text-2xl hover:underline cursor-pointer dark:text-zinc-300"
+              aria-label="link to the post"
+            >
               {title}
             </a>
           </Link>
