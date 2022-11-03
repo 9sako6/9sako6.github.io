@@ -2,6 +2,7 @@
 title: "とろとろ軟骨にあらずんばソーキ汁にあらず"
 description: "沖縄では、「ソーキ」と呼ばれる謎の肉を煮込んだ料理を食べます。「ソーキ」には、骨付きのソーキ（スペアリブ）と軟骨つきのソーキが存在します。圧力鍋で何時間か煮込んでとろとろに仕上がった軟骨ソーキの話です。"
 topics: ["料理"]
+category: "Random"
 published: false
 eyecatch: "/images/soki_eyecatch.webp"
 date: "2022-06-21T02:18:27.707+09:00"

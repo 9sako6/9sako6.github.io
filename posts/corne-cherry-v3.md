@@ -3,6 +3,7 @@ title: "修練の幕開け"
 description: "俺のキーボードかっこいい！キースイッチを交換できる点と、コンパクトさに惹かれて Corne Cherry V3 を買って作りました。
 キースイッチは Gateron Silent Yellow を使っています。静音です。"
 topics: ["キーボード"]
+category: "Random"
 published: false
 eyecatch: "/images/corne-cherry-v3-1.webp"
 date: "2022-08-24T20:48:06.841+09:00"

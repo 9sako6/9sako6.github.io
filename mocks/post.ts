@@ -4,6 +4,7 @@ export const buildPost = (params: Partial<Post> = {}): Post => {
   const defaultParams = {
     title: "サンプルポスト",
     topics: ["Programming", "OCaml"],
+    category: "Random",
     published: true,
     description: "サンプル説明文です。",
     date: "2020-02-07T23:38:00.000+09:00",

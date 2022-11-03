@@ -2,6 +2,7 @@
 title: "Fireabse testing"
 description: ""
 topics: []
+category: "Random"
 published: false
 eyecatch: ""
 date: "2022-06-05T14:23:23.677+09:00"

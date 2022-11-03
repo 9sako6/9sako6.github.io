@@ -33,7 +33,7 @@ export const Card = ({
   );
 
   return (
-    <div className="pb-12 text-left w-full md:grid md:grid-cols-8 md:gap-8">
+    <div className="pb-4 text-left w-full md:grid md:grid-cols-8 md:gap-8">
       <div className="md:col-span-6">
         <div className="pb-3">
           <Link href={postPath} passHref>

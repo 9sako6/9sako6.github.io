@@ -2,6 +2,7 @@
 title: "ABC113 D - Number of Amidakuji (400点)"
 description: "ABC113 D - Number of Amidakujiの解説です。DPの訓練になる良問です。"
 topics: ["AtCoder", "DP", "競技プログラミング"]
+category: "Competitive Programming"
 published: true
 eyecatch: /images/eyecatch_abc113_d.webp
 date: "2020-02-16T03:30:00.000+09:00"

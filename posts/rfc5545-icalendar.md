@@ -2,6 +2,7 @@
 title: "ics ファイルの仕様 RFC5545 iCalendar"
 description: ""
 topics: []
+category: "Random"
 published: false
 eyecatch: ""
 date: "2022-05-03T16:18:15.994+09:00"

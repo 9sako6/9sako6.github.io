@@ -2,6 +2,7 @@
 title: "bashでABC153 A~DとABC154 A~Cを解いた"
 description: "ABC153 A~DとABC154 A~Cの計7問をbashで解きました。 解く中で得た知識を備忘録として残しておきます。"
 topics: ["AtCoder", "競技プログラミング", "bash"]
+category: "Competitive Programming"
 published: true
 eyecatch: ""
 date: "2020-02-13T00:02:00.000+09:00"

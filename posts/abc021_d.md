@@ -2,6 +2,7 @@
 title: "ABC021 D - 多重ループ"
 description: "ABC021 D - 多重ループの解説です。解くのに必要な重複組み合わせも説明します。"
 topics: ["AtCoder", "競技プログラミング", "重複組み合わせ", "二項係数"]
+category: "Competitive Programming"
 published: true
 eyecatch: ""
 date: "2020-02-07T20:33:00.000+09:00"

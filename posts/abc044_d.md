@@ -2,6 +2,7 @@
 title: "ABC044 D - 桁和 / Digit Sum (500点)"
 description: "ABC044 Dの解説です。割り算が出たら平方根を考えるというのは典型っぽい"
 topics: ["AtCoder", "競技プログラミング", "和"]
+category: "Competitive Programming"
 published: true
 eyecatch: ""
 date: "2020-02-16T03:14:00.000+09:00"

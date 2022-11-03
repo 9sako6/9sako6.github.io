@@ -2,6 +2,7 @@
 title: "Puppeteer と Deno で Yahoo! カレンダーをスクレイピング【認証編】"
 description: '私的な理由で Yahoo! カレンダーから情報をとってきたいのですが、Yahoo! カレンダーには API がありません。 そこで本記事では、認証の確認コード入力以外を自動化してヘッドレスブラウザで Yahoo! カレンダーにログインする方法を提案します。 ログインさえできればあとは Yahoo! カレンダーに迷惑のかからない範囲で情報を取ってくることができます。'
 topics: ["Deno", "TypeScript", "スクレイピング"]
+category: "Technology"
 published: true
 date: "2022-04-02T04:11:00.000+09:00"
 ---
