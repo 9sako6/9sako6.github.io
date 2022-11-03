@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import dayjs from "dayjs";
 import { allPostsSync } from "@/lib/all-posts";
 import { YearlyArchivesPage } from "@/components/templates";
+import type { Post } from "@/types";
 
 type Params = {
   year: string;

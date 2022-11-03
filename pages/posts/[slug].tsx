@@ -5,7 +5,8 @@ import { allPostsSync } from "@/lib/all-posts";
 import { markdownToHtml } from "@/lib/markdown-html";
 import { commitHistory, Commit } from "@/lib/update-history";
 import { withOgpCard } from "@/lib/with-ogp-card";
-import { PostPage } from "@/components/templates";
+import { PostPage as PostPageTemplate } from "@/components/templates";
+import type { Metadata, Post } from "@/types";
 
 export type Props = Post & {
   bodyHtml: string;
@@ -57,8 +58,8 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
   };
 };
 
-const Post: NextPage<Props> = (props) => {
-  return <PostPage {...props} />;
+const PostPage: NextPage<Props> = (props) => {
+  return <PostPageTemplate {...props} />;
 };
 
-export default Post;
+export default PostPage;

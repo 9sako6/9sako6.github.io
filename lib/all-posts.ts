@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync } from "fs";
 import dayjs from "dayjs";
 import matter from "gray-matter";
+import type { Metadata, Post } from "@/types";
 
 export function allPostsSync({ draft }: { draft: boolean }): Post[] {
   return readdirSync("posts")

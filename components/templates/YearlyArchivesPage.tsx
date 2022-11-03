@@ -1,6 +1,7 @@
 import { Layout } from "../layouts";
 import { Card, PostTitle } from "../atoms";
 import Head from "next/head";
+import type { Post } from "@/types";
 
 type Props = {
   posts: Post[];
