@@ -1,3 +1,5 @@
+import type { Post } from "@/types";
+
 export const buildPost = (params: Partial<Post> = {}): Post => {
   const defaultParams = {
     title: "サンプルポスト",

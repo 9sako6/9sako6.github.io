@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Card } from "../atoms";
 import { Layout } from "../layouts";
+import type { Metadata } from "@/types";
 
 export type Post = Metadata & { slug: string };
 
