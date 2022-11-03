@@ -2,6 +2,7 @@
 title: "2022年読んだ本"
 description: ""
 topics: []
+category: "Random"
 published: false
 eyecatch: ""
 date: "2022-08-29T23:21:06.340+09:00"

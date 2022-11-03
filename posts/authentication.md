@@ -2,6 +2,7 @@
 title: "各種認証の概要とNext.jsによる実装例"
 description: "Basic 認証、"
 topics: ['認証']
+category: "Authentication"
 published: false
 eyecatch: ""
 date: "2022-09-16T22:51:19.133+09:00"

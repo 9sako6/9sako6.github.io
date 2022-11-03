@@ -2,6 +2,7 @@
 title: "おいしいタコスの作り方"
 description: 'おいしいタコスの作り方をご紹介します。トルティーヤから自分で作ります。みんなで作業すると盛り上がるので、クリスマスや年末年始にご家族で作ってみてはいかがでしょうか。'
 topics: ["料理"]
+category: "Random"
 published: true
 date: "2021-12-16T02:13:00.000+09:00"
 eyecatch: /images/eyecatch_tacos.webp

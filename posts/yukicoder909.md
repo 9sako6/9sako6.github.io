@@ -2,6 +2,7 @@
 title: "yukicoder No.909 たぴの配置 (★2)"
 description: "yukicoder No.909 たぴの配置 (★2)の解説"
 topics: ["yukicoder", "競技プログラミング", "数直線"]
+category: "Competitive Programming"
 published: true
 eyecatch: ""
 date: "2020-02-07T23:38:00.000+09:00"

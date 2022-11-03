@@ -2,6 +2,7 @@
 title: "#define int long longは何がいけないのか"
 description: '`#define int long long`を許さない派をたまに見かけますが、本当に許されないほどのものなのでしょうか。一応、使うべきでないとまで言える根拠はあります。 「キーワード（他言語でいうところのだいたい予約語）をdefineするのは未定義動作だから」です。 そもそもintに限らず、キーワードをdefineするのは未定義動作なのです。'
 topics: ["C++", "競技プログラミング"]
+category: "Competitive Programming"
 published: true
 date: "2020-04-07T23:35:00.000+09:00"
 ---

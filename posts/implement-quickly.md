@@ -2,6 +2,7 @@
 title: "ググれる時代だけど覚えることは重要"
 description: "創造性があるとか、頭がいいとかよりも、知っていることの方が重要である。"
 topics: ["思想"]
+category: "Random"
 published: false
 eyecatch: ""
 date: "2022-08-14T22:10:33.548+09:00"

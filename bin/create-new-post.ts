@@ -5,6 +5,7 @@ async function run() {
 title: ""
 description: ""
 topics: []
+category: "Random"
 published: false
 eyecatch: ""
 date: "${datetime(new Date()).toISO()}"

@@ -2,6 +2,7 @@
 title: "C の極小サブセットコンパイラを OCaml で実装した日記"
 description: ""
 topics: ["OCaml", "Compiler", "C"]
+category: "Technology"
 published: false
 eyecatch: ""
 date: "2022-08-14T20:51:46.914+09:00"

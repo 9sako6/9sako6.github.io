@@ -2,6 +2,7 @@
 title: "RFC の歩き方"
 description: ""
 topics: []
+category: "Random"
 published: false
 eyecatch: ""
 date: "2022-05-03T23:54:06.890+09:00"
