@@ -20,7 +20,7 @@ https://github.com/9sako6/ccaml
 この解説記事において、コンパイラ実装に使う言語の指定は特にありません。たまに出てくる疑似コードは Python で書かれています。
 
 なるべく小さい機能をコンパイルするところから始めてインクリメンタルに開発しました[^1]。
-最初にコンパイルできるようになったのは、数値を返すだけの `main` 関数です。
+最初にコンパイルできるようになったのは、数値を返すだけの `main` 関数でした。
 
 [^1]: [Abdulaziz Ghuloum. An Incremental Approach to Compiler Construction. Proceedings of the 2006 Scheme and Functional Programming Workshop](http://scheme2006.cs.uchicago.edu/11-ghuloum.pdf) という論文で、コンパイラをインクリメンタルに作るアプローチが説明されている。
 
@@ -39,6 +39,7 @@ main:
   ret
 ```
 
+こんなところからスタートして、現在のところは各種算術演算子、ローカル変数、関数などが実装されています。
 まだいろいろ機能が足りていないのですが、標準ライブラリの `putchar` を使って `Hello, World!` することができます。
 
 ```c
