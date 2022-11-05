@@ -16,10 +16,10 @@ date: "2022-11-05T19:30:46.914+09:00"
 
 https://github.com/9sako6/ccaml
 
-[Writing a C Compiler](https://norasandler.com/2017/11/29/Write-a-Compiler.html) という、Nora Sandler さんが書かれたコンパイラ実装の解説に沿って実装していきました。
-この解説記事では、コンパイラ実装に使う言語の指定は特にありません。たまに出てくる疑似コードは Python で書かれています。
+[Writing a C Compiler](https://norasandler.com/2017/11/29/Write-a-Compiler.html) という、Nora Sandler さんが書かれたコンパイラ実装の解説記事に沿って実装していきました。
+この解説記事において、コンパイラ実装に使う言語の指定は特にありません。たまに出てくる疑似コードは Python で書かれています。
 
-なるべく小さい機能をコンパイルするところから初めて、インクリメンタルに開発しました[^1]。
+なるべく小さい機能をコンパイルするところから始めてインクリメンタルに開発しました[^1]。
 最初にコンパイルできるようになったのは、数値を返すだけの `main` 関数です。
 
 [^1]: [Abdulaziz Ghuloum. An Incremental Approach to Compiler Construction. Proceedings of the 2006 Scheme and Functional Programming Workshop](http://scheme2006.cs.uchicago.edu/11-ghuloum.pdf) という論文で、コンパイラをインクリメンタルに作るアプローチが説明されている。
