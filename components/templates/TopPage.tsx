@@ -6,11 +6,12 @@ import { getCategorizedPosts } from "@/lib/get-categorized-posts";
 
 export type Post = Metadata & { slug: string };
 
-type Props = {
+export type Props = {
   posts: Post[];
+  externalPostUrls: string[];
 };
 
-export const TopPage = ({ posts }: Props): JSX.Element => {
+export const TopPage = ({ posts, externalPostUrls }: Props): JSX.Element => {
   const categorizedPosts = getCategorizedPosts(posts);
 
   return (
@@ -60,6 +61,14 @@ export const TopPage = ({ posts }: Props): JSX.Element => {
           );
         })
       )}
+
+      <h1 className="pt-10 pb-10 mb-10 font-mono text-2xl" id="external-posts">
+        External Posts
+      </h1>
+
+      {externalPostUrls.map((url) => (
+        <div key={url}>{url}</div>
+      ))}
     </Layout>
   );
 };
