@@ -3,6 +3,7 @@ import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import rehypeAnchorHeading from "./rehype-anchor-heading";
 import rehypeKatex from "rehype-katex";
@@ -20,7 +21,8 @@ export const markdownToHtml = withMermaid(async (markdown: string) => {
       })
       .use(remarkGfm)
       .use(remarkMath)
-      .use(remarkRehype)
+      .use(remarkRehype, { allowDangerousHtml: true })
+      .use(rehypeRaw)
       .use(rehypeSlug)
       .use(rehypeAnchorHeading)
       .use(rehypeKatex)

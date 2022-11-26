@@ -37,7 +37,7 @@
   @apply m-auto;
 }
 .markdown blockquote {
-  @apply p-4 mb-4 border-l-slate-700 border-l-4 bg-slate-100 rounded dark:border-l-zinc-300 dark:bg-zinc-700;
+  @apply pb-4 px-2 mb-4 border-l-slate-700 border-l-4 bg-slate-100 dark:border-l-zinc-500 dark:bg-zinc-700;
 }
 .markdown code:not(.code-highlight) {
   @apply font-mono font-semibold;
