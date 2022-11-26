@@ -24,7 +24,7 @@ export const TopPage = ({ posts }: Props): JSX.Element => {
           property="og:image"
           content={`${process.env.siteUrl}/icon.webp`}
         />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@9sako6" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
