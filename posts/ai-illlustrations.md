@@ -1,6 +1,6 @@
 ---
 title: "昔自分で描いた絵を Anything V3 にも描いていただいた"
-description: "私は昔イラストを描く趣味を持っていました。その頃描いたイラストを img2prompt に食わせて説明文を生成し、その説明文を Anything V3 に食わせてイラストを描いてもらいました。"
+description: "はるか昔、私はイラストを描く趣味を持っていました。その頃描いたイラストを img2prompt に食わせて説明文を生成し、その説明文を Anything V3 に食わせてイラストを描いてもらいました。"
 topics: ["Anything V3"]
 category: "Random"
 published: true
