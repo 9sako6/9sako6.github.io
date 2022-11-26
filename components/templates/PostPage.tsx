@@ -21,8 +21,8 @@ export const PostPage = ({
 }: Props): JSX.Element => {
   const pageTitle = `${title} - ${process.env.siteTitle}`;
   const imageUrl = eyecatch
-    ? `${process.env.siteUrl}/${eyecatch}`
-    : `${process.env.siteUrl}/icon.webp`;
+    ? new URL(eyecatch, process.env.siteUrl).href
+    : new URL("/icon.webp", process.env.siteUrl).href;
 
   return (
     <Layout>
