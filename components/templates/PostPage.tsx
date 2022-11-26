@@ -28,13 +28,15 @@ export const PostPage = ({
     <Layout>
       <Head>
         <title>{pageTitle}</title>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content={pageTitle} />
+        <meta property="twitter:image" content={imageUrl} />
+        <meta name="twitter:creator" content="@9sako6" />
         <meta name="description" content={description} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={imageUrl} />
         <meta property="og:url" content={url} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@9sako6" />
       </Head>
 
       <div className="flex justify-center">
