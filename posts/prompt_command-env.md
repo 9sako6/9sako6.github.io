@@ -25,7 +25,7 @@ You can display the current branch name following a branch switch with `git swit
 
 ![example of the prompt](/images/example-prompt-with-git-branch.webp)
 
-If `PROMPT_COMMAND` is not set, switching branches will leave the previous branch visible at the prompt.
+If `PROMPT_COMMAND` is not set, switching branches will leave the previous branch name at the prompt.
 Without `PROMPT_COMMAND`, we will have to do `source ~/.bashrc` manually or use git's `post-checkout` hook.
 
 # References
