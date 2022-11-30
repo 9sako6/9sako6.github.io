@@ -18,6 +18,7 @@ export const markdownToHtml = withMermaid(async (markdown: string) => {
       .use(remarkParse)
       .use(remarkToc, {
         heading: "toc|table[ -]of[ -]contents?|目次",
+        tight: true,
       })
       .use(remarkGfm)
       .use(remarkMath)
