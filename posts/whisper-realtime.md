@@ -30,7 +30,7 @@ BuildVersion:   21G115
 
 まず、PyAudio を使って録音した音声を tmp ファイルに保存します。tmp ファイルのパスをキューに入れておきます。
 
-文字起こしスレッドでは、キューから音声ファイルのパスを取り出して wave で読み込み、Whisper で文字起こししています。Whisper の使い方はほぼ
+文字起こしスレッドでは、キューから音声ファイルのパスを取り出して読み込み、Whisper で文字起こししています。Whisper の使い方はほぼ
 [README](https://github.com/openai/whisper#python-usage) のままです。
 
 無言の時間を文字起こししないように、雑な閾値を設けています。
