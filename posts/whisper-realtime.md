@@ -1,7 +1,7 @@
 ---
 title: "Whisper でリアルタイムに文字起こしする実験"
 description: ""
-topics: ["Whisper"]
+topics: ["Whisper", "Python"]
 category: "Random"
 published: true
 eyecatch: ""
