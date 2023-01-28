@@ -3,7 +3,7 @@ title: "Whisper でリアルタイムに文字起こしする実験"
 description: ""
 topics: ["Whisper", "Python"]
 category: "Random"
-published: true
+published: false
 eyecatch: ""
 date: "2022-12-04T15:50:11.181+09:00"
 ---
