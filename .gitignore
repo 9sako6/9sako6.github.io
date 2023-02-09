@@ -41,9 +41,6 @@ yarn-error.log*
 # secret
 .env
 
-# storybook
-storybook-static
-
 # firebase
 *-debug.log
 /test-results/
