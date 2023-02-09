@@ -59,8 +59,10 @@ export const Footer = (): JSX.Element => {
               </div>
               <p className="py-6 break-all">
                 I&apos;m 9sako6, a software engineer.
-                <Link href="/about"
-                  className="break-all hover:underline focus:underline active:underline">
+                <Link
+                  href="/about"
+                  className="break-all hover:underline focus:underline active:underline"
+                >
                   A brief resume is here.
                 </Link>
               </p>

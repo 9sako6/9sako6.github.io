@@ -10,7 +10,8 @@ export const BookmarkButton = ({ url }: Props) => {
     <Link
       className="hover:text-teal-600 dark:hover:text-teal-400"
       aria-label="bookmarks"
-      href={url}>
+      href={url}
+    >
       <BookmarkIcon />
     </Link>
   );
