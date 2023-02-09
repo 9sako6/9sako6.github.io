@@ -20,12 +20,6 @@ firebase emulators:start --import=./firebase/seed
 firebase emulators:export ./firebase/seed
 ```
 
-### Storybook
-
-```bash
-yarn storybook
-```
-
 ## Deploy
 
 ```bash

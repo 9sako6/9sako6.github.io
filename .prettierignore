@@ -1,6 +1,5 @@
 .next
 out
 posts/*.md
-storybook-static
 data
 playwright-report
