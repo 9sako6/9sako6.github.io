@@ -24,17 +24,15 @@ export const Footer = (): JSX.Element => {
             <div className="">
               <div className="flex items-center gap-2">
                 <Link href="/about">
-                  <a>
-                    <div className="w-16 h-16 relative hover:scale-105">
-                      <Image
-                        alt="icon"
-                        className="rounded-full"
-                        src={"/icon.webp"}
-                        layout={"fill"}
-                        objectFit={"contain"}
-                      />
-                    </div>
-                  </a>
+                  <div className="w-16 h-16 relative hover:scale-105">
+                    <Image
+                      alt="icon"
+                      className="rounded-full"
+                      src={"/icon.webp"}
+                      layout={"fill"}
+                      objectFit={"contain"}
+                    />
+                  </div>
                 </Link>
                 <nav className="flex gap-2 text-3xl cursor-pointer">
                   <div className="hover:text-zinc-600 hover:dark:text-zinc-200 hover:scale-105">
@@ -57,23 +55,13 @@ export const Footer = (): JSX.Element => {
                       <TwitterIcon />
                     </a>
                   </div>
-                  {/* <div className="hover:text-zinc-600 hover:dark:text-zinc-200">
-                    <a
-                      href="https://www.linkedin.com/in/9sako6/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <LinkedinIcon />
-                    </a>
-                  </div> */}
                 </nav>
               </div>
               <p className="py-6 break-all">
                 I&apos;m 9sako6, a software engineer.
-                <Link href="/about">
-                  <a className="break-all hover:underline focus:underline active:underline">
-                    A brief resume is here.
-                  </a>
+                <Link href="/about"
+                  className="break-all hover:underline focus:underline active:underline">
+                  A brief resume is here.
                 </Link>
               </p>
             </div>

@@ -7,13 +7,11 @@ type Props = {
 
 export const UserButton = ({ url }: Props) => {
   return (
-    <Link href={url}>
-      <a
-        className="hover:text-teal-600 dark:hover:text-teal-400"
-        aria-label="about me"
-      >
-        <UserIcon />
-      </a>
+    <Link href={url}
+      className="hover:text-teal-600 dark:hover:text-teal-400"
+      aria-label="about me"
+    >
+      <UserIcon />
     </Link>
   );
 };

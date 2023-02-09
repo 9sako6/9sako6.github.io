@@ -8,9 +8,7 @@ export const Header = (): JSX.Element => {
     <header>
       <nav className="flex items-center pb-20 pt-20 md:max-w-5xl m-auto justify-between">
         <Link href="/">
-          <a>
-            <SiteTitle />
-          </a>
+          <SiteTitle />
         </Link>
         <ul className="flex md:text-2xl text-xl items-center">
           <li className="text-lg mr-2">
