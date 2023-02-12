@@ -69,11 +69,10 @@ export const Card = ({
           <div className="h-80 md:h-32">
             <Link href={postPath} aria-label={title}>
               <Image
-                className="cursor-pointer rounded"
+                className="cursor-pointer rounded object-cover"
                 alt={title}
                 src={imageUrl}
-                layout="fill"
-                objectFit="cover"
+                fill
                 placeholder="blur"
                 blurDataURL={imageUrl}
               />

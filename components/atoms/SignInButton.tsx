@@ -15,10 +15,9 @@ export const SignInButton = () => {
         onClick={handleGoogleSignIn}
       >
         <Image
-          className="cursor-pointer"
+          className="cursor-pointer object-contain"
           src="/vendor/btn_google_signin_light_normal_web@2x.png"
-          layout="fill"
-          objectFit="contain"
+          fill
           alt="Sign in with Google"
         />
       </div>
