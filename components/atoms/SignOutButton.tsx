@@ -1,3 +1,5 @@
+"use client";
+
 import { useUser } from "@/hooks/use-user";
 import { getAuth, signOut } from "firebase/auth";
 import { SignOutIcon } from "../icons/SignOutIcon";

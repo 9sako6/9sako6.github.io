@@ -1,6 +1,5 @@
 import { Layout } from "@/components/layouts";
 import { MarkdownWrapper } from "@/components/atoms";
-import { ShareButtons } from "@/components/organisms/ShareButtons";
 
 # Bookmarks
 
@@ -55,9 +54,5 @@ export default ({ children }) => (
   <Layout>
     <MarkdownWrapper>{children}</MarkdownWrapper>
     <div style={{ margin: "100px" }} />
-    <ShareButtons
-      title={`9sako6's bookmarks`}
-      url={`${process.env.siteUrl}/bookmarks`}
-    />
   </Layout>
 );

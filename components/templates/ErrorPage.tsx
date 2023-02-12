@@ -1,3 +1,5 @@
+"use client";
+
 import { PostTitle } from "../atoms";
 import { Layout } from "../layouts";
 
@@ -9,6 +11,6 @@ type Props = {
 export const ErrorPage = ({ status, message }: Props): JSX.Element => (
   <Layout>
     <PostTitle title={String(status)} />
-    <p>{message}</p>
+    <div>{message}</div>
   </Layout>
 );

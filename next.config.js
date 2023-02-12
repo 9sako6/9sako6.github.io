@@ -15,6 +15,9 @@ const withMDX = require("@next/mdx")({
 });
 
 const nextConfig = {
+  experimental: {
+    appDir: true,
+  },
   // FIXME: If this is true, the following error occurs.
   //
   // ```

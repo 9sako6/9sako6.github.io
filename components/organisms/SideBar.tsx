@@ -1,5 +1,5 @@
 import { Tag } from "../atoms";
-import { ShareButtons } from "./ShareButtons";
+// import { ShareButtons } from "./ShareButtons";
 
 export type SideBarProps = {
   topics: string[];
@@ -20,7 +20,7 @@ export const SideBar = ({ topics, title, url }: SideBarProps) => (
         </div>
       )}
       <div className="pt-8 flex justify-center border-t dark:border-zinc-800">
-        <ShareButtons url={url} title={title} />
+        {/* <ShareButtons url={url} title={title} /> */}
       </div>
     </div>
   </div>

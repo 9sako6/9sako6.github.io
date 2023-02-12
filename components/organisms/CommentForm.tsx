@@ -1,3 +1,5 @@
+"use client";
+
 import { useInput } from "@/hooks/use-input";
 import { useUser } from "@/hooks/use-user";
 import { CommentTextarea, SendButton, SignInButton } from "../atoms";

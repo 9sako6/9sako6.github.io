@@ -1,3 +1,5 @@
+"use client";
+
 import { getAuth, GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 import Image from "next/image";
 

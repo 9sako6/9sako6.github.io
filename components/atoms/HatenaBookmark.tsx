@@ -1,4 +1,4 @@
-import { HatenaShareButton, HatenaIcon } from "react-share";
+// import { HatenaShareButton, HatenaIcon } from "react-share";
 
 type Props = {
   title: string;
@@ -7,8 +7,8 @@ type Props = {
 
 export const HatenaBookmark = ({ title, url }: Props) => (
   <div className="w-8">
-    <HatenaShareButton title={title} url={url}>
+    {/* <HatenaShareButton title={title} url={url}>
       <HatenaIcon size={32} round />
-    </HatenaShareButton>
+    </HatenaShareButton> */}
   </div>
 );
