@@ -27,10 +27,9 @@ export const Footer = (): JSX.Element => {
                   <div className="w-16 h-16 relative hover:scale-105">
                     <Image
                       alt="icon"
-                      className="rounded-full"
+                      className="rounded-full object-contain"
                       src={"/icon.webp"}
-                      layout={"fill"}
-                      objectFit={"contain"}
+                      fill
                     />
                   </div>
                 </Link>
