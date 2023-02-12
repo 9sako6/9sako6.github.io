@@ -1,4 +1,6 @@
-import { useRouter } from "next/router";
+"use client";
+
+import { usePathname } from "next/navigation";
 import { Cd, Tag } from "@/components/atoms";
 import { CopyrightIcon } from "@/components/icons/CopyrightIcon";
 import Image from "next/image";
@@ -8,8 +10,8 @@ import { TwitterIcon } from "../icons/TwitterIcon";
 import topics from "@/data/topics.json";
 
 export const Footer = (): JSX.Element => {
-  const router = useRouter();
-  const isRootPath = router.pathname === "/";
+  const pathname = usePathname();
+  const isRootPath = pathname === "/";
   const year = new Date().getFullYear();
 
   return (
