@@ -16,6 +16,6 @@ test("top page has a valid title and a link to the about page", async ({
 
   await aboutPage.click();
 
-  await expect(page.locator(".markdown")).toHaveText(/Work Experience/);
+  await expect(page.locator(".markdown")).toHaveText(/経歴/);
   await expect(page.locator(".markdown")).toHaveText(/Education/);
 });
