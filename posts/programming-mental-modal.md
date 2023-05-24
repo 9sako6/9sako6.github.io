@@ -1,7 +1,7 @@
 ---
 title: "プログラミング言語とメンタルモデル、設計はそのあと"
 description: "今書いているプログラミング言語とエコシステムに慣れ親しんでメンタルモデルを形成することが大事だ"
-topics: []
+topics: ["設計"]
 category: "Random"
 published: true
 eyecatch: ""
