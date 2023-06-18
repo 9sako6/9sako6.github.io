@@ -3,7 +3,7 @@ title: "Non empty list type"
 description: ""
 topics: ["型"]
 category: "Technology"
-published: true
+published: false
 eyecatch: ""
 date: "2023-04-29T21:54:19.708+09:00"
 ---
