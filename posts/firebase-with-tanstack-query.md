@@ -290,6 +290,8 @@ export function useFirestoreDoc<Result>(
 
 ```
 
+# テスト
+
 ラッパー関数は Hooks なので、[Testing Library](https://testing-library.com/docs/react-testing-library/api#renderhook) の `renderHook` を使ってテストできます。Firebase のセットアップ等は省略しますが以下のような感じです。
 
 ```typescript
