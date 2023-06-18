@@ -406,6 +406,8 @@ Firebase は BaaS というもので、Firebase がバックエンドの代わ�
 Next.js 13 で導入された App Directory はデフォルトが Server Component の世界です。
 Next.js が Server Component をメインに据えているのに CSR を強いられるのは覚悟がいることに思います。
 
+Cloud Functions とかを組み合わせれば SSR, SSG できないことはないですが。
+
 # おわり
 
 Firebase はいいものです。Firestore なら RDB を使うより圧倒的に安く済みます。リアルタイムアップデートも簡単です。
