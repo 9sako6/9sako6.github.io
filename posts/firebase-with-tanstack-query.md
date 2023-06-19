@@ -417,9 +417,23 @@ Firebase はいいものです。Firestore なら RDB を使うより圧倒的�
 
 # おまけとして Firebase の依存を検知する ESLint Plugin
 
-`components` ディレクトリの中で Firebase SDK を import した場合にエラーを出す ESlint Plugin を置いておきます。
+`components` ディレクトリの中で Firebase SDK を `import` した場合にエラーを出す ESlint Plugin を置いておきます。
+例えば以下のようにコンポーネントから Firebase SDK を読み込んでいる場合です。
 
-これを有効にすると、`import { getDoc } from 'firebase/firestore'` の箇所でこのようにエラーになってくれます。
+```tsx
+// src/components/ui/Header.tsx
+
+import Image from 'next/image';
+import { getDoc } from 'firebase/firestore';
+
+export const Header: React.FC<Props> = () => (
+  <div>
+    なんらかのコンポーネント
+  </div>
+);
+```
+
+プラグインを有効にすると、`import { getDoc } from 'firebase/firestore'` の箇所でこのようにエラーになります。
 
 ```bash
 /Users/9sako6/blog/src/components/ui/Header.tsx
@@ -431,7 +445,7 @@ Firebase はいいものです。Firestore なら RDB を使うより圧倒的�
 プラグインの実装です。
 
 no-firebase-in-components.js というファイルを以下の内容で作ります。ファイル名がプラグイン名になります。
-ファイルを置くディレクトリは好きな場所で構いません。私は src/lib/eslint/rules というディレクトリの下に配置しました。
+ファイルを置くディレクトリは好きな場所で構いません。私は src/lib/eslint/rules ディレクトリの下に配置しました。
 
 ```javascript
 // no-firebase-in-components.js
@@ -455,7 +469,6 @@ module.exports = {
   },
 };
 ```
-
 
 eslint.js の `rules` に加えます。
 
