@@ -414,3 +414,70 @@ Firebase はいいものです。Firestore なら RDB を使うより圧倒的�
 
 しかし、先に述べたような懸念や、ベンダーロックインしやすい面があります。
 本記事で述べたようにしてなるべくコンポーネントから Firebase を隠蔽することにより、いつか来るかもしれない別れの痛みを抑えることができるかもしれません。
+
+# おまけとして Firebase の依存を検知する ESLint Plugin
+
+`components` ディレクトリの中で Firebase SDK を import した場合にエラーを出す ESlint Plugin を置いておきます。
+
+これを有効にすると、`import { getDoc } from 'firebase/firestore'` の箇所でこのようにエラーになってくれます。
+
+```bash
+/Users/9sako6/blog/src/components/ui/Header.tsx
+  2:1  error  Firebase package import is not allowed in components directory  no-firebase-in-components
+
+✖ 1 problem (1 error, 0 warnings)
+```
+
+プラグインの実装です。
+
+no-firebase-in-components.js というファイルを以下の内容で作ります。ファイル名がプラグイン名になります。
+ファイルを置くディレクトリは好きな場所で構いません。私は src/lib/eslint/rules というディレクトリの下に配置しました。
+
+```javascript
+// no-firebase-in-components.js
+
+module.exports = {
+  create(context) {
+    return {
+      ImportDeclaration(node) {
+        const filename = context.getFilename();
+        if (!filename.includes('components')) {
+          return;
+        }
+        if (node.source && node.source.value.startsWith('firebase')) {
+          context.report({
+            node,
+            message: 'Firebase package import is not allowed in components directory.',
+          });
+        }
+      },
+    };
+  },
+};
+```
+
+
+eslint.js の `rules` に加えます。
+
+```javascript
+  rules: {
+    'no-firebase-in-components': 'error',
+  },
+```
+
+ESLint 実行時に `--rulesdir=src/lib/eslint/rules` オプションをつけると先のローカルルールを含めて実行することができます。
+
+```bash
+$ npx eslint --max-warnings=0 --fix --ext .ts,.tsx --rulesdir=src/lib/eslint/rules .
+/Users/9sako6/blog/src/components/ui/Header.tsx
+  2:1  error  Firebase package import is not allowed in components directory  no-firebase-in-components
+
+✖ 1 problem (1 error, 0 warnings)
+```
+
+# 参考
+
+1. https://github.com/CSFrequency/react-firebase-hooks
+1. https://github.com/invertase/react-query-firebase
+1. https://eslint.org/docs/latest/extend/custom-rules#runtime-rules
+
