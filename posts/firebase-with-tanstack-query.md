@@ -322,7 +322,7 @@ it('should return a subscribed document data', async () => {
       wrapper,
     },
   );
-  await waitFor(() => result.current.isSuccess, { timeout: 5000 });
+  await waitFor(() => expect(result.current.isSuccess).toBe(true), { timeout: 5000 });
 
   if (!result.current.data) throw new Error('Failed to fetch the post.');
 
