@@ -18,16 +18,15 @@ jobs:
           git pull
       - uses: actions/setup-node@v3
         with:
-          node-version: "16"
-          cache: "yarn"
-          cache-dependency-path: "**/yarn.lock"
+          node-version: 18
+          cache: "npm"
       - name: Install dependencies
         run: |
-          yarn
+          npm ci
         working-directory: ./app
       - name: Build
         run: |
-          yarn build
+          npm run build
         env:
           TZ: Asia/Tokyo
         working-directory: ./app

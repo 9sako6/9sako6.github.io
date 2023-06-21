@@ -6,7 +6,7 @@ https://9sako6.com
 
 ```bash
 # Run server
-yarn dev
+npm run dev
 # Run test
-yarn test
+npm test
 ```

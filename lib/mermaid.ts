@@ -29,7 +29,7 @@ export const withMermaid = (
 
       // Generate mermaid light svgs and markdowns that reference these svgs.
       await execPromise(
-        `yarn -p @mermaid-js/mermaid-cli mmdc -i ${inputPath} -o ${outputPath} -t default -b transparent`
+        `npx @mermaid-js/mermaid-cli mmdc -i ${inputPath} -o ${outputPath} -t default -b transparent`
       );
 
       const lightSVGs = (await svgFiles(workDir)).map((svgPath) =>
@@ -38,7 +38,7 @@ export const withMermaid = (
 
       // Generate mermaid dark svgs and markdowns that reference these svgs.
       await execPromise(
-        `yarn -p @mermaid-js/mermaid-cli mmdc -i ${inputPath} -o ${outputPath} -t dark -b transparent`
+        `npx @mermaid-js/mermaid-cli mmdc -i ${inputPath} -o ${outputPath} -t dark -b transparent`
       );
 
       const darkSVGs = (await svgFiles(workDir)).map((svgPath) =>
