@@ -21,7 +21,7 @@
     "@tailwindcss/line-clamp": "^0.4.0",
     "dayjs": "^1.11.0",
     "jsdom": "^20.0.0",
-    "next": "^13.1.6",
+    "next": "^13.4.6",
     "next-themes": "^0.1.1",
     "nprogress": "^0.2.0",
     "prismjs": "^1.26.0",
