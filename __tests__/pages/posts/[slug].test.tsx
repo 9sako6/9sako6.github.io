@@ -1,6 +1,5 @@
 import PostPage from "@/pages/posts/[slug]";
 import { render } from "@testing-library/react";
-import { createFirebaseApp } from "@/firebase/client-app";
 import { buildPost } from "@/mocks";
 
 vi.mock("next/router", () => ({
@@ -10,10 +9,6 @@ vi.mock("next/router", () => ({
     };
   },
 }));
-
-beforeAll(() => {
-  createFirebaseApp();
-});
 
 test("PostPage", () => {
   const post = buildPost();

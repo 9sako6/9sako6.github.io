@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ThemeChanger } from "@/components/atoms/ThemeChanger";
 import { SiteTitle } from "@/components/atoms/SiteTitle";
-import { SignOutButton } from "../atoms";
 
 export const Header = (): JSX.Element => {
   return (
@@ -11,9 +10,6 @@ export const Header = (): JSX.Element => {
           <SiteTitle />
         </Link>
         <ul className="flex md:text-2xl text-xl items-center">
-          <li className="text-lg mr-2">
-            <SignOutButton />
-          </li>
           <li>
             <ThemeChanger />
           </li>

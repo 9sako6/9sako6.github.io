@@ -22,7 +22,5 @@ jobs:
       - run: yarn prettier-check
       - run: yarn lint
       - name: Run tests
-        run: |
-          npm install -g firebase-tools
-          firebase emulators:exec 'yarn test'
+        run: yarn test
       - run: yarn build

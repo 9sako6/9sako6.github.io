@@ -10,19 +10,3 @@ yarn dev
 # Run test
 yarn test
 ```
-
-### Firebase
-
-```bash
-# Run emulator
-firebase emulators:start --import=./firebase/seed
-# Export emulator's data
-firebase emulators:export ./firebase/seed
-```
-
-## Deploy
-
-```bash
-// Deploy firestore.rules file
-firebase deploy --only firestore:rules
-```

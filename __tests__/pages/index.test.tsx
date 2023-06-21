@@ -1,6 +1,5 @@
 import { render } from "@testing-library/react";
 import Home from "@/pages/index";
-import { createFirebaseApp } from "@/firebase/client-app";
 import { buildPost } from "@/mocks";
 
 // How to mock.
@@ -15,8 +14,6 @@ vi.mock("next/router", () => ({
     };
   },
 }));
-
-createFirebaseApp();
 
 test("home", () => {
   const posts = [

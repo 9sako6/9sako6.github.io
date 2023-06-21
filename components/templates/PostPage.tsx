@@ -4,11 +4,9 @@ import { Layout } from "@/components/layouts";
 import "prismjs/themes/prism-okaidia.min.css";
 import "@/node_modules/katex/dist/katex.min.css";
 import { Props } from "@/pages/posts/[slug]";
-import { CommentForm, SideBar, History } from "@/components/organisms";
-import { isDevelopment } from "@/lib/is-development";
+import { SideBar, History } from "@/components/organisms";
 
 export const PostPage = ({
-  slug,
   title,
   description,
   eyecatch,
@@ -53,10 +51,6 @@ export const PostPage = ({
             <History commits={commitHistory} />
           </div>
           <Body html={bodyHtml} />
-          <div className="pt-8">
-            {/* TOTO: Not yet production */}
-            {isDevelopment && <CommentForm slug={slug} />}
-          </div>
         </div>
       </div>
     </Layout>
