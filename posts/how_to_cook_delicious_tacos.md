@@ -12,10 +12,10 @@ eyecatch: /images/eyecatch_tacos.webp
 
 それはさておき、おいしいタコスの作り方を紹介します。
 
-![タコス盛り付け](//images.ctfassets.net/57a83iqiwfit/430pZ4dVTLrSnZig26puoJ/af317bf9f3d9b8a3b784b50e9e578138/2021_1215_22292800.jpg)
+![タコス盛り付け](//images.ctfassets.net/57a83iqiwfit/430pZ4dVTLrSnZig26puoJ/af317bf9f3d9b8a3b784b50e9e578138/2021_1215_22292800.jpg?fm=webp)
 
 # 材料（2人分）
-![タコス_全体像](//images.ctfassets.net/57a83iqiwfit/1kqbU0BX0GcURnQc9oBaQo/6ef7ec67e2a187fa2850f4d2f1be8eee/2021_1215_22253000__1_.jpg)
+![タコス_全体像](//images.ctfassets.net/57a83iqiwfit/1kqbU0BX0GcURnQc9oBaQo/6ef7ec67e2a187fa2850f4d2f1be8eee/2021_1215_22253000__1_.jpg?fm=webp)
 
 今回のタコスを構成するパーツは4つあります。トルティーヤ（タコスの生地）、
 サルサ（タコスにかけるソース）、具の野菜（タコスに挟む野菜）、具の肉（タコスに挟む肉）です。
@@ -24,7 +24,7 @@ eyecatch: /images/eyecatch_tacos.webp
 
 ## トルティーヤ
 
-![トルティーヤ](//images.ctfassets.net/57a83iqiwfit/6GeFVqhDlyLdBi6X6dvCAo/8b1c2c5fa080ac11774a115aa67a8708/2021_1215_22245600.jpg)
+![トルティーヤ](//images.ctfassets.net/57a83iqiwfit/6GeFVqhDlyLdBi6X6dvCAo/8b1c2c5fa080ac11774a115aa67a8708/2021_1215_22245600.jpg?fm=webp)
 
 - 薄力粉 ... 1 カップ
 - 強力粉 ... 1 カップ
@@ -52,7 +52,7 @@ eyecatch: /images/eyecatch_tacos.webp
 
 ## 具の野菜
 
-![taco_vegetable](//images.ctfassets.net/57a83iqiwfit/1ESLD0cG9L9tOqc06DQwSb/5b6dff849a43b3da89853ea39559f8d0/______.jpg)
+![taco_vegetable](//images.ctfassets.net/57a83iqiwfit/1ESLD0cG9L9tOqc06DQwSb/5b6dff849a43b3da89853ea39559f8d0/______.jpg?fm=webp)
 
 - アボカド ... 1 個
 - パクチー ... 好きなだけ
@@ -65,7 +65,7 @@ eyecatch: /images/eyecatch_tacos.webp
 
 ## 具の肉
 
-![タコス_スパイスたち](//images.ctfassets.net/57a83iqiwfit/4oDNbPlQ07XYCOrFhEnjIj/aa37661ac986856d103d447ff26b455f/2021_1215_20341200.jpg)
+![タコス_スパイスたち](//images.ctfassets.net/57a83iqiwfit/4oDNbPlQ07XYCOrFhEnjIj/aa37661ac986856d103d447ff26b455f/2021_1215_20341200.jpg?fm=webp)
 
 - 牛・豚合い挽き肉 ... 400 g
 - パクチーの茎 ... 好きなだけ
@@ -90,7 +90,7 @@ eyecatch: /images/eyecatch_tacos.webp
 
 **1. ボウルに水以外の材料を入れる**
 
-![トルティーヤの材料たち](//images.ctfassets.net/57a83iqiwfit/5ujOQLfDSiOhYjqUjJyGxR/29e4c0663008c29fd3766dbab3a15dbe/2021_1215_21161700.jpg)
+![トルティーヤの材料たち](//images.ctfassets.net/57a83iqiwfit/5ujOQLfDSiOhYjqUjJyGxR/29e4c0663008c29fd3766dbab3a15dbe/2021_1215_21161700.jpg?fm=webp)
 
 **2. 水を7割ほどいれてこねる**
 
@@ -103,7 +103,7 @@ eyecatch: /images/eyecatch_tacos.webp
 
 最終的に、以下のようにまとまります。
 
-![トルティーヤ生地まとまったやつ](//images.ctfassets.net/57a83iqiwfit/31chCsrqsGobiRq4BSWOiu/df382f5a5e2a95e8c905dc7bdb9de3eb/2021_1215_21243200.jpg)
+![トルティーヤ生地まとまったやつ](//images.ctfassets.net/57a83iqiwfit/31chCsrqsGobiRq4BSWOiu/df382f5a5e2a95e8c905dc7bdb9de3eb/2021_1215_21243200.jpg?fm=webp)
 
 **4. ラップをして30分程度室温で寝かせる**
 
@@ -111,26 +111,26 @@ eyecatch: /images/eyecatch_tacos.webp
 
 生地が台にくっつかないように、強力粉で打ち粉をします。
 
-![トルティーヤ、小分けにされた生地](//images.ctfassets.net/57a83iqiwfit/RDnXS0jQ1jAznUIKSL1fn/c745aa5f2bc655610c79d79f54e520a6/2021_1215_21404500.jpg)
+![トルティーヤ、小分けにされた生地](//images.ctfassets.net/57a83iqiwfit/RDnXS0jQ1jAznUIKSL1fn/c745aa5f2bc655610c79d79f54e520a6/2021_1215_21404500.jpg?fm=webp)
 
 直径 10 cm ほどに伸ばします。形が多少いびつになってもおいしいければ問題ないと思っています。
 
-![トルティーヤ、伸ばされた生地](//images.ctfassets.net/57a83iqiwfit/7I2XNzdUj105k2MdEdUS9T/27aec85852d1b498bf9222f6e3b5dea1/2021_1215_21430800.jpg)
+![トルティーヤ、伸ばされた生地](//images.ctfassets.net/57a83iqiwfit/7I2XNzdUj105k2MdEdUS9T/27aec85852d1b498bf9222f6e3b5dea1/2021_1215_21430800.jpg?fm=webp)
 
 **6. 中火に熱したフライパンで両面を焼く**
 
 フライパンには油を引かないでください。
 何もしなくても、全くくっつかずに焼けます。
 
-![フライパンにのせた生地](//images.ctfassets.net/57a83iqiwfit/65wXB9ed6TlLwdo2QnHDZl/74ead16dee5034d551996ccba89dfc93/2021_1215_21444400.jpg)
+![フライパンにのせた生地](//images.ctfassets.net/57a83iqiwfit/65wXB9ed6TlLwdo2QnHDZl/74ead16dee5034d551996ccba89dfc93/2021_1215_21444400.jpg?fm=webp)
 
 ふくらんできたら裏返します。
 
-![ふくらんできた生地](//images.ctfassets.net/57a83iqiwfit/69hxIqSdDbrQKiHkEO9Cho/4d96afa3b563794582a1a64defb2459b/2021_1215_22014700.jpg)
+![ふくらんできた生地](//images.ctfassets.net/57a83iqiwfit/69hxIqSdDbrQKiHkEO9Cho/4d96afa3b563794582a1a64defb2459b/2021_1215_22014700.jpg?fm=webp)
 
 軽く焼き色がつけば完成です。
 
-![焼けた生地](//images.ctfassets.net/57a83iqiwfit/56lrTppFtisN76sAGKpoz/7985c35222698e69751b512fc72af03d/2021_1215_21453700.jpg)
+![焼けた生地](//images.ctfassets.net/57a83iqiwfit/56lrTppFtisN76sAGKpoz/7985c35222698e69751b512fc72af03d/2021_1215_21453700.jpg?fm=webp)
 
 焼いた生地は、乾燥しないようにラップをかけて置いておきます。
 
@@ -150,7 +150,7 @@ eyecatch: /images/eyecatch_tacos.webp
 
 パクチーの茎はみじん切りにして具の肉に入れるのでとっておきます。
 
-![みじんぎりパクチー](//images.ctfassets.net/57a83iqiwfit/7HchiHXvz5JsUY5vAiOWg5/309105660a991ae731712c25175323e6/2021_1215_20395500.jpg)
+![みじんぎりパクチー](//images.ctfassets.net/57a83iqiwfit/7HchiHXvz5JsUY5vAiOWg5/309105660a991ae731712c25175323e6/2021_1215_20395500.jpg?fm=webp)
 
 これも、冷蔵庫で冷やしておきます。
 
@@ -164,15 +164,15 @@ eyecatch: /images/eyecatch_tacos.webp
 
 弱めの中火くらいで、香りがでるまでさっと火を通します。
 
-![にんにくとクミンシード](//images.ctfassets.net/57a83iqiwfit/XRzmhy6qVQqmytEkyXjNe/029822815c4e0dbfcf4afabb5a3420e9/2021_1215_20532000.jpg)
+![にんにくとクミンシード](//images.ctfassets.net/57a83iqiwfit/XRzmhy6qVQqmytEkyXjNe/029822815c4e0dbfcf4afabb5a3420e9/2021_1215_20532000.jpg?fm=webp)
 
 **3. 挽き肉を入れて色が変わるまで炒める**
 
-![肉を入れたフライパン](//images.ctfassets.net/57a83iqiwfit/12tsZUeMyQ0Vr6qOL3LMRd/86735f2eb36cb5145057afd5454cf96c/2021_1215_20560100.jpg)
+![肉を入れたフライパン](//images.ctfassets.net/57a83iqiwfit/12tsZUeMyQ0Vr6qOL3LMRd/86735f2eb36cb5145057afd5454cf96c/2021_1215_20560100.jpg?fm=webp)
 
 **4. パクチーの茎を入れる。用意した塩を半分入れて炒める。**
 
-![肉とパクチー](//images.ctfassets.net/57a83iqiwfit/58Um9peFiMuLPNw1VHrdjs/1e91fff03c4ac7d4f744c97dbaf20cb4/2021_1215_20574700.jpg)
+![肉とパクチー](//images.ctfassets.net/57a83iqiwfit/58Um9peFiMuLPNw1VHrdjs/1e91fff03c4ac7d4f744c97dbaf20cb4/2021_1215_20574700.jpg?fm=webp)
 
 **5. 肉に完全に火が通ったら、スパイス（クミンパウダー、コリアンダー、オレガノ、カイエンペッパー）、ケチャップ、ウスターソースを全て入れる。塩は味を見ながら足す。**
 
@@ -184,18 +184,14 @@ eyecatch: /images/eyecatch_tacos.webp
 
 完成したタコスが以下です。
 
-![タコス盛り付け](//images.ctfassets.net/57a83iqiwfit/430pZ4dVTLrSnZig26puoJ/af317bf9f3d9b8a3b784b50e9e578138/2021_1215_22292800.jpg)
+![タコス盛り付け](//images.ctfassets.net/57a83iqiwfit/430pZ4dVTLrSnZig26puoJ/af317bf9f3d9b8a3b784b50e9e578138/2021_1215_22292800.jpg?fm=webp)
 
 トルティーヤにアボカドを塗り、肉とサルサをかけ、野菜を挟んで食べる。お好みでチーズを入れてもおいしいです。
 
-![てのひらタコス](//images.ctfassets.net/57a83iqiwfit/74ffCFdidMrnkyYC56hI2y/580b4728c98f38f5679dafb73f41ca82/2021_1215_22265100.jpg)
+![てのひらタコス](//images.ctfassets.net/57a83iqiwfit/74ffCFdidMrnkyYC56hI2y/580b4728c98f38f5679dafb73f41ca82/2021_1215_22265100.jpg?fm=webp)
 
 # おわり
 
 以上がおいしいタコスの作り方です。
 
 みんなで作業すると盛り上がるので、クリスマスや年末年始にご家族で作ってみてはいかがでしょうか。
-
-![あすけん、タコス](//images.ctfassets.net/57a83iqiwfit/6k7xMJTg2D86EKkHtnhX6d/9bdcb900dc9c57504861a45f084a146f/Screenshot_20211216_015058_jp.co.greenhouse.asken.jpg)
-
-![あすけん、タコス点数](//images.ctfassets.net/57a83iqiwfit/3VvHOo6EQxdi5zQFNPyOHt/c847b729485fe7529f19add3eb382ea5/Screenshot_20211216_015037_jp.co.greenhouse.asken.jpg)
