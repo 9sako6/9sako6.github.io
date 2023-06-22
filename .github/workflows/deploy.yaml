@@ -1,7 +1,11 @@
 name: Deploy
 
 on:
-  push:
+  workflow_run:
+    workflows:
+      - CI
+    types:
+      - completed
     branches:
       - master
   workflow_dispatch:
@@ -13,6 +17,7 @@ jobs:
       contents: read
       deployments: write
     name: Publish to Cloudflare Pages
+    if: github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
