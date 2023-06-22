@@ -1,5 +1,8 @@
 name: Deploy
 
+env:
+  TZ: Asia/Tokyo
+
 on:
   workflow_run:
     workflows:
