@@ -69,7 +69,7 @@ export const MouseButton: Record<string, Protocol.Input.MouseButton> = Object.fr
 ```
 
 型アノテーションがついており、`MouseButton` は `Record<string, Protocol.Input.MouseButton>` 型である。
-プロパティの値は `Protocol.Input.MouseButton` 型である必要があるので、例えば `forwrad` のようなミスをしても型エラーになってくれるようになっている。
+プロパティの値は `Protocol.Input.MouseButton` 型である必要があるので、例えば `forwrad` のようなミスをしても型エラーになってくれる。
 
 今のところ何も問題なさそうだ。
 
