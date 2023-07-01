@@ -58,11 +58,6 @@ function satisfies<A>() {
 
 以下のような `MouseButton` を考える。
 
-型アノテーションがついており、`MouseButton` は `Record<string, Protocol.Input.MouseButton>` 型である。
-プロパティの値は `Protocol.Input.MouseButton` 型である必要があるので、例えば `forwrad` のようなミスをしても型エラーになってくれる。
-
-今のところ何も問題なさそうだ。
-
 ```typescript
 export const MouseButton: Record<string, Protocol.Input.MouseButton> = Object.freeze({
   Left: 'left',
@@ -72,6 +67,11 @@ export const MouseButton: Record<string, Protocol.Input.MouseButton> = Object.fr
   Forward: 'forward',
 });
 ```
+
+型アノテーションがついており、`MouseButton` は `Record<string, Protocol.Input.MouseButton>` 型である。
+プロパティの値は `Protocol.Input.MouseButton` 型である必要があるので、例えば `forwrad` のようなミスをしても型エラーになってくれるようになっている。
+
+今のところ何も問題なさそうだ。
 
 では、エディタで `MouseButton` にカーソルを当てて表示される型はどうなっているだろうか。
 やってみると以下のようになる。
