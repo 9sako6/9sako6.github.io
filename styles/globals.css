@@ -31,7 +31,7 @@
   @apply dark:text-zinc-100;
 }
 .markdown img {
-  @apply md:max-w-xl m-auto;
+  @apply m-auto md:rounded-sm;
 }
 .markdown svg {
   @apply m-auto;
