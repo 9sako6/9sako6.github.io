@@ -47,9 +47,9 @@ export const PostPage = ({
           <SideBar topics={topics} title={title} url={url} />
         </div>
         <div className="md:col-span-3">
-          <div className="pb-6">
+          {/* <div className="pb-6">
             <History commits={commitHistory} />
-          </div>
+          </div> */}
           <Body html={bodyHtml} />
         </div>
       </div>
