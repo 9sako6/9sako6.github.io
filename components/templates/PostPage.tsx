@@ -1,10 +1,10 @@
-import Head from "next/head";
 import { Body, PostDate, PostTitle } from "@/components/atoms";
 import { Layout } from "@/components/layouts";
-import "prismjs/themes/prism-okaidia.min.css";
+import { SideBar } from "@/components/organisms";
 import "@/node_modules/katex/dist/katex.min.css";
 import { Props } from "@/pages/posts/[slug]";
-import { SideBar, History } from "@/components/organisms";
+import Head from "next/head";
+import "prismjs/themes/prism-okaidia.min.css";
 
 export const PostPage = ({
   title,
