@@ -104,11 +104,11 @@ export const MouseButton = Object.freeze({
 > `satisfies` は型を変えない
 
 という性質がここで効いてくる。
+エディタで `MouseButton` にカーソルを当てると、型の中身が一発でわかる。
 
 
 ![](/images/why-typescript-satisfies-operator-good.png)
 
-エディタで `MouseButton` にカーソルを当てると、型の中身が一発でわかる。
 
 `satisfies` を使うことにより、**型推論しつつ、読みやすい推論結果を残すことができる。**
 
