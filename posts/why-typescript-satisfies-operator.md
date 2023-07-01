@@ -4,9 +4,11 @@ description: "satisfies を使うことにより、型推論しつつ、型を�
 topics: ["TypeScript"]
 category: "Technology"
 published: true
-eyecatch: "/images/why-typescript-satisfies-operator-good.png"
+eyecatch: "/images/why-typescript-satisfies-operator-eye.png"
 date: "2023-07-01T16:38:44.902+09:00"
 ---
+
+![](/images/why-typescript-satisfies-operator-eye.png)
 
 # 目次
 
@@ -51,7 +53,6 @@ function satisfies<A>() {
 これだけ言っても意味がわからないので、実例を添えて説明してみる。Puppeteer のコードを説明に使わせていただく。
 
 [puppeteer/packages/puppeteer-core/src/api/Input.ts - puppeteer/puppeteer](https://github.com/puppeteer/puppeteer/blob/58e9c64f6364fc1663995d4136445cdc8fab9292/packages/puppeteer-core/src/api/Input.ts#L292)
-
 
 ## `satisfies` を使わない場合の問題
 
