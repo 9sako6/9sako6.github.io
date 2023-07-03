@@ -61,7 +61,9 @@ export const Card = ({
               className="hover:underline"
               aria-label={title}
             >
-              {description.length < MAX_DESCRIPTION_LENGTH ? description : description.slice(0, MAX_DESCRIPTION_LENGTH).concat("...")}
+              {description.length < MAX_DESCRIPTION_LENGTH
+                ? description
+                : description.slice(0, MAX_DESCRIPTION_LENGTH).concat("...")}
             </Link>
           </div>
         </div>
