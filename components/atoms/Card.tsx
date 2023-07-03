@@ -12,6 +12,8 @@ type Props = {
   tags: string[];
 };
 
+const MAX_DESCRIPTION_LENGTH = 100;
+
 export const Card = ({
   slug,
   title,
@@ -59,20 +61,21 @@ export const Card = ({
               className="hover:underline"
               aria-label={title}
             >
-              {description}
+              {description.length < MAX_DESCRIPTION_LENGTH ? description : description.slice(0, MAX_DESCRIPTION_LENGTH).concat("...")}
             </Link>
           </div>
         </div>
       </div>
-      <div className="md:col-span-2 grid place-content-center relative">
+      <div className="md:col-span-2 grid place-content-center">
         {imageUrl ? (
-          <div className="h-80 md:h-32">
+          <div className="md:h-32">
             <Link href={postPath} aria-label={title}>
               <Image
-                className="cursor-pointer rounded object-cover"
+                className="cursor-pointer rounded"
                 alt={title}
                 src={imageUrl}
-                fill
+                width={640}
+                height={360}
                 placeholder="blur"
                 blurDataURL={imageUrl}
               />
