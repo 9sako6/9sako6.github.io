@@ -1,10 +1,12 @@
-import { Body, PostDate, PostTitle } from "@/components/atoms";
-import { Layout } from "@/components/layouts";
-import { SideBar } from "@/components/organisms";
+import { Layout } from "../ui/Layout";
+import { SideBar } from "@/components/ui/SideBar";
 import "@/node_modules/katex/dist/katex.min.css";
 import { Props } from "@/pages/posts/[slug]";
 import Head from "next/head";
 import "prismjs/themes/prism-okaidia.min.css";
+import { Body } from "../features/post/Body";
+import { PostDate } from "../features/post/PostDate";
+import { PageTitle } from "../ui/PageTitle";
 
 export const PostPage = ({
   title,
@@ -14,7 +16,6 @@ export const PostPage = ({
   url,
   date,
   topics,
-  commitHistory,
 }: Props): JSX.Element => {
   const pageTitle = `${title} - ${process.env.siteTitle}`;
   const imageUrl = eyecatch
@@ -37,7 +38,7 @@ export const PostPage = ({
       </Head>
 
       <div className="flex justify-center">
-        <PostTitle title={title} />
+        <PageTitle title={title} />
       </div>
       <div className="flex justify-center pb-16">
         <PostDate date={new Date(date)} />
@@ -47,9 +48,6 @@ export const PostPage = ({
           <SideBar topics={topics} title={title} url={url} />
         </div>
         <div className="md:col-span-3">
-          {/* <div className="pb-6">
-            <History commits={commitHistory} />
-          </div> */}
           <Body html={bodyHtml} />
         </div>
       </div>

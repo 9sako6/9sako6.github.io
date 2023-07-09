@@ -1,4 +1,4 @@
-import { LoadingBar } from "../atoms";
+import { LoadingBar } from "./LoadeingBar";
 
 export const LoadingCommentTextarea = () => (
   <div className="w-full">

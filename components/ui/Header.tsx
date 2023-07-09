@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ThemeChanger } from "@/components/atoms/ThemeChanger";
-import { SiteTitle } from "@/components/atoms/SiteTitle";
+import { ThemeChanger } from "@/components/ui/ThemeChanger";
+import { SiteTitle } from "@/components/ui/SiteTitle";
 
 export const Header = (): JSX.Element => {
   return (

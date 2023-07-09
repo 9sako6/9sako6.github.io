@@ -1,8 +1,8 @@
 import Head from "next/head";
-import { Card } from "../atoms";
-import { Layout } from "../layouts";
+import { Layout } from "../ui/Layout";
 import type { Metadata } from "@/types";
 import { getCategorizedPosts } from "@/lib/get-categorized-posts";
+import { Card } from "../features/post/Card";
 
 export type Post = Metadata & { slug: string };
 

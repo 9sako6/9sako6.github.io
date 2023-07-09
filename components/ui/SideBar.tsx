@@ -1,4 +1,4 @@
-import { Tag } from "../atoms";
+import { Tag } from "../features/post/Tag";
 
 export type SideBarProps = {
   topics: string[];

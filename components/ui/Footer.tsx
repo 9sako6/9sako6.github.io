@@ -1,13 +1,14 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Cd, Tag } from "@/components/atoms";
-import { CopyrightIcon } from "@/components/icons/CopyrightIcon";
+import { CopyrightIcon } from "./icons/CopyrightIcon";
 import Image from "next/image";
 import Link from "next/link";
-import { GitHubIcon } from "../icons/GitHubIcon";
-import { TwitterIcon } from "../icons/TwitterIcon";
+import { GitHubIcon } from "./icons/GitHubIcon";
+import { TwitterIcon } from "./icons/TwitterIcon";
 import topics from "@/data/topics.json";
+import { Cd } from "./Cd";
+import { Tag } from "../features/post/Tag";
 
 export const Footer = (): JSX.Element => {
   const pathname = usePathname();

@@ -1,7 +1,8 @@
-import { Layout } from "../layouts";
-import { Card, PostTitle } from "../atoms";
+import { Layout } from "../ui/Layout";
 import Head from "next/head";
 import type { Post } from "@/types";
+import { PageTitle } from "../ui/PageTitle";
+import { Card } from "../features/post/Card";
 
 type Props = {
   posts: Post[];
@@ -28,7 +29,7 @@ export const YearlyArchivesPage = ({ posts, year }: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="l-0">
-        <PostTitle title={pageTitle} />
+        <PageTitle title={pageTitle} />
       </div>
       {posts.length === 0 ? (
         <p>There are no posts.</p>

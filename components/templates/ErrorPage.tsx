@@ -1,5 +1,5 @@
-import { PostTitle } from "../atoms";
-import { Layout } from "../layouts";
+import { Layout } from "../ui/Layout";
+import { PageTitle } from "../ui/PageTitle";
 
 type Props = {
   status: number;
@@ -8,7 +8,7 @@ type Props = {
 
 export const ErrorPage = ({ status, message }: Props): JSX.Element => (
   <Layout>
-    <PostTitle title={String(status)} />
+    <PageTitle title={String(status)} />
     <p>{message}</p>
   </Layout>
 );

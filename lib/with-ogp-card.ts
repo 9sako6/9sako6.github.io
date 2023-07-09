@@ -1,6 +1,6 @@
 import { JSDOM } from "jsdom";
 import { getOgpAll } from "@/lib/get-ogp";
-import { staticLinkCard } from "@/components/organisms/LinkCard";
+import { staticLinkCard } from "@/components/features/link/LinkCard";
 
 export const withOgpCard = async (html: string) => {
   const jsdom = new JSDOM();

@@ -1,7 +1,8 @@
 import Head from "next/head";
-import { Card, PostTitle } from "../atoms";
-import { Layout } from "../layouts";
+import { Layout } from "../ui/Layout";
 import type { Post } from "@/types";
+import { PageTitle } from "../ui/PageTitle";
+import { Card } from "../features/post/Card";
 
 export type Props = {
   posts: Post[];
@@ -26,7 +27,7 @@ export const TagPage = ({ posts, tag }: Props): JSX.Element => {
         <meta name="twitter:creator" content="@9sako6" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PostTitle title={`#${tag}`} />
+      <PageTitle title={`#${tag}`} />
       {posts.length === 0 ? (
         <p>There are no posts.</p>
       ) : (
