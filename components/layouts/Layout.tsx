@@ -12,6 +12,8 @@ export const Layout = ({ children }: Props): JSX.Element => {
       <Head>
         <title>{process.env.siteTitle}</title>
         <meta name="description" content={process.env.siteDescription} />
+        <meta name="og:title" content={process.env.siteTitle} />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@9sako6" />
         <link rel="icon" href="/favicon.ico" />
