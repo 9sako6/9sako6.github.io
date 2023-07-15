@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import dayjs from "dayjs";
-import { allPostsSync } from "@/lib/all-posts";
+import { allPosts } from "@/lib/all-posts";
 import { YearlyArchivesPage } from "@/components/templates";
 import type { Post } from "@/types";
 
@@ -16,7 +16,7 @@ type Props = {
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
   const years = new Set<Params["year"]>();
 
-  allPostsSync({ draft: false })
+  (await allPosts({ draft: false }))
     .map((post) => dayjs(post.date).format("YYYY"))
     .forEach((year) => years.add(year));
 
@@ -43,7 +43,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
     return emptyResponse;
   }
 
-  const posts = allPostsSync({ draft: false }).filter(
+  const posts = (await allPosts({ draft: false })).filter(
     (post) => dayjs(post.date).format("YYYY") === year
   );
 

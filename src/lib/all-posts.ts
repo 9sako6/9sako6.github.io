@@ -1,10 +1,12 @@
-import { readdirSync, readFileSync } from "fs";
-import dayjs from "dayjs";
-import matter from "gray-matter";
 import type { Metadata, Post } from "@/types";
+import dayjs from "dayjs";
+import { readFileSync } from "fs";
+import { readdir } from "fs/promises";
+import matter from "gray-matter";
 
-export function allPostsSync({ draft }: { draft: boolean }): Post[] {
-  return readdirSync("posts")
+export async function allPosts({ draft }: { draft: boolean }) {
+  const files = await readdir("posts");
+  return files
     .map((fileName) => {
       const file = readFileSync(`posts/${fileName}`, "utf-8");
       const metadata = matter(file).data as Metadata;

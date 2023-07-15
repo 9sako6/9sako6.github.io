@@ -1,7 +1,7 @@
 import type { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import { readFileSync } from "fs";
 import matter from "gray-matter";
-import { allPostsSync } from "@/lib/all-posts";
+import { allPosts } from "@/lib/all-posts";
 import { markdownToHtml } from "@/lib/markdown-html";
 import { commitHistory, Commit } from "@/lib/update-history";
 import { withOgpCard } from "@/lib/with-ogp-card";
@@ -19,9 +19,11 @@ type Params = {
 };
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const paths = allPostsSync({
-    draft: process.env.NODE_ENV === "development",
-  }).map((post) => ({
+  const paths = (
+    await allPosts({
+      draft: process.env.NODE_ENV === "development",
+    })
+  ).map((post) => ({
     params: { slug: post.slug },
   }));
 

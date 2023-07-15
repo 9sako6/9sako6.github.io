@@ -1,7 +1,6 @@
-import { Tag } from "./Tag";
 import Link from "next/link";
 import { PostDate } from "./PostDate";
-import Image from "next/image";
+import { Tag } from "./Tag";
 
 type Props = {
   slug: string;
@@ -14,14 +13,14 @@ type Props = {
 
 const MAX_DESCRIPTION_LENGTH = 100;
 
-export const Card = ({
+export const Card: React.FC<Props> = ({
   slug,
   title,
   description,
   createdAt,
   imageUrl,
   tags,
-}: Props): JSX.Element => {
+}: Props) => {
   const postPath = `/posts/${slug}`;
   const placeholder = (
     <Link
@@ -72,14 +71,19 @@ export const Card = ({
         {imageUrl ? (
           <div className="md:h-32">
             <Link href={postPath} aria-label={title}>
-              <Image
+              {/* <Image
                 className="cursor-pointer rounded"
                 alt={title}
                 src={imageUrl}
                 width={640}
                 height={360}
-                placeholder="blur"
-                blurDataURL={imageUrl}
+                // placeholder="blur"
+                // blurDataURL={imageUrl}
+              /> */}
+              <img
+                src={imageUrl}
+                alt={title}
+                className="cursor-pointer rounded"
               />
             </Link>
           </div>

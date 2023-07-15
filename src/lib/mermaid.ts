@@ -16,6 +16,10 @@ export const withMermaid = (
   markdownToHtml: (_markdownText: string) => Promise<string>
 ) => {
   return async (originalMarkdown: string) => {
+    if (!originalMarkdown.match(/```mermaid/)) {
+      return await markdownToHtml(originalMarkdown);
+    }
+
     // Create a working directory.
     if (!fs.existsSync("tmp")) fs.mkdirSync("tmp");
     const workDir = fs.mkdtempSync("tmp/mermaid");

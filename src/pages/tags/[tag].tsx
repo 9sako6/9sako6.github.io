@@ -1,5 +1,5 @@
 import type { NextPage, GetStaticPaths, GetStaticProps } from "next";
-import { allPostsSync } from "@/lib/all-posts";
+import { allPosts } from "@/lib/all-posts";
 import { TagPage, Props } from "@/components/templates/TagPage";
 
 type Params = {
@@ -8,7 +8,7 @@ type Params = {
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
   const tags = Array.from(
-    new Set(allPostsSync({ draft: false }).flatMap((post) => post.topics))
+    new Set((await allPosts({ draft: false })).flatMap((post) => post.topics))
   ).sort();
   const paths = tags.map((tag) => ({
     params: { tag },
@@ -26,7 +26,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
   if (!params) return { props: {} as Props };
 
   const { tag } = params;
-  const posts = allPostsSync({ draft: false }).filter((post) =>
+  const posts = (await allPosts({ draft: false })).filter((post) =>
     post.topics.includes(tag)
   );
 

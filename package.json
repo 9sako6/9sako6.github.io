@@ -7,7 +7,7 @@
   "scripts": {
     "analyze": "ANALYZE=true npm run build",
     "dev": "next dev",
-    "build": "next build && next export && next-export-optimize-images",
+    "build": "next build && next-export-optimize-images",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",

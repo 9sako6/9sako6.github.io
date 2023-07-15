@@ -1,7 +1,5 @@
-import Head from "next/head";
-import { Layout } from "../ui/Layout";
-import type { Metadata } from "@/types";
 import { getCategorizedPosts } from "@/lib/get-categorized-posts";
+import type { Metadata } from "@/types";
 import { Card } from "../features/post/Card";
 
 export type Post = Metadata & { slug: string };
@@ -14,21 +12,7 @@ export const TopPage = ({ posts }: Props): JSX.Element => {
   const categorizedPosts = getCategorizedPosts(posts);
 
   return (
-    <Layout>
-      <Head>
-        <title>{process.env.siteTitle}</title>
-        <meta name="description" content={process.env.siteDescription} />
-        <meta property="og:title" content={process.env.siteTitle} />
-        <meta property="og:description" content={process.env.siteDescription} />
-        <meta
-          property="og:image"
-          content={`${process.env.siteUrl}/icon.webp`}
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@9sako6" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <>
       {posts.length === 0 ? (
         <p>There are no posts.</p>
       ) : (
@@ -60,6 +44,6 @@ export const TopPage = ({ posts }: Props): JSX.Element => {
           );
         })
       )}
-    </Layout>
+    </>
   );
 };
