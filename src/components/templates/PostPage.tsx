@@ -1,6 +1,6 @@
 import { Layout } from "../ui/Layout";
 import { SideBar } from "@/components/ui/SideBar";
-import "@/node_modules/katex/dist/katex.min.css";
+import "../../../node_modules/katex/dist/katex.min.css";
 import { Props } from "@/pages/posts/[slug]";
 import Head from "next/head";
 import "prismjs/themes/prism-okaidia.min.css";

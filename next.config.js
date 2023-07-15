@@ -29,7 +29,7 @@ const nextConfig = {
   productionBrowserSourceMaps: true,
   webpack: (config, { isServer, nextRuntime }) => {
     if (isServer && nextRuntime === "nodejs") {
-      require("./scripts/generate-topics-json.js");
+      require("./src/scripts/generate-topics-json.js");
     }
     return config;
   },

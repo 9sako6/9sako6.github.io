@@ -17,6 +17,6 @@ const topics = Array.from(new Set(allTopics)).sort((a, b) =>
   a.localeCompare(b)
 );
 
-writeFileSync("./data/topics.json", JSON.stringify(topics));
+writeFileSync("./src/data/topics.json", JSON.stringify(topics));
 
 console.log(colors.magenta("info - topics JSON was generated."));
