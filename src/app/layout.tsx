@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   generator: "Next.js",
   viewport: { width: "device-width", initialScale: 1 },
   keywords: ["software engineer", "web development", "blog"],
-  icons: [`${process.env.siteUrl}/icon.webp`],
+  icons: [`${process.env.siteUrl}/favicon.ico`],
   openGraph: {
     type: "website",
     url: process.env.siteUrl,
