@@ -1,42 +1,20 @@
-import { Layout } from "../ui/Layout";
+import { Props } from "@/app/posts/[slug]/page";
 import { SideBar } from "@/components/ui/SideBar";
-import "../../../node_modules/katex/dist/katex.min.css";
-import { Props } from "@/pages/posts/[slug]";
-import Head from "next/head";
 import "prismjs/themes/prism-okaidia.min.css";
+import "../../../node_modules/katex/dist/katex.min.css";
 import { Body } from "../features/post/Body";
 import { PostDate } from "../features/post/PostDate";
 import { PageTitle } from "../ui/PageTitle";
 
-export const PostPage = ({
+export const PostPage: React.FC<Props> = ({
   title,
-  description,
-  eyecatch,
   bodyHtml,
   url,
   date,
   topics,
-}: Props): JSX.Element => {
-  const pageTitle = `${title} - ${process.env.siteTitle}`;
-  const imageUrl = eyecatch
-    ? new URL(eyecatch, process.env.siteUrl).href
-    : new URL("/icon.webp", process.env.siteUrl).href;
-
+}) => {
   return (
-    <Layout>
-      <Head>
-        <title>{pageTitle}</title>
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:image" content={imageUrl} />
-        <meta name="twitter:creator" content="@9sako6" />
-        <meta name="description" content={description} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={imageUrl} />
-        <meta property="og:url" content={url} />
-      </Head>
-
+    <>
       <div className="flex justify-center">
         <PageTitle title={title} />
       </div>
@@ -51,6 +29,6 @@ export const PostPage = ({
           <Body html={bodyHtml} />
         </div>
       </div>
-    </Layout>
+    </>
   );
 };

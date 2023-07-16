@@ -1,3 +1,5 @@
+"use client";
+
 import ReactDOMServer from "react-dom/server";
 
 type Props = {
