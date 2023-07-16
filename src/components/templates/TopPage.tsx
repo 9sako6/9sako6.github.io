@@ -22,7 +22,7 @@ export const TopPage = ({ posts }: Props): JSX.Element => {
           return (
             <div key={category}>
               <h1
-                className="pt-10 pb-10 mb-10 font-mono text-2xl"
+                className="pt-10 pb-10 md:mb-10 font-mono text-2xl"
                 id={category}
               >
                 <a href={`#${category}`}>{category}</a>
