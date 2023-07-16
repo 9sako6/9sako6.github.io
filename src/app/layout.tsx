@@ -1,14 +1,13 @@
-import "@/styles/globals.css";
-import "@/styles/nprogress.css";
-import "@/styles/rehype-prism-plus.css";
-import "@/styles/prism.css";
-import "@/styles/mermaid.css";
 import "@/styles/footnote.css";
+import "@/styles/globals.css";
+import "@/styles/mermaid.css";
+import "@/styles/nprogress.css";
+import "@/styles/prism.css";
+import "@/styles/rehype-prism-plus.css";
 
-import { Metadata } from "next";
-import { Header } from "@/components/ui/Header";
 import { Footer } from "@/components/ui/Footer";
-import { ThemeProvider } from "@/providers/ThemeProvider";
+import { Header } from "@/components/ui/Header";
+import { Metadata } from "next";
 
 import { Noto_Serif_JP } from "next/font/google";
 
@@ -56,9 +55,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${notoSerifJp.className}`}>
       <body className="pl-4 pr-4">
-        <ThemeProvider>
-          <Header />
-        </ThemeProvider>
+        <Header />
         <main className="flex items-center justify-center">
           <div className="md:max-w-5xl w-full">{children}</div>
         </main>
