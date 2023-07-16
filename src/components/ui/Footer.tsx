@@ -30,7 +30,7 @@ export const Footer = (): JSX.Element => {
                   <div className="w-16 h-16 relative hover:scale-105">
                     <Image
                       alt="icon"
-                      className="rounded-full object-contain"
+                      className="rounded-full object-contain border border-orange-200 dark:border-orange-100"
                       src={"/icon.webp"}
                       fill
                     />
@@ -59,15 +59,17 @@ export const Footer = (): JSX.Element => {
                   </div>
                 </nav>
               </div>
-              <p className="py-6 break-all">
-                I&apos;m 9sako6, a software engineer.
-                <Link
-                  href="/about"
-                  className="break-all hover:underline focus:underline active:underline"
-                >
-                  A brief resume is here.
-                </Link>
-              </p>
+              <div className="py-6 break-word">
+                <p>I&apos;m 9sako6, a software engineer.</p>
+                <p>
+                  <Link
+                    href="/about"
+                    className="break-all hover:underline focus:underline active:underline"
+                  >
+                    A brief resume is here.
+                  </Link>
+                </p>
+              </div>
             </div>
             <div className="col-span-2 py-6">
               {topics.map((topic) => (

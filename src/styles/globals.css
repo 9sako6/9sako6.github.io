@@ -15,9 +15,6 @@
 .markdown p {
   @apply break-all pb-3 pt-3;
 }
-.markdown blockquote > p {
-  @apply pb-0;
-}
 .markdown ol {
   @apply list-decimal pl-10 pt-2 pb-2;
 }
@@ -37,10 +34,10 @@
   @apply m-auto;
 }
 .markdown blockquote {
-  @apply pb-4 px-2 mb-4 border-l-slate-700 border-l-4 bg-slate-100 dark:border-l-zinc-500 dark:bg-zinc-700;
+  @apply py-4 px-2 mb-4 border-l-slate-700 border-l-4 bg-slate-100 dark:border-l-zinc-700 dark:bg-zinc-800;
 }
 .markdown code:not(.code-highlight) {
-  @apply font-mono font-semibold;
+  @apply font-mono;
 }
 .markdown code:not(.code-highlight)::after,
 .markdown code:not(.code-highlight)::before {

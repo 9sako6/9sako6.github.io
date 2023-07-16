@@ -10,6 +10,14 @@ import { Header } from "@/components/ui/Header";
 import { Footer } from "@/components/ui/Footer";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 
+import { Noto_Serif_JP } from "next/font/google";
+
+const notoSerifJp = Noto_Serif_JP({
+  display: "swap",
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: process.env.siteTitle,
   description: process.env.siteDescription,
@@ -46,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" className="dark">
+    <html lang="ja" className={`${notoSerifJp.className}`}>
       <body className="pl-4 pr-4">
         <ThemeProvider>
           <Header />

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ThemeChanger } from "@/components/ui/ThemeChanger";
+// import { ThemeChanger } from "@/components/ui/ThemeChanger";
 import { SiteTitle } from "@/components/ui/SiteTitle";
 
 export const Header = (): JSX.Element => {
@@ -9,11 +9,11 @@ export const Header = (): JSX.Element => {
         <Link href="/">
           <SiteTitle />
         </Link>
-        <ul className="flex md:text-2xl text-xl items-center">
+        {/* <ul className="flex md:text-2xl text-xl items-center">
           <li>
             <ThemeChanger />
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </header>
   );
