@@ -1,8 +1,7 @@
-import { Layout } from "../ui/Layout";
-import Head from "next/head";
 import type { Post } from "@/types";
-import { PageTitle } from "../ui/PageTitle";
+import Head from "next/head";
 import { Card } from "../features/post/Card";
+import { PageTitle } from "../ui/PageTitle";
 
 type Props = {
   posts: Post[];
@@ -14,7 +13,7 @@ export const YearlyArchivesPage = ({ posts, year }: Props) => {
   const seoTitle = `${pageTitle} - ${process.env.siteTitle}`;
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>{seoTitle}</title>
         <meta name="description" content={process.env.siteDescription} />
@@ -46,6 +45,6 @@ export const YearlyArchivesPage = ({ posts, year }: Props) => {
           />
         ))
       )}
-    </Layout>
+    </>
   );
 };
