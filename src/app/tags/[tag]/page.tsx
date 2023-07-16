@@ -25,9 +25,9 @@ export function generateMetadata({ params }: Params): Metadata {
 }
 
 const Tag = async ({ params }: Params) => {
-  const { tag } = params;
+  const tag = decodeURI(params.tag);
   const posts = (await allPosts({ draft: false })).filter((post) =>
-    post.topics.includes(tag)
+    post.topics.includes(decodeURI(tag))
   );
   return <TagPage posts={posts} tag={tag} />;
 };
