@@ -1,8 +1,10 @@
-/** @type {import('next').NextConfig} */
 const withExportImages = require("next-export-optimize-images");
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
+
+const { createVanillaExtractPlugin } = require("@vanilla-extract/next-plugin");
+const withVanillaExtract = createVanillaExtractPlugin();
 
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
@@ -14,6 +16,7 @@ const withMDX = require("@next/mdx")({
   },
 });
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
   reactStrictMode: true,
@@ -37,9 +40,11 @@ const nextConfig = {
 };
 
 module.exports = withBundleAnalyzer(
-  withMDX(
-    withExportImages({
-      ...nextConfig,
-    })
+  withVanillaExtract(
+    withMDX(
+      withExportImages({
+        ...nextConfig,
+      })
+    )
   )
 );

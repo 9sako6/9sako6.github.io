@@ -1,4 +1,5 @@
 import Link from "next/link";
+import * as styles from "./Card.css";
 import { PostDate } from "./PostDate";
 import { Tag } from "./Tag";
 
@@ -66,26 +67,17 @@ export const Card: React.FC<Props> = ({
           </div>
         </div>
       </div>
-      <div className="md:col-span-2 grid place-content-center">
+      <div className={styles.imageContainer}>
         {imageUrl ? (
-          <div className="md:h-32">
-            <Link href={postPath} aria-label={title}>
-              {/* <Image
-                className="cursor-pointer rounded"
-                alt={title}
-                src={imageUrl}
-                width={640}
-                height={360}
-                // placeholder="blur"
-                // blurDataURL={imageUrl}
-              /> */}
-              <img
-                src={imageUrl}
-                alt={title}
-                className="cursor-pointer rounded"
-              />
-            </Link>
-          </div>
+          <Link href={postPath} aria-label={title}>
+            <img
+              src={imageUrl}
+              alt={title}
+              width={480}
+              height={270}
+              className={styles.image}
+            />
+          </Link>
         ) : (
           placeholder
         )}
