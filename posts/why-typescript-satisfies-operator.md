@@ -4,11 +4,11 @@ description: "satisfies を使うことにより、型推論しつつ、型を�
 topics: ["TypeScript"]
 category: "Technology"
 published: true
-eyecatch: "/images/why-typescript-satisfies-operator-eye.png"
+eyecatch: "https://imagedelivery.net/JtEZHVqOaD6-I4jpdS8nBQ/0286e951-6a3b-482e-6248-7751c927a200/thumbnail"
 date: "2023-07-01T16:38:44.902+09:00"
 ---
 
-![](/images/why-typescript-satisfies-operator-eye.png)
+![](https://imagedelivery.net/JtEZHVqOaD6-I4jpdS8nBQ/0286e951-6a3b-482e-6248-7751c927a200/public)
 
 # 目次
 
