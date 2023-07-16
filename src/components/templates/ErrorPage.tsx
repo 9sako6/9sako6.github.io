@@ -1,4 +1,3 @@
-import { Layout } from "../ui/Layout";
 import { PageTitle } from "../ui/PageTitle";
 
 type Props = {
@@ -6,9 +5,9 @@ type Props = {
   message: string;
 };
 
-export const ErrorPage = ({ status, message }: Props): JSX.Element => (
-  <Layout>
+export const ErrorPage: React.FC<Props> = ({ status, message }) => (
+  <>
     <PageTitle title={String(status)} />
     <p>{message}</p>
-  </Layout>
+  </>
 );
