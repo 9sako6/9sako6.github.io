@@ -5,7 +5,7 @@ description: "俺のキーボードかっこいい！キースイッチを交換
 topics: ["キーボード"]
 category: "Random"
 published: true
-eyecatch: https://imagedelivery.net/JtEZHVqOaD6-I4jpdS8nBQ/9b2a07ee-fed3-41a2-4229-c6276a9ad500/thumbnail
+eyecatch: https://imagedelivery.net/JtEZHVqOaD6-I4jpdS8nBQ/62f54f5f-f447-4c01-680c-118fcabc9500/thumbnail
 date: "2022-08-24T20:48:06.841+09:00"
 ---
 
