@@ -5,7 +5,7 @@ topics: ["料理"]
 category: "Random"
 published: true
 date: "2021-12-16T02:13:00.000+09:00"
-eyecatch: /images/eyecatch_tacos.webp
+eyecatch: https://imagedelivery.net/JtEZHVqOaD6-I4jpdS8nBQ/ebfeee82-a17b-4a23-f9d0-46cc6328e800/thumbnail
 ---
 
 この記事は、[ESM Advent Calender 2021](https://adventar.org/calendars/6972) の16日目の記事です。

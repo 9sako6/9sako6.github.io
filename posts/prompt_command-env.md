@@ -4,7 +4,7 @@ description: "The `PROMPT_COMMAND` variable is evaluated just before the prompt 
 topics: ["bash"]
 category: "Technology"
 published: true
-eyecatch: "/images/example-prompt-with-git-branch.webp"
+eyecatch: https://imagedelivery.net/JtEZHVqOaD6-I4jpdS8nBQ/9b2a07ee-fed3-41a2-4229-c6276a9ad500/thumbnail
 date: "2022-10-19T01:46:23.190+09:00"
 lang: "en"
 ---

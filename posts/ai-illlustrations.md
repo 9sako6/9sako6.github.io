@@ -4,7 +4,7 @@ description: "はるか昔、私はイラストを描く趣味を持っていま
 topics: ["Anything V3"]
 category: "Random"
 published: true
-eyecatch: "/images/okita-face.png"
+eyecatch: "https://imagedelivery.net/JtEZHVqOaD6-I4jpdS8nBQ/889c78e7-75b5-4bf6-ae5d-180376063400/thumbnail"
 date: "2022-11-26T17:18:55.874+09:00"
 ---
 

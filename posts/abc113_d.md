@@ -4,7 +4,7 @@ description: "ABC113 D - Number of Amidakujiの解説です。DPの訓練にな�
 topics: ["AtCoder", "DP", "競技プログラミング"]
 category: "Competitive Programming"
 published: true
-eyecatch: /images/eyecatch_abc113_d.webp
+eyecatch: https://imagedelivery.net/JtEZHVqOaD6-I4jpdS8nBQ/825e3265-8ac3-46ab-efca-089c81a60b00/thumbnail
 date: "2020-02-16T03:30:00.000+09:00"
 ---
 
