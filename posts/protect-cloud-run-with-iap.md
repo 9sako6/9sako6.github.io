@@ -183,6 +183,15 @@ Cloud Run へのアクセスはロードバランサ経由のものだけを許�
 Cloud Load Balancing と IAP を使うことで特定の Google アカウントだけにアクセスを許可することができるようになりました。
 アクセス権限を絞りたい管理画面や、ステージング環境に使えると思います。
 
+# 料金
+
+月間 10,000 リクエスト、トラフィックが 1 GiB くらいのあまり使われないアプリだと想定して [Google Cloud Pricing Calculator で試算](https://cloud.google.com/products/calculator/#id=c952d014-a533-4976-9c90-628df48ce22e) してみました。
+
+結果は合計で月 2.94 USD でした。
+
+Cloud Load Balancing, Cloud Run は合計 0.02 USD でした。
+IP Address が一番高くて 2.92 USD かかってしまいます、たぶん。
+
 # 参考
 
 1. [Cloud Run での IAP の有効化  |  Identity-Aware Proxy  |  Google Cloud](https://cloud.google.com/iap/docs/enabling-cloud-run?hl=ja)
