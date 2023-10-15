@@ -155,6 +155,7 @@ SSL 証明書のステータスは Certificate Manager の [従来の証明書] 
 ![IAP sample](/images/cloud-run-iap-sample.png)
 
 アクセス可能なユーザーを追加する手順を説明します。
+公式ドキュメントは [IAP で保護されたリソースへのアクセスの管理](https://cloud.google.com/iap/docs/managing-access?hl=ja) です。
 
 - IAP を選択して [プリンシパルを追加] をクリックします
 
@@ -165,7 +166,8 @@ SSL 証明書のステータスは Certificate Manager の [従来の証明書] 
 
 ![IAP right sample](/images/cloud-run-iap-right-sample.png)
 
-最後に、IAP が Cloud Run にトラフィックを送信できるようにする必要があります。
+<!-- これいらんかも -->
+<!-- 最後に、IAP が Cloud Run にトラフィックを送信できるようにする必要があります。
 具体的には、[Cloud Run](https://console.cloud.google.com/run) のページから以下のように確認できる `service-[PROJECT-NUMBER]@gcp-sa-iap.iam.gserviceaccount.com` というサービスアカウントに対して、IAM で権限を付与します。
 
 ![Cloud Run service account sample](/images/cloud-run-service-account-sample.png)
@@ -176,7 +178,7 @@ SSL 証明書のステータスは Certificate Manager の [従来の証明書] 
 - [ロール] として [Cloud Run 起動元] を選択します
 
 
-IAM 設定が保存されたかどうかは、[Google 提供のロール付与を含める] にチェックを入れると確認できます。
+IAM 設定が保存されたかどうかは、[Google 提供のロール付与を含める] にチェックを入れると確認できます。 -->
 
 # 動作確認
 
@@ -204,6 +206,7 @@ IP Address が一番高くて 2.92 USD かかってしまいます、たぶん�
 
 1. [Cloud Run での IAP の有効化  |  Identity-Aware Proxy  |  Google Cloud](https://cloud.google.com/iap/docs/enabling-cloud-run?hl=ja)
 1. [Cloud Run、App Engine、または Cloud Functions を使用して従来のアプリケーション ロードバランサを設定する  |  負荷分散  |  Google Cloud](https://cloud.google.com/load-balancing/docs/https/setting-up-https-serverless?hl=ja)
+1. [IAP で保護されたリソースへのアクセスの管理  |  Identity-Aware Proxy  |  Google Cloud](https://cloud.google.com/iap/docs/managing-access?hl=ja)
 1. [Identity-Aware Proxy(IAP)とCloud Armorを使用してCloud Runサービスへのアクセス制御を実装する - G-gen Tech Blog](https://blog.g-gen.co.jp/entry/authentication-for-cloud-run-with-iap#IP-%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AE%E7%A2%BA%E4%BF%9D%E3%81%A8-DNS-%E8%A8%AD%E5%AE%9A)
 1. [Cloud Run で Identity-Aware Proxy (IAP) を使う](https://zenn.dev/ww24/articles/19099c85febe0d)
 1. [モノレポ環境の Next.js を Cloud Run にデプロイして社内のメンバーだけが閲覧できるようにするまで](https://zenn.dev/jj/scraps/8070ee137830be#comment-80225db7a11f9a)
