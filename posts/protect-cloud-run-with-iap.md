@@ -150,7 +150,7 @@ SSL 証明書のステータスは Certificate Manager の [従来の証明書] 
 
 ![Sample new OAuth app page](/images/cloud-run-sample-edit-oauth-page.png)
 
-[Identity-Aware Proxy](https://console.cloud.google.com/security/iap) ページで、ロードバランサに対して IAP を有効にします。
+[Identity-Aware Proxy](https://console.cloud.google.com/security/iap) ページで、[IAP] のトグルを有効にして、ロードバランサに対して IAP を有効にしましょう。
 
 ![IAP sample](/images/cloud-run-iap-sample.png)
 
