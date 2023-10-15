@@ -140,7 +140,15 @@ SSL 証明書のステータスは Certificate Manager の [従来の証明書] 
 
 前準備として、プロジェクトの OAuth 同意画面をまだ構成していない場合は、[API とサービスの OAuth 同意画面](https://console.cloud.google.com/apis/credentials/consent)から作成しましょう。
 
+![Sample OAuth warning](/images/cloud-run-sample-oauth-page.png)
+
 - [ユーザーの種類] は [外部] にします
+
+![Sample new OAuth page](/images/cloud-run-sample-new-oauth-page.png)
+
+必須情報を埋めたら、あとはデフォルト値で問題ありません。
+
+![Sample new OAuth app page](/images/cloud-run-sample-edit-oauth-page.png)
 
 [Identity-Aware Proxy](https://console.cloud.google.com/security/iap) ページで、ロードバランサに対して IAP を有効にします。
 
