@@ -31,13 +31,12 @@ export async function generateMetadata({
   const { slug } = params;
 
   const props = await getPost(slug);
-  const pageTitle = `${props.title} - ${process.env.siteTitle}`;
   const imageUrl = props.eyecatch
     ? new URL(props.eyecatch, process.env.siteUrl).href
     : new URL("/icon.webp", process.env.siteUrl).href;
 
   return {
-    title: pageTitle,
+    title: props.title,
     description: props.description,
     openGraph: {
       ...defaultOpenGraph,
@@ -46,7 +45,7 @@ export async function generateMetadata({
     },
     twitter: {
       ...defaultTwitter,
-      title: pageTitle,
+      title: props.title,
       description: props.description,
       images: [imageUrl],
     },
