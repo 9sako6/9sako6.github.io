@@ -12,7 +12,7 @@ export const defaultOpenGraph = {
 };
 
 export const defaultTwitter = {
-  card: "summary_large_image",
+  card: "summary",
   site: "@9sako6",
   creator: "@9sako6",
   images: `${process.env.siteUrl}/icon.webp`,
