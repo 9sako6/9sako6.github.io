@@ -195,12 +195,18 @@ Cloud Load Balancing と IAP を使うことで特定の Google アカウント�
 
 # 料金
 
-月間 10,000 リクエスト、トラフィックが 1 GiB くらいのあまり使われないアプリだと想定して [Google Cloud Pricing Calculator で試算](https://cloud.google.com/products/calculator/#id=c952d014-a533-4976-9c90-628df48ce22e) してみました。
+~月間 10,000 リクエスト、トラフィックが 1 GiB くらいのあまり使われないアプリだと想定して [Google Cloud Pricing Calculator で試算](https://cloud.google.com/products/calculator/#id=c952d014-a533-4976-9c90-628df48ce22e) してみました。~
 
-結果は合計で月 2.94 USD でした。
+~試算結果は合計で月 2.94 USD でした。~
+~Cloud Load Balancing, Cloud Run は合計 0.02 USD でした。~
+~IP Address が一番高くて 2.92 USD かかってしまいます、たぶん。~
 
-Cloud Load Balancing, Cloud Run は合計 0.02 USD でした。
-IP Address が一番高くて 2.92 USD かかってしまいます、たぶん。
+Load Balancing の転送ルール (Cloud Load Balancer Forwarding Rule Minimum Global) を見落としていました。
+
+![Cloud Load Balancer Forwarding Rule Minimum Global Price](/images/cloud-run-price.png)
+
+**[こちらがより正確な試算](https://cloud.google.com/products/calculator#id=f4cc5653-d997-4fcb-b573-c71f732d9090)** だと思います。
+月 21.19 USD ですね。
 
 # 参考
 
