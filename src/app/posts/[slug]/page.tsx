@@ -40,6 +40,8 @@ export async function generateMetadata({
     description: props.description,
     openGraph: {
       ...defaultOpenGraph,
+      title: props.title,
+      description: props.description,
       url: props.url,
       images: [imageUrl],
     },
