@@ -1,0 +1,32 @@
+name: admin-web-deploy
+
+env:
+  TZ: Asia/Tokyo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./admin-web
+    env:
+      SERVICE_NAME: ${{ secrets.GCP_SERVICE_NAME }}
+      REGION: ${{ secrets.GCP_REGION }}
+      IMAGE_NAME: ${{ secrets.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_REPOSITORY }}/admin-web
+      IMAGE_TAG: ${{ github.sha }}
+    name: Deploy to Cloud Run
+    steps:
+      - uses: actions/checkout@v4
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+      - name: Build image
+        run: docker build -f Dockerfile.production -t ${IMAGE_NAME}:${IMAGE_TAG} .
+      - name: Push image
+        run: docker push ${IMAGE_NAME}:${IMAGE_TAG}
+      - name: Deploy
+        run: gcloud run deploy ${SERVICE_NAME} --image ${IMAGE_NAME}:${IMAGE_TAG} --region ${REGION} --allow-unauthenticated

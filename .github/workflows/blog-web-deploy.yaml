@@ -1,4 +1,4 @@
-name: Deploy
+name: blog-web-deploy
 
 env:
   TZ: Asia/Tokyo
@@ -6,7 +6,7 @@ env:
 on:
   workflow_run:
     workflows:
-      - CI
+      - blog-web-test
     types:
       - completed
     branches:
