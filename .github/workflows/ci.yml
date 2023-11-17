@@ -12,12 +12,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./blog-web
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: "npm"
+          # cache: "npm"
       - run: npm ci
       - run: npm run prettier-check
       - run: npm run lint
@@ -26,12 +29,15 @@ jobs:
   e2e:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./blog-web
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: "npm"
+          # cache: "npm"
       - name: Install dependencies
         run: npm ci
       - name: Install Playwright Browsers
