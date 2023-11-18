@@ -9,6 +9,7 @@ let hostname () =
   | None -> "localhost"
 
 let () =
-  Dream.run ~port:(port ()) ~interface:(hostname ()) (fun _ ->
-    Dream.html "Hello, world!")
-
+  Dream.run ~port:(port ()) ~interface:(hostname ())
+  @@ Dream.router [
+    Dream.get "/systems/health" Admin_api.Handler.Health.health_handler;
+  ]

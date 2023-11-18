@@ -1,2 +1,3 @@
 (library
- (name admin_api))
+ (name admin_api)
+ (libraries handler))

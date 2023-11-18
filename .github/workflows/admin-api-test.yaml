@@ -1,0 +1,36 @@
+name: admin-api-test
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - admin-api/**
+      - e2e/admin-api-e2e/**
+      - .github/workflows/admin-api-test.yaml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - admin-api/**
+      - e2e/admin-api-e2e/**
+      - .github/workflows/admin-api-test.yaml
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./e2e/admin-api-e2e
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: "npm"
+          cache-dependency-path: ./e2e/admin-api-e2e/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test

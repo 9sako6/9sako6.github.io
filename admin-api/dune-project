@@ -19,7 +19,7 @@
  (name admin_api)
  (synopsis "A short synopsis")
  (description "A longer description")
- (depends ocaml dune dream)
+ (depends ocaml dune dream yojson)
  (tags
   (topics "to describe" your project)))
 
