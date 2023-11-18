@@ -22,4 +22,5 @@ jobs:
       run:
         working-directory: ./admin-web
     steps:
+      - uses: actions/checkout@v4
       - run: echo 'TODO test'
