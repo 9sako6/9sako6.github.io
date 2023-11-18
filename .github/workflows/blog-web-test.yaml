@@ -6,11 +6,13 @@ on:
       - main
     paths:
       - blog-web/**
+      - .github/workflows/blog-web-test.yaml
   pull_request:
     branches:
       - main
     paths:
       - blog-web/**
+      - .github/workflows/blog-web-test.yaml
   workflow_dispatch:
 
 jobs:
@@ -20,7 +22,7 @@ jobs:
       run:
         working-directory: ./blog-web
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: 20

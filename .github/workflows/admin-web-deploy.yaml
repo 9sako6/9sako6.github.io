@@ -4,6 +4,13 @@ env:
   TZ: Asia/Tokyo
 
 on:
+  workflow_run:
+    workflows:
+      - admin-web-test
+    types:
+      - completed
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -18,6 +25,7 @@ jobs:
       IMAGE_NAME: ${{ secrets.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_REPOSITORY }}/admin-web
       IMAGE_TAG: ${{ github.sha }}
     name: Deploy to Cloud Run
+    if: github.event.workflow_run.conclusion == 'success'
     steps:
       - uses: actions/checkout@v4
       - name: Authenticate to Google Cloud
@@ -36,5 +44,5 @@ jobs:
         uses: google-github-actions/deploy-cloudrun@v1
         with:
           service: ${{ secrets.GCP_SERVICE_NAME }}
-          image: ${IMAGE_NAME}:${IMAGE_TAG}
-          region: ${REGION}
+          image: ${{ secrets.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_REPOSITORY }}/admin-web:${{ github.sha }}
+          region: ${{ secrets.GCP_REGION }}
