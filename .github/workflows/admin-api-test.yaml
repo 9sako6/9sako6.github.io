@@ -18,13 +18,21 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  e2e:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./e2e/admin-api-e2e
+    env:
+      IMAGE_TAG: ${{ github.sha }}
+      IMAGE_NAME: admin-api-e2e
+      PORT: 8080
     steps:
       - uses: actions/checkout@v4
+      - name: Build admin-api
+        run: docker build -t $IMAGE_NAME:$IMAGE_TAG -f ../../admin-api/Dockerfile.production ../../admin-api
+      - name: Run admin-api
+        run: docker run -d -p ${PORT}:${PORT} $IMAGE_NAME:$IMAGE_TAG
       - uses: actions/setup-node@v3
         with:
           node-version: 20
