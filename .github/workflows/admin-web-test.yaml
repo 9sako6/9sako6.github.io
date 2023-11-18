@@ -1,0 +1,25 @@
+name: admin-web-test
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - admin-web/**
+      - .github/workflows/admin-web-test.yaml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - admin-web/**
+      - .github/workflows/admin-web-test.yaml
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./admin-web
+    steps:
+      - run: echo 'TODO test'

@@ -6,11 +6,13 @@ on:
       - main
     paths:
       - blog-web/**
+      - .github/workflows/blog-web-test.yaml
   pull_request:
     branches:
       - main
     paths:
       - blog-web/**
+      - .github/workflows/blog-web-test.yaml
   workflow_dispatch:
 
 jobs:
