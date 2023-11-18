@@ -1,4 +1,10 @@
 {
   "deno.unstable": true,
-  "deno.enablePaths": ["bin"]
+  "deno.enablePaths": [
+    "bin"
+  ],
+  "ocaml.sandbox": {
+    "kind": "opam",
+    "switch": "${workspaceFolder:9sako6.github.io}/admin-api"
+  }
 }
