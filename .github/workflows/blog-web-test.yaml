@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - main
+    paths:
+      - blog-web/**
   pull_request:
     branches:
       - main
+    paths:
+      - blog-web/**
   workflow_dispatch:
 
 jobs:

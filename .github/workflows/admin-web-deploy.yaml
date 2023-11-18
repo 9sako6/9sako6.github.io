@@ -34,4 +34,7 @@ jobs:
       - name: Push image
         run: docker push ${IMAGE_NAME}:${IMAGE_TAG}
       - name: Deploy
-        run: gcloud run deploy ${SERVICE_NAME} --image ${IMAGE_NAME}:${IMAGE_TAG} --region ${REGION} --allow-unauthenticated
+        uses: google-github-actions/deploy-cloudrun@v1
+        with:
+          service: ${SERVICE_NAME}
+          image: ${IMAGE_NAME}:${IMAGE_TAG}
