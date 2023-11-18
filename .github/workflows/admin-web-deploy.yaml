@@ -36,5 +36,5 @@ jobs:
         uses: google-github-actions/deploy-cloudrun@v1
         with:
           service: ${{ secrets.GCP_SERVICE_NAME }}
-          image: ${IMAGE_NAME}:${IMAGE_TAG}
-          region: ${REGION}
+          image: ${{ secrets.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_REPOSITORY }}/admin-web:${{ github.sha }}
+          region: ${{ secrets.GCP_REGION }}
