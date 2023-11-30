@@ -4,7 +4,7 @@ description: "俺のキーボードかっこいい！キースイッチを交換
 キースイッチは Gateron Silent Yellow を使っています。静音です。"
 topics: ["キーボード"]
 category: "Random"
-published: true
+published: false
 eyecatch: https://imagedelivery.net/JtEZHVqOaD6-I4jpdS8nBQ/62f54f5f-f447-4c01-680c-118fcabc9500/thumbnail
 date: "2022-08-24T20:48:06.841+09:00"
 ---

@@ -3,7 +3,7 @@ title: "昔自分で描いた絵を Anything V3 にも描いていただいた"
 description: "はるか昔、私はイラストを描く趣味を持っていました。その頃描いたイラストを img2prompt に食わせて説明文を生成し、その説明文を Anything V3 に食わせてイラストを描いてもらいました。"
 topics: ["Anything V3"]
 category: "Random"
-published: true
+published: false
 eyecatch: "https://imagedelivery.net/JtEZHVqOaD6-I4jpdS8nBQ/889c78e7-75b5-4bf6-ae5d-180376063400/thumbnail"
 date: "2022-11-26T17:18:55.874+09:00"
 ---
