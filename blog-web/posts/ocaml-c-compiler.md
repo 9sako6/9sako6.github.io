@@ -3,7 +3,7 @@ title: "Writing a toy C compiler in OCaml"
 description: "2022年の夏、OCaml を勉強したあとに何か作りたくなって、C のサブセットのコンパイラを作りはじめました。`Hello, World!` ができます。なお、機能が色々足りてないです。"
 topics: ["OCaml", "Compiler", "C"]
 category: "Technology"
-published: true
+published: false
 eyecatch: ""
 date: "2022-11-05T19:30:46.914+09:00"
 ---

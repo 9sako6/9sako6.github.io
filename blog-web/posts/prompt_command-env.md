@@ -3,7 +3,7 @@ title: "Display the git branch name at the prompt and follows branch switching"
 description: "The `PROMPT_COMMAND` variable is evaluated just before the prompt is displayed, so it is useful for dynamically displaying a branch name at the prompt."
 topics: ["bash"]
 category: "Technology"
-published: true
+published: false
 eyecatch: https://imagedelivery.net/JtEZHVqOaD6-I4jpdS8nBQ/9b2a07ee-fed3-41a2-4229-c6276a9ad500/thumbnail
 date: "2022-10-19T01:46:23.190+09:00"
 lang: "en"

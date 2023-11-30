@@ -3,7 +3,7 @@ title: "Firebase をコンポーネントから隠蔽しつつ TanStack Query �
 description: "Firebase に密結合しすぎず、将来的に Firebase から離れるのを簡単にしたい。かつ、TanStack Query (React Query)を使いたい。Firebase をラップしつつ TanStack Query のインターフェイスをもつラッパー関数を作ろう。ただし、依存を消し去れるわけではない。Firebase を使うことで CSR にせざるを得ない時点で強い依存である。"
 topics: ["Firebase", "設計"]
 category: "Technology"
-published: true
+published: false
 eyecatch: ""
 date: "2023-06-18T19:39:18.464+09:00"
 ---

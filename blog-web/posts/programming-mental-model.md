@@ -3,7 +3,7 @@ title: "プログラミング言語とメンタルモデル、設計はそのあ
 description: "目の前にあるプログラミング言語とエコシステムに慣れ親しんでメンタルモデルを形成せよ"
 topics: ["設計"]
 category: "Random"
-published: true
+published: false
 eyecatch: ""
 date: "2023-05-24T21:30:43.313+09:00"
 ---
