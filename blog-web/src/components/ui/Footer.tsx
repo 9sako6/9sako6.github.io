@@ -61,13 +61,21 @@ export const Footer = (): JSX.Element => {
               </nav>
             </div>
             <div className="py-6 break-word">
-              <p>I&apos;m 9sako6, a software engineer.</p>
+              <p>
+                Web アプリケーションの開発をして生きている
+                <ruby>
+                  9sako6<rp>(</rp>
+                  <rt>くさころ</rt>
+                  <rp>)</rp>
+                </ruby>
+                です。
+              </p>
               <p>
                 <Link
                   href="/about"
-                  className="break-all hover:underline focus:underline active:underline"
+                  className="break-all text-teal-600 hover:underline focus:underline active:underline"
                 >
-                  A brief resume is here.
+                  私のプロフィールはこちら。
                 </Link>
               </p>
             </div>
