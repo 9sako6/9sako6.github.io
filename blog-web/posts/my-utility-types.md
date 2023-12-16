@@ -3,7 +3,7 @@ title: "TypeScript の Utility Types もどきを自分で実装する"
 description: 'TypeScript にはじめから用意されている Partial, Uppercase 等の Utility Types, Intrinsic String Manipulation Types もどきを再実装して遊ぶ記事です。'
 topics: ["TypeScript"]
 category: "Technology"
-published: true
+published: false
 date: "2022-04-09T17:30:00.000+09:00"
 ---
 

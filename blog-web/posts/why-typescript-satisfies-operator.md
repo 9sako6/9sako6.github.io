@@ -14,7 +14,7 @@ date: "2023-07-01T16:38:44.902+09:00"
 
 # `satisfies` 演算子とは
 
-[TypeScript 4.9 で導入された](https://devblogs.microsoft.com/typescript/announcing-typescript-4-9-beta/#the-satisfies-operator) `satisfies` 演算子は、`expression satisfies type` のようにして使う。
+[TypeScript 4.9 で導入された](https://devblogs.microsoft.com/typescript/announcing-typescript-4-9-beta/#the-satisfies-operator) `satisfies` 演算子は、`expression satisfies type` のようにして使います。
 
 ```typescript
 type Colors = "red" | "green" | "blue";
@@ -34,9 +34,9 @@ const palette = {
 - 式がある型を満たすことを保証しつつ、文脈的に型付けする
 - 型を変えない
 
-という演算子である。
+という演算子です。
 
-関数で実装するならこうなるだろう。
+関数で実装するならこうなるでしょう。
 
 ```typescript
 function satisfies<A>() {
@@ -44,19 +44,19 @@ function satisfies<A>() {
 }
 ```
 
-これ以上の説明は他の文献に譲る。本記事では、具体的な用途について紹介したい。
+これ以上の説明は他の文献に譲ります。本記事では、具体的な用途について紹介します。
 
 # 結局何に使うの？
 
-`satisfies` を使うことにより、**型推論しつつ、読みやすい推論結果を残すことができる。**
+`satisfies` を使うことにより、**型推論しつつ、読みやすい推論結果を残す**ことができます。
 
-これだけ言っても意味がわからないので、実例を添えて説明してみる。Puppeteer のコードを説明に使わせていただく。
+これだけ言っても意味がわからないので、実例を添えて説明してみます。Puppeteer のコードを説明に使わせていただきます。
 
 [puppeteer/packages/puppeteer-core/src/api/Input.ts - puppeteer/puppeteer](https://github.com/puppeteer/puppeteer/blob/58e9c64f6364fc1663995d4136445cdc8fab9292/packages/puppeteer-core/src/api/Input.ts#L292)
 
 ## `satisfies` を使わない場合の問題
 
-以下のような `MouseButton` を考える。
+以下のような `MouseButton` を考えます。
 
 ```typescript
 export const MouseButton: Record<string, Protocol.Input.MouseButton> = Object.freeze({
@@ -68,24 +68,24 @@ export const MouseButton: Record<string, Protocol.Input.MouseButton> = Object.fr
 });
 ```
 
-型アノテーションがついており、`MouseButton` は `Record<string, Protocol.Input.MouseButton>` 型である。
-プロパティの値は `Protocol.Input.MouseButton` 型である必要があるので、例えば `forwrad` のようなミスをしても型エラーになってくれる。
+型アノテーションがついており、`MouseButton` は `Record<string, Protocol.Input.MouseButton>` 型です。
+プロパティの値は `Protocol.Input.MouseButton` 型である必要があるので、例えば `forwrad` のようなミスをしても型エラーになってくれます。
 
-今のところ何も問題なさそうだ。
+今のところ何も問題なさそうですね。
 
-では、エディタで `MouseButton` にカーソルを当てて表示される型はどうなっているだろうか。
-やってみると以下のようになる。
+では、エディタで `MouseButton` にカーソルを当てて表示される型はどうなっているでしょうか。
+やってみると以下のようになります。
 
 ![](/images/why-typescript-satisfies-operator-bad.png)
 
-何も間違ってはいないのだが、型定義にジャンプしない限りは中身がどうなっているのか全くわからない。
-これが型アノテーションの限界だと思っている。
+何も間違ってはいませんが、型定義にジャンプしない限りは中身がどうなっているのか全くわかりません。
+これが型アノテーションの限界だと思っています。
 
-もちろん `{Left: 'left'; Right: 'right'; Middle: 'middle'; Back: 'back'; Forward: 'forward';}` 型をアノテーションすれば問題なくなるが、Union 型で値の集合を定義しておきたいという本来の意図から外れる。
+もちろん `{Left: 'left'; Right: 'right'; Middle: 'middle'; Back: 'back'; Forward: 'forward';}` 型をアノテーションすれば問題なくなりますが、Union 型で値の集合を定義しておきたいという本来の意図から外れてしまします。
 
 ## `satisfies` によってもたらされる型の可読性
 
-今度は型アノテーションではなく、`satisfies` を使ってみる。
+今度は型アノテーションではなく、`satisfies` を使ってみましょう。
 
 ```typescript
 export const MouseButton = Object.freeze({
@@ -97,22 +97,22 @@ export const MouseButton = Object.freeze({
 }) satisfies Record<string, Protocol.Input.MouseButton>;
 ```
 
-型アノテーションした場合と同様に、`forwrad` みたいなタイポをしていたら型エラーになる。
+型アノテーションした場合と同様に、`forwrad` みたいなタイポをしていたら型エラーになります。
 
 さらに、
 
 > `satisfies` は型を変えない
 
-という性質がここで効いてくる。
-エディタで `MouseButton` にカーソルを当てると、型の中身が一発でわかる。
+という性質がここで効いてきます。
+エディタで `MouseButton` にカーソルを当てると、型の中身が一発でわかります。
 
 
 ![](/images/why-typescript-satisfies-operator-good.png)
 
 
-`satisfies` を使うことにより、**型推論しつつ、読みやすい推論結果を残すことができる。**
+`satisfies` を使うことにより、**型推論しつつ、読みやすい推論結果を残す**ことができました。
 
-これは個人的に一番腹落ちする `satisfies` の使い方だった。
+これは個人的に一番腹落ちする `satisfies` の使い方でした。
 
 # 参考
 
