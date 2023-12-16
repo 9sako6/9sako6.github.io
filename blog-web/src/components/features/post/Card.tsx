@@ -1,5 +1,5 @@
 import Link from "next/link";
-import * as styles from "./Card.css";
+import styles from "./Card.module.scss";
 import { PostDate } from "./PostDate";
 import { Tag } from "./Tag";
 
