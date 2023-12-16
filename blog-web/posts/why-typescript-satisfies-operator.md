@@ -99,11 +99,7 @@ export const MouseButton = Object.freeze({
 
 型アノテーションした場合と同様に、`forwrad` みたいなタイポをしていたら型エラーになります。
 
-さらに、
-
-> `satisfies` は型を変えない
-
-という性質がここで効いてきます。
+さらに、「`satisfies` は型を変えない」という性質がここで効いてきます。
 エディタで `MouseButton` にカーソルを当てると、型の中身が一発でわかります。
 
 
