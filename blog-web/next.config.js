@@ -3,9 +3,6 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
-const { createVanillaExtractPlugin } = require("@vanilla-extract/next-plugin");
-const withVanillaExtract = createVanillaExtractPlugin();
-
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
   options: {
@@ -40,11 +37,9 @@ const nextConfig = {
 };
 
 module.exports = withBundleAnalyzer(
-  withVanillaExtract(
-    withMDX(
-      withExportImages({
-        ...nextConfig,
-      })
-    )
+  withMDX(
+    withExportImages({
+      ...nextConfig,
+    })
   )
 );
