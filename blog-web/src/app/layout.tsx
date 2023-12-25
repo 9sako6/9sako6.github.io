@@ -2,6 +2,7 @@ import "@/styles/footnote.css";
 import "@/styles/globals.css";
 import "@/styles/znc.css";
 import "@/styles/nprogress.css";
+import "@/styles/rehype-prism-plus.css";
 
 import { Footer } from "@/components/ui/Footer";
 import { Header } from "@/components/ui/Header";
