@@ -16,15 +16,6 @@ export const Card: React.FC<Props> = ({
   tags,
 }: Props) => {
   const postPath = `/posts/${slug}`;
-  const placeholder = (
-    <Link
-      href={postPath}
-      className="hover:underline font-mono hidden md:block"
-      aria-label={title}
-    >
-      <div>Read more →</div>
-    </Link>
-  );
 
   return (
     <div className="pb-4 text-left w-full md:grid md:grid-cols-8 md:gap-8">
@@ -47,19 +38,13 @@ export const Card: React.FC<Props> = ({
         </div>
       </div>
       <div className={styles.imageContainer}>
-        {imageUrl ? (
-          <Link href={postPath} aria-label={title}>
-            <img
-              src={imageUrl}
-              alt={title}
-              width={480}
-              height={270}
-              className={styles.image}
-            />
-          </Link>
-        ) : (
-          placeholder
-        )}
+        <Link
+          href={postPath}
+          className="hover:underline font-mono hidden md:block"
+          aria-label={title}
+        >
+          <div>Read more →</div>
+        </Link>
       </div>
     </div>
   );
