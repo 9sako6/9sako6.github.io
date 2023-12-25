@@ -23,7 +23,7 @@ export const Footer = (): JSX.Element => {
         </div>
       )}
       {isRootPath && <div className="h-20"></div>}
-      <div className="md:max-w-5xl md:m-auto">
+      <div className="md:m-auto">
         <div className="grid md:grid-cols-4 md:gap-4">
           <div>
             <div className="flex items-center gap-2">

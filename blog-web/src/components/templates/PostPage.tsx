@@ -1,9 +1,9 @@
 import { Props } from "@/app/posts/[slug]/page";
-import { SideBar } from "@/components/ui/SideBar";
 import "prismjs/themes/prism-okaidia.min.css";
 import { Body } from "../features/post/Body";
 import { PostDate } from "../features/post/PostDate";
 import { PageTitle } from "../ui/PageTitle";
+import { Tag } from "../features/post/Tag";
 
 export const PostPage: React.FC<Props> = ({
   title,
@@ -14,24 +14,21 @@ export const PostPage: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <div className="flex justify-center">
+      <div className="grid place-items-center gap-4 pt-8 pb-16">
         <PageTitle title={title} />
-      </div>
-      <div className="flex justify-center pb-16">
+
+        <div className="flex gap-8">
+          {topics.length > 0 &&
+            topics.map((topic) => (
+              <div key={topic}>
+                <Tag tag={topic} />
+              </div>
+            ))}
+        </div>
         <PostDate date={new Date(date)} />
       </div>
-      <div className="grid md:grid-cols-4 max-w-5xl">
-        <div className="hidden md:block">
-          <SideBar topics={topics} title={title} url={url} />
-        </div>
-        <div className="hidden md:block md:col-span-3">
-          <Body html={bodyHtml} />
-        </div>
-      </div>
-      {/* SP */}
-      <div className="md:hidden">
-        <Body html={bodyHtml} />
-      </div>
+
+      <Body html={bodyHtml} />
     </>
   );
 };

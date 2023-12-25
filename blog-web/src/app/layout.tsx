@@ -53,10 +53,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={`${notoSerifJp.className}`}>
-      <body className="pl-4 pr-4">
+      <body className="m-auto pl-4 pr-4 md:pl-8 md:pr-8 md:max-w-5xl">
         <Header />
         <main className="flex items-center justify-center">
-          <div className="md:max-w-5xl w-full">{children}</div>
+          <div className="w-full">{children}</div>
         </main>
         <Footer />
       </body>
