@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { Tag } from "../features/post/Tag";
 import { Cd } from "./Cd";
 import styles from "./Footer.module.scss";
-import { CopyrightIcon } from "./icons/CopyrightIcon";
 import { GitHubIcon } from "./icons/GitHubIcon";
 import { TwitterIcon } from "./icons/TwitterIcon";
 
@@ -75,7 +74,7 @@ export const Footer = (): JSX.Element => {
         </div>
       </div>
       <div className="text-sm flex items-center justify-center text-slate-500 dark:text-zinc-400 p-12">
-        {year} <CopyrightIcon /> 9sako6
+        &copy; {year} 9sako6
       </div>
     </footer>
   );
