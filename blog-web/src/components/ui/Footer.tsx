@@ -1,14 +1,14 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { CopyrightIcon } from "./icons/CopyrightIcon";
-import Image from "next/image";
+import topics from "@/data/topics.json";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Tag } from "../features/post/Tag";
+import { Cd } from "./Cd";
+import styles from "./Footer.module.scss";
+import { CopyrightIcon } from "./icons/CopyrightIcon";
 import { GitHubIcon } from "./icons/GitHubIcon";
 import { TwitterIcon } from "./icons/TwitterIcon";
-import topics from "@/data/topics.json";
-import { Cd } from "./Cd";
-import { Tag } from "../features/post/Tag";
 
 export const Footer = (): JSX.Element => {
   const pathname = usePathname();
@@ -27,16 +27,6 @@ export const Footer = (): JSX.Element => {
         <div className="grid md:grid-cols-4 md:gap-4">
           <div>
             <div className="flex items-center gap-2">
-              <Link href="/about">
-                <div className="w-16 h-16 relative hover:scale-105">
-                  <Image
-                    alt="icon"
-                    className="rounded-full object-contain border border-orange-50"
-                    src={"/icon.webp"}
-                    fill
-                  />
-                </div>
-              </Link>
               <nav className="flex gap-2 text-3xl cursor-pointer">
                 <div className="hover:text-zinc-600 hover:dark:text-zinc-200 hover:scale-105">
                   <a
@@ -71,10 +61,7 @@ export const Footer = (): JSX.Element => {
                 です。
               </p>
               <p>
-                <Link
-                  href="/about"
-                  className="break-all text-teal-600 hover:underline focus:underline active:underline"
-                >
+                <Link href="/about" className={styles.link}>
                   私のプロフィールはこちら。
                 </Link>
               </p>

@@ -1,7 +1,6 @@
 import { Props } from "@/app/posts/[slug]/page";
 import { SideBar } from "@/components/ui/SideBar";
 import "prismjs/themes/prism-okaidia.min.css";
-import "../../../node_modules/katex/dist/katex.min.css";
 import { Body } from "../features/post/Body";
 import { PostDate } from "../features/post/PostDate";
 import { PageTitle } from "../ui/PageTitle";
@@ -25,9 +24,13 @@ export const PostPage: React.FC<Props> = ({
         <div className="hidden md:block">
           <SideBar topics={topics} title={title} url={url} />
         </div>
-        <div className="md:col-span-3">
+        <div className="hidden md:block md:col-span-3">
           <Body html={bodyHtml} />
         </div>
+      </div>
+      {/* SP */}
+      <div className="md:hidden">
+        <Body html={bodyHtml} />
       </div>
     </>
   );

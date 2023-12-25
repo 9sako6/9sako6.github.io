@@ -1,6 +1,0 @@
-.markdown pre[class*="language-"] {
-  background-color: #1a2638;
-}
-.markdown code.code-highlight {
-  @apply mt-2 mb-2;
-}

@@ -1,17 +1,17 @@
 import { defaultOpenGraph, defaultTwitter } from "@/app/sharedMetadata";
 import { PostPage as PostPageTemplate } from "@/components/templates";
 import { allPosts } from "@/lib/all-posts";
-import { markdownToHtml } from "@/lib/markdown-html";
-import { Commit, commitHistory } from "@/lib/update-history";
+import markdownToHtml from "zenn-markdown-html";
 import type { Metadata, Post } from "@/types";
 import { readFileSync } from "fs";
 import matter from "gray-matter";
 import { Metadata as NextMetadata } from "next";
+import Script from "next/script";
+import "zenn-content-css";
 
 export type Props = Post & {
   bodyHtml: string;
   url: string;
-  commitHistory: Commit[];
 };
 
 export const generateStaticParams = async () => {
@@ -61,18 +61,15 @@ const getPost = async (slug: string) => {
   const matterResult = matter(file);
   const metadata = matterResult.data as Metadata;
 
-  // TODO: fix for app router
-  // const bodyHtml = await withOgpCard(
-  //   await markdownToHtml(matterResult.content || "")
-  // );
-  const bodyHtml = await markdownToHtml(matterResult.content || "");
+  const bodyHtml = markdownToHtml(matterResult.content || "", {
+    embedOrigin: "https://embed.zenn.studio",
+  });
   const url = `${process.env.siteUrl}/posts/${slug}`;
 
   return {
     slug,
     bodyHtml,
     url,
-    commitHistory: commitHistory(postPath),
     ...metadata,
   };
 };
@@ -85,7 +82,12 @@ const PostPage = async ({ params }: Params) => {
   const { slug } = params;
   const props = await getPost(slug);
 
-  return <PostPageTemplate {...props} />;
+  return (
+    <>
+      <Script src="https://embed.zenn.studio/js/listen-embed-event.js" />
+      <PostPageTemplate {...props} />
+    </>
+  );
 };
 
 export default PostPage;

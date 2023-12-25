@@ -1,9 +1,15 @@
+"use client";
+
+import { useEffect } from "react";
+
 type Props = {
   html: string;
 };
 
 export const Body = ({ html }: Props): JSX.Element => {
-  return (
-    <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
-  );
+  useEffect(() => {
+    import("zenn-embed-elements");
+  }, []);
+
+  return <div className="znc" dangerouslySetInnerHTML={{ __html: html }} />;
 };
