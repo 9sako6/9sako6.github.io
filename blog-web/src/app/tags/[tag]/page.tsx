@@ -1,3 +1,4 @@
+import { defaultOpenGraph, defaultTwitter } from "@/app/sharedMetadata";
 import { TagPage } from "@/components/templates/TagPage";
 import { allPosts } from "@/lib/all-posts";
 import { Metadata } from "next";
@@ -17,9 +18,18 @@ type Params = {
 export function generateMetadata({ params }: Params): Metadata {
   const { tag } = params;
 
-  const pageTitle = `${tag} - ${process.env.siteTitle}`;
+  const pageTitle = `${decodeURIComponent(tag)} - ${process.env.siteTitle}`;
 
   return {
+    ...defaultOpenGraph,
+    openGraph: {
+      ...defaultOpenGraph,
+      title: pageTitle,
+    },
+    twitter: {
+      ...defaultTwitter,
+      title: pageTitle,
+    },
     title: pageTitle,
   };
 }

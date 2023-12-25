@@ -8,11 +8,11 @@ export type Props = {
 };
 
 export const TagPage = ({ posts, tag }: Props): JSX.Element => {
-  const pageTitle = `${tag} - ${process.env.siteTitle}`;
-
   return (
-    <>
-      <PageTitle title={`#${tag}`} />
+    <div>
+      <div className="pb-16">
+        <PageTitle title={`#${tag}`} />
+      </div>
       {posts.length === 0 ? (
         <p>There are no posts.</p>
       ) : (
@@ -26,6 +26,6 @@ export const TagPage = ({ posts, tag }: Props): JSX.Element => {
           />
         ))
       )}
-    </>
+    </div>
   );
 };
