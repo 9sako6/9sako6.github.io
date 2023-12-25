@@ -27,12 +27,11 @@ export const TopPage = ({ posts }: Props): JSX.Element => {
               >
                 <a href={`#${category}`}>{category}</a>
               </h1>
-              {posts.map(({ slug, title, date, eyecatch, topics }) => (
+              {posts.map(({ slug, title, eyecatch, topics }) => (
                 <Card
                   key={slug}
                   slug={slug || ""}
                   title={title || ""}
-                  createdAt={date}
                   imageUrl={eyecatch}
                   tags={topics}
                 />

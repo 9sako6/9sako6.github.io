@@ -16,12 +16,11 @@ export const TagPage = ({ posts, tag }: Props): JSX.Element => {
       {posts.length === 0 ? (
         <p>There are no posts.</p>
       ) : (
-        posts.map(({ slug, title, date, eyecatch, topics }) => (
+        posts.map(({ slug, title, eyecatch, topics }) => (
           <Card
             key={slug}
             slug={slug}
             title={title}
-            createdAt={date}
             imageUrl={eyecatch}
             tags={topics}
           />

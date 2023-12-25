@@ -38,7 +38,6 @@ export const YearlyArchivesPage = ({ posts, year }: Props) => {
             key={post.slug}
             slug={post.slug}
             title={post.title}
-            createdAt={post.date}
             imageUrl={post.eyecatch}
             tags={post.topics}
           />

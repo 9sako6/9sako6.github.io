@@ -1,12 +1,10 @@
 import Link from "next/link";
 import styles from "./Card.module.scss";
-import { PostDate } from "./PostDate";
 import { Tag } from "./Tag";
 
 type Props = {
   slug: string;
   title: string;
-  createdAt: string;
   imageUrl?: string;
   tags: string[];
 };
@@ -14,7 +12,6 @@ type Props = {
 export const Card: React.FC<Props> = ({
   slug,
   title,
-  createdAt,
   imageUrl,
   tags,
 }: Props) => {
@@ -47,9 +44,6 @@ export const Card: React.FC<Props> = ({
               <Tag tag={tag} className="mr-4" key={tag} />
             ))}
           </span>
-          <div className="pb-4 text-slate-500 dark:text-zinc-400">
-            <PostDate date={new Date(createdAt)} />
-          </div>
         </div>
       </div>
       <div className={styles.imageContainer}>
