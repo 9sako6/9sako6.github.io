@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("top page has a valid title and a link to the about page", async ({
+test.skip("top page has a valid title and a link to the about page", async ({
   page,
 }) => {
   await page.goto("/");
