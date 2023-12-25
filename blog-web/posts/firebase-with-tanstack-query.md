@@ -16,8 +16,6 @@ TanStack Query や SWR はクライアントサイドでデータフェッチす
 
 そんな動機で、フロントエンドのコンポーネントから Firebase が隠蔽された状態で TanStack Query を使えるようにする実装と設計をします。
 
-# 目次
-
 # 結論
 
 話はシンプルです。Firebase をラップしつつ TanStack Query のインターフェイスをもつラッパー関数を作ろう。

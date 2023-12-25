@@ -10,8 +10,6 @@ date: "2023-07-01T16:38:44.902+09:00"
 
 ![](https://imagedelivery.net/JtEZHVqOaD6-I4jpdS8nBQ/0286e951-6a3b-482e-6248-7751c927a200/public)
 
-# 目次
-
 # `satisfies` 演算子とは
 
 [TypeScript 4.9 で導入された](https://devblogs.microsoft.com/typescript/announcing-typescript-4-9-beta/#the-satisfies-operator) `satisfies` 演算子は、`expression satisfies type` のようにして使います。

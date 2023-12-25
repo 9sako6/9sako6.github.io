@@ -16,8 +16,6 @@ TypeScript にはじめから用意されている `Partial<Type>`, `Uppercase<S
 `Capitalize<StringType>`, `Uncapitalize<StringType>` の実装はコンパイラの中にあり、TypeScript
 のコードからは見えないのでご注意ください。本記事では、実用性を無視して TypeScript でどうにか再現しています。
 
-# 目次
-
 # 環境
 
 - TypeScript v4.6.2
