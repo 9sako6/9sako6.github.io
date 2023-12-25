@@ -6,18 +6,14 @@ import { Tag } from "./Tag";
 type Props = {
   slug: string;
   title: string;
-  description: string;
   createdAt: string;
   imageUrl?: string;
   tags: string[];
 };
 
-const MAX_DESCRIPTION_LENGTH = 100;
-
 export const Card: React.FC<Props> = ({
   slug,
   title,
-  description,
   createdAt,
   imageUrl,
   tags,
@@ -53,17 +49,6 @@ export const Card: React.FC<Props> = ({
           </span>
           <div className="pb-4 text-slate-500 dark:text-zinc-400">
             <PostDate date={new Date(createdAt)} />
-          </div>
-          <div className="pb-3 text-slate-500 dark:text-zinc-400">
-            <Link
-              href={postPath}
-              className="hover:underline"
-              aria-label={title}
-            >
-              {description.length < MAX_DESCRIPTION_LENGTH
-                ? description
-                : description.slice(0, MAX_DESCRIPTION_LENGTH).concat("...")}
-            </Link>
           </div>
         </div>
       </div>
