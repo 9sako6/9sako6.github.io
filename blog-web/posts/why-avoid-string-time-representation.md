@@ -1,5 +1,5 @@
 ---
-title: 時刻を文字列で表現する必要が生じるシナリオ
+title: 時刻の文字列表現を避けるべき理由と、避けられないシナリオ
 description: ""
 topics: ["設計"]
 category: "Technology"
