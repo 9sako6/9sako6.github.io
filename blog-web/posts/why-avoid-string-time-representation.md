@@ -1,7 +1,7 @@
 ---
 title: 時刻を文字列で表現する必要が生じるシナリオ
 description: ""
-topics: ["時刻", "設計"]
+topics: ["設計"]
 category: "Technology"
 published: true
 eyecatch: ""
