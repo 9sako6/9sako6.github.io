@@ -33,7 +33,7 @@ export async function generateMetadata({
   const props = await getPost(slug);
   const imageUrl = props.eyecatch
     ? new URL(props.eyecatch, process.env.siteUrl).href
-    : new URL("/icon.webp", process.env.siteUrl).href;
+    : new URL("/icon.nine.webp", process.env.siteUrl).href;
 
   return {
     title: props.title,

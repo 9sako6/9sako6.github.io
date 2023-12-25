@@ -21,7 +21,7 @@ export const YearlyArchivesPage = ({ posts, year }: Props) => {
         <meta property="og:description" content={process.env.siteDescription} />
         <meta
           property="og:image"
-          content={`${process.env.siteUrl}/icon.webp`}
+          content={`${process.env.siteUrl}/icon.nine.webp`}
         />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="@9sako6" />

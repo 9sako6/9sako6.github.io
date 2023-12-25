@@ -6,7 +6,7 @@ export const defaultOpenGraph = {
   siteName: process.env.siteTitle,
   images: [
     {
-      url: `${process.env.siteUrl}/icon.webp`,
+      url: `${process.env.siteUrl}/icon.nine.webp`,
     },
   ],
 };
@@ -15,5 +15,5 @@ export const defaultTwitter = {
   card: "summary",
   site: "@9sako6",
   creator: "@9sako6",
-  images: `${process.env.siteUrl}/icon.webp`,
+  images: `${process.env.siteUrl}/icon.nine.webp`,
 };
