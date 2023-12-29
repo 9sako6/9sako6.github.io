@@ -1,0 +1,15 @@
+.link {
+  color: #0f83fd;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.archiveListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.archiveListHeader {
+  font-weight: bold;
+}

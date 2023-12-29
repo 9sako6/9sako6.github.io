@@ -1,15 +1,16 @@
 "use client";
 
+import { ArchiveList } from "@/components/features/archive/ArchiveList";
 import topics from "@/data/topics.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Tag } from "../features/post/Tag";
-import { Cd } from "./Cd";
+import { Tag } from "../../features/post/Tag";
+import { Cd } from "../Cd";
+import { GitHubIcon } from "../icons/GitHubIcon";
+import { TwitterIcon } from "../icons/TwitterIcon";
 import styles from "./Footer.module.scss";
-import { GitHubIcon } from "./icons/GitHubIcon";
-import { TwitterIcon } from "./icons/TwitterIcon";
 
-export const Footer = (): JSX.Element => {
+export const Footer = () => {
   const pathname = usePathname();
   const isRootPath = pathname === "/";
   const year = new Date().getFullYear();
@@ -70,6 +71,10 @@ export const Footer = (): JSX.Element => {
             {topics.map((topic) => (
               <Tag className="mr-4" tag={topic} key={topic} />
             ))}
+          </div>
+          <div className={styles.archiveListContainer}>
+            <h2 className={styles.archiveListHeader}>年別アーカイブ</h2>
+            <ArchiveList />
           </div>
         </div>
       </div>
