@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import AboutContent from "@/components/features/contents/about.mdx";
 import { MarkdownWrapper } from "@/components/ui/MarkdownWrapper";
