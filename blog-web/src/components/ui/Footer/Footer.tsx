@@ -1,28 +1,20 @@
-"use client";
-
 import { ArchiveList } from "@/components/features/archive/ArchiveList";
 import topics from "@/data/topics.json";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Tag } from "../../features/post/Tag";
-import { Cd } from "../Cd";
 import { GitHubIcon } from "../icons/GitHubIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
+import { BackToTop } from "./BackToTop";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
-  const pathname = usePathname();
-  const isRootPath = pathname === "/";
   const year = new Date().getFullYear();
 
   return (
     <footer>
-      {!isRootPath && (
-        <div className="flex items-center h-20 justify-center my-20">
-          <Cd text="← Back to top" />
-        </div>
-      )}
-      {isRootPath && <div className="h-20"></div>}
+      <div className="h-40 flex justify-center items-center">
+        <BackToTop />
+      </div>
       <div className="md:m-auto">
         <div className="grid md:grid-cols-4 md:gap-4">
           <div>
