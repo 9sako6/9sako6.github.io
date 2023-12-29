@@ -23,7 +23,7 @@ export const Card: React.FC<Props> = ({
         <div className="pb-3">
           <Link
             href={postPath}
-            className="text-2xl hover:underline cursor-pointer dark:text-zinc-300"
+            className="text-xl md:text-2xl hover:underline cursor-pointer dark:text-zinc-300"
             aria-label="link to the post"
           >
             {title}
