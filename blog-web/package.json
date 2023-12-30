@@ -10,10 +10,10 @@
     "build": "next build && next-export-optimize-images",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write .",
-    "prettier-check": "prettier --check .",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
     "tsc": "tsc --noEmit",
-    "new": "deno run --allow-write bin/create-new-post.ts",
+    "new": "tsx scripts/new-post.ts",
     "test": "vitest run",
     "test:e2e": "playwright test"
   },
@@ -57,6 +57,7 @@
     "postcss": "^8.4.12",
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.23",
+    "tsx": "^4.7.0",
     "typescript": "^5.3.3",
     "uuid": "^8.3.2",
     "vitest": "^0.24.1"
