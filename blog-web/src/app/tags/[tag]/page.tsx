@@ -1,5 +1,5 @@
 import { defaultOpenGraph, defaultTwitter } from "@/app/sharedMetadata";
-import { Card } from "@/components/features/post/Card";
+import { PostsList } from "@/components/features/post/PostsList";
 import { PageTitle } from "@/components/ui/PageTitle";
 import { allPosts } from "@/lib/all-posts";
 import { Metadata } from "next";
@@ -46,19 +46,9 @@ const Tag = async ({ params }: Params) => {
       <div className="pb-16">
         <PageTitle>{`#${tag}`}</PageTitle>
       </div>
-      {posts.length === 0 ? (
-        <p>There are no posts.</p>
-      ) : (
-        posts.map(({ slug, title, eyecatch, topics }) => (
-          <Card
-            key={slug}
-            slug={slug}
-            title={title}
-            imageUrl={eyecatch}
-            tags={topics}
-          />
-        ))
-      )}
+      <PostsList
+        posts={posts.map((post) => ({ ...post, tags: post.topics }))}
+      />
     </div>
   );
 };

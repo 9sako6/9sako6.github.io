@@ -1,11 +1,11 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Cd } from "../../Cd";
+import Link from "next/link";
 
 export const BackToTop = () => {
   const pathname = usePathname();
   const isRootPath = pathname === "/";
 
-  return isRootPath ? null : <Cd text="← Back to top" />;
+  return isRootPath ? null : <Link className="font-mono hover:underline underline-offset-2" href="/">← Back to top</Link>;
 };

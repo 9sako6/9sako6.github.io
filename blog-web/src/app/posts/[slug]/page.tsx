@@ -1,7 +1,7 @@
 import { defaultOpenGraph, defaultTwitter } from "@/app/sharedMetadata";
 import { Body } from "@/components/features/post/Body";
 import { PostDate } from "@/components/features/post/PostDate";
-import { Tag } from "@/components/features/post/Tag";
+import { TagsList } from "@/components/features/post/TagsList";
 import { PageTitle } from "@/components/ui/PageTitle";
 import { allPosts } from "@/lib/all-posts";
 import type { Metadata, Post } from "@/types";
@@ -91,14 +91,7 @@ const PostPage = async ({ params }: Params) => {
       <div className="grid place-items-center gap-4 pt-8 pb-16">
         <PageTitle>{title}</PageTitle>
 
-        <div className="flex gap-8">
-          {topics.length > 0 &&
-            topics.map((topic) => (
-              <div key={topic}>
-                <Tag tag={topic} />
-              </div>
-            ))}
-        </div>
+        <TagsList tags={topics} />
         <PostDate date={new Date(date)} />
       </div>
 

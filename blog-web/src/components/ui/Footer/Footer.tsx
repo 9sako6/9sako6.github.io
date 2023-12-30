@@ -1,7 +1,7 @@
 import { ArchiveList } from "@/components/features/archive/ArchiveList";
+import { TagsList } from "@/components/features/post/TagsList";
 import topics from "@/data/topics.json";
 import Link from "next/link";
-import { Tag } from "../../features/post/Tag";
 import { GitHubIcon } from "../icons/GitHubIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
 import { BackToTop } from "./BackToTop";
@@ -59,10 +59,8 @@ export const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="md:col-span-2 py-6">
-            {topics.map((topic) => (
-              <Tag className="mr-4" tag={topic} key={topic} />
-            ))}
+          <div className="md:col-span-2 py-6 md:py-0">
+            <TagsList tags={topics} />
           </div>
           <div className={styles.archiveListContainer}>
             <h2 className={styles.archiveListHeader}>年別アーカイブ</h2>

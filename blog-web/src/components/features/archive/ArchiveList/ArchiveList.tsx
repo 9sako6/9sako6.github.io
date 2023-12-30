@@ -27,10 +27,11 @@ export const ArchiveList = async () => {
   return (
     <ul>
       {years.map((year) => (
-        <li key={year} className={styles.item}>
-          <Link href={ARCHIVE_PATH(year)}>{`${year} (${countByYear.get(
-            year,
-          )})`}</Link>
+        <li key={year}>
+          <Link
+            href={ARCHIVE_PATH(year)}
+            className={styles.item}
+          >{`${year} (${countByYear.get(year)})`}</Link>
         </li>
       ))}
     </ul>

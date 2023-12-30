@@ -1,5 +1,5 @@
 import { defaultOpenGraph, defaultTwitter } from "@/app/sharedMetadata";
-import { Card } from "@/components/features/post/Card";
+import { PostsList } from "@/components/features/post/PostsList";
 import { PageTitle } from "@/components/ui/PageTitle";
 import { allPosts } from "@/lib/all-posts";
 import dayjs from "dayjs";
@@ -69,19 +69,9 @@ const YearPage = async ({ params }: Params) => {
       <div className="pb-16">
         <PageTitle>{pageTitle}</PageTitle>
       </div>
-      {posts.length === 0 ? (
-        <p>There are no posts.</p>
-      ) : (
-        posts.map((post) => (
-          <Card
-            key={post.slug}
-            slug={post.slug}
-            title={post.title}
-            imageUrl={post.eyecatch}
-            tags={post.topics}
-          />
-        ))
-      )}
+      <PostsList
+        posts={posts.map((post) => ({ ...post, tags: post.topics }))}
+      />
     </div>
   );
 };

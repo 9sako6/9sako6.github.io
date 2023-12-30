@@ -13,8 +13,8 @@
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "tsc": "tsc --noEmit",
-    "new": "tsx scripts/new-post.ts",
-    "gen": "scaffdog generate",
+    "new": "tsx src/scripts/new-post.ts",
+    "scaffold": "scaffdog generate",
     "test": "vitest run",
     "test:e2e": "playwright test"
   },

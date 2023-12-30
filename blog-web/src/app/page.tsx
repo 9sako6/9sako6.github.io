@@ -1,4 +1,4 @@
-import { Card } from "@/components/features/post/Card";
+import { PostsList } from "@/components/features/post/PostsList";
 import { allPosts } from "@/lib/all-posts";
 import { getCategorizedPosts } from "@/lib/get-categorized-posts";
 
@@ -24,15 +24,9 @@ const TopPage = async () => {
               >
                 <a href={`#${category}`}>{category}</a>
               </h1>
-              {posts.map(({ slug, title, eyecatch, topics }) => (
-                <Card
-                  key={slug}
-                  slug={slug || ""}
-                  title={title || ""}
-                  imageUrl={eyecatch}
-                  tags={topics}
-                />
-              ))}
+              <PostsList
+                posts={posts.map((post) => ({ ...post, tags: post.topics }))}
+              />
             </div>
           );
         })
