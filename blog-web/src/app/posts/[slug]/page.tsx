@@ -1,13 +1,16 @@
 import { defaultOpenGraph, defaultTwitter } from "@/app/sharedMetadata";
-import { PostPage as PostPageTemplate } from "@/components/templates";
+import { Body } from "@/components/features/post/Body";
+import { PostDate } from "@/components/features/post/PostDate";
+import { Tag } from "@/components/features/post/Tag";
+import { PageTitle } from "@/components/ui/PageTitle";
 import { allPosts } from "@/lib/all-posts";
-import markdownToHtml from "zenn-markdown-html";
 import type { Metadata, Post } from "@/types";
 import { readFileSync } from "fs";
 import matter from "gray-matter";
 import { Metadata as NextMetadata } from "next";
 import Script from "next/script";
 import "zenn-content-css";
+import markdownToHtml from "zenn-markdown-html";
 
 export type Props = Post & {
   bodyHtml: string;
@@ -80,13 +83,27 @@ type Params = {
 
 const PostPage = async ({ params }: Params) => {
   const { slug } = params;
-  const props = await getPost(slug);
+  const { title, topics, date, bodyHtml } = await getPost(slug);
 
   return (
-    <>
+    <div>
       <Script src="https://embed.zenn.studio/js/listen-embed-event.js" />
-      <PostPageTemplate {...props} />
-    </>
+      <div className="grid place-items-center gap-4 pt-8 pb-16">
+        <PageTitle title={title} />
+
+        <div className="flex gap-8">
+          {topics.length > 0 &&
+            topics.map((topic) => (
+              <div key={topic}>
+                <Tag tag={topic} />
+              </div>
+            ))}
+        </div>
+        <PostDate date={new Date(date)} />
+      </div>
+
+      <Body html={bodyHtml} />
+    </div>
   );
 };
 
