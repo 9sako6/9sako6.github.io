@@ -44,7 +44,8 @@ const taro: User = { email: "taro@example.com" };
 
 # オブジェクトのキーが充足しているかチェックする
 
-`satisfies` を使うと、オブジェクトのキーが全て揃っていることをチェックできます。
+オブジェクトのキーが、あらかじめ定義された集合から成ることをチェックしたい場合、
+`satisfies` を使うとオブジェクトのキーが全て揃っていることをチェックできます。
 
 ```typescript
 type Color = "red" | "green" | "blue";
