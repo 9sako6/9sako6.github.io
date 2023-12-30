@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-top: 1px solid #e0e0e0;
+  background-color: #fff;
+  padding: 8px 0px;
+}
+
+.iconContainer {
+  width: 20px;
+  height: 20px;
+
+  stroke: black;
+  fill: black;
+}

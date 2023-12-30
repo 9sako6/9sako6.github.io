@@ -9,6 +9,7 @@ import { Header } from "@/components/ui/Header";
 import { Metadata } from "next";
 
 import { Noto_Serif_JP } from "next/font/google";
+import { ToolMenu } from "@/components/ui/ToolMenu";
 
 const notoSerifJp = Noto_Serif_JP({
   display: "swap",
@@ -59,6 +60,9 @@ export default function RootLayout({
           <div className="w-full">{children}</div>
         </main>
         <Footer />
+        <div className="md:hidden fixed bottom-0 left-0 right-0">
+          <ToolMenu />
+        </div>
       </body>
     </html>
   );
