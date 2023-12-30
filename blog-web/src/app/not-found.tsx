@@ -1,5 +1,10 @@
-import { ErrorPage } from "@/components/templates";
+import { PageTitle } from "@/components/ui/PageTitle";
 
-const NotFound = () => <ErrorPage status={404} message={"Not found."} />;
+const NotFound = () => (
+  <div>
+    <PageTitle>404</PageTitle>
+    <p>Not found.</p>
+  </div>
+);
 
 export default NotFound;

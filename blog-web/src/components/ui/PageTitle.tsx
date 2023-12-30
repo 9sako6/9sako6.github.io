@@ -1,11 +1,11 @@
 type Props = {
-  title: string;
+  children: string;
 };
 
-export const PageTitle = ({ title }: Props): JSX.Element => {
+export const PageTitle = ({ children }: Props): JSX.Element => {
   return (
     <div className="text-3xl flex items-center dark:text-zinc-300">
-      <h1>{title}</h1>
+      <h1>{children}</h1>
     </div>
   );
 };

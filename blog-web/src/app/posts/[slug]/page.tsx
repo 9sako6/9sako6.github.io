@@ -89,7 +89,7 @@ const PostPage = async ({ params }: Params) => {
     <div>
       <Script src="https://embed.zenn.studio/js/listen-embed-event.js" />
       <div className="grid place-items-center gap-4 pt-8 pb-16">
-        <PageTitle title={title} />
+        <PageTitle>{title}</PageTitle>
 
         <div className="flex gap-8">
           {topics.length > 0 &&

@@ -1,5 +1,6 @@
 import { defaultOpenGraph, defaultTwitter } from "@/app/sharedMetadata";
-import { TagPage } from "@/components/templates/TagPage";
+import { Card } from "@/components/features/post/Card";
+import { PageTitle } from "@/components/ui/PageTitle";
 import { allPosts } from "@/lib/all-posts";
 import { Metadata } from "next";
 
@@ -36,10 +37,30 @@ export function generateMetadata({ params }: Params): Metadata {
 
 const Tag = async ({ params }: Params) => {
   const tag = decodeURI(params.tag);
-  const posts = (await allPosts({ draft: false })).filter((post) =>
-    post.topics.includes(decodeURI(tag)),
+  const posts = (
+    await allPosts({ draft: process.env.NODE_ENV === "development" })
+  ).filter((post) => post.topics.includes(decodeURI(tag)));
+
+  return (
+    <div>
+      <div className="pb-16">
+        <PageTitle>{`#${tag}`}</PageTitle>
+      </div>
+      {posts.length === 0 ? (
+        <p>There are no posts.</p>
+      ) : (
+        posts.map(({ slug, title, eyecatch, topics }) => (
+          <Card
+            key={slug}
+            slug={slug}
+            title={title}
+            imageUrl={eyecatch}
+            tags={topics}
+          />
+        ))
+      )}
+    </div>
   );
-  return <TagPage posts={posts} tag={tag} />;
 };
 
 export default Tag;
