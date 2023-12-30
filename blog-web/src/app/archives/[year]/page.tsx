@@ -16,7 +16,7 @@ export const generateStaticParams = async () => {
 
 const getPostsInYear = async (year: string) => {
   const posts = (await allPosts({ draft: false })).filter(
-    (post) => dayjs(post.date).format("YYYY") === year
+    (post) => dayjs(post.date).format("YYYY") === year,
   );
 
   return {

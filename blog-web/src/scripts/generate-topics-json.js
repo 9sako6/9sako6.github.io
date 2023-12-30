@@ -14,7 +14,7 @@ const allTopics = readdirSync("posts").flatMap((fileName) => {
 });
 
 const topics = Array.from(new Set(allTopics)).sort((a, b) =>
-  a.localeCompare(b)
+  a.localeCompare(b),
 );
 
 writeFileSync("./src/data/topics.json", JSON.stringify(topics));

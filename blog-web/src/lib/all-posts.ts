@@ -20,6 +20,6 @@ export async function allPosts({ draft }: { draft: boolean }) {
     })
     .filter<Post>((post): post is Post => typeof post !== "undefined")
     .sort(
-      (a: Post, b: Post) => dayjs(b.date).valueOf() - dayjs(a.date).valueOf()
+      (a: Post, b: Post) => dayjs(b.date).valueOf() - dayjs(a.date).valueOf(),
     );
 }
