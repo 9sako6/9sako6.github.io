@@ -7,5 +7,9 @@ export const BackToTop = () => {
   const pathname = usePathname();
   const isRootPath = pathname === "/";
 
-  return isRootPath ? null : <Link className="font-mono hover:underline underline-offset-2" href="/">← Back to top</Link>;
+  return isRootPath ? null : (
+    <Link className="font-mono hover:underline underline-offset-2" href="/">
+      ← Back to top
+    </Link>
+  );
 };
