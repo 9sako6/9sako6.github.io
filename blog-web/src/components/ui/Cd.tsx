@@ -6,6 +6,9 @@ type Props = {
 };
 
 export const Cd = ({ href, text }: Props): JSX.Element => {
+  type User = { email: string };
+  const jane = { email: "jane@example.com" } satisfies User;
+
   return (
     <Link
       href={href || "/"}
