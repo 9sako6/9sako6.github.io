@@ -58,6 +58,7 @@
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "next-export-optimize-images": "^3.2.0",
+    "playwright": "^1.40.1",
     "postcss": "^8.4.12",
     "prettier": "^3.1.1",
     "scaffdog": "^3.0.0",

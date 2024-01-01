@@ -5,6 +5,7 @@ import { TagsList } from "@/components/features/post/TagsList";
 import { PageTitle } from "@/components/ui/PageTitle";
 import { getAllPosts } from "@/lib/get-all-posts";
 import { getMarkdownObject } from "@/lib/get-markdown-object";
+import { OG_IMAGE_PATH } from "@/lib/path";
 import { Post } from "@/models/post";
 import { Metadata as NextMetadata } from "next";
 import Script from "next/script";
@@ -33,11 +34,10 @@ export async function generateMetadata({
   const { slug } = params;
 
   const props = await getPost(slug);
-  const imageUrl = props.eyecatch
-    ? new URL(props.eyecatch, process.env.siteUrl).href
-    : new URL("/icon.nine.webp", process.env.siteUrl).href;
+  const imageUrl = OG_IMAGE_PATH({ slug });
 
   return {
+    metadataBase: new URL(process.env.siteUrl || "http://localhost:3000"),
     title: props.title,
     description: props.description,
     openGraph: {

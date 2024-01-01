@@ -1,7 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 tmp
-public/rss.xml
 
 # dependencies
 /node_modules
@@ -14,6 +13,8 @@ public/rss.xml
 # next.js
 /.next/
 /out/
+public/rss.xml
+public/og-images/
 
 # production
 /build
