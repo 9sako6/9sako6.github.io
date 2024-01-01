@@ -25,12 +25,12 @@ export async function getAllPosts({
           ...(post.data.eyecatch ? { eyecatch: post.data.eyecatch } : {}),
         };
       }
-    })
+    }),
   );
 
   return posts
     .filter<Post>((post): post is Post => typeof post !== "undefined")
     .sort(
-      (a: Post, b: Post) => dayjs(b.date).valueOf() - dayjs(a.date).valueOf()
+      (a: Post, b: Post) => dayjs(b.date).valueOf() - dayjs(a.date).valueOf(),
     );
 }
