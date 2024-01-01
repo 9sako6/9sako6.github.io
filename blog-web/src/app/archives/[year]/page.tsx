@@ -1,7 +1,7 @@
 import { defaultOpenGraph, defaultTwitter } from "@/app/sharedMetadata";
 import { PostsList } from "@/components/features/post/PostsList";
 import { PageTitle } from "@/components/ui/PageTitle";
-import { allPosts } from "@/lib/all-posts";
+import { getAllPosts } from "@/lib/get-all-posts";
 import dayjs from "dayjs";
 import { Metadata } from "next";
 
@@ -10,7 +10,7 @@ type Year = string;
 export const generateStaticParams = async () => {
   const years = new Set<Year>();
 
-  (await allPosts({ draft: false }))
+  (await getAllPosts({ draft: false }))
     .map((post) => dayjs(post.date).format("YYYY"))
     .forEach((year) => years.add(year));
 
@@ -18,7 +18,7 @@ export const generateStaticParams = async () => {
 };
 
 const getPostsInYear = async (year: string) => {
-  const posts = (await allPosts({ draft: false })).filter(
+  const posts = (await getAllPosts({ draft: false })).filter(
     (post) => dayjs(post.date).format("YYYY") === year,
   );
 

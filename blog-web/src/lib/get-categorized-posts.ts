@@ -1,4 +1,4 @@
-import type { Post } from "@/types";
+import { Post } from "@/models/post";
 
 export const getCategorizedPosts = (posts: Post[]) => {
   const categorizedPosts: { [name: string]: Post[] } = {};

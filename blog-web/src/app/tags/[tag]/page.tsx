@@ -1,15 +1,16 @@
 import { defaultOpenGraph, defaultTwitter } from "@/app/sharedMetadata";
 import { PostsList } from "@/components/features/post/PostsList";
 import { PageTitle } from "@/components/ui/PageTitle";
-import { allPosts } from "@/lib/all-posts";
+import { getAllPosts } from "@/lib/get-all-posts";
+import { getAllTags } from "@/lib/get-all-tags";
 import { Metadata } from "next";
 
 export const generateStaticParams = async () => {
-  const tags = Array.from(
-    new Set((await allPosts({ draft: false })).flatMap((post) => post.topics)),
-  ).sort();
+  const tags = await getAllTags({
+    draft: process.env.NODE_ENV === "development",
+  });
 
-  return tags.map((tag) => ({ tag }));
+  return tags.map((tag) => ({ tag: encodeURIComponent(tag) }));
 };
 
 type Params = {
@@ -36,10 +37,10 @@ export function generateMetadata({ params }: Params): Metadata {
 }
 
 const Tag = async ({ params }: Params) => {
-  const tag = decodeURI(params.tag);
+  const tag = decodeURIComponent(params.tag);
   const posts = (
-    await allPosts({ draft: process.env.NODE_ENV === "development" })
-  ).filter((post) => post.topics.includes(decodeURI(tag)));
+    await getAllPosts({ draft: process.env.NODE_ENV === "development" })
+  ).filter((post) => post.topics.includes(tag));
 
   return (
     <div>

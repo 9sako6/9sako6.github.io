@@ -15,7 +15,7 @@ vi.mock("next/router", () => ({
   },
 }));
 
-vi.mock("@/lib/all-posts", () => {
+vi.mock("@/lib/get-all-posts", () => {
   return {
     allPosts: async () => {
       return [

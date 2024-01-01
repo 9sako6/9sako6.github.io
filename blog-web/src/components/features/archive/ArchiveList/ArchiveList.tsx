@@ -1,10 +1,10 @@
-import { allPosts } from "@/lib/all-posts";
+import { getAllPosts } from "@/lib/get-all-posts";
 import { ARCHIVE_PATH } from "@/lib/path";
 import Link from "next/link";
 import styles from "./ArchiveList.module.scss";
 
 export const ArchiveList = async () => {
-  const posts = await allPosts({
+  const posts = await getAllPosts({
     draft: process.env.NODE_ENV === "development",
   });
 

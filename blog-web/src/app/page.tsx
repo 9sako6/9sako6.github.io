@@ -1,9 +1,9 @@
 import { PostsList } from "@/components/features/post/PostsList";
-import { allPosts } from "@/lib/all-posts";
+import { getAllPosts } from "@/lib/get-all-posts";
 import { getCategorizedPosts } from "@/lib/get-categorized-posts";
 
 const TopPage = async () => {
-  const posts = await allPosts({
+  const posts = await getAllPosts({
     draft: process.env.NODE_ENV === "development",
   });
   const categorizedPosts = getCategorizedPosts(posts);

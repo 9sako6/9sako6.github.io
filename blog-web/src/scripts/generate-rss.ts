@@ -1,4 +1,4 @@
-import { allPosts } from "@/lib/all-posts";
+import { getAllPosts } from "@/lib/get-all-posts";
 import { Feed } from "feed";
 import { writeFile } from "fs/promises";
 
@@ -8,7 +8,7 @@ async function main() {
   if (!blogUrl) {
     throw new Error("Missing env var: process.env.BLOG_URL");
   }
-  const posts = await allPosts({ draft: false });
+  const posts = await getAllPosts({ draft: false });
 
   const feed = new Feed({
     title: "腐ったコロッケ",

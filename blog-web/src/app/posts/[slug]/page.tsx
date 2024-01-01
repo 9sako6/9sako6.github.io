@@ -3,10 +3,9 @@ import { Body } from "@/components/features/post/Body";
 import { PostDate } from "@/components/features/post/PostDate";
 import { TagsList } from "@/components/features/post/TagsList";
 import { PageTitle } from "@/components/ui/PageTitle";
-import { allPosts } from "@/lib/all-posts";
-import type { Metadata, Post } from "@/types";
-import { readFileSync } from "fs";
-import matter from "gray-matter";
+import { getAllPosts } from "@/lib/get-all-posts";
+import { getMarkdownObject } from "@/lib/get-markdown-object";
+import { Post } from "@/models/post";
 import { Metadata as NextMetadata } from "next";
 import Script from "next/script";
 import "zenn-content-css";
@@ -18,7 +17,7 @@ export type Props = Post & {
 };
 
 export const generateStaticParams = async () => {
-  const posts = await allPosts({
+  const posts = await getAllPosts({
     draft: process.env.NODE_ENV === "development",
   });
   return posts.map((post) => ({ slug: post.slug }));
@@ -58,13 +57,9 @@ export async function generateMetadata({
 }
 
 const getPost = async (slug: string) => {
-  const postPath = `posts/${slug}.md`;
+  const post = await getMarkdownObject({ filePath: `posts/${slug}.md` });
 
-  const file = readFileSync(postPath, "utf-8");
-  const matterResult = matter(file);
-  const metadata = matterResult.data as Metadata;
-
-  const bodyHtml = markdownToHtml(matterResult.content || "", {
+  const bodyHtml = markdownToHtml(post.content || "", {
     embedOrigin: "https://embed.zenn.studio",
   });
   const url = `${process.env.siteUrl}/posts/${slug}`;
@@ -73,7 +68,7 @@ const getPost = async (slug: string) => {
     slug,
     bodyHtml,
     url,
-    ...metadata,
+    ...post.data,
   };
 };
 

@@ -1,4 +1,4 @@
-export type Metadata = {
+export type Post = {
   title: string;
   description: string;
   date: string;
@@ -6,4 +6,5 @@ export type Metadata = {
   category: string;
   published: boolean;
   eyecatch?: string;
+  slug: string;
 };

@@ -1,15 +1,18 @@
 import { ArchiveList } from "@/components/features/archive/ArchiveList";
 import { TagsList } from "@/components/features/post/TagsList";
-import topics from "@/data/topics.json";
+import { getAllTags } from "@/lib/get-all-tags";
 import Link from "next/link";
 import { GitHubIcon } from "../icons/GitHubIcon";
-import { TwitterIcon } from "../icons/TwitterIcon";
+import { RSSIcon } from "../icons/RSSIcon";
+import { XIcon } from "../icons/XIcon";
 import { BackToTop } from "./BackToTop";
 import styles from "./Footer.module.scss";
-import { RSSIcon } from "../icons/RSSIcon";
 
-export const Footer = () => {
+export const Footer = async () => {
   const year = new Date().getFullYear();
+  const tags = await getAllTags({
+    draft: process.env.NODE_ENV === "development",
+  });
 
   return (
     <footer>
@@ -36,9 +39,9 @@ export const Footer = () => {
                     href="https://twitter.com/9sako6"
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="link to Twitter"
+                    aria-label="link to X"
                   >
-                    <TwitterIcon />
+                    <XIcon />
                   </a>
                 </div>
                 <div className={styles.iconContainer}>
@@ -46,7 +49,7 @@ export const Footer = () => {
                     href="/rss.xml"
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="link to RSS"
+                    aria-label="RSS"
                   >
                     <RSSIcon />
                   </a>
@@ -71,7 +74,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className="md:col-span-2 py-6 md:py-0">
-            <TagsList tags={topics} />
+            <TagsList tags={tags} />
           </div>
           <div className={styles.archiveListContainer}>
             <h2 className={styles.archiveListHeader}>年別アーカイブ</h2>

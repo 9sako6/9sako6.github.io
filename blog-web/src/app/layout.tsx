@@ -17,25 +17,29 @@ const notoSerifJp = Noto_Serif_JP({
   subsets: ["latin"],
 });
 
+import type { Viewport } from "next";
+
+export const viewport: Viewport = { width: "device-width", initialScale: 1 };
+
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.siteUrl || "http://localhost:3000"),
   title: process.env.siteTitle,
   description: process.env.siteDescription,
   applicationName: process.env.siteTitle,
   authors: [{ name: "9sako6", url: process.env.siteUrl }],
   creator: "9sako6",
   generator: "Next.js",
-  viewport: { width: "device-width", initialScale: 1 },
   keywords: ["software engineer", "web development", "blog"],
-  icons: [`${process.env.siteUrl}/favicon.ico`],
+  icons: ["/favicon.ico"],
   openGraph: {
     type: "website",
-    url: process.env.siteUrl,
+    url: "/",
     title: process.env.siteTitle,
     description: process.env.siteDescription,
     siteName: process.env.siteTitle,
     images: [
       {
-        url: `${process.env.siteUrl}/icon.nine.webp`,
+        url: "/icon.nine.webp",
       },
     ],
   },
@@ -43,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary",
     site: "@9sako6",
     creator: "@9sako6",
-    images: `${process.env.siteUrl}/icon.nine.webp`,
+    images: "/icon.nine.webp",
   },
 };
 

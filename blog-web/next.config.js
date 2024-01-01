@@ -27,12 +27,6 @@ const nextConfig = {
     siteUrl: "https://9sako6.com",
   },
   productionBrowserSourceMaps: true,
-  webpack: (config, { isServer, nextRuntime }) => {
-    if (isServer && nextRuntime === "nodejs") {
-      require("./src/scripts/generate-topics-json.js");
-    }
-    return config;
-  },
 };
 
 module.exports = withBundleAnalyzer(

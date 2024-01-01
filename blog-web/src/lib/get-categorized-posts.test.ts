@@ -1,5 +1,5 @@
 import { buildPost } from "@/mocks";
-import { getCategorizedPosts } from "../get-categorized-posts";
+import { getCategorizedPosts } from "./get-categorized-posts";
 
 it("should partition into categorized posts", async () => {
   const TechPost1 = buildPost({ category: "Technology" });
