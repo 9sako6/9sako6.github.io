@@ -36,6 +36,7 @@ export const generateOgImages = async () => {
 
   for (const post of posts) {
     await generateOgImage({ slug: post.slug, title: post.title });
+    console.log(`Generated OG image for ${post.slug}`);
   }
 };
 

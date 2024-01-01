@@ -7,7 +7,7 @@
   "scripts": {
     "analyze": "ANALYZE=true npm run build",
     "dev": "next dev",
-    "prebuild": "npm run generate:rss",
+    "prebuild": "npm run generate:rss && tsx src/scripts/generate-og-images.ts",
     "build": "next build && next-export-optimize-images",
     "start": "next start",
     "lint": "next lint",
