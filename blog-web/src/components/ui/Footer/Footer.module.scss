@@ -13,3 +13,12 @@
 .archiveListHeader {
   font-weight: bold;
 }
+.iconContainer {
+  width: 30px;
+  height: 30px;
+
+  &:hover {
+    color: rgb(82 82 91);
+    transform: scale(1.05);
+  }
+}

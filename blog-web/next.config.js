@@ -25,7 +25,6 @@ const nextConfig = {
     siteTitle: "腐ったコロッケ",
     siteDescription: "Webアプリケーション開発者くさころの技術ブログ。",
     siteUrl: "https://9sako6.com",
-    MAX_COMMENT_LENGTH: 400,
   },
   productionBrowserSourceMaps: true,
   webpack: (config, { isServer, nextRuntime }) => {

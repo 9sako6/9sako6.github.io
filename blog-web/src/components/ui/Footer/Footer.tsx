@@ -6,6 +6,7 @@ import { GitHubIcon } from "../icons/GitHubIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
 import { BackToTop } from "./BackToTop";
 import styles from "./Footer.module.scss";
+import { RSSIcon } from "../icons/RSSIcon";
 
 export const Footer = () => {
   const year = new Date().getFullYear();
@@ -20,7 +21,7 @@ export const Footer = () => {
           <div>
             <div className="flex items-center gap-2">
               <nav className="flex gap-2 text-3xl cursor-pointer">
-                <div className="hover:text-zinc-600 hover:dark:text-zinc-200 hover:scale-105">
+                <div className={styles.iconContainer}>
                   <a
                     href="https://github.com/9sako6"
                     target="_blank"
@@ -30,7 +31,7 @@ export const Footer = () => {
                     <GitHubIcon />
                   </a>
                 </div>
-                <div className="hover:text-zinc-600 hover:dark:text-zinc-200 hover:scale-105">
+                <div className={styles.iconContainer}>
                   <a
                     href="https://twitter.com/9sako6"
                     target="_blank"
@@ -38,6 +39,16 @@ export const Footer = () => {
                     aria-label="link to Twitter"
                   >
                     <TwitterIcon />
+                  </a>
+                </div>
+                <div className={styles.iconContainer}>
+                  <a
+                    href="/rss.xml"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="link to RSS"
+                  >
+                    <RSSIcon />
                   </a>
                 </div>
               </nav>
