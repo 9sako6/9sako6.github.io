@@ -33,8 +33,7 @@ jobs:
         #   cache: "npm"
         #   cache-dependency-path: ./blog-web/package-lock.json
       - run: npm ci
-      - run: npx playwright install-deps chromium
-      - run: npx playwright install chromium
+      - run: npx playwright install --with-deps
       - run: npm run build
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
