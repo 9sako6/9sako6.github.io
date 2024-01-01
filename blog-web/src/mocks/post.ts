@@ -1,6 +1,6 @@
-import { Post } from "@/models/post";
+import { PostMetadata } from "@/models/post";
 
-export const buildPost = (params: Partial<Post> = {}): Post => {
+export const buildPost = (params: Partial<PostMetadata> = {}): PostMetadata => {
   const defaultParams = {
     title: "サンプルポスト",
     topics: ["Programming", "OCaml"],

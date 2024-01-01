@@ -1,7 +1,7 @@
-import { Post } from "@/models/post";
+import { PostMetadata } from "@/models/post";
 
-export const getCategorizedPosts = (posts: Post[]) => {
-  const categorizedPosts: { [name: string]: Post[] } = {};
+export const getCategorizedPosts = (posts: PostMetadata[]) => {
+  const categorizedPosts: { [name: string]: PostMetadata[] } = {};
 
   posts.forEach((post) => {
     if (categorizedPosts[post.category]) {

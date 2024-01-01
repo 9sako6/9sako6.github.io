@@ -5,15 +5,14 @@ import { TagsList } from "@/components/features/post/TagsList";
 import { PageTitle } from "@/components/ui/PageTitle";
 import { generateDescription } from "@/lib/generate-description";
 import { getAllPosts } from "@/lib/get-all-posts";
-import { getMarkdownObject } from "@/lib/get-markdown-object";
+import { getPost } from "@/lib/get-post";
 import { OG_IMAGE_PATH } from "@/lib/path";
-import { Post } from "@/models/post";
+import { PostMetadata } from "@/models/post";
 import { Metadata as NextMetadata } from "next";
 import Script from "next/script";
 import "zenn-content-css";
-import markdownToHtml from "zenn-markdown-html";
 
-export type Props = Post & {
+export type Props = PostMetadata & {
   bodyHtml: string;
   url: string;
 };
@@ -34,7 +33,7 @@ export async function generateMetadata({
 }: MetaProps): Promise<NextMetadata> {
   const { slug } = params;
 
-  const props = await getPost(slug);
+  const props = await getPost({ slug });
   const imageUrl = OG_IMAGE_PATH({ slug });
   const description =
     props.description || generateDescription({ htmlString: props.bodyHtml });
@@ -59,29 +58,13 @@ export async function generateMetadata({
   };
 }
 
-const getPost = async (slug: string) => {
-  const post = await getMarkdownObject({ filePath: `posts/${slug}.md` });
-
-  const bodyHtml = markdownToHtml(post.content || "", {
-    embedOrigin: "https://embed.zenn.studio",
-  });
-  const url = `${process.env.siteUrl}/posts/${slug}`;
-
-  return {
-    slug,
-    bodyHtml,
-    url,
-    ...post.data,
-  };
-};
-
 type Params = {
   params: { slug: string };
 };
 
 const PostPage = async ({ params }: Params) => {
   const { slug } = params;
-  const { title, topics, date, bodyHtml } = await getPost(slug);
+  const { title, topics, date, bodyHtml } = await getPost({ slug });
 
   return (
     <div>

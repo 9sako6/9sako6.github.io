@@ -1,4 +1,4 @@
-import { Post } from "@/models/post";
+import { PostMetadata } from "@/models/post";
 import dayjs from "dayjs";
 import { readdir } from "fs/promises";
 import { getMarkdownObject } from "./get-markdown-object";
@@ -7,7 +7,7 @@ export async function getAllPosts({
   draft,
 }: {
   draft: boolean;
-}): Promise<Post[]> {
+}): Promise<PostMetadata[]> {
   const files = await readdir("posts");
   const posts = await Promise.all(
     files.map(async (fileName) => {
@@ -29,8 +29,11 @@ export async function getAllPosts({
   );
 
   return posts
-    .filter<Post>((post): post is Post => typeof post !== "undefined")
+    .filter<PostMetadata>(
+      (post): post is PostMetadata => typeof post !== "undefined",
+    )
     .sort(
-      (a: Post, b: Post) => dayjs(b.date).valueOf() - dayjs(a.date).valueOf(),
+      (a: PostMetadata, b: PostMetadata) =>
+        dayjs(b.date).valueOf() - dayjs(a.date).valueOf(),
     );
 }

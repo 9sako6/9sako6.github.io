@@ -7,7 +7,7 @@
   "scripts": {
     "analyze": "ANALYZE=true npm run build",
     "dev": "next dev",
-    "prebuild": "npm run generate:rss && tsx src/scripts/generate-og-images.ts",
+    "prebuild": "npm run generate:rss && npm run generate:og-images",
     "build": "next build && next-export-optimize-images",
     "start": "next start",
     "lint": "next lint",
@@ -17,6 +17,7 @@
     "new": "tsx src/scripts/new-post.ts",
     "scaffold": "scaffdog generate",
     "generate:rss": "BLOG_URL=https://9sako6.com tsx src/scripts/generate-rss.ts",
+    "generate:og-images": "tsx src/scripts/generate-og-images.ts",
     "test": "vitest run",
     "test:e2e": "playwright test"
   },
