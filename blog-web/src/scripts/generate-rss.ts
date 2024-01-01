@@ -40,7 +40,6 @@ async function main() {
       id: url,
       link: url,
       description,
-      content: description,
       date: new Date(post.date),
       image: imageUrl,
     });
