@@ -3,6 +3,7 @@ import { Body } from "@/components/features/post/Body";
 import { PostDate } from "@/components/features/post/PostDate";
 import { TagsList } from "@/components/features/post/TagsList";
 import { PageTitle } from "@/components/ui/PageTitle";
+import { generateDescription } from "@/lib/generate-description";
 import { getAllPosts } from "@/lib/get-all-posts";
 import { getMarkdownObject } from "@/lib/get-markdown-object";
 import { OG_IMAGE_PATH } from "@/lib/path";
@@ -35,22 +36,24 @@ export async function generateMetadata({
 
   const props = await getPost(slug);
   const imageUrl = OG_IMAGE_PATH({ slug });
+  const description =
+    props.description || generateDescription({ htmlString: props.bodyHtml });
 
   return {
     metadataBase: new URL(process.env.siteUrl || "http://localhost:3000"),
     title: props.title,
-    description: props.description,
+    description,
     openGraph: {
       ...defaultOpenGraph,
       title: props.title,
-      description: props.description,
+      description,
       url: props.url,
       images: [imageUrl],
     },
     twitter: {
       ...defaultTwitter,
       title: props.title,
-      description: props.description,
+      description,
       images: [imageUrl],
     },
   };
