@@ -10,7 +10,7 @@ export const generateStaticParams = async () => {
     draft: process.env.NODE_ENV === "development",
   });
 
-  return tags.map((tag) => ({ tag: encodeURIComponent(tag) }));
+  return tags.map((tag) => ({ tag }));
 };
 
 type Params = {
