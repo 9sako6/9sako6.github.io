@@ -30,7 +30,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/global-error.jsx"
+    "src/app/global-error.jsx",
+    "src/app/privacy-policy/page.mdx"
   ],
   "exclude": ["node_modules", "./bin/**/*"]
 }
