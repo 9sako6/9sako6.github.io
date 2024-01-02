@@ -22,3 +22,13 @@
     transform: scale(1.05);
   }
 }
+.policyContainer {
+  padding: 32px 0px;
+}
+.policyLink {
+  color: rgb(100 116 139);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
