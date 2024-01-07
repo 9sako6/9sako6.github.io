@@ -22,7 +22,7 @@ async function main() {
     id: blogUrl,
     link: blogUrl,
     language: "ja",
-    image: `${blogUrl}/icon.nine.webp`,
+    image: `${blogUrl}/icon.obake.png`,
     favicon: `${blogUrl}/favicon.ico`,
     copyright: `All rights reserved ${new Date().getFullYear()}, 9sako6`,
     feedLinks: {

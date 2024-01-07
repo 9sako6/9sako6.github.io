@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: process.env.siteTitle,
     images: [
       {
-        url: "/icon.nine.webp",
+        url: "/icon.obake.png",
       },
     ],
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary",
     site: "@9sako6",
     creator: "@9sako6",
-    images: "/icon.nine.webp",
+    images: "/icon.obake.png",
   },
 };
 

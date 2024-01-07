@@ -22,7 +22,15 @@ export const Footer = async () => {
       <div className="grid md:grid-cols-4 md:gap-4">
         <section>
           <div className="flex items-center gap-2">
-            <nav className="flex gap-2 text-3xl cursor-pointer">
+            <nav className="flex gap-2 text-3xl cursor-pointer items-center">
+              <Link href="/about">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/icon.obake.png"
+                  alt="9sako6's icon"
+                  className={styles.faceIcon}
+                />
+              </Link>
               <div className={styles.iconContainer}>
                 <a
                   href="https://github.com/9sako6"
