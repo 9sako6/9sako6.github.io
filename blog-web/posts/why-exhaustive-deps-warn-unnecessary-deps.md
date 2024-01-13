@@ -14,7 +14,7 @@ ESLint の `react-hooks/exhaustive-deps` ルールを使っているときにフ
 
 ESLint で`react-hooks/exhaustive-deps` ルールを有効にすると、`useEffect` や `useCallback` 、`useMemo` といったフックの依存配列に漏れがある場合に検知してくれます。
 
-もし、これらのフックの依存先に不変のオブジェクトがあるとき、不変のオブジェクトを依存配列に含める必要はありません。
+ただし、これらのフックの依存先に不変のオブジェクトがあるとき、不変のオブジェクトを依存配列に含める必要はありません。
 例えば、以下の `useCallback` では `setCount` を使っていますが、`setCount`（`useState` が返す set 関数）は再レンダリング間で不変[^1]なので依存配列に含める必要はありません。
 そして `react-hooks/exhaustive-deps` は賢いので、この場合は依存配列に含めてなくても怒られません。
 
