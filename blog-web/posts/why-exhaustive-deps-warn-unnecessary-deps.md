@@ -66,7 +66,6 @@ React を使う際はぜひ `react-hooks/exhaustive-deps` ルールを有効に�
 - eslint-plugin-react@7.33.2
 - eslint@8.56.0
 - react-dom@18.2.0
-- react-scripts@5.0.1
 - react@18.2.0
 
 # 参考
