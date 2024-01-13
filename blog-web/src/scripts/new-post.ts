@@ -11,4 +11,8 @@ eyecatch: ""
 date: "${new Date().toISOString()}"
 ---`;
 
-writeFileSync(`./posts/zzz${v4()}.md`, template);
+const filename = `./posts/zzz${v4()}.md`;
+
+writeFileSync(filename, template);
+
+console.log(filename);
