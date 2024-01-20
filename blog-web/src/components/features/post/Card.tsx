@@ -24,7 +24,7 @@ export const Card: React.FC<Props> = ({ slug, title, tags }: Props) => {
       </div>
       <Link
         href={postPath}
-        className="hover:underline font-mono hidden md:block"
+        className="hover:underline font-mono hidden md:block flex-shrink-0"
         aria-label={title}
       >
         Read more →
