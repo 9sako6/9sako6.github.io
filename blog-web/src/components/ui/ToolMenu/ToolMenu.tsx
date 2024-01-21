@@ -7,7 +7,7 @@ export type Props = {};
 export const ToolMenu: React.FC<Props> = () => {
   return (
     <div className={styles.container}>
-      <Link href="/">
+      <Link href="/" aria-label="Link to the top page.">
         <div className={styles.iconContainer}>
           <HomeIcon />
         </div>

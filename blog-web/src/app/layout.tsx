@@ -13,7 +13,7 @@ import { ToolMenu } from "@/components/ui/ToolMenu";
 
 const notoSerifJp = Noto_Serif_JP({
   display: "swap",
-  weight: ["400", "700"],
+  weight: ["400"],
   subsets: ["latin"],
 });
 
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: process.env.siteTitle,
     images: [
       {
-        url: "/icon.obake.png",
+        url: "/icon.obake.webp",
       },
     ],
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary",
     site: "@9sako6",
     creator: "@9sako6",
-    images: "/icon.obake.png",
+    images: "/icon.obake.webp",
   },
 };
 

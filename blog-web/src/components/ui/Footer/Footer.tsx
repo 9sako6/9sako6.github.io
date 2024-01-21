@@ -26,7 +26,7 @@ export const Footer = async () => {
               <Link href="/about">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/icon.obake.png"
+                  src="/icon.obake.webp"
                   alt="9sako6's icon"
                   className={styles.faceIcon}
                 />

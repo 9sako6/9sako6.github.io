@@ -25,7 +25,7 @@ export const ArchiveList = async () => {
   const years = Array.from(countByYear.keys()).sort((a, b) => b - a);
 
   return (
-    <ul>
+    <ul className={styles.list}>
       {years.map((year) => (
         <li key={year}>
           <Link
