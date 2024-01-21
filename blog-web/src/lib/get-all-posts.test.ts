@@ -3,7 +3,9 @@ import { getAllPosts } from "./get-all-posts";
 import { getMarkdownObject } from "./get-markdown-object";
 
 vi.mock("fs/promises", () => ({
-  readdir: vi.fn().mockResolvedValue(["post1.md", "post2.md"]),
+  default: {
+    readdir: vi.fn().mockResolvedValue(["post1.md", "post2.md"]),
+  },
 }));
 
 vi.mock("./get-markdown-object", () => ({
