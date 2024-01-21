@@ -16,14 +16,14 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
     },
     "types": ["vitest/globals"],
     "plugins": [
       {
-        "name": "next"
-      }
-    ]
+        "name": "next",
+      },
+    ],
   },
   "include": [
     "next-env.d.ts",
@@ -31,7 +31,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/global-error.jsx",
-    "src/app/privacy-policy/page.mdx"
+    "src/app/privacy-policy/page.mdx",
   ],
-  "exclude": ["node_modules", "./bin/**/*"]
+  "exclude": ["node_modules", "./bin/**/*"],
 }
