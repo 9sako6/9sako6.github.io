@@ -17,7 +17,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/playwright:v1.40.0-jammy
+      image: mcr.microsoft.com/playwright:v1.41.1-jammy
     defaults:
       run:
         working-directory: ./blog-web
