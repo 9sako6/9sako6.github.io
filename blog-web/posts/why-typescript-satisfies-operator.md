@@ -104,6 +104,34 @@ const r = palette.red[0];
 
 以上のように、`satisfies` は型推論を保持しつつ、オブジェクトのキーが充足しているかチェックするのに役立ちます。
 
+もう一つ実用的な例を出しておきます。
+広い型を受け取る関数にオブジェクトリテラルを渡す際、`satisfies` で型チェックをすることができます。
+例えば、[Zod](https://github.com/colinhacks/zod) のようなランタイムでの validator にオブジェクトを渡す場合です。
+
+```typescript
+const post = PostSchema.parse({
+  title: "Lorem Ipsum",
+  description: "Neque porro quisquam est",
+} satisfies PostSchema);
+```
+
+その他にも、例えば Firestore のようなスキーマレスのデータストアに保存するオブジェクトリテラルに型チェックをすることができます。
+
+```typescript
+type User = {
+  name: string;
+  age: number;
+};
+
+await db
+  .collection("users")
+  .doc("2ddb6c99-be69-4ef1-9375-93c05d11462d")
+  .set({
+    name: "Jane Doe",
+    age: 18,
+  } satisfies User);
+```
+
 # 型推論を残して型の可読性を高める
 
 `satisfies` を使うことにより、型推論しつつ、読みやすい推論結果を残すことができます。
