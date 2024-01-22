@@ -18,10 +18,7 @@ const TopPage = async () => {
 
           return (
             <div key={category}>
-              <h1
-                className="pt-10 pb-10 md:mb-10 font-mono text-lg"
-                id={category}
-              >
+              <h1 className="pt-10 pb-10 font-mono text-lg" id={category}>
                 <a href={`#${category}`}>{category}</a>
               </h1>
               <PostsList
