@@ -1,4 +1,0 @@
-(executable
- (public_name admin_api)
- (name main)
- (libraries admin_api dream))
