@@ -39,7 +39,7 @@ export async function generateMetadata({
   const { posts } = await getPostsInYear(year);
   const pageTitle = `${year}年に公開された${posts.length}件の記事`;
   const seoTitle = `${pageTitle} - ${process.env.siteTitle}`;
-  const url = new URL(`/archives/${year}`, process.env.siteUrl).href;
+  const url = `${process.env.siteUrl}/archives/${year}`;
 
   return {
     title: seoTitle,

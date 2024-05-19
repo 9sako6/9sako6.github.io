@@ -1,4 +1,3 @@
-const withExportImages = require("next-export-optimize-images");
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
@@ -20,10 +19,4 @@ const nextConfig = {
   productionBrowserSourceMaps: true,
 };
 
-module.exports = withBundleAnalyzer(
-  withMDX(
-    withExportImages({
-      ...nextConfig,
-    }),
-  ),
-);
+module.exports = withBundleAnalyzer(withMDX(nextConfig));
